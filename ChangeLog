@@ -1,0 +1,44 @@
+12.10.2011 - Version 1.3:
+  - Neue Funktion: In der Übersicht der vorspielreifen Stücke kann man nun die Stücke nach Unterrichtsorten filtern lassen
+  - Neue Funktion: Rechtsklick auf einen "Vorspielkandidaten" bietet die Funktion zum automatischen Eintragen einer Errinnerung bzgl. einer Vorspielteilnahme
+  - Verbesserung: Das Metronom/Stimmgerät-Fenster ist nun unabhängiger vom Qupil-Hauptfenster und blockiert dieses nicht mehr
+  - Verbesserung: Wird eine Erinnerung bei einem speziellen Schüler angezeigt, kann man per Häckchen direkt im Dialog die Erinnerung mit "Erledigt" markieren und damit automatisch löschen
+  - Verbesserung: Beim Dokumentenexport nach PDF von Vorspielmeldungen wird automatische ein Dateiname wie "AllgemeinesVorspiel_OrtdesVorspiels_2011-09-09.pdf" vorgeschlagen
+  - Verbesserung: Wenn das Programm im laufenden Unterricht gestartet wird, dann werden trotzdem noch die Errinnerungen zum aktuellen Unterricht angezeigt
+  - Fehlerbehebung: Beim Stundenplandokument waren bei manchen Gruppen haben die Schülernamen nicht untereinander <-- behoben!
+  - Fehlerbehebung: Im Veranstaltungsmanager beim Dokumentenexport PDF wurde ungefragt ein falscher Dialog angezeigt <-- behoben!
+  - Fehlerbehebung: Erinnerungen bei zwei Schülern in einem Gruppenunterricht wird nun wirklich bei beiden seperat angezeigt
+  - Fehlerbehebung: Beim Schülerarchiv werden nachträglich eingetragene Unterrichtsnotizen nun an der richtigen Stelle und nicht ganz am Ende der Liste angezeigt.
+
+08.02.2010 - Version 1.2:
+  - Neue Funktion: Ensemblekandidaten (zeigt die Schüler an, die eigentlich in Ensembles spielen sollten aber im Moment in keinem Ensemble aktiv sind)
+  - Neue Funktion: Erinnerungen (abhängig von verschiedenen Ereignissen wie Programmstart, am Beginn jeder Unterrichtseinheit oder bei einem bestimmten Schüler können Erinnerungsmeldung eingeblendet und auf Wunsch akkustisch signalisiert werden)
+  - Neue Funktion: Tagesübersicht (erstellt ein Dokument welches die Unterrichtseinheiten für den angegebenen Wochentag incl. der letzten Unterrichtsnotizen und einem Leerfeld für handschriftliche Notizen auflistet)
+  - Verbesserung: Unterrichtsnotizen können nun auch mehrzeilig und mit formatiertem Text geschrieben werden
+  - Verbesserung: Für regelmäßige Aktivitäten kann nun auch der Typ gespeichert werden (z.B. Ensemble)
+
+21.01.2010 - Version 1.1:
+  - Neue Funktion: Veranstaltungsmanager (z.B. Verwaltung von Vorspielprogrammen) incl. Archivfunktion
+  - Neue Funktion: Automatische Eintragungen bei "Werke" und Aktivitäten für alle Schüler die an Veranstaltungen teilgenommen haben
+  - Neue Funktion: Geschätze Gesamtdauer von Veranstaltungen wird anhand individuell einstellbarer Zeitfaktoren berechnet
+  - Neue Funktion: Programmliste für Veranstaltungen mit PDF-Export- und Druckmöglichkeit
+  - Neue Funktion: Stundenplandokument mit PDF-Export- und Druckmöglichkeit
+  - Neue Funktion: Vorspielkandidaten (zeigt die Schüler an, deren letztes Vorspiel bereits länger als das individuell eingestellte Vorspielintervall her ist)
+  - Verbesserung: Beim Programmstart springt die Auswahl nun nicht mehr zum aktuellen Unterricht sondern zum ersten Schüler des aktuellen Unterrichts
+  - Verbesserung: Neue minimale Fenstergröße passt besser zu Netbook-Bildschirmauflösungen
+  - Fehlerbehebung: mehrere "vorspielbereite" Werke für eine Gruppe werden nun korrekt in der Verspielmanager-Übersicht angezeigt
+  - Fehlerbehebung: Absturz beim Systemen ohne Soundkarte behoben
+
+14.12.2008 - Version 1.0.2:
+  - Verbesserung: CSV-Adressbuch Import (automatische Seperator-Erkennung, verschiedene Dateikodierungen möglich)
+  - Verbesserung: Werke --> Status auf "Abgeschlossen" setzt End-Datum automatisch
+  - Fehlerbehebung: Hochkomma in Unterrichtsnotizen, Werken und Notenbibliothek funktionieren nun
+  - Fehlerbehebung: Absturz beim Leeren der Unterrichtsort-, Instrumenten-, Größenlisten in Einstellungen behoben
+  - Fehlerbehebung: Datumformatierung in der Notenbibliothek nun auf Deutsch
+
+28.08.2008 - Version 1.0.1:
+  - Backup-Fehler unter Windows behoben
+  - Tippfehler im Hauptfenster bereinigt
+
+15.08.2008 - Version 1.0:
+  - Kompletter Rewrite von Qupil 0.3.2 

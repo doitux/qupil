@@ -1,0 +1,2813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>637</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/qupil.qrc">
+    <normaloff>:/gfx/system_users.png</normaloff>:/gfx/system_users.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QComboBox" name="comboBox_leftListMode">
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>Stundenplan</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources/qupil.qrc">
+         <normaloff>:/gfx/preferences_system_time.png</normaloff>:/gfx/preferences_system_time.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Schülerliste</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources/qupil.qrc">
+         <normaloff>:/gfx/system_users.png</normaloff>:/gfx/system_users.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Schülerarchiv</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources/qupil.qrc">
+         <normaloff>:/gfx/archive_extract.png</normaloff>:/gfx/archive_extract.png</iconset>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2">
+     <widget class="QStackedWidget" name="stackedWidget_rightTabs">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_lesson">
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="LessonTabWidget" name="tabWidget_lesson">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_lessonDetails">
+           <attribute name="icon">
+            <iconset resource="../resources/qupil.qrc">
+             <normaloff>:/gfx/view_calendar_day.png</normaloff>:/gfx/view_calendar_day.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>Details</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_7">
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox_lessonType">
+              <property name="title">
+               <string>Unterrichtsform:</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <property name="topMargin">
+                <number>4</number>
+               </property>
+               <property name="bottomMargin">
+                <number>7</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QRadioButton" name="radioButton_singleLesson">
+                 <property name="text">
+                  <string>Einzelunterricht</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QRadioButton" name="radioButton_groupLesson">
+                 <property name="text">
+                  <string>Gruppenunterricht</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QRadioButton" name="radioButton_ensembleLesson">
+                 <property name="text">
+                  <string>Ensembleunterricht</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QGroupBox" name="groupBox">
+              <property name="title">
+               <string>Unterrichtsbezeichnung:</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_10">
+               <property name="topMargin">
+                <number>4</number>
+               </property>
+               <property name="bottomMargin">
+                <number>7</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QRadioButton" name="radioButton_autoLessonName">
+                 <property name="text">
+                  <string>Automatisch erzeugen:</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QRadioButton" name="radioButton_manualLessonName">
+                 <property name="text">
+                  <string>Manuell:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="lineEdit_manualLessonName"/>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_autoLessonName">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QGroupBox" name="groupBox_lessonDate">
+              <property name="title">
+               <string>Unterrichtszeit:</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <property name="topMargin">
+                <number>4</number>
+               </property>
+               <property name="bottomMargin">
+                <number>7</number>
+               </property>
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_steadyLessonDate">
+                   <property name="text">
+                    <string>Fester Termin:</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="radioButton_unsteadyLessonDate">
+                   <property name="text">
+                    <string>Unregelmäßiger Unterricht</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <widget class="QGroupBox" name="groupBox_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="title">
+                    <string/>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                    <property name="margin">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_2">
+                      <item>
+                       <widget class="QLabel" name="label">
+                        <property name="text">
+                         <string>Wochentag:</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QComboBox" name="comboBox_lessonDay">
+                        <item>
+                         <property name="text">
+                          <string>Montag</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>Dienstag</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>Mittwoch</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>Donnerstag</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>Freitag</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>Samstag</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>Sonntag</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>70</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>Beginn:</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTimeEdit" name="timeEdit_lessonStartTime">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="dateTime">
+                       <datetime>
+                        <hour>0</hour>
+                        <minute>0</minute>
+                        <second>0</second>
+                        <year>2000</year>
+                        <month>1</month>
+                        <day>1</day>
+                       </datetime>
+                      </property>
+                      <property name="displayFormat">
+                       <string>HH:mm 'Uhr'</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_3">
+                      <property name="maximumSize">
+                       <size>
+                        <width>70</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>Ende:</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTimeEdit" name="timeEdit_lessonStopTime">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="displayFormat">
+                       <string>HH:mm 'Uhr'</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_4">
+                      <property name="maximumSize">
+                       <size>
+                        <width>70</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>Dauer:</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSpinBox" name="spinBox_lessonDuration">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>110</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="readOnly">
+                       <bool>true</bool>
+                      </property>
+                      <property name="buttonSymbols">
+                       <enum>QAbstractSpinBox::NoButtons</enum>
+                      </property>
+                      <property name="suffix">
+                       <string> Minuten</string>
+                      </property>
+                      <property name="prefix">
+                       <string/>
+                      </property>
+                      <property name="maximum">
+                       <number>1000</number>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Unterrichtsort:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_lessonLocation">
+                <property name="minimumSize">
+                 <size>
+                  <width>200</width>
+                  <height>0</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item row="4" column="0">
+             <widget class="QGroupBox" name="groupBox_pupilAtLesson">
+              <property name="title">
+               <string>Schüler:</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_8">
+               <item row="0" column="0">
+                <layout class="QVBoxLayout" name="verticalLayout">
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Schüler im Unterricht:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTreeWidget" name="treeWidget_pupilAtLesson">
+                   <property name="rootIsDecorated">
+                    <bool>false</bool>
+                   </property>
+                   <property name="sortingEnabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="headerHidden">
+                    <bool>true</bool>
+                   </property>
+                   <column>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="2">
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <item>
+                  <spacer name="verticalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_addPupil">
+                   <property name="text">
+                    <string>Hin&amp;zufügen</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/qupil.qrc">
+                     <normaloff>:/gfx/arrow_left_double.png</normaloff>:/gfx/arrow_left_double.png</iconset>
+                   </property>
+                   <property name="default">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_delPupil">
+                   <property name="text">
+                    <string>Ent&amp;fernen</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/qupil.qrc">
+                     <normaloff>:/gfx/arrow_right_double.png</normaloff>:/gfx/arrow_right_double.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="3">
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>10</width>
+                   <height>17</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="4">
+                <layout class="QVBoxLayout" name="verticalLayout_2">
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Verfügbare Schüler:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTreeWidget" name="treeWidget_availablePupil">
+                   <property name="rootIsDecorated">
+                    <bool>false</bool>
+                   </property>
+                   <property name="sortingEnabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="headerHidden">
+                    <bool>true</bool>
+                   </property>
+                   <column>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="1">
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>10</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>47</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="6" column="0">
+             <widget class="QPushButton" name="pushButton_saveLessonDetails">
+              <property name="text">
+               <string>Spei&amp;chern</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources/qupil.qrc">
+                <normaloff>:/gfx/filesave.png</normaloff>:/gfx/filesave.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_pupil">
+       <layout class="QGridLayout" name="gridLayout_4">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="PupilTabWidget" name="tabWidget_pupil">
+          <property name="minimumSize">
+           <size>
+            <width>110</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_palNotes">
+           <attribute name="icon">
+            <iconset resource="../resources/qupil.qrc">
+             <normaloff>:/gfx/document_properties.png</normaloff>:/gfx/document_properties.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>Unterrichts&amp;notizen</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_22">
+            <item row="0" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QLabel" name="label_18">
+                <property name="text">
+                 <string>Unterricht:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_palNotesSelection">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QTreeView" name="treeView_palNotes">
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="rootIsDecorated">
+               <bool>false</bool>
+              </property>
+              <property name="allColumnsShowFocus">
+               <bool>true</bool>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <layout class="QGridLayout" name="gridLayout_9">
+              <property name="horizontalSpacing">
+               <number>6</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>5</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Datum:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDateEdit" name="dateEdit_palNotes">
+                <property name="minimumSize">
+                 <size>
+                  <width>90</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="displayFormat">
+                 <string>dd.MM.yyyy</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>358</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>Notiz:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1" rowspan="2" colspan="6">
+               <widget class="QTextEdit" name="textEdit_palNotes">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>93</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>93</height>
+                 </size>
+                </property>
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Nimbus Sans L'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border: none;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Minimum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>72</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="3">
+               <widget class="QPushButton" name="pushButton_italicNotesText">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../resources/qupil.qrc">
+                  <normaloff>:/gfx/format-text-italic.png</normaloff>:/gfx/format-text-italic.png</iconset>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+Shift+K</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="pushButton_boldNotesText">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../resources/qupil.qrc">
+                  <normaloff>:/gfx/format-text-bold.png</normaloff>:/gfx/format-text-bold.png</iconset>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+Shift+F</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QPushButton" name="pushButton_underlinedNotesText">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../resources/qupil.qrc">
+                  <normaloff>:/gfx/format-text-underline.png</normaloff>:/gfx/format-text-underline.png</iconset>
+                </property>
+                <property name="shortcut">
+                 <string>Ctrl+Shift+U</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QPushButton" name="pushButton_notesTextColor">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../resources/qupil.qrc">
+                  <normaloff>:/gfx/format-text-color.png</normaloff>:/gfx/format-text-color.png</iconset>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="pushButton_addPalNotes">
+              <property name="text">
+               <string>Neue Notiz &amp;hinzufügen</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources/qupil.qrc">
+                <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QPushButton" name="pushButton_delPalNotes">
+              <property name="text">
+               <string>Notiz &amp;löschen</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources/qupil.qrc">
+                <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_palPieces">
+           <attribute name="icon">
+            <iconset resource="../resources/qupil.qrc">
+             <normaloff>:/gfx/sound.png</normaloff>:/gfx/sound.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>&amp;Werke</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_11">
+            <item row="0" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <widget class="QLabel" name="label_19">
+                <property name="text">
+                 <string>Unterricht:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_palPiecesSelection">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QTreeView" name="treeView_palPieces">
+              <property name="alternatingRowColors">
+               <bool>false</bool>
+              </property>
+              <property name="rootIsDecorated">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QLabel" name="label_44">
+                  <property name="text">
+                   <string>Komponist:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_newPieceComposer"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_5">
+                  <property name="text">
+                   <string>Titel:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_newPieceTitle"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QLabel" name="label_8">
+                  <property name="text">
+                   <string>Genre:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_palPieceGenre">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>Dauer:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="spinBox_palPieceDuration">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>66</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="suffix">
+                   <string> Min.</string>
+                  </property>
+                  <property name="prefix">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_9">
+                  <property name="text">
+                   <string>Status:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_palPieceState">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item row="3" column="1">
+             <widget class="QPushButton" name="pushButton_delPalPiece">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Werk &amp;löschen</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources/qupil.qrc">
+                <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="pushButton_addPalPiece">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Neues Werk &amp;hinzufügen</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources/qupil.qrc">
+                <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_pupilPersonalData">
+           <attribute name="icon">
+            <iconset resource="../resources/qupil.qrc">
+             <normaloff>:/gfx/preferences_desktop_user.png</normaloff>:/gfx/preferences_desktop_user.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>&amp;Persönliche Daten</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_16">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item row="0" column="0" colspan="2">
+             <layout class="QGridLayout" name="gridLayout_12">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>Vorname:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit_pupilForename">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string>Nachname:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLineEdit" name="lineEdit_pupilSurname">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string>Adresse:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="lineEdit_pupilAddress">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string>E-Mail:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QLineEdit" name="lineEdit_pupilEmail">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_22">
+                <property name="text">
+                 <string>Telefon:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="lineEdit_pupilPhone">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="label_23">
+                <property name="text">
+                 <string>Handy:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QLineEdit" name="lineEdit_pupilHandy">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_24">
+                <property name="text">
+                 <string>Geburtstag:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QDateEdit" name="dateEdit_pupilBirthday">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="displayFormat">
+                 <string>dd.MM.yyyy</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLabel" name="label_25">
+                <property name="text">
+                 <string>Alter:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QLabel" name="label_pupilAge">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_3">
+              <property name="title">
+               <string>Eltern:</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_20">
+               <property name="leftMargin">
+                <number>7</number>
+               </property>
+               <property name="topMargin">
+                <number>2</number>
+               </property>
+               <property name="rightMargin">
+                <number>7</number>
+               </property>
+               <property name="bottomMargin">
+                <number>7</number>
+               </property>
+               <item row="0" column="0" colspan="2">
+                <widget class="QLabel" name="label_31">
+                 <property name="text">
+                  <string>Name (Mutter):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLineEdit" name="lineEdit_pupilMotherName"/>
+               </item>
+               <item row="0" column="3" colspan="2">
+                <widget class="QLabel" name="label_32">
+                 <property name="text">
+                  <string>Beruf (Mutter):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QLineEdit" name="lineEdit_pupilMotherJob"/>
+               </item>
+               <item row="0" column="6" colspan="2">
+                <widget class="QLabel" name="label_33">
+                 <property name="text">
+                  <string>Telefon (Mutter):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="8">
+                <widget class="QLineEdit" name="lineEdit_pupilMotherPhone"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="label_28">
+                 <property name="text">
+                  <string>Name (Vater):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLineEdit" name="lineEdit_pupilFatherName"/>
+               </item>
+               <item row="1" column="4">
+                <widget class="QLabel" name="label_29">
+                 <property name="text">
+                  <string>Beruf (Vater):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QLineEdit" name="lineEdit_pupilFatherJob"/>
+               </item>
+               <item row="1" column="7">
+                <widget class="QLabel" name="label_30">
+                 <property name="text">
+                  <string>Telefon (Vater):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="8">
+                <widget class="QLineEdit" name="lineEdit_pupilFatherPhone"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="Line" name="line">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0" colspan="2">
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <property name="spacing">
+                 <number>6</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_34">
+                  <property name="text">
+                   <string>Unterricht seit:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDateEdit" name="dateEdit_pupilFirstLesson">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="displayFormat">
+                   <string>dd.MM.yyyy</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_35">
+                  <property name="text">
+                   <string>Insgesamt:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_pupilWholeLessonTime">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_21">
+                <property name="spacing">
+                 <number>6</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_42">
+                  <property name="text">
+                   <string>Persönliches Vorspielintervall: </string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_pupilRecitalInterval">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>niemals</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1 Monate</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>2 Monate</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>3 Monate</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>4 Monate</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>6 Monate</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>9 Monate</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>12 Monate</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>18 Monate</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>24 Monate</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="Line" name="line_4">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkBox_ensembleActivityRequested">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Ensemblemitwirkung wird erwartet</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item row="4" column="0" colspan="2">
+             <widget class="Line" name="line_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_37">
+                <property name="text">
+                 <string>Instrument:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_pupilInstrument">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_38">
+                <property name="text">
+                 <string>Größe:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_pupilInstrumentSize">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox_pupilNeedsNextInstrumentSize">
+                <property name="text">
+                 <string>nächste Größe erforderlich</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="6" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_pupilHasRentInstrument">
+              <property name="title">
+               <string>Leihinstrument:</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_12">
+               <item>
+                <widget class="QLabel" name="label_39">
+                 <property name="text">
+                  <string>Inventarnummer:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="lineEdit_pupilRentInstrumentNumber"/>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_40">
+                 <property name="text">
+                  <string>geliehen seit:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDateEdit" name="dateEdit_pupilRentInstrumentSince">
+                 <property name="minimumSize">
+                  <size>
+                   <width>95</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="displayFormat">
+                  <string>dd.MM.yyyy</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_27">
+              <property name="text">
+               <string>Notizen:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QTextEdit" name="textEdit_pupilNotes">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>1</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0" colspan="2">
+             <widget class="QPushButton" name="pushButton_pupilSavePersonalData">
+              <property name="text">
+               <string>Spei&amp;chern</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources/qupil.qrc">
+                <normaloff>:/gfx/filesave.png</normaloff>:/gfx/filesave.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_pupilActivity">
+           <attribute name="icon">
+            <iconset resource="../resources/qupil.qrc">
+             <normaloff>:/gfx/view_refresh.png</normaloff>:/gfx/view_refresh.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>&amp;Aktivitäten</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_18">
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="title">
+               <string>Regelmäßig (z.B. Ensembles):</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <property name="spacing">
+                <number>4</number>
+               </property>
+               <property name="bottomMargin">
+                <number>9</number>
+               </property>
+               <item>
+                <widget class="QTreeView" name="treeView_continousActivity">
+                 <property name="alternatingRowColors">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <item>
+                    <widget class="QLabel" name="label_20">
+                     <property name="text">
+                      <string>Bezeichnung:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineEdit_continousActivityName"/>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_45">
+                     <property name="text">
+                      <string>Typ: </string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_continoustype">
+                     <item>
+                      <property name="text">
+                       <string>Ensemble</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Theorieunterricht</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Korrepetition</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Sonstiges</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_16">
+                   <property name="spacing">
+                    <number>1</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_addContinousActivity">
+                     <property name="minimumSize">
+                      <size>
+                       <width>26</width>
+                       <height>26</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>26</width>
+                       <height>26</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../resources/qupil.qrc">
+                       <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_delContinousActivity">
+                     <property name="minimumSize">
+                      <size>
+                       <width>26</width>
+                       <height>26</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>26</width>
+                       <height>26</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../resources/qupil.qrc">
+                       <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_5">
+                   <item>
+                    <widget class="QLabel" name="label_21">
+                     <property name="text">
+                      <string>Termin:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_continousActivityDay">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Montag</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Dienstag</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Mittwoch</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Donnerstag</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Freitag</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Samstag</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Sonntag</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>unregelmäßig</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QTimeEdit" name="timeEdit_continousActivityTime">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>95</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="displayFormat">
+                      <string>HH:mm 'Uhr'</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_36">
+                     <property name="text">
+                      <string>Beginn:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDateEdit" name="dateEdit_continousActivityStartdate">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_5">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Fixed</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>57</width>
+                     <height>24</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QGroupBox" name="groupBox_6">
+              <property name="title">
+               <string>Einmalig (z.B. Vorspiel, Wettbewerb):</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_17">
+               <property name="verticalSpacing">
+                <number>4</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QTreeView" name="treeView_singularActivity">
+                 <property name="alternatingRowColors">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_26">
+                   <property name="text">
+                    <string>Bezeichnung:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_singularActivityName"/>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_43">
+                   <property name="text">
+                    <string>Typ:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_singularActivityType">
+                   <item>
+                    <property name="text">
+                     <string>Solo-Vortrag</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Ensemble-Mitwirkung</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Sonstiges</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_41">
+                   <property name="text">
+                    <string>Datum:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDateEdit" name="dateEdit_singularActivityDate"/>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_18">
+                   <property name="spacing">
+                    <number>1</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_addSingularActivity">
+                     <property name="minimumSize">
+                      <size>
+                       <width>26</width>
+                       <height>26</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>26</width>
+                       <height>26</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../resources/qupil.qrc">
+                       <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_delSingularActivity">
+                     <property name="minimumSize">
+                      <size>
+                       <width>26</width>
+                       <height>26</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>26</width>
+                       <height>26</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../resources/qupil.qrc">
+                       <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab">
+           <attribute name="icon">
+            <iconset resource="../resources/qupil.qrc">
+             <normaloff>:/gfx/document_multiple.png</normaloff>:/gfx/document_multiple.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>&amp;Geliehene Noten</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_19">
+            <item row="0" column="0">
+             <widget class="QTreeWidget" name="treeWidget_rentToPupil">
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="rootIsDecorated">
+               <bool>false</bool>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <column>
+               <property name="text">
+                <string>Index</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Komponist / Autor</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Titel</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Verlag</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Verliehen am</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="pushButton_sheetBackFromPupil">
+              <property name="text">
+               <string>Auswahl von Schüler &amp;zurückgegeben</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources/qupil.qrc">
+                <normaloff>:/gfx/document_import.png</normaloff>:/gfx/document_import.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_pupilArchive">
+       <layout class="QGridLayout" name="gridLayout_14">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="PupilArchiveTextBrowser" name="textBrowser_pupilArchive"/>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_15">
+          <item>
+           <widget class="QPushButton" name="pushButton_printCurrentPupilArchive">
+            <property name="text">
+             <string>&amp;Drucken</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/qupil.qrc">
+              <normaloff>:/gfx/printer1.png</normaloff>:/gfx/printer1.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_exportCurrentPupilArchiveToPDF">
+            <property name="text">
+             <string>Nach &amp;PDF exportieren</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/qupil.qrc">
+              <normaloff>:/gfx/pdf.png</normaloff>:/gfx/pdf.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QStackedWidget" name="stackedWidget_leftList">
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="TimeTableTreeWidget" name="treeWidget_timeTable">
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string>Uhrzeit</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Unterricht</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QGridLayout" name="gridLayout_13">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="PupilListTreeWidget" name="treeWidget_pupilList">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <layout class="QGridLayout" name="gridLayout_15">
+        <property name="margin">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="PupilArchiveListTreeWidget" name="treeWidget_pupilArchiveList">
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuQupil">
+    <property name="title">
+     <string>Q&amp;upil</string>
+    </property>
+    <widget class="QMenu" name="menuNeu">
+     <property name="title">
+      <string>&amp;Neu ...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resources/qupil.qrc">
+       <normaloff>:/gfx/document_new.png</normaloff>:/gfx/document_new.png</iconset>
+     </property>
+     <addaction name="actionNeuerSchueler"/>
+     <addaction name="actionNeuerUnterricht"/>
+    </widget>
+    <addaction name="menuNeu"/>
+    <addaction name="actionAdressbuchCsvImportieren"/>
+    <addaction name="separator"/>
+    <addaction name="actionBackupErstellen"/>
+    <addaction name="actionBackupZurueckspielen"/>
+    <addaction name="separator"/>
+    <addaction name="actionUeberQupil"/>
+    <addaction name="actionBeenden"/>
+   </widget>
+   <widget class="QMenu" name="menuEinstellungen">
+    <property name="title">
+     <string>Eins&amp;tellungen</string>
+    </property>
+    <addaction name="actionQupil_einrichten"/>
+   </widget>
+   <widget class="QMenu" name="menuExtras">
+    <property name="title">
+     <string>&amp;Extras</string>
+    </property>
+    <addaction name="actionVorspielkandidaten"/>
+    <addaction name="actionEnsemblekandidaten"/>
+    <addaction name="actionMetronomStimmen"/>
+    <addaction name="actionGeburtstageAnzeigen"/>
+    <addaction name="actionErinnerungen"/>
+   </widget>
+   <widget class="QMenu" name="menuBearbeiten">
+    <property name="title">
+     <string>&amp;Bearbeiten</string>
+    </property>
+    <addaction name="actionUnterrichtLoeschen"/>
+    <addaction name="actionSchuelerLoeschen"/>
+    <addaction name="actionSchuelerArchivieren"/>
+    <addaction name="actionSchuelerArchivierenUndLoeschen"/>
+    <addaction name="actionArchiveintragLoeschen"/>
+   </widget>
+   <widget class="QMenu" name="menuDokumente">
+    <property name="title">
+     <string>&amp;Dokumente</string>
+    </property>
+    <addaction name="actionTagesuebersicht"/>
+    <addaction name="actionStundenplanErstellen"/>
+   </widget>
+   <widget class="QMenu" name="menuWerkzeuge">
+    <property name="title">
+     <string>Wer&amp;kzeuge</string>
+    </property>
+    <addaction name="actionVorspielManager"/>
+    <addaction name="actionInstrumentenManager"/>
+    <addaction name="actionNotenBibliothek"/>
+   </widget>
+   <addaction name="menuQupil"/>
+   <addaction name="menuBearbeiten"/>
+   <addaction name="menuDokumente"/>
+   <addaction name="menuWerkzeuge"/>
+   <addaction name="menuExtras"/>
+   <addaction name="menuEinstellungen"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionBeenden">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/application_exit.png</normaloff>:/gfx/application_exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Beenden</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionEinstellungen">
+   <property name="text">
+    <string>Einstellungen ...</string>
+   </property>
+  </action>
+  <action name="actionQupil_einrichten">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/systemsettings.png</normaloff>:/gfx/systemsettings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Qupil &amp;einrichten ...</string>
+   </property>
+  </action>
+  <action name="actionVorspielManager">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/media_podcast.png</normaloff>:/gfx/media_podcast.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Veranstaltungs-Manager ...</string>
+   </property>
+  </action>
+  <action name="actionInstrumentenManager">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/audio_input_microphone_small.png</normaloff>:/gfx/audio_input_microphone_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Instrumenten-Manager ...</string>
+   </property>
+  </action>
+  <action name="actionUeberQupil">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/system_users.png</normaloff>:/gfx/system_users.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Über Qupil ...</string>
+   </property>
+  </action>
+  <action name="actionGeburtstageAnzeigen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/kontact_date.png</normaloff>:/gfx/kontact_date.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Geburtstage anzeigen ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionNeuer_Unterricht">
+   <property name="text">
+    <string>Neuer Unterricht ...</string>
+   </property>
+  </action>
+  <action name="actionNeuerSchueler">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/list_add_user.png</normaloff>:/gfx/list_add_user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Schüler</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N, S</string>
+   </property>
+  </action>
+  <action name="actionNeuerUnterricht">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/view_calendar_day.png</normaloff>:/gfx/view_calendar_day.png</iconset>
+   </property>
+   <property name="text">
+    <string>Unterricht</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N, U</string>
+   </property>
+  </action>
+  <action name="actionUnterrichtLoeschen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/go_jump_today.png</normaloff>:/gfx/go_jump_today.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Unterricht löschen</string>
+   </property>
+  </action>
+  <action name="actionSchuelerLoeschen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/list_remove_user.png</normaloff>:/gfx/list_remove_user.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Schüler löschen</string>
+   </property>
+  </action>
+  <action name="actionSchuelerArchivieren">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/archive_insert.png</normaloff>:/gfx/archive_insert.png</iconset>
+   </property>
+   <property name="text">
+    <string>Schüler archi&amp;vieren</string>
+   </property>
+  </action>
+  <action name="actionSchuelerArchivierenUndLoeschen">
+   <property name="text">
+    <string>Schüler a&amp;rchivieren und löschen</string>
+   </property>
+  </action>
+  <action name="actionArchiveintragLoeschen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/archive_remove.png</normaloff>:/gfx/archive_remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Archiveintrag löschen</string>
+   </property>
+  </action>
+  <action name="actionMetronomStimmen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/speaker.png</normaloff>:/gfx/speaker.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Metronom / Stimmen ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionNotenBibliothek">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/document_multiple.png</normaloff>:/gfx/document_multiple.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Noten-Bibliothek ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionBackupErstellen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/document_export.png</normaloff>:/gfx/document_export.png</iconset>
+   </property>
+   <property name="text">
+    <string>Backup erstellen ...</string>
+   </property>
+  </action>
+  <action name="actionBackupZurueckspielen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/document_import.png</normaloff>:/gfx/document_import.png</iconset>
+   </property>
+   <property name="text">
+    <string>Backup zurückspielen ...</string>
+   </property>
+  </action>
+  <action name="actionAdressbuchCsvImportieren">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/book.png</normaloff>:/gfx/book.png</iconset>
+   </property>
+   <property name="text">
+    <string>Adressbuch (CSV) importieren ...</string>
+   </property>
+  </action>
+  <action name="actionStundenplanErstellen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/preferences_system_time.png</normaloff>:/gfx/preferences_system_time.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Stundenplan-Dokument ...</string>
+   </property>
+  </action>
+  <action name="actionVorspielkandidaten">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/sound.png</normaloff>:/gfx/sound.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Vorspiel&amp;kandidaten ...</string>
+   </property>
+  </action>
+  <action name="actionErinnerungen">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/preferences-desktop-notification-bell.png</normaloff>:/gfx/preferences-desktop-notification-bell.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;rinnerungen ...</string>
+   </property>
+  </action>
+  <action name="actionTagesuebersicht">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/view_calendar_day.png</normaloff>:/gfx/view_calendar_day.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Tagesübersicht ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="action_Jo">
+   <property name="text">
+    <string>&amp;Jo</string>
+   </property>
+  </action>
+  <action name="actionEnsemblekandidaten">
+   <property name="icon">
+    <iconset resource="../resources/qupil.qrc">
+     <normaloff>:/gfx/system_users.png</normaloff>:/gfx/system_users.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Ensemblekandidaten ...</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LessonTabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>lessontabwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TimeTableTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>timetabletreewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PupilTabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>pupiltabwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PupilListTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>pupillisttreewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PupilArchiveListTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>pupilarchivelisttreewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PupilArchiveTextBrowser</class>
+   <extends>QTextBrowser</extends>
+   <header>pupilarchivetextbrowser.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>comboBox_leftListMode</tabstop>
+  <tabstop>treeWidget_timeTable</tabstop>
+  <tabstop>tabWidget_lesson</tabstop>
+  <tabstop>radioButton_singleLesson</tabstop>
+  <tabstop>radioButton_groupLesson</tabstop>
+  <tabstop>radioButton_ensembleLesson</tabstop>
+  <tabstop>radioButton_autoLessonName</tabstop>
+  <tabstop>radioButton_manualLessonName</tabstop>
+  <tabstop>lineEdit_manualLessonName</tabstop>
+  <tabstop>radioButton_steadyLessonDate</tabstop>
+  <tabstop>radioButton_unsteadyLessonDate</tabstop>
+  <tabstop>comboBox_lessonDay</tabstop>
+  <tabstop>timeEdit_lessonStartTime</tabstop>
+  <tabstop>timeEdit_lessonStopTime</tabstop>
+  <tabstop>spinBox_lessonDuration</tabstop>
+  <tabstop>comboBox_lessonLocation</tabstop>
+  <tabstop>treeWidget_pupilAtLesson</tabstop>
+  <tabstop>pushButton_addPupil</tabstop>
+  <tabstop>pushButton_delPupil</tabstop>
+  <tabstop>treeWidget_availablePupil</tabstop>
+  <tabstop>pushButton_saveLessonDetails</tabstop>
+  <tabstop>tabWidget_pupil</tabstop>
+  <tabstop>comboBox_palNotesSelection</tabstop>
+  <tabstop>treeView_palNotes</tabstop>
+  <tabstop>dateEdit_palNotes</tabstop>
+  <tabstop>textEdit_palNotes</tabstop>
+  <tabstop>pushButton_addPalNotes</tabstop>
+  <tabstop>pushButton_delPalNotes</tabstop>
+  <tabstop>comboBox_palPiecesSelection</tabstop>
+  <tabstop>treeView_palPieces</tabstop>
+  <tabstop>lineEdit_newPieceComposer</tabstop>
+  <tabstop>lineEdit_newPieceTitle</tabstop>
+  <tabstop>comboBox_palPieceGenre</tabstop>
+  <tabstop>spinBox_palPieceDuration</tabstop>
+  <tabstop>comboBox_palPieceState</tabstop>
+  <tabstop>pushButton_addPalPiece</tabstop>
+  <tabstop>pushButton_delPalPiece</tabstop>
+  <tabstop>lineEdit_pupilForename</tabstop>
+  <tabstop>lineEdit_pupilSurname</tabstop>
+  <tabstop>lineEdit_pupilAddress</tabstop>
+  <tabstop>lineEdit_pupilEmail</tabstop>
+  <tabstop>lineEdit_pupilPhone</tabstop>
+  <tabstop>lineEdit_pupilHandy</tabstop>
+  <tabstop>dateEdit_pupilBirthday</tabstop>
+  <tabstop>lineEdit_pupilMotherName</tabstop>
+  <tabstop>lineEdit_pupilMotherJob</tabstop>
+  <tabstop>lineEdit_pupilMotherPhone</tabstop>
+  <tabstop>lineEdit_pupilFatherName</tabstop>
+  <tabstop>lineEdit_pupilFatherJob</tabstop>
+  <tabstop>lineEdit_pupilFatherPhone</tabstop>
+  <tabstop>dateEdit_pupilFirstLesson</tabstop>
+  <tabstop>comboBox_pupilRecitalInterval</tabstop>
+  <tabstop>checkBox_ensembleActivityRequested</tabstop>
+  <tabstop>comboBox_pupilInstrument</tabstop>
+  <tabstop>comboBox_pupilInstrumentSize</tabstop>
+  <tabstop>checkBox_pupilNeedsNextInstrumentSize</tabstop>
+  <tabstop>groupBox_pupilHasRentInstrument</tabstop>
+  <tabstop>lineEdit_pupilRentInstrumentNumber</tabstop>
+  <tabstop>dateEdit_pupilRentInstrumentSince</tabstop>
+  <tabstop>textEdit_pupilNotes</tabstop>
+  <tabstop>pushButton_pupilSavePersonalData</tabstop>
+  <tabstop>treeView_continousActivity</tabstop>
+  <tabstop>lineEdit_continousActivityName</tabstop>
+  <tabstop>comboBox_continoustype</tabstop>
+  <tabstop>comboBox_continousActivityDay</tabstop>
+  <tabstop>timeEdit_continousActivityTime</tabstop>
+  <tabstop>dateEdit_continousActivityStartdate</tabstop>
+  <tabstop>pushButton_addContinousActivity</tabstop>
+  <tabstop>pushButton_delContinousActivity</tabstop>
+  <tabstop>treeView_singularActivity</tabstop>
+  <tabstop>lineEdit_singularActivityName</tabstop>
+  <tabstop>comboBox_singularActivityType</tabstop>
+  <tabstop>dateEdit_singularActivityDate</tabstop>
+  <tabstop>pushButton_addSingularActivity</tabstop>
+  <tabstop>pushButton_delSingularActivity</tabstop>
+  <tabstop>treeWidget_rentToPupil</tabstop>
+  <tabstop>pushButton_sheetBackFromPupil</tabstop>
+  <tabstop>textBrowser_pupilArchive</tabstop>
+  <tabstop>pushButton_printCurrentPupilArchive</tabstop>
+  <tabstop>pushButton_exportCurrentPupilArchiveToPDF</tabstop>
+  <tabstop>treeWidget_pupilList</tabstop>
+  <tabstop>treeWidget_pupilArchiveList</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources/qupil.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionBeenden</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_leftListMode</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>stackedWidget_leftList</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>96</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_manualLessonName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEdit_manualLessonName</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>352</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_autoLessonName</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>lineEdit_manualLessonName</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>364</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_steadyLessonDate</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_2</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>623</x>
+     <y>263</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>280</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_unsteadyLessonDate</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_2</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>633</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_leftListMode</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>stackedWidget_rightTabs</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>220</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>628</x>
+     <y>353</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
