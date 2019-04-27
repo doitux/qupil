@@ -57,9 +57,9 @@ bool DBUpdater::checkIfDbUpdateNeeded()
     } else {
         query.next();
         if(query.value(0).toInt() < THIS_VERSION_DB_DATA_STRUCTURE ) {
-            return TRUE;
+            return true;
         } else {
-            return FALSE;
+            return false;
         }
     }
     return false;

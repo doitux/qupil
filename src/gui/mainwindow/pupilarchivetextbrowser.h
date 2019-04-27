@@ -21,6 +21,7 @@
 #define PUPILARCHIVETEXTBROWSER_H
 
 #include <QtGui>
+#include <QtWidgets>
 #include <QtCore>
 
 class ConfigFile;

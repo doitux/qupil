@@ -53,7 +53,7 @@ void TimeTableTreeWidget::refreshTimeTable()
     int lessonCounter = 0;
 
     clear();
-    setRootIsDecorated(FALSE);
+    setRootIsDecorated(false);
 
     QStringList dayList;
     dayList << tr("Montag") << tr("Dienstag") << tr("Mittwoch") << tr("Donnerstag") << tr("Freitag") << tr("Samstag") << tr("Sonntag") << QString::fromUtf8(tr("unregelmäßig").toStdString().c_str());
@@ -73,14 +73,14 @@ void TimeTableTreeWidget::refreshTimeTable()
         if(query.next()) {
 
             QTreeWidgetItem *dayItem = new QTreeWidgetItem(this);
-            dayItem->setFirstColumnSpanned ( TRUE );
+            dayItem->setFirstColumnSpanned ( true );
             dayItem->setData(0, Qt::UserRole, QString("d%1").arg(-8+i));
             dayItem->setData(0, Qt::DisplayRole, dayList.at(i));
             QFont dayFont;
             QFont tempFont;
-            tempFont.setBold(TRUE);
+            tempFont.setBold(true);
             tempFont.setPointSize(dayItem->font(0).pointSize()+1);
-            dayFont.setBold(TRUE);
+            dayFont.setBold(true);
             dayFont.setPointSize(dayItem->font(0).pointSize()+3);
             dayItem->setFont(0, dayFont);
             dayItem->setBackground(0, QBrush(QColor(QString(myConfig->readConfigString("TimeTableDayBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableDayBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableDayBColor").c_str()).section(",",2,2).toInt())));
@@ -104,7 +104,7 @@ void TimeTableTreeWidget::refreshTimeTable()
             if(i < 7) {
                 item->setData(0, Qt::DisplayRole, query.value(2).toString()+" - "+query.value(3).toString());
                 QFont tempFont;
-                tempFont.setBold(TRUE);
+                tempFont.setBold(true);
                 tempFont.setPointSize(item->font(0).pointSize()+1);
                 item->setFont(0, tempFont);
                 item->setData(1, Qt::DisplayRole, query.value(1).toString());
@@ -117,7 +117,7 @@ void TimeTableTreeWidget::refreshTimeTable()
                 item->setSizeHint ( 0, size );
                 item->setSizeHint ( 1, size );
             } else {
-                item->setFirstColumnSpanned ( TRUE );
+                item->setFirstColumnSpanned ( true );
                 item->setData(0, Qt::DisplayRole, query.value(1).toString());
                 item->setBackground(0, QBrush(QColor(QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",2,2).toInt())));
                 item->setForeground(0, QBrush(QColor(QString(myConfig->readConfigString("TimeTableLessonTColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableLessonTColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableLessonTColor").c_str()).section(",",2,2).toInt())));
@@ -131,7 +131,7 @@ void TimeTableTreeWidget::refreshTimeTable()
             while (pupilQuery.next()) {
                 pupilCounter++;
                 QTreeWidgetItem *pupilItem = new QTreeWidgetItem(item);
-                pupilItem->setFirstColumnSpanned ( TRUE );
+                pupilItem->setFirstColumnSpanned ( true );
                 pupilItem->setData(0, Qt::UserRole, "p"+pupilQuery.value(0).toString());
                 pupilItem->setData(0, Qt::DisplayRole, pupilQuery.value(2).toString()+", "+pupilQuery.value(1).toString());
                 pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/user.png"));
@@ -141,7 +141,7 @@ void TimeTableTreeWidget::refreshTimeTable()
                 size.rheight() += 20;
                 pupilItem->setSizeHint ( 0, size );
             }
-            item->setExpanded(TRUE);
+            item->setExpanded(true);
 
         }
     }
@@ -173,9 +173,9 @@ void TimeTableTreeWidget::refreshTimeTable()
                 }
             }
         }
-        myW->page_lesson->setEnabled(TRUE);
+        myW->page_lesson->setEnabled(true);
     } else {
-        myW->page_lesson->setDisabled(TRUE);
+        myW->page_lesson->setDisabled(true);
     }
 
     myW->refreshTimeTableStats(lessonCounter, pupilCounter);

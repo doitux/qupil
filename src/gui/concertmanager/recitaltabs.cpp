@@ -221,7 +221,7 @@ void RecitalTabs::pieceUp()
             QTreeWidgetItem *item = ui->treeWidget->takeTopLevelItem(oldPosition);
             ui->treeWidget->insertTopLevelItem(oldPosition-1, item);
             ui->treeWidget->clearSelection();
-            item->setSelected(TRUE);
+            item->setSelected(true);
             ui->treeWidget->expandAll();
         }
     }
@@ -236,7 +236,7 @@ void RecitalTabs::pieceDown()
             QTreeWidgetItem *item = ui->treeWidget->takeTopLevelItem(oldPosition);
             ui->treeWidget->insertTopLevelItem(oldPosition+1, item);
             ui->treeWidget->clearSelection();
-            item->setSelected(TRUE);
+            item->setSelected(true);
             ui->treeWidget->expandAll();
         }
     }

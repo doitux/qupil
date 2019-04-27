@@ -9,7 +9,7 @@ ReminderEditDialog::ReminderEditDialog(QWidget *parent, int mode, int reminderid
 {
     ui->setupUi(this);
 
-    ui->comboBox_schueler->setEnabled(FALSE);
+    ui->comboBox_schueler->setEnabled(false);
 
     QSqlQuery query("SELECT surname, forename, pupilid FROM pupil ORDER BY surname ASC");
     if (query.lastError().isValid()) {
@@ -38,13 +38,13 @@ ReminderEditDialog::ReminderEditDialog(QWidget *parent, int mode, int reminderid
             switch(query.value(2).toInt()) {
 
             case 0:
-                ui->radioButton_modusProgrammstart->setChecked(TRUE);
+                ui->radioButton_modusProgrammstart->setChecked(true);
                 break;
             case 1:
-                ui->radioButton_modusJedeUnterrichtseinheit->setChecked(TRUE);
+                ui->radioButton_modusJedeUnterrichtseinheit->setChecked(true);
                 break;
             case 2: {
-                ui->radioButton_modusSpeziellerSchueler->setChecked(TRUE);
+                ui->radioButton_modusSpeziellerSchueler->setChecked(true);
                 int pos = ui->comboBox_schueler->findData(query.value(3).toInt());
                 if(pos != -1) {
                     ui->comboBox_schueler->setCurrentIndex(pos);
@@ -54,9 +54,9 @@ ReminderEditDialog::ReminderEditDialog(QWidget *parent, int mode, int reminderid
             }
 
             if(query.value(4).toInt())
-                ui->checkBox_sound->setChecked(TRUE);
+                ui->checkBox_sound->setChecked(true);
             else
-                ui->checkBox_sound->setChecked(FALSE);
+                ui->checkBox_sound->setChecked(false);
 
         }
     }

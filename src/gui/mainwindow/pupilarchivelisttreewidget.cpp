@@ -56,14 +56,14 @@ void PupilArchiveListTreeWidget::refreshPupilArchiveList( int pupilId )
     }
 
     clear();
-    setRootIsDecorated(FALSE);
+    setRootIsDecorated(false);
 //
     QSqlQuery pupilQuery("SELECT pupilid, forename, surname FROM pupilarchive ORDER BY surname ASC");
     if (pupilQuery.lastError().isValid()) qDebug() << "DB Error: 88 - " << pupilQuery.lastError();
 
     while (pupilQuery.next()) {
         QTreeWidgetItem *pupilItem = new QTreeWidgetItem(this);
-        pupilItem->setFirstColumnSpanned ( TRUE );
+        pupilItem->setFirstColumnSpanned ( true );
         pupilItem->setData(0, Qt::UserRole, pupilQuery.value(0).toString());
         pupilItem->setData(0, Qt::DisplayRole, pupilQuery.value(2).toString()+", "+pupilQuery.value(1).toString());
         pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/archive_extract.png"));
@@ -92,14 +92,14 @@ void PupilArchiveListTreeWidget::refreshPupilArchiveList( int pupilId )
                 }
             }
         }
-        myW->textBrowser_pupilArchive->setEnabled(TRUE);
-        myW->pushButton_printCurrentPupilArchive->setEnabled(TRUE);
-        myW->pushButton_exportCurrentPupilArchiveToPDF->setEnabled(TRUE);
+        myW->textBrowser_pupilArchive->setEnabled(true);
+        myW->pushButton_printCurrentPupilArchive->setEnabled(true);
+        myW->pushButton_exportCurrentPupilArchiveToPDF->setEnabled(true);
     } else {
         myW->textBrowser_pupilArchive->clear();
-        myW->textBrowser_pupilArchive->setDisabled(TRUE);
-        myW->pushButton_printCurrentPupilArchive->setDisabled(TRUE);
-        myW->pushButton_exportCurrentPupilArchiveToPDF->setDisabled(TRUE);
+        myW->textBrowser_pupilArchive->setDisabled(true);
+        myW->pushButton_printCurrentPupilArchive->setDisabled(true);
+        myW->pushButton_exportCurrentPupilArchiveToPDF->setDisabled(true);
     }
     //refresh menu
     myW->rightTabsChanged(2);

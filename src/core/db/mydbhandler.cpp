@@ -608,7 +608,7 @@ bool myDBHandler::closeDB()
     qDebug() << myPupilDB->rollback();
     myPupilDB->close();
     myPupilDB->close();
-    return TRUE;
+    return true;
 }
 
 bool myDBHandler::updateDBStructure(int oldVersion, int newVersion)

@@ -71,28 +71,28 @@ void SettingsDialogImpl::loadSettings()
     checkBox_saveNotesPiecesForAllPupil->setChecked(myConfig->readConfigInt("SaveNotesPiecesForAllPupil"));
 
     if(myConfig->readConfigInt("RecitalIntervalCheckerOnlySolo")) {
-        radioButton_recitalIntervallCheckerSoloOnly->setChecked(TRUE);
+        radioButton_recitalIntervallCheckerSoloOnly->setChecked(true);
     } else {
-        radioButton_recitalIntervallCheckerSoloAndEns->setChecked(TRUE);
+        radioButton_recitalIntervallCheckerSoloAndEns->setChecked(true);
     }
 
     QPalette timeTableDayPalette;
     timeTableDayPalette.setColor(QPalette::WindowText, QColor(QString(myConfig->readConfigString("TimeTableDayTColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableDayTColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableDayTColor").c_str()).section(",",2,2).toInt()));
     timeTableDayPalette.setColor(QPalette::Window, QColor(QString(myConfig->readConfigString("TimeTableDayBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableDayBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableDayBColor").c_str()).section(",",2,2).toInt()));
     label_timeTableDayColor->setPalette(timeTableDayPalette);
-    label_timeTableDayColor->setAutoFillBackground(TRUE);
+    label_timeTableDayColor->setAutoFillBackground(true);
 
     QPalette timeTableLessonPalette;
     timeTableLessonPalette.setColor(QPalette::WindowText, QColor(QString(myConfig->readConfigString("TimeTableLessonTColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableLessonTColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableLessonTColor").c_str()).section(",",2,2).toInt()));
     timeTableLessonPalette.setColor(QPalette::Window, QColor(QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",2,2).toInt()));
     label_timeTableLessonColor->setPalette(timeTableLessonPalette);
-    label_timeTableLessonColor->setAutoFillBackground(TRUE);
+    label_timeTableLessonColor->setAutoFillBackground(true);
 
     QPalette timeTablePupilPalette;
     timeTablePupilPalette.setColor(QPalette::WindowText, QColor(QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",2,2).toInt()));
     timeTablePupilPalette.setColor(QPalette::Window, QColor(QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",2,2).toInt()));
     label_timeTablePupilColor->setPalette(timeTablePupilPalette);
-    label_timeTablePupilColor->setAutoFillBackground(TRUE);
+    label_timeTablePupilColor->setAutoFillBackground(true);
 
     listWidget_piecesGenre->clear();
     listWidget_lessonLocations->clear();

@@ -81,7 +81,7 @@ void SheetMusicLibraryDialogImpl::loadAll()
     treeView_all->setColumnWidth(3,100);
 
     QHeaderView *head = treeView_all->header();
-    head->setResizeMode(QHeaderView::ResizeToContents);
+    head->setSectionResizeMode(QHeaderView::ResizeToContents);
 }
 
 void SheetMusicLibraryDialogImpl::loadAvailable()
@@ -140,7 +140,7 @@ void SheetMusicLibraryDialogImpl::loadRentToPupil()
     treeWidget_rentToPupil->sortByColumn(0, Qt::AscendingOrder);
 }
 
-void SheetMusicLibraryDialogImpl::exec()
+int SheetMusicLibraryDialogImpl::exec()
 {
     loadPupilComboBox();
     loadSheetMusicLibrary();

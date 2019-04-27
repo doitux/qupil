@@ -100,7 +100,7 @@ void InstrumentManagerDialogImpl::loadInstrumentManager()
     label_nextInstrumentNeeded->setText(query2.value(0).toString());
 }
 
-void InstrumentManagerDialogImpl::exec()
+int InstrumentManagerDialogImpl::exec()
 {
     loadInstrumentManager();
     QDialog::exec();

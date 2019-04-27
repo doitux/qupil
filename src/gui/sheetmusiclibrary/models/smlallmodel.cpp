@@ -48,7 +48,7 @@ bool SmlAllModel::setData(const QModelIndex &index, const QVariant &value, int /
 
     clear();
 
-    bool ok = TRUE;
+    bool ok = true;
     switch (index.column()) {
     case 1:
         ok = setAuthor(smlId, value.toString());
@@ -124,8 +124,8 @@ bool SmlAllModel::setTitle(int smlId, const QString &title)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 149 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 
 
 }
@@ -157,8 +157,8 @@ bool SmlAllModel::setAuthor(int smlId, const QString &author)
     query1.exec();
     if (query1.lastError().isValid()) {
         qDebug() << "DB Error: 152 - " << query1.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 bool SmlAllModel::setPublisher(int smlId, const QString &publisher)
@@ -188,8 +188,8 @@ bool SmlAllModel::setPublisher(int smlId, const QString &publisher)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 155 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 void SmlAllModel::sort(int column, Qt::SortOrder order)

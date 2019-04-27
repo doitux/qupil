@@ -88,8 +88,8 @@ bool PalNotesModel::setDate(int noteId, int cnoteId, const QString &date)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 64 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     } else {
         QSqlQuery query;
         query.prepare("UPDATE note SET date = ? where noteid = ?");
@@ -98,8 +98,8 @@ bool PalNotesModel::setDate(int noteId, int cnoteId, const QString &date)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 65 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     }
 }
 
@@ -113,8 +113,8 @@ bool PalNotesModel::setContent(int noteId, int cnoteId, const QString &content)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 66 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     } else {
         QSqlQuery query;
         query.prepare("UPDATE note SET content = ? where noteid = ?");
@@ -123,7 +123,7 @@ bool PalNotesModel::setContent(int noteId, int cnoteId, const QString &content)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 67 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     }
 }

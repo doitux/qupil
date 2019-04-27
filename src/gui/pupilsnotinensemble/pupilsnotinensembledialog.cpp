@@ -9,7 +9,7 @@ PupilsNotInEnsembleDialog::PupilsNotInEnsembleDialog(ConfigFile *c, QWidget *par
 {
     ui->setupUi(this);
 
-    ui->treeWidget->setColumnHidden(0, TRUE);
+    ui->treeWidget->setColumnHidden(0, true);
 
     QString msg;
     int duePupilCounter = 0;
@@ -41,18 +41,18 @@ PupilsNotInEnsembleDialog::PupilsNotInEnsembleDialog(ConfigFile *c, QWidget *par
                         qDebug() << "DB Error: 260 - " << query3.lastError();
                     } else {
                         QString lastEnsenbleStopDate = "";
-                        bool activeEnsemble = FALSE;
-                        bool anyEnsemble = FALSE;
+                        bool activeEnsemble = false;
+                        bool anyEnsemble = false;
                         if(query3.next()) {
 
                             if(query3.value(1).toString() == "9999-99-99") {
-                                activeEnsemble = TRUE;
+                                activeEnsemble = true;
                                 activeEnsembleCounter++;
                             } else {
                                 lastEnsenbleStopDate = query3.value(1).toString();
                             }
 
-                            anyEnsemble = TRUE;
+                            anyEnsemble = true;
                         } else {
 
                         }

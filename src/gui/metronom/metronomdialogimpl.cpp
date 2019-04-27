@@ -29,7 +29,7 @@
 #include "metronomplayer.h"
 
 MetronomDialogImpl::MetronomDialogImpl(ConfigFile *c, mainWindowImpl *w, SDLPlayer *p, MetronomPlayer *m)
-    : myConfig(c), myW(w), mySDLPlayer(p), myMetronomPlayer(m), startCheckTimer(FALSE), checkTimerCounter(0)
+    : myConfig(c), myW(w), mySDLPlayer(p), myMetronomPlayer(m), startCheckTimer(false), checkTimerCounter(0)
 {
     setupUi(this);
 
@@ -83,7 +83,7 @@ void MetronomDialogImpl::checkTempo()
         realTimer.reset();
         realTimer.start();
 
-        startCheckTimer = TRUE;
+        startCheckTimer = true;
     } else {
         spinBox_bpm->setValue(60000/realTimer.elapsed().total_milliseconds());
         realTimer.reset();
@@ -93,7 +93,7 @@ void MetronomDialogImpl::checkTempo()
 
 void MetronomDialogImpl::checkResetTempoChecker()
 {
-    if(checkLastTime->msecsTo(QTime::currentTime()) > 1700) startCheckTimer = FALSE;
+    if(checkLastTime->msecsTo(QTime::currentTime()) > 1700) startCheckTimer = false;
 }
 
 void MetronomDialogImpl::changeBeats(int b)
@@ -192,7 +192,7 @@ void MetronomDialogImpl::playMetronomTick()
 
 void MetronomDialogImpl::reject()
 {
-    pushButton_play->setChecked(FALSE);
+    pushButton_play->setChecked(false);
     mySDLPlayer->closeAudio();
     QDialog::reject();
 }

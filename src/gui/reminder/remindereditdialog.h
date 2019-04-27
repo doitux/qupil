@@ -2,7 +2,7 @@
 #define REMINDEREDITDIALOG_H
 
 #include <QDialog>
-
+#include <QtWidgets>
 namespace Ui
 {
 class ReminderEditDialog;

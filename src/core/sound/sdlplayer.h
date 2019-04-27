@@ -11,6 +11,7 @@
 //
 #include <QtCore>
 #include <QtGui>
+#include <QtWidgets>
 
 #ifndef SDLPLAYER_H
 #define SDLPLAYER_H
@@ -43,7 +44,7 @@ public:
     ~SDLPlayer();
 
     bool initAudio();
-    void playSound(QString, int, bool = FALSE);
+    void playSound(QString, int, bool = false);
     void audioDone();
     void closeAudio();
     void loadMetronomTicks(QString audioString1, QString audioString2, QString audioString3);

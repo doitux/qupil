@@ -60,14 +60,14 @@ QWidget *PupilContActivityDelegate::createEditor ( QWidget *parent, const QStyle
     break;
     case 5: {
         QDateEdit *cal = new QDateEdit ( parent );
-        cal->setCalendarPopup ( TRUE );
+        cal->setCalendarPopup ( true );
         connect ( cal, SIGNAL ( dateChanged ( const QDate ) ), this, SLOT ( emitCommitData() ) );
         return cal;
     }
     break;
     case 6: {
         QDateEdit *cal1 = new QDateEdit ( parent );
-        cal1->setCalendarPopup ( TRUE );
+        cal1->setCalendarPopup ( true );
         connect ( cal1, SIGNAL ( dateChanged ( const QDate ) ), this, SLOT ( emitCommitData() ) );
         return cal1;
     }

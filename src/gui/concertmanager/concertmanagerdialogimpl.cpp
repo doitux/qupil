@@ -21,6 +21,9 @@
 
 #include <QtCore>
 #include <QtGui>
+#include <QPrinter>
+#include <QtWidgets>
+#include <QPrintDialog>
 #include <QtSql>
 
 #include "qupil_defs.h"
@@ -146,11 +149,11 @@ void ConcertManagerDialogImpl::loadReadyPiecesView()
             pupilsString = pupilsString.remove(pupilsString.length()-1,1); //remove last <br>
             item->setData(4, Qt::DisplayRole, pupilsString);
 
-            bool sameItemFound = FALSE;
+            bool sameItemFound = false;
             QTreeWidgetItemIterator it(treeWidget);
             while (*it) {
                 if ((*it)->data(0, Qt::UserRole).toString() == query.value(10).toString()) {
-                    sameItemFound = TRUE;
+                    sameItemFound = true;
                 }
                 ++it;
             }
@@ -187,7 +190,7 @@ void ConcertManagerDialogImpl::loadReadyPiecesView()
 }
 
 
-void ConcertManagerDialogImpl::exec()
+int ConcertManagerDialogImpl::exec()
 {
     loadReadyPiecesView();
     loadConcertManager();
@@ -223,23 +226,23 @@ void ConcertManagerDialogImpl::loadConcertManager()
 
     //Menüs anpassen
     if(recitalCounter) {
-        removeRecitalAction->setDisabled(FALSE);
-        removeAndArchiveRecitalAction->setDisabled(FALSE);
-        pushButton_createRecitalDocument->setDisabled(FALSE);
-        addPieceAction->setDisabled(FALSE);
-        addExtPieceAction->setDisabled(FALSE);
+        removeRecitalAction->setDisabled(false);
+        removeAndArchiveRecitalAction->setDisabled(false);
+        pushButton_createRecitalDocument->setDisabled(false);
+        addPieceAction->setDisabled(false);
+        addExtPieceAction->setDisabled(false);
         if(static_cast<RecitalTabs*>(tabWidget_recitals->currentWidget())->getPiecesCount()) {
-            removePieceAction->setDisabled(FALSE);
+            removePieceAction->setDisabled(false);
         } else {
-            removePieceAction->setDisabled(TRUE);
+            removePieceAction->setDisabled(true);
         }
     } else {
-        removeRecitalAction->setDisabled(TRUE);
-        removeAndArchiveRecitalAction->setDisabled(TRUE);
-        pushButton_createRecitalDocument->setDisabled(TRUE);
-        addPieceAction->setDisabled(TRUE);
-        addExtPieceAction->setDisabled(TRUE);
-        removePieceAction->setDisabled(TRUE);
+        removeRecitalAction->setDisabled(true);
+        removeAndArchiveRecitalAction->setDisabled(true);
+        pushButton_createRecitalDocument->setDisabled(true);
+        addPieceAction->setDisabled(true);
+        addExtPieceAction->setDisabled(true);
+        removePieceAction->setDisabled(true);
     }
 }
 
@@ -578,8 +581,8 @@ void ConcertManagerDialogImpl::exportCurrentArchiveDocToPDF()
 void ConcertManagerDialogImpl::refreshPieceActions(int pieceCounter)
 {
     if(pieceCounter) {
-        removePieceAction->setDisabled(FALSE);
+        removePieceAction->setDisabled(false);
     } else {
-        removePieceAction->setDisabled(TRUE);
+        removePieceAction->setDisabled(true);
     }
 }

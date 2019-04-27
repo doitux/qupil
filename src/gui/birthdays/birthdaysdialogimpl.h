@@ -33,7 +33,7 @@ public:
     BirthdaysDialogImpl(ConfigFile *c, mainWindowImpl *w);
     ~BirthdaysDialogImpl();
 
-    int exec(bool force = FALSE);
+    int exec(bool force = false);
     void checkBirthdays();
 
 private:

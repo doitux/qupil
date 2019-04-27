@@ -32,7 +32,7 @@
 #include "pupilsingularactivitydelegate.h"
 
 PupilTabWidget::PupilTabWidget(QWidget *tab)
-    : QTabWidget(tab), saveOk(TRUE)
+    : QTabWidget(tab), saveOk(true)
 {
     myPalNotesModel = new PalNotesModel();
     myPalPiecesModel = new PalPiecesModel();
@@ -141,14 +141,14 @@ void PupilTabWidget::loadComboBoxItems()
     }
 
     if(myW->comboBox_palPiecesSelection->count())
-        myW->tab_palPieces->setEnabled(TRUE);
+        myW->tab_palPieces->setEnabled(true);
     else
-        myW->tab_palPieces->setDisabled(TRUE);
+        myW->tab_palPieces->setDisabled(true);
 
     if(myW->comboBox_palNotesSelection->count())
-        myW->tab_palNotes->setEnabled(TRUE);
+        myW->tab_palNotes->setEnabled(true);
     else
-        myW->tab_palNotes->setDisabled(TRUE);
+        myW->tab_palNotes->setDisabled(true);
 
 }
 
@@ -225,11 +225,11 @@ void PupilTabWidget::loadPupilPersonalData()
     myW->checkBox_pupilNeedsNextInstrumentSize->setChecked(query.value(17).toInt());
 
     if(query.value(18).toInt()) {
-        myW->groupBox_pupilHasRentInstrument->setChecked(TRUE);
+        myW->groupBox_pupilHasRentInstrument->setChecked(true);
         myW->lineEdit_pupilRentInstrumentNumber->setText(query.value(19).toString());
         myW->dateEdit_pupilRentInstrumentSince->setDate(QDate::fromString(query.value(20).toString(), Qt::ISODate));
     } else {
-        myW->groupBox_pupilHasRentInstrument->setChecked(FALSE);
+        myW->groupBox_pupilHasRentInstrument->setChecked(false);
         myW->lineEdit_pupilRentInstrumentNumber->clear();
         myW->dateEdit_pupilRentInstrumentSince->setDate(QDate::fromString("0000-00-00", Qt::ISODate));
     }
@@ -240,7 +240,7 @@ void PupilTabWidget::loadPupilPersonalData()
 void PupilTabWidget::savePupilPersonalData()
 {
 
-    saveOk = TRUE;
+    saveOk = true;
 
     QSqlQuery query(*myW->getMyDb()->getMyPupilDb());
     query.prepare("UPDATE pupil SET forename = ?, surname = ?, address = ?, email = ?, telefon = ?, handy = ?, birthday = ?, notes = ?, fathername = ?, fatherjob = ?, fathertelefon = ?, mothername = ?, motherjob = ?, mothertelefon = ?, firstlessondate = ?, instrumenttype = ?, instrumentsize = ?, ifinstrumentnextsize = ?, ifrentinstrument = ?, rentinstrumentdesc = ?, rentinstrumentstartdate = ?, recitalinterval = ?, ensembleactivityrequested = ? WHERE pupilid="+QString::number(currentPupilId,10));
@@ -333,7 +333,7 @@ void PupilTabWidget::loadPupilActivity()
     myW->treeView_singularActivity->hideColumn(0);
     myW->treeView_singularActivity->resizeColumnToContents(1);
     QHeaderView *head = myW->treeView_singularActivity->header();
-    head->setResizeMode(QHeaderView::ResizeToContents);
+    head->setSectionResizeMode(QHeaderView::ResizeToContents);
 
     myPupilContActivityModel->setCurrentPupilId(currentPupilId);
     myW->treeView_continousActivity->setModel(myPupilContActivityModel);
@@ -347,7 +347,7 @@ void PupilTabWidget::loadPupilActivity()
     myW->treeView_continousActivity->resizeColumnToContents(5);
 
     QHeaderView *head1 = myW->treeView_continousActivity->header();
-    head1->setResizeMode(QHeaderView::ResizeToContents);
+    head1->setSectionResizeMode(QHeaderView::ResizeToContents);
 }
 
 void PupilTabWidget::loadPalNotes( int palId )
@@ -375,7 +375,7 @@ void PupilTabWidget::loadPalNotes( int palId )
     myW->treeView_palNotes->hideColumn(1);
 
     QHeaderView *head = myW->treeView_palNotes->header();
-    head->setResizeMode(QHeaderView::ResizeToContents);
+    head->setSectionResizeMode(QHeaderView::ResizeToContents);
 
     myPalNotesSelectionModel = myW->treeView_palNotes->selectionModel();
     connect( myPalNotesSelectionModel, SIGNAL (currentChanged( const QModelIndex &, const QModelIndex & )), this, SLOT ( notesItemSelected( const QModelIndex &, const QModelIndex & ) ) );
@@ -422,7 +422,7 @@ void PupilTabWidget::loadPalPieces( int palId )
     myW->treeView_palPieces->setColumnWidth(6,80);
     myW->treeView_palPieces->setColumnWidth(7,110);
     QHeaderView *head = myW->treeView_palPieces->header();
-    head->setResizeMode(QHeaderView::ResizeToContents);
+    head->setSectionResizeMode(QHeaderView::ResizeToContents);
 
     refreshPiecesComposerCompleter();
 }
@@ -838,8 +838,8 @@ void PupilTabWidget::palNotesEditSelectionChanged()
     myW->pushButton_notesTextColor->setPalette(pal);
 
     if(fmt.fontWeight() == 75)
-        myW->pushButton_boldNotesText->setChecked(TRUE);
+        myW->pushButton_boldNotesText->setChecked(true);
     else
-        myW->pushButton_boldNotesText->setChecked(FALSE);
+        myW->pushButton_boldNotesText->setChecked(false);
 
 }

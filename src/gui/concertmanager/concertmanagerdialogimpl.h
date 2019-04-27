@@ -39,7 +39,7 @@ public slots:
     void loadConcertManager();
     void loadReadyPiecesView();
     void loadRecitalArchive();
-    void exec();
+    int exec();
     void addRecital();
     void removeRecital();
     void removeAndArchiveRecital();

@@ -33,7 +33,7 @@ QWidget *PupilSingularActivityDelegate::createEditor ( QWidget *parent, const QS
     switch ( index.column() ) {
     case 2: {
         QDateEdit *cal = new QDateEdit ( parent );
-        cal->setCalendarPopup ( TRUE );
+        cal->setCalendarPopup ( true );
         connect ( cal, SIGNAL ( dateChanged ( const QDate ) ), this, SLOT ( emitCommitData() ) );
         return cal;
     }

@@ -10,7 +10,7 @@ PupilsLastRecitalViewDialog::PupilsLastRecitalViewDialog(ConfigFile *c, QWidget 
 {
     ui->setupUi(this);
 
-    ui->treeWidget->setColumnHidden(0, TRUE);
+    ui->treeWidget->setColumnHidden(0, true);
 
     QString msg;
     QString pupilsList;

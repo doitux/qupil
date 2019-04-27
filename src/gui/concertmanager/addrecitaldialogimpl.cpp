@@ -32,7 +32,7 @@ AddRecitalDialogImpl::AddRecitalDialogImpl()
 AddRecitalDialogImpl::~AddRecitalDialogImpl() {}
 
 
-void AddRecitalDialogImpl::exec()
+int AddRecitalDialogImpl::exec()
 {
 
     QDialog::exec();

@@ -52,14 +52,14 @@ void CsvImportFieldsDialogImpl::exec(QString fileName)
         QTextStream stream(&cvsFile);
         str=stream.readLine();
 
-        bool sepertatorFound = FALSE;
+        bool sepertatorFound = false;
         if(str.count(",") > str.count(";")) {
             mySeperator=',';
-            sepertatorFound = TRUE;
+            sepertatorFound = true;
         }
         if(str.count(";") > str.count(",")) {
             mySeperator=';';
-            sepertatorFound = TRUE;
+            sepertatorFound = true;
         }
 
         if(sepertatorFound) {
@@ -111,14 +111,14 @@ void CsvImportFieldsDialogImpl::accept()
 
             QString dateString("");
             QString bday = model->data(model->index(i, comboBox_birthday->currentIndex())).toString();
-            bool bdayFormatFound = FALSE;
+            bool bdayFormatFound = false;
             if(bday.count(".")) {
                 dateString = "dd.MM.yyyy";
-                bdayFormatFound = TRUE;
+                bdayFormatFound = true;
             }
             if(bday.count("-")) {
                 dateString = "yyyy-MM-dd";
-                bdayFormatFound = TRUE;
+                bdayFormatFound = true;
             }
             if(bdayFormatFound)
                 birthday = QDate::fromString(model->data(model->index(i, comboBox_birthday->currentIndex())).toString(), dateString).toString(Qt::ISODate);
@@ -218,7 +218,7 @@ void CsvImportFieldsDialogImpl::reloadCvsFileFields()
     }
 
     QStringList fieldsList;
-    model->setSource(myFileName.toStdString().c_str(), TRUE, mySeperator);
+    model->setSource(myFileName.toStdString().c_str(), true, mySeperator);
     int i;
     for(i=0; i<model->columnCount(); i++) {
 

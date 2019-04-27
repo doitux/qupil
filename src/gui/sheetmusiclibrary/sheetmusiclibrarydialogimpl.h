@@ -42,7 +42,7 @@ public slots:
     void loadAll();
     void loadAvailable();
     void loadRentToPupil();
-    void exec();
+    int exec();
     void addNewSheetMusic();
     void delSheetMusic();
     void rentSheetToPupil();

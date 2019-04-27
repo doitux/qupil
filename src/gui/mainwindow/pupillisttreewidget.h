@@ -21,6 +21,7 @@
 #define PUPILLISTTREEWIDGET_H
 
 #include <QtGui>
+#include <QtWidgets>
 #include <QtCore>
 
 class ConfigFile;
@@ -49,7 +50,7 @@ public slots:
     void refreshPupilList();
     void selectFirstItem();
     void callPupilListContextMenu(const QPoint);
-    void delCurrentPupil(bool firstItemSelection = TRUE, bool menuRefresh = TRUE);
+    void delCurrentPupil(bool firstItemSelection = true, bool menuRefresh = true);
     void archiveCurrentPupil();
     void archiveAndDelCurrentPupil();
 

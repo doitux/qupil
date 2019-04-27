@@ -91,8 +91,8 @@ bool PupilSingularActivityModel::setDate(int activityId, const QString &date)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 86 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 bool PupilSingularActivityModel::setDesc(int activityId, const QString &desc)
@@ -104,8 +104,8 @@ bool PupilSingularActivityModel::setDesc(int activityId, const QString &desc)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 87 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 bool PupilSingularActivityModel::setType(int activityId, const QString &type)
@@ -117,6 +117,6 @@ bool PupilSingularActivityModel::setType(int activityId, const QString &type)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 208 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }

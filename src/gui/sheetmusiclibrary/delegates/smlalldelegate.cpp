@@ -23,6 +23,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QtSql>
+#include <QtWidgets>
 
 SmlAllDelegate::SmlAllDelegate (QObject *parent )
     : QItemDelegate ( parent ) {}

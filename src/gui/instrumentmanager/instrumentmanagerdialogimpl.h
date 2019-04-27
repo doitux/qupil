@@ -37,7 +37,7 @@ public:
 public slots:
 
     void loadInstrumentManager();
-    void exec();
+    int exec();
     void createRentInstrumentList();
 
 private:

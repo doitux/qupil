@@ -48,7 +48,7 @@ bool PupilContActivityModel::setData(const QModelIndex &index, const QVariant &v
 
     clear();
 
-    bool ok = TRUE;
+    bool ok = true;
     switch (index.column()) {
     case 1:
         ok = setDesc(actvitiyId, value.toString());
@@ -116,8 +116,8 @@ bool PupilContActivityModel::setStartDate(int activityId, const QString &date)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 81 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 bool PupilContActivityModel::setStopDate(int activityId, const QString &date)
@@ -129,8 +129,8 @@ bool PupilContActivityModel::setStopDate(int activityId, const QString &date)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 82 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 bool PupilContActivityModel::setDesc(int activityId, const QString &desc)
@@ -142,8 +142,8 @@ bool PupilContActivityModel::setDesc(int activityId, const QString &desc)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 83 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 bool PupilContActivityModel::setDay(int activityId, const int &day)
@@ -155,8 +155,8 @@ bool PupilContActivityModel::setDay(int activityId, const int &day)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 84 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 bool PupilContActivityModel::setType(int activityId, const int &type)
@@ -168,8 +168,8 @@ bool PupilContActivityModel::setType(int activityId, const int &type)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 255 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }
 
 
@@ -182,6 +182,6 @@ bool PupilContActivityModel::setTime(int activityId, const QString &time)
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 85 - " << query.lastError();
-        return FALSE;
-    } else return TRUE;
+        return false;
+    } else return true;
 }

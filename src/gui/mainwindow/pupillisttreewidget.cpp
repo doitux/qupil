@@ -58,14 +58,14 @@ void PupilListTreeWidget::refreshPupilList()
     }
 
     clear();
-    setRootIsDecorated(FALSE);
+    setRootIsDecorated(false);
 
     QSqlQuery pupilQuery("SELECT pupilid, forename, surname FROM pupil ORDER BY surname ASC");
     if (pupilQuery.lastError().isValid()) qDebug() << "DB Error: 91 - " << pupilQuery.lastError();
 
     while (pupilQuery.next()) {
         QTreeWidgetItem *pupilItem = new QTreeWidgetItem(this);
-        pupilItem->setFirstColumnSpanned ( TRUE );
+        pupilItem->setFirstColumnSpanned ( true );
         pupilItem->setData(0, Qt::UserRole, pupilQuery.value(0).toString());
         pupilItem->setData(0, Qt::DisplayRole, pupilQuery.value(2).toString()+", "+pupilQuery.value(1).toString());
         pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/user.png"));
@@ -82,9 +82,9 @@ void PupilListTreeWidget::refreshPupilList()
                 break;
             }
         }
-        myW->page_pupil->setEnabled(TRUE);
+        myW->page_pupil->setEnabled(true);
     } else {
-        myW->page_pupil->setDisabled(TRUE);
+        myW->page_pupil->setDisabled(true);
     }
 
     //refresh menu
@@ -353,7 +353,7 @@ void PupilListTreeWidget::archiveCurrentPupil()
 void PupilListTreeWidget::archiveAndDelCurrentPupil()
 {
     archiveCurrentPupil();
-    delCurrentPupil(FALSE, FALSE);
+    delCurrentPupil(false, false);
 
 // 	refresh menu
     myW->rightTabsChanged(2);

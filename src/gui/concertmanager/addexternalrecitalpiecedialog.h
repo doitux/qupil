@@ -2,7 +2,7 @@
 #define ADDEXTERNALRECITALPIECEDIALOG_H
 
 #include <QDialog>
-
+#include <QtWidgets>
 class ConfigFile;
 
 namespace Ui

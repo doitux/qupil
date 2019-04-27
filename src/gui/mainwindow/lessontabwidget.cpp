@@ -24,7 +24,7 @@
 #include <QtSql>
 
 LessonTabWidget::LessonTabWidget(QWidget *tab)
-    : QTabWidget(tab), saveOk(TRUE)
+    : QTabWidget(tab), saveOk(true)
 {
 
 }
@@ -98,25 +98,25 @@ void LessonTabWidget::loadLessonDetails()
     //set ensemble type radiobutton
     switch (query.value(0).toInt()) {
     case 1:
-        myW->radioButton_singleLesson->setChecked(TRUE);
+        myW->radioButton_singleLesson->setChecked(true);
         break;
     case 2:
-        myW->radioButton_groupLesson->setChecked(TRUE);
+        myW->radioButton_groupLesson->setChecked(true);
         break;
     case 3:
-        myW->radioButton_ensembleLesson->setChecked(TRUE);
+        myW->radioButton_ensembleLesson->setChecked(true);
         break;
     }
 
     //set naming type radiobutton
     switch (query.value(1).toInt()) {
     case 0: {
-        myW->radioButton_manualLessonName->setChecked(TRUE);
+        myW->radioButton_manualLessonName->setChecked(true);
         myW->lineEdit_manualLessonName->setText(query.value(2).toString());
     }
     break;
     case 1: {
-        myW->radioButton_autoLessonName->setChecked(TRUE);
+        myW->radioButton_autoLessonName->setChecked(true);
         myW->lineEdit_manualLessonName->setText("");
     }
     break;
@@ -125,7 +125,7 @@ void LessonTabWidget::loadLessonDetails()
     //set regular or unsteady lesson
     switch (query.value(3).toInt()) {
     case 0: {
-        myW->radioButton_steadyLessonDate->setChecked(TRUE);
+        myW->radioButton_steadyLessonDate->setChecked(true);
         myW->comboBox_lessonDay->setCurrentIndex(query.value(6).toInt());
         myW->timeEdit_lessonStartTime->setTime(QTime::fromString(query.value(4).toString(),"hh:mm"));
         myW->timeEdit_lessonStopTime->setTime(QTime::fromString(query.value(5).toString(),"hh:mm"));
@@ -133,7 +133,7 @@ void LessonTabWidget::loadLessonDetails()
     }
     break;
     case 1: {
-        myW->radioButton_unsteadyLessonDate->setChecked(TRUE);
+        myW->radioButton_unsteadyLessonDate->setChecked(true);
         myW->comboBox_lessonDay->setCurrentIndex(0);
         myW->timeEdit_lessonStartTime->setTime(QTime::fromString("00:00", "hh:mm"));
         myW->timeEdit_lessonStopTime->setTime(QTime::fromString("00:00", "hh:mm"));
@@ -195,7 +195,7 @@ void LessonTabWidget::refreshAvailablePupilList()
 void LessonTabWidget::saveLessonDetails()
 {
 
-    saveOk = TRUE;
+    saveOk = true;
 
     QString lessonDayString("");
     if(myW->radioButton_steadyLessonDate->isChecked()) lessonDayString = ", lessonday = ?";
@@ -257,7 +257,7 @@ void LessonTabWidget::saveLessonDetails()
                                  QString::fromUtf8(tr("Sie können einem Einzelunterricht nicht mehr als einen Schüler zuweisen\n"
                                          "Bitte ändern Sie die Schüleranzahl um zu speichern!").toStdString().c_str()),
                                  QMessageBox::Ok);
-        saveOk = FALSE;
+        saveOk = false;
     } else {
         //1. see if previous pupils are removed --> UPDATE stopdate
         QListIterator<QStringList> it(pupilPalListBeforeEdit);

@@ -20,8 +20,11 @@
 #include "docviewerdialogimpl.h"
 
 #include <QtCore>
+#include <QtWidgets>
 #include <QtGui>
 #include <QtSql>
+#include <QPrinter>
+#include <QPrintDialog>
 
 DocViewerDialogImpl::DocViewerDialogImpl(int o, QString fn) : myOrientation(o), suggestedfileName(fn)
 {

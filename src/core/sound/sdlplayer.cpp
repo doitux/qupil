@@ -60,7 +60,7 @@ bool SDLPlayer::initAudio()
 void SDLPlayer::playSound(QString audioString, int volume, bool fullpath)
 {
 
-    if(myMetronomPlayer->isPlaying()) myMetronomDialog->pushButton_play->setChecked(FALSE);
+    if(myMetronomPlayer->isPlaying()) myMetronomDialog->pushButton_play->setChecked(false);
 
     if(!initAudio()) {
         QMessageBox::critical(myMetronomDialog,"Qupil","Konnte die Soundkarte nicht initialisieren.");

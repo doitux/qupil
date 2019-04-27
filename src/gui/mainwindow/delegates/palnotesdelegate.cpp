@@ -24,6 +24,7 @@
 #include <QSqlQueryModel>
 #include <QDebug>
 #include <QtGui>
+#include <QtWidgets>
 #include <QtCore>
 #include "delegatetextedit.h"
 
@@ -35,7 +36,7 @@ QWidget *PalNotesDelegate::createEditor ( QWidget *parent, const QStyleOptionVie
     switch ( index.column() ) {
     case 2: {
         QDateEdit *cal = new QDateEdit ( parent );
-        cal->setCalendarPopup ( TRUE );
+        cal->setCalendarPopup ( true );
         connect ( cal, SIGNAL ( dateChanged ( const QDate ) ), this, SLOT ( emitCommitData() ) );
         return cal;
     }

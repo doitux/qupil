@@ -21,6 +21,7 @@
 #define PALTABWIDGET_H
 
 #include <QtGui>
+#include <QtWidgets>
 #include <QtCore>
 #include <vector>
 

@@ -50,7 +50,7 @@ bool PalPiecesModel::setData(const QModelIndex &index, const QVariant &value, in
 
     clear();
 
-    bool ok = TRUE;
+    bool ok = true;
     switch (index.column()) {
     case 2:
         ok = setComposer(pieceId, cpieceId, value.toString());
@@ -163,8 +163,8 @@ bool PalPiecesModel::setComposer(int pieceId, int cpieceId, const QString &compo
             query.exec();
             if (query.lastError().isValid()) {
                 qDebug() << "DB Error: 190 - " << query.lastError();
-                return FALSE;
-            } else return TRUE;
+                return false;
+            } else return true;
         } else {
             QSqlQuery query;
             query.prepare("UPDATE piece SET piececomposerid = ? where pieceid = ?");
@@ -173,8 +173,8 @@ bool PalPiecesModel::setComposer(int pieceId, int cpieceId, const QString &compo
             query.exec();
             if (query.lastError().isValid()) {
                 qDebug() << "DB Error: 191 - " << query.lastError();
-                return FALSE;
-            } else return TRUE;
+                return false;
+            } else return true;
         }
     }
 }
@@ -189,8 +189,8 @@ bool PalPiecesModel::setTitle(int pieceId, int cpieceId, const QString &title)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 69 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     } else {
         QSqlQuery query;
         query.prepare("UPDATE piece SET title = ? where pieceid = ?");
@@ -199,8 +199,8 @@ bool PalPiecesModel::setTitle(int pieceId, int cpieceId, const QString &title)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 70 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     }
 }
 
@@ -215,8 +215,8 @@ bool PalPiecesModel::setGenre(int pieceId, int cpieceId, const QString &genre)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 71 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     } else {
         QSqlQuery query;
         query.prepare("UPDATE piece SET genre = ? where pieceid = ?");
@@ -225,8 +225,8 @@ bool PalPiecesModel::setGenre(int pieceId, int cpieceId, const QString &genre)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 72 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     }
 }
 
@@ -241,8 +241,8 @@ bool PalPiecesModel::setDuration(int pieceId, int cpieceId, const int &duration)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 73 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     } else {
         QSqlQuery query;
         query.prepare("UPDATE piece SET duration = ? where pieceid = ?");
@@ -251,8 +251,8 @@ bool PalPiecesModel::setDuration(int pieceId, int cpieceId, const int &duration)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 74 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     }
 }
 
@@ -266,8 +266,8 @@ bool PalPiecesModel::setStartDate(int pieceId, int cpieceId, const QString &date
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 75 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     } else {
         QSqlQuery query;
         query.prepare("UPDATE piece SET startdate = ? where pieceid = ?");
@@ -276,8 +276,8 @@ bool PalPiecesModel::setStartDate(int pieceId, int cpieceId, const QString &date
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 76 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     }
 }
 
@@ -291,8 +291,8 @@ bool PalPiecesModel::setStopDate(int pieceId, int cpieceId, const QString &date)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 77 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     } else {
         QSqlQuery query;
         query.prepare("UPDATE piece SET stopdate = ? where pieceid = ?");
@@ -301,8 +301,8 @@ bool PalPiecesModel::setStopDate(int pieceId, int cpieceId, const QString &date)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 78 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     }
 }
 
@@ -319,8 +319,8 @@ bool PalPiecesModel::setState(int pieceId, int cpieceId, const int &stateId)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 79 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     } else {
         QSqlQuery query;
         query.prepare("UPDATE piece SET state = ? where pieceid = ?");
@@ -329,7 +329,7 @@ bool PalPiecesModel::setState(int pieceId, int cpieceId, const int &stateId)
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 80 - " << query.lastError();
-            return FALSE;
-        } else return TRUE;
+            return false;
+        } else return true;
     }
 }

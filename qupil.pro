@@ -7,7 +7,7 @@ CONFIG += qt \
     release
 
 # CONFIG += qt thread warn_on debug
-QT += sql
+QT += sql uitools widgets printsupport
 UI_DIR = uics
 MOC_DIR = mocs
 OBJECTS_DIR = obj

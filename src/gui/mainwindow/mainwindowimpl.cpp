@@ -58,7 +58,7 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
     statusBarSpace = new QLabel("");
     statusBar()->addWidget(statusBarSpace, 1);
     statusBarLehrsaiten = new QLabel("<a href='http://www.lehrsaiten.de' target='_blank'> www.lehrsaiten.de</a>");
-    statusBarLehrsaiten->setOpenExternalLinks(TRUE);
+    statusBarLehrsaiten->setOpenExternalLinks(true);
     statusBar()->addWidget(statusBarLehrsaiten);
 
     tabWidget_lesson->setMyW(this);
@@ -113,11 +113,11 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
 
     mySDLPlayer->setMyMetronomDialog(myMetronomDialog);
 
-    actionUnterrichtLoeschen->setVisible(TRUE);
-    actionSchuelerLoeschen->setVisible(FALSE);
-    actionSchuelerArchivierenUndLoeschen->setVisible(FALSE);
-    actionSchuelerArchivieren->setVisible(FALSE);
-    actionArchiveintragLoeschen->setVisible(FALSE);
+    actionUnterrichtLoeschen->setVisible(true);
+    actionSchuelerLoeschen->setVisible(false);
+    actionSchuelerArchivierenUndLoeschen->setVisible(false);
+    actionSchuelerArchivieren->setVisible(false);
+    actionArchiveintragLoeschen->setVisible(false);
 
     lessonEndMsgTimer = new QTimer(this);
     lessonEndMsgTimer->start(10000);
@@ -158,7 +158,7 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
 
     if(myConfig->readConfigInt("BirthdayReminder")) {
         connect(singShot2, SIGNAL(timeout()), this, SLOT(birthdayReminder()));
-        singShot2->setSingleShot(TRUE);
+        singShot2->setSingleShot(true);
         singShot2->start(2000);
     }
     //refresh menu
@@ -170,11 +170,11 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
     restoreWindowGeometry();
 
     //check for Programmstart Reminder
-    singShot1->setSingleShot(TRUE);
+    singShot1->setSingleShot(true);
     singShot1->start(1800);
 
     //check for normal Reminder directly after Program start
-    singShot3->setSingleShot(TRUE);
+    singShot3->setSingleShot(true);
     singShot3->start(1600);
 
 
@@ -318,12 +318,12 @@ void mainWindowImpl::callSettingsDialog()
 
 void mainWindowImpl::birthdayReminder()
 {
-    myBirthdaysDialog->exec(FALSE);
+    myBirthdaysDialog->exec(false);
 }
 
 void mainWindowImpl::callBirthdaysDialog()
 {
-    myBirthdaysDialog->exec(TRUE);
+    myBirthdaysDialog->exec(true);
 }
 
 void mainWindowImpl::leftListModeChanged(int index)
@@ -425,7 +425,7 @@ void mainWindowImpl::lessonEndMsgPlayer()
         while(query.next()) {
             QTime lessonEnd = QTime::fromString(query.value(0).toString(), "hh:mm");
             if(now.secsTo(lessonEnd) < myConfig->readConfigInt("MinutesToLessonEndForMsg")*60 && now.secsTo(lessonEnd) > myConfig->readConfigInt("MinutesToLessonEndForMsg")*60-11) {
-                mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("MsgSoundFilePath").c_str()), myConfig->readConfigInt("LessonEndMsgSoundVolume"), TRUE);
+                mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("MsgSoundFilePath").c_str()), myConfig->readConfigInt("LessonEndMsgSoundVolume"), true);
             }
         }
     }
@@ -436,40 +436,40 @@ void mainWindowImpl::rightTabsChanged(int index)
     switch (index) {
     case 0: {
         if(treeWidget_timeTable->topLevelItemCount()) {
-            menuBearbeiten->setEnabled(TRUE);
-            actionUnterrichtLoeschen->setVisible(TRUE);
-            actionSchuelerLoeschen->setVisible(FALSE);
-            actionSchuelerArchivierenUndLoeschen->setVisible(FALSE);
-            actionSchuelerArchivieren->setVisible(FALSE);
-            actionArchiveintragLoeschen->setVisible(FALSE);
+            menuBearbeiten->setEnabled(true);
+            actionUnterrichtLoeschen->setVisible(true);
+            actionSchuelerLoeschen->setVisible(false);
+            actionSchuelerArchivierenUndLoeschen->setVisible(false);
+            actionSchuelerArchivieren->setVisible(false);
+            actionArchiveintragLoeschen->setVisible(false);
         } else {
-            menuBearbeiten->setEnabled(FALSE);
+            menuBearbeiten->setEnabled(false);
         }
     }
     break;
     case 1: {
         if(treeWidget_pupilList->topLevelItemCount()) {
-            menuBearbeiten->setEnabled(TRUE);
-            actionUnterrichtLoeschen->setVisible(FALSE);
-            actionSchuelerLoeschen->setVisible(TRUE);
-            actionSchuelerArchivierenUndLoeschen->setVisible(TRUE);
-            actionSchuelerArchivieren->setVisible(TRUE);
-            actionArchiveintragLoeschen->setVisible(FALSE);
+            menuBearbeiten->setEnabled(true);
+            actionUnterrichtLoeschen->setVisible(false);
+            actionSchuelerLoeschen->setVisible(true);
+            actionSchuelerArchivierenUndLoeschen->setVisible(true);
+            actionSchuelerArchivieren->setVisible(true);
+            actionArchiveintragLoeschen->setVisible(false);
         } else {
-            menuBearbeiten->setEnabled(FALSE);
+            menuBearbeiten->setEnabled(false);
         }
     }
     break;
     case 2: {
         if(treeWidget_pupilArchiveList->topLevelItemCount()) {
-            menuBearbeiten->setEnabled(TRUE);
-            actionUnterrichtLoeschen->setVisible(FALSE);
-            actionSchuelerLoeschen->setVisible(FALSE);
-            actionSchuelerArchivierenUndLoeschen->setVisible(FALSE);
-            actionSchuelerArchivieren->setVisible(FALSE);
-            actionArchiveintragLoeschen->setVisible(TRUE);
+            menuBearbeiten->setEnabled(true);
+            actionUnterrichtLoeschen->setVisible(false);
+            actionSchuelerLoeschen->setVisible(false);
+            actionSchuelerArchivierenUndLoeschen->setVisible(false);
+            actionSchuelerArchivieren->setVisible(false);
+            actionArchiveintragLoeschen->setVisible(true);
         } else {
-            menuBearbeiten->setEnabled(FALSE);
+            menuBearbeiten->setEnabled(false);
         }
     }
     break;
@@ -672,14 +672,14 @@ void mainWindowImpl::checkForProgramStartReminder()
     } else {
         while(query.next()) {
             QMessageBox *msgBox = new QMessageBox(this);
-            msgBox->setModal(FALSE);
+            msgBox->setModal(false);
             msgBox->setWindowTitle(tr("Qupil"));
             msgBox->setTextFormat(Qt::RichText);
             msgBox->setText(QString("<u>Erinnerung:</u><br><br><b>%1</b><br>").arg(query.value(1).toString()));
             msgBox->setIcon(QMessageBox::Information);
             msgBox->show();
             if(query.value(4).toInt()) {
-                mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("RemSoundFilePath").c_str()), myConfig->readConfigInt("RemSoundVolume"), TRUE);
+                mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("RemSoundFilePath").c_str()), myConfig->readConfigInt("RemSoundVolume"), true);
             }
         }
     }
@@ -752,14 +752,14 @@ void mainWindowImpl::showReminder(bool directlyAfterStartup)
                         if(query2.next()) {
 
                             QMessageBox *msgBox = new QMessageBox(this);
-                            msgBox->setModal(FALSE);
+                            msgBox->setModal(false);
                             msgBox->setWindowTitle(tr("Qupil"));
                             msgBox->setTextFormat(Qt::RichText);
                             msgBox->setText(QString("<u>Erinnerung:</u><br><br><b>%1</b><br>").arg(query.value(1).toString()));
                             msgBox->setIcon(QMessageBox::Information);
                             msgBox->show();
                             if(query.value(4).toInt()) {
-                                mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("RemSoundFilePath").c_str()), myConfig->readConfigInt("RemSoundVolume"), TRUE);
+                                mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("RemSoundFilePath").c_str()), myConfig->readConfigInt("RemSoundVolume"), true);
                             }
                             reminderAtLessonStartCounter++;
                             thisReminder1TimeAlreadyDone = now;
@@ -799,7 +799,7 @@ void mainWindowImpl::showReminder(bool directlyAfterStartup)
                                     else {
                                         if(query4.next()) {
                                             myMessageDialogImpl *msgBox = new myMessageDialogImpl(this, myDb);
-                                            msgBox->setModal(FALSE);
+                                            msgBox->setModal(false);
                                             msgBox->setWindowTitle(tr("Qupil"));
                                             msgBox->setTextFormat(Qt::RichText);
                                             msgBox->setText(QString::fromUtf8(QString("<u>Erinnerung für den Schüler ").toStdString().c_str())+QString("\"%1\":</u><br><br><b>%2</b><br>").arg(query4.value(0).toString()+", "+query4.value(1).toString()).arg(query.value(1).toString()));
@@ -807,7 +807,7 @@ void mainWindowImpl::showReminder(bool directlyAfterStartup)
                                             msgBox->show(query.value(0).toInt(), true, "Erledigt? - Die Erinnerung wird entfernt!");
 
                                             if(query.value(4).toInt()) {
-                                                mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("RemSoundFilePath").c_str()), myConfig->readConfigInt("RemSoundVolume"), TRUE);
+                                                mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("RemSoundFilePath").c_str()), myConfig->readConfigInt("RemSoundVolume"), true);
                                             }
                                             // diese variable soll ermöglichen dass auch mehrere schüler im selben
                                             // unterricht unterschiedliche perönliche Reminder angezeigt bekommen

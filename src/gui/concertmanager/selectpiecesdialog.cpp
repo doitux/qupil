@@ -93,11 +93,11 @@ void SelectPiecesDialog::loadPieces()
             pupilsString = pupilsString.remove(pupilsString.length()-1,1); //remove last <br>
             item->setData(4, Qt::DisplayRole, pupilsString);
 
-            bool sameItemFound = FALSE;
+            bool sameItemFound = false;
             QTreeWidgetItemIterator it(ui->treeWidget);
             while (*it) {
                 if ((*it)->data(1, Qt::UserRole).toString() == query.value(11).toString()) {
-                    sameItemFound = TRUE;
+                    sameItemFound = true;
                 }
                 ++it;
             }

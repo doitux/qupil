@@ -22,6 +22,8 @@
 #include "mydbhandler.h"
 #include "configfile.h"
 #include <QtSql>
+#include <QPrintDialog>
+#include <QPrinter>
 
 PupilArchiveTextBrowser::PupilArchiveTextBrowser(QWidget *parent)
     : QTextBrowser(parent)
