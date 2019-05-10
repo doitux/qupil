@@ -194,7 +194,7 @@ int ConcertManagerDialogImpl::exec()
 {
     loadReadyPiecesView();
     loadConcertManager();
-    QDialog::exec();
+    return QDialog::exec();
 }
 
 

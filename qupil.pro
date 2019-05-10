@@ -4,9 +4,8 @@ CODECFORSRC = UTF-8
 CONFIG += qt \
     thread \
     warn_on \
-    release
+#     release
 
-# CONFIG += qt thread warn_on debug
 QT += sql uitools widgets printsupport
 UI_DIR = uics
 MOC_DIR = mocs

@@ -20,5 +20,5 @@ bool DelegateTextEdit::event(QEvent *event)
 //         }
 //     }
 
-    return QWidget::event(event);
+    return QTextEdit::event(event);
 }

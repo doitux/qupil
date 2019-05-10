@@ -144,7 +144,7 @@ int SheetMusicLibraryDialogImpl::exec()
 {
     loadPupilComboBox();
     loadSheetMusicLibrary();
-    QDialog::exec();
+    return QDialog::exec();
 }
 
 void SheetMusicLibraryDialogImpl::addNewSheetMusic()

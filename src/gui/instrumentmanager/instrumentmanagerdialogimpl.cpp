@@ -103,7 +103,7 @@ void InstrumentManagerDialogImpl::loadInstrumentManager()
 int InstrumentManagerDialogImpl::exec()
 {
     loadInstrumentManager();
-    QDialog::exec();
+    return QDialog::exec();
 }
 
 void InstrumentManagerDialogImpl::createRentInstrumentList()
