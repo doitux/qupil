@@ -96,6 +96,11 @@ public slots:
 
     void palNotesEditSelectionChanged();
 
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate
+    void palNotesHideFirstColumns();
+    void palPiecesHideFirstColumns();
+    void activityHideFirstColumns();
+
 private:
     mainWindowImpl *myW;
     int currentPupilId;

@@ -40,17 +40,13 @@ QWidget *PalNotesDelegate::createEditor ( QWidget *parent, const QStyleOptionVie
         connect ( cal, SIGNAL ( dateChanged ( const QDate ) ), this, SLOT ( emitCommitData() ) );
         return cal;
     }
-    break;
     case 3: {
         DelegateTextEdit *te = new DelegateTextEdit ( parent );
         connect ( te, SIGNAL ( editingFinished() ), this, SLOT ( emitCommitData() ) );
         return te;
     }
-    break;
-
     default:
         return QStyledItemDelegate::createEditor ( parent, option, index );
-        break;
     }
 }
 

@@ -348,6 +348,12 @@ void PupilTabWidget::loadPupilActivity()
 
     QHeaderView *head1 = myW->treeView_continousActivity->header();
     head1->setSectionResizeMode(QHeaderView::ResizeToContents);
+
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate
+    QAbstractItemDelegate *myContinousActivityItemDelegate = myW->treeView_continousActivity->itemDelegate();
+    connect( myContinousActivityItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( activityHideFirstColumns() ) );
+    QAbstractItemDelegate *mySingularActivityItemDelegate = myW->treeView_singularActivity->itemDelegate();
+    connect( mySingularActivityItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( activityHideFirstColumns() ) );
 }
 
 void PupilTabWidget::loadPalNotes( int palId )
@@ -379,6 +385,10 @@ void PupilTabWidget::loadPalNotes( int palId )
 
     myPalNotesSelectionModel = myW->treeView_palNotes->selectionModel();
     connect( myPalNotesSelectionModel, SIGNAL (currentChanged( const QModelIndex &, const QModelIndex & )), this, SLOT ( notesItemSelected( const QModelIndex &, const QModelIndex & ) ) );
+
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate
+    QAbstractItemDelegate *myPalNotesItemDelegate = myW->treeView_palNotes->itemDelegate();
+    connect( myPalNotesItemDelegate, SIGNAL ( commitData(QWidget *)), this, SLOT ( palNotesHideFirstColumns() ) );
 }
 
 void PupilTabWidget::loadPalPieces( int palId )
@@ -425,6 +435,10 @@ void PupilTabWidget::loadPalPieces( int palId )
     head->setSectionResizeMode(QHeaderView::ResizeToContents);
 
     refreshPiecesComposerCompleter();
+
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate
+    QAbstractItemDelegate *myPalPiecesItemDelegate = myW->treeView_palPieces->itemDelegate();
+    connect( myPalPiecesItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( palPiecesHideFirstColumns() ) );
 }
 
 void PupilTabWidget::addNewPiece()
@@ -842,4 +856,22 @@ void PupilTabWidget::palNotesEditSelectionChanged()
     else
         myW->pushButton_boldNotesText->setChecked(false);
 
+}
+
+void PupilTabWidget::palNotesHideFirstColumns()
+{
+    myW->treeView_palNotes->hideColumn(0);
+    myW->treeView_palNotes->hideColumn(1);
+}
+
+void PupilTabWidget::palPiecesHideFirstColumns()
+{
+    myW->treeView_palPieces->hideColumn(0);
+    myW->treeView_palPieces->hideColumn(1);
+}
+
+void PupilTabWidget::activityHideFirstColumns()
+{
+    myW->treeView_continousActivity->hideColumn(0);
+    myW->treeView_singularActivity->hideColumn(0);
 }
