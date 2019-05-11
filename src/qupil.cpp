@@ -40,8 +40,8 @@ int main(int argc, char *argv[])
     a.setStyleSheet("QDialogButtonBox { dialogbuttonbox-buttons-have-icons: 1; dialog-ok-icon: url(:/gfx/dialog_ok_apply.png); dialog-cancel-icon: url(:/gfx/dialog_close.png); dialog-close-icon: url(:/gfx/dialog_close.png);}");
 
 #ifdef _WIN32
-    QString font1String("font-family: \"Arial\";");
-    a.setStyleSheet("QApplication, QWidget, QDialog { " + font1String + " font-size: 12px; }");
+//    QString font1String("font-family: \"Arial\";");
+//   a.setStyleSheet("QApplication, QWidget, QDialog { " + font1String + " font-size: 12px; }");
 #else
 #ifdef __APPLE__
     QString font1String("font-family: \"Lucida Grande\";");
