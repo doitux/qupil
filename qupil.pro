@@ -207,7 +207,7 @@ win32 {
         debug:LIBPATH += debug/lib
         release:LIBPATH += release/lib
         win32-g++-cross {
-            LIBS += -lntlm -lmikmod -lddraw -ldxguid -lsmpeg -lvorbisfile -lvorbis -logg
+            LIBS += -lntlm -lmikmod -lddraw -ldxguid -lsmpeg -lvorbisfile -lvorbis -logg -lmodplug
         }
         win32-g++ {
 
