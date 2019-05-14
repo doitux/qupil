@@ -349,16 +349,19 @@ void PupilTabWidget::loadPupilActivity()
     QHeaderView *head1 = myW->treeView_continousActivity->header();
     head1->setSectionResizeMode(QHeaderView::ResizeToContents);
 
-    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate and scrollState is not saved during editing
     QAbstractItemDelegate *myContinousActivityItemDelegate = myW->treeView_continousActivity->itemDelegate();
-    connect( myContinousActivityItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( activityHideFirstColumns() ) );
+    connect( myContinousActivityItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( activityRestoreViewLayout() ) );
+    connect( myContinousActivityItemDelegate, SIGNAL ( editorCreated()), this, SLOT ( activitySaveScrollState() ) );
+
     QAbstractItemDelegate *mySingularActivityItemDelegate = myW->treeView_singularActivity->itemDelegate();
-    connect( mySingularActivityItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( activityHideFirstColumns() ) );
+    connect( mySingularActivityItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( activityRestoreViewLayout() ) );
+    connect( mySingularActivityItemDelegate, SIGNAL ( editorCreated()), this, SLOT ( activitySaveScrollState() ) );
+
 }
 
 void PupilTabWidget::loadPalNotes( int palId )
 {
-
     QSqlQuery query("SELECT startdate FROM pupilatlesson WHERE palid= ?");
     if(palId == -1) {
         myPalNotesModel->setCurrentPalId(currentPalId);
@@ -386,9 +389,10 @@ void PupilTabWidget::loadPalNotes( int palId )
     myPalNotesSelectionModel = myW->treeView_palNotes->selectionModel();
     connect( myPalNotesSelectionModel, SIGNAL (currentChanged( const QModelIndex &, const QModelIndex & )), this, SLOT ( notesItemSelected( const QModelIndex &, const QModelIndex & ) ) );
 
-    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate
-    QAbstractItemDelegate *myPalNotesItemDelegate = myW->treeView_palNotes->itemDelegate();
-    connect( myPalNotesItemDelegate, SIGNAL ( commitData(QWidget *)), this, SLOT ( palNotesHideFirstColumns() ) );
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate and scrollState is not saved during editing
+    PalNotesDelegate *myPalNotesItemDelegate =  qobject_cast<PalNotesDelegate *> (myW->treeView_palNotes->itemDelegate());
+    connect( myPalNotesItemDelegate, SIGNAL ( commitData(QWidget *)), this, SLOT ( palNotesRestoreViewLayout() ) );
+    connect( myPalNotesItemDelegate, SIGNAL ( editorCreated()), this, SLOT ( palNotesSaveScrollState() ) );
 }
 
 void PupilTabWidget::loadPalPieces( int palId )
@@ -436,9 +440,10 @@ void PupilTabWidget::loadPalPieces( int palId )
 
     refreshPiecesComposerCompleter();
 
-    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate and scrollState is not saved during editing
     QAbstractItemDelegate *myPalPiecesItemDelegate = myW->treeView_palPieces->itemDelegate();
-    connect( myPalPiecesItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( palPiecesHideFirstColumns() ) );
+    connect( myPalPiecesItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( palPiecesRestoreViewLayout() ) );
+    connect( myPalPiecesItemDelegate, SIGNAL ( editorCreated() ), this, SLOT ( palPiecesSaveScrollState() ) );
 }
 
 void PupilTabWidget::addNewPiece()
@@ -858,20 +863,40 @@ void PupilTabWidget::palNotesEditSelectionChanged()
 
 }
 
-void PupilTabWidget::palNotesHideFirstColumns()
+void PupilTabWidget::palNotesRestoreViewLayout()
 {
     myW->treeView_palNotes->hideColumn(0);
     myW->treeView_palNotes->hideColumn(1);
+    myW->treeView_palNotes->verticalScrollBar()->setValue(palNotesTreeViewVerticalScrollValue);
 }
 
-void PupilTabWidget::palPiecesHideFirstColumns()
+void PupilTabWidget::palPiecesRestoreViewLayout()
 {
     myW->treeView_palPieces->hideColumn(0);
     myW->treeView_palPieces->hideColumn(1);
+    myW->treeView_palPieces->verticalScrollBar()->setValue(palPiecesTreeViewVerticalScrollValue);
 }
 
-void PupilTabWidget::activityHideFirstColumns()
+void PupilTabWidget::activityRestoreViewLayout()
 {
     myW->treeView_continousActivity->hideColumn(0);
     myW->treeView_singularActivity->hideColumn(0);
+    myW->treeView_continousActivity->verticalScrollBar()->setValue(continousActivityTreeViewVerticalScrollValue);
+    myW->treeView_singularActivity->verticalScrollBar()->setValue(singularActivityTreeViewVerticalScrollValue);
+}
+
+void PupilTabWidget::palNotesSaveScrollState()
+{
+    palNotesTreeViewVerticalScrollValue = myW->treeView_palNotes->verticalScrollBar()->value();
+}
+
+void PupilTabWidget::palPiecesSaveScrollState()
+{
+    palPiecesTreeViewVerticalScrollValue = myW->treeView_palPieces->verticalScrollBar()->value();
+}
+
+void PupilTabWidget::activitySaveScrollState()
+{
+    continousActivityTreeViewVerticalScrollValue = myW->treeView_continousActivity->verticalScrollBar()->value();
+    singularActivityTreeViewVerticalScrollValue = myW->treeView_singularActivity->verticalScrollBar()->value();
 }

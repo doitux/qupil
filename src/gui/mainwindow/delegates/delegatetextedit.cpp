@@ -11,14 +11,13 @@ DelegateTextEdit::DelegateTextEdit(QWidget *parent) :
 
 bool DelegateTextEdit::event(QEvent *event)
 {
-//     if (event->type() == QEvent::KeyPress) {
-//         QKeyEvent *ke = static_cast<QKeyEvent *>(event);
-//         if (ke->key() == QKeySequence(Qt::Key_Control + Qt::Key_Return)) {
-//                 qDebug() << "jo";
-//             // special tab handling here
-//             return true;
-//         }
-//     }
+     if (event->type() == QEvent::KeyPress) {
+         QKeyEvent *ke = static_cast<QKeyEvent *>(event);
+         if (ke->key() == Qt::Key_Return && (ke->modifiers() & Qt::ControlModifier)) {
+             emit editingFinished();
+             return true;
+         }
+     }
 
     return QTextEdit::event(event);
 }

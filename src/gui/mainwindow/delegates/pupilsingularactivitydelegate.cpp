@@ -30,6 +30,8 @@ PupilSingularActivityDelegate::PupilSingularActivityDelegate (QObject *parent )
 
 QWidget *PupilSingularActivityDelegate::createEditor ( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
+    emit editorCreated();
+
     switch ( index.column() ) {
     case 2: {
         QDateEdit *cal = new QDateEdit ( parent );
@@ -37,7 +39,6 @@ QWidget *PupilSingularActivityDelegate::createEditor ( QWidget *parent, const QS
         connect ( cal, SIGNAL ( dateChanged ( const QDate ) ), this, SLOT ( emitCommitData() ) );
         return cal;
     }
-    break;
     case 3: {
         QComboBox *combo = new QComboBox ( parent );
         QStringList myTypeList;
@@ -45,12 +46,9 @@ QWidget *PupilSingularActivityDelegate::createEditor ( QWidget *parent, const QS
         combo->insertItems ( 0, myTypeList );
         connect ( combo, SIGNAL ( activated ( int ) ), this, SLOT ( emitCommitData() ) );
         return combo;
-    }
-    break;
-
+    } 
     default:
         return QItemDelegate::createEditor ( parent, option, index );
-        break;
     }
 }
 
@@ -79,9 +77,7 @@ void PupilSingularActivityDelegate::setEditorData ( QWidget *editor, const QMode
     default: {
         QItemDelegate::setEditorData ( editor, index );
         return;
-
     }
-    break;
     }
 }
 
@@ -111,7 +107,6 @@ void PupilSingularActivityDelegate::setModelData ( QWidget *editor, QAbstractIte
         return;
 
     }
-    break;
     }
 }
 

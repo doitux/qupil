@@ -31,6 +31,8 @@ PupilContActivityDelegate::PupilContActivityDelegate (QObject *parent )
 
 QWidget *PupilContActivityDelegate::createEditor ( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
+    emit editorCreated();
+
     switch ( index.column() ) {
     case 2: {
         QStringList typeList;
