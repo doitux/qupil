@@ -34,6 +34,7 @@ PalPiecesDelegate::PalPiecesDelegate ( QStringList &g, QStringList &s, QDate &d,
 
 QWidget *PalPiecesDelegate::createEditor ( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
+    emit editorCreated();
     switch ( index.column() ) {
     case 2: {
         QLineEdit *line = new QLineEdit ( parent );

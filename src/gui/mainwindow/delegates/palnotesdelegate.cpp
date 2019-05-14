@@ -33,6 +33,7 @@ PalNotesDelegate::PalNotesDelegate (QDate &d, QObject *parent )
 
 QWidget *PalNotesDelegate::createEditor ( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
+    emit editorCreated();
     switch ( index.column() ) {
     case 2: {
         QDateEdit *cal = new QDateEdit ( parent );
@@ -114,30 +115,30 @@ void PalNotesDelegate::setModelData ( QWidget *editor, QAbstractItemModel *model
 
 void PalNotesDelegate::emitCommitData()
 {
-    emit commitData ( qobject_cast<QWidget *> ( sender() ) );
+    emit commitData(qobject_cast<QWidget *> ( sender()) );
 }
 
 void PalNotesDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    QStyleOptionViewItemV4 optionV4 = option;
-    initStyleOption(&optionV4, index);
+    QStyleOptionViewItem o = option;
+    initStyleOption(&o, index);
 
-    QStyle *style = optionV4.widget? optionV4.widget->style() : QApplication::style();
+    QStyle *style = o.widget? o.widget->style() : QApplication::style();
 
     QTextDocument doc;
-    doc.setHtml(optionV4.text);
+    doc.setHtml(o.text);
 
     /// Painting item without text
-    optionV4.text = QString();
-    style->drawControl(QStyle::CE_ItemViewItem, &optionV4, painter);
+    o.text = QString();
+    style->drawControl(QStyle::CE_ItemViewItem, &o, painter);
 
     QAbstractTextDocumentLayout::PaintContext ctx;
 
     // Highlighting text if item is selected
-    if (optionV4.state & QStyle::State_Selected)
-        ctx.palette.setColor(QPalette::Text, optionV4.palette.color(QPalette::Active, QPalette::HighlightedText));
+    if (o.state & QStyle::State_Selected)
+        ctx.palette.setColor(QPalette::Text, o.palette.color(QPalette::Active, QPalette::HighlightedText));
 
-    QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &optionV4);
+    QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &o);
     painter->save();
     painter->translate(textRect.topLeft());
     painter->setClipRect(textRect.translated(-textRect.topLeft()));
@@ -147,11 +148,17 @@ void PalNotesDelegate::paint(QPainter *painter, const QStyleOptionViewItem &opti
 
 QSize PalNotesDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    QStyleOptionViewItemV4 optionV4 = option;
-    initStyleOption(&optionV4, index);
+    QStyleOptionViewItem o = option;
+    initStyleOption(&o, index);
 
     QTextDocument doc;
-    doc.setHtml(optionV4.text);
-    doc.setTextWidth(optionV4.rect.width());
+    doc.setHtml(o.text);
+    doc.setTextWidth(o.rect.width());
     return QSize(doc.idealWidth()+10, doc.size().height());
+}
+
+
+bool PalNotesDelegate::editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) {
+
+    return QStyledItemDelegate::editorEvent( event, model, option, index);
 }
