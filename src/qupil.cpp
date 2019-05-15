@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
     QString font1String("font-family: \"Lucida Grande\";");
     a.setStyleSheet("QApplication, QWidget, QDialog { " + font1String + " font-size: 11px; }");
 #else
-    QString font1String("font-family: \"Nimbus Sans L\";");
-    a.setStyleSheet("QApplication, QWidget, QDialog { " + font1String + " font-size: 12px; }");
+//    QString font1String("font-family: \"Nimbus Sans L\";");
+//    a.setStyleSheet("QApplication, QWidget, QDialog { " + font1String + " font-size: 12px; }");
 #endif
 
 #endif
