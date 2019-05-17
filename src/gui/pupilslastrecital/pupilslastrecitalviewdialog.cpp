@@ -147,7 +147,7 @@ PupilsLastRecitalViewDialog::PupilsLastRecitalViewDialog(ConfigFile *c, QWidget 
         head = "Derzeit sind keine überfälligen Vorspielkandidaten vorhanden.<br><br>Gute Arbeit!";
     }
 
-    msg += "<span style='font-size:10pt; font-weight:600;'>"+QString::fromUtf8(head.toStdString().c_str())+"</span><br><br>";
+    msg += "<span style='font-weight:600;'>"+QString::fromUtf8(head.toStdString().c_str())+"</span><br><br>";
 
     ui->label_txt->setText(msg);
 

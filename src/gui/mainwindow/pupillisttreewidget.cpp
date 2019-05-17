@@ -334,7 +334,7 @@ void PupilListTreeWidget::archiveCurrentPupil()
 	<tr><td></td></tr>"+completeLessonContentsList.join("")+"\
 	<tr><td></td></tr>\
 	<tr><td></td></tr>\
-        <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;"+COPYRIGHT_TIME_STRING+" - Felix Hammer- www.lehrsaiten.de</i></td></tr>\
+        <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;2006-"+QDate::currentDate().toString("yyyy")+" - Felix Hammer - qupil.de</i></td></tr>\
 	</table>\
 	</body>\
 	</html>");

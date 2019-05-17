@@ -84,7 +84,7 @@ PupilsNotInEnsembleDialog::PupilsNotInEnsembleDialog(ConfigFile *c, QWidget *par
         head = "Aktuell sind alle Schüler in Ensembles aktiv.<br><br>Gute Arbeit!";
     }
 
-    msg += "<span style='font-size:10pt; font-weight:600;'>"+QString::fromUtf8(head.toStdString().c_str())+"</span><br><br>";
+    msg += "<span style='font-weight:600;'>"+QString::fromUtf8(head.toStdString().c_str())+"</span><br><br>";
 
     ui->label_txt->setText(msg);
     ui->pupilStats->setText(QString::fromUtf8(QString("Insgesamt <span style='color:red; font-weight:600;'>%1</span> inaktive Schüler | <span style='color:green; font-weight:600;'>%2</span> Schüler sind in Ensembles aktiv").arg(duePupilCounter).arg(activeEnsembleCounter).toStdString().c_str()));
