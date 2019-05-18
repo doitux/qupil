@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>608</width>
-    <height>478</height>
+    <width>903</width>
+    <height>590</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,13 +18,13 @@
     <widget class="QListWidget" name="listWidget">
      <property name="minimumSize">
       <size>
-       <width>145</width>
+       <width>250</width>
        <height>0</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>200</width>
+       <width>250</width>
        <height>16777215</height>
       </size>
      </property>
@@ -40,7 +40,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/systemsettings.png</normaloff>:/gfx/systemsettings.png</iconset>
+        <normaloff>:/gfx/configure.svg</normaloff>:/gfx/configure.svg</iconset>
       </property>
      </item>
      <item>
@@ -49,7 +49,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/preferences_system_time.png</normaloff>:/gfx/preferences_system_time.png</iconset>
+        <normaloff>:/gfx/appointment-new.svg</normaloff>:/gfx/appointment-new.svg</iconset>
       </property>
      </item>
      <item>
@@ -58,7 +58,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/applications_education.png</normaloff>:/gfx/applications_education.png</iconset>
+        <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
       </property>
      </item>
      <item>
@@ -67,7 +67,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/audio_input_microphone.png</normaloff>:/gfx/audio_input_microphone.png</iconset>
+        <normaloff>:/gfx/audio-input-microphone.svg</normaloff>:/gfx/audio-input-microphone.svg</iconset>
       </property>
      </item>
      <item>
@@ -76,7 +76,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/audio_x_monkey.png</normaloff>:/gfx/audio_x_monkey.png</iconset>
+        <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
       </property>
      </item>
      <item>
@@ -85,7 +85,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/media_podcast64.png</normaloff>:/gfx/media_podcast64.png</iconset>
+        <normaloff>:/gfx/x-office-contact.svg</normaloff>:/gfx/x-office-contact.svg</iconset>
       </property>
      </item>
     </widget>
@@ -110,7 +110,7 @@
    <item row="0" column="1">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="page">
       <layout class="QGridLayout" name="gridLayout_16">
@@ -145,7 +145,7 @@ p, li { white-space: pre-wrap; }
        <item row="3" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBox_lessonEndMsg">
          <property name="title">
-          <string>Meldung zum Unterrichtsende </string>
+          <string>Meldung zum Unterrichtsende  </string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -209,7 +209,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/folder_sound.png</normaloff>:/gfx/folder_sound.png</iconset>
+                <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
               </property>
              </widget>
             </item>
@@ -292,7 +292,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/folder_sound.png</normaloff>:/gfx/folder_sound.png</iconset>
+                <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
               </property>
              </widget>
             </item>
@@ -662,7 +662,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -673,7 +673,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -747,7 +747,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -758,7 +758,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -810,7 +810,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -821,7 +821,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -895,7 +895,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -906,7 +906,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -939,7 +939,7 @@ p, li { white-space: pre-wrap; }
        <item row="2" column="0">
         <widget class="QGroupBox" name="groupBox_3">
          <property name="title">
-          <string>Gesamtspielzeit von Veranstaltungen berechnen</string>
+          <string>Gesamtspielzeit von Veranstaltungen berechnen    </string>
          </property>
          <layout class="QGridLayout" name="gridLayout_10">
           <item row="0" column="0">

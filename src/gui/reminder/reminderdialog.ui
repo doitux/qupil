@@ -49,7 +49,7 @@
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+       <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
      </property>
     </widget>
    </item>
@@ -60,7 +60,7 @@
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/document_properties.png</normaloff>:/gfx/document_properties.png</iconset>
+       <normaloff>:/gfx/document-edit-sign.svg</normaloff>:/gfx/document-edit-sign.svg</iconset>
      </property>
     </widget>
    </item>
@@ -71,7 +71,7 @@
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+       <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
      </property>
     </widget>
    </item>

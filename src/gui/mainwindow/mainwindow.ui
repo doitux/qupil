@@ -21,61 +21,206 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../resources/qupil.qrc">
-    <normaloff>:/gfx/system_users.png</normaloff>:/gfx/system_users.png</iconset>
+    <normaloff>:/gfx/qupil.png</normaloff>:/gfx/qupil.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_3">
-    <item row="0" column="0">
-     <widget class="QComboBox" name="comboBox_leftListMode">
-      <property name="minimumSize">
-       <size>
-        <width>250</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>250</width>
-        <height>16777215</height>
-       </size>
-      </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_22">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_7">
       <item>
-       <property name="text">
-        <string>Stundenplan</string>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources/qupil.qrc">
-         <normaloff>:/gfx/preferences_system_time.png</normaloff>:/gfx/preferences_system_time.png</iconset>
-       </property>
+       <widget class="QComboBox" name="comboBox_leftListMode">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>0</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>Stundenplan</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/qupil.qrc">
+           <normaloff>:/gfx/appointment-new.svg</normaloff>:/gfx/appointment-new.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Schülerliste</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/qupil.qrc">
+           <normaloff>:/gfx/user-group-new.svg</normaloff>:/gfx/user-group-new.svg</iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Schülerarchiv</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/qupil.qrc">
+           <normaloff>:/gfx/archive-extract.svg</normaloff>:/gfx/archive-extract.svg</iconset>
+         </property>
+        </item>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>Schülerliste</string>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources/qupil.qrc">
-         <normaloff>:/gfx/system_users.png</normaloff>:/gfx/system_users.png</iconset>
-       </property>
+       <widget class="QStackedWidget" name="stackedWidget_leftList">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="TimeTableTreeWidget" name="treeWidget_timeTable">
+            <property name="minimumSize">
+             <size>
+              <width>250</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>250</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <attribute name="headerStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Uhrzeit</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Unterricht</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_2">
+         <layout class="QGridLayout" name="gridLayout_13">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="PupilListTreeWidget" name="treeWidget_pupilList">
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <column>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_3">
+         <layout class="QGridLayout" name="gridLayout_15">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="PupilArchiveListTreeWidget" name="treeWidget_pupilArchiveList">
+            <property name="contextMenuPolicy">
+             <enum>Qt::CustomContextMenu</enum>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <column>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
       </item>
-      <item>
-       <property name="text">
-        <string>Schülerarchiv</string>
-       </property>
-       <property name="icon">
-        <iconset resource="../resources/qupil.qrc">
-         <normaloff>:/gfx/archive_extract.png</normaloff>:/gfx/archive_extract.png</iconset>
-       </property>
-      </item>
-     </widget>
+     </layout>
     </item>
-    <item row="0" column="1" rowspan="2">
+    <item>
      <widget class="QStackedWidget" name="stackedWidget_rightTabs">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
       <widget class="QWidget" name="page_lesson">
        <layout class="QGridLayout" name="gridLayout">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
          <number>0</number>
         </property>
         <property name="spacing">
@@ -89,7 +234,7 @@
           <widget class="QWidget" name="tab_lessonDetails">
            <attribute name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/view_calendar_day.png</normaloff>:/gfx/view_calendar_day.png</iconset>
+             <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
            </attribute>
            <attribute name="title">
             <string>Details</string>
@@ -223,7 +368,16 @@
                     <string/>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_3">
-                    <property name="margin">
+                    <property name="leftMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
                      <number>5</number>
                     </property>
                     <item>
@@ -509,7 +663,7 @@ p, li { white-space: pre-wrap; }
                    </property>
                    <property name="icon">
                     <iconset resource="../resources/qupil.qrc">
-                     <normaloff>:/gfx/arrow_left_double.png</normaloff>:/gfx/arrow_left_double.png</iconset>
+                     <normaloff>:/gfx/arrow-left-double.svg</normaloff>:/gfx/arrow-left-double.svg</iconset>
                    </property>
                    <property name="default">
                     <bool>false</bool>
@@ -523,7 +677,7 @@ p, li { white-space: pre-wrap; }
                    </property>
                    <property name="icon">
                     <iconset resource="../resources/qupil.qrc">
-                     <normaloff>:/gfx/arrow_right_double.png</normaloff>:/gfx/arrow_right_double.png</iconset>
+                     <normaloff>:/gfx/arrow-right-double.svg</normaloff>:/gfx/arrow-right-double.svg</iconset>
                    </property>
                   </widget>
                  </item>
@@ -630,7 +784,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/filesave.png</normaloff>:/gfx/filesave.png</iconset>
+                <normaloff>:/gfx/document-save.svg</normaloff>:/gfx/document-save.svg</iconset>
               </property>
              </widget>
             </item>
@@ -642,7 +796,16 @@ p, li { white-space: pre-wrap; }
       </widget>
       <widget class="QWidget" name="page_pupil">
        <layout class="QGridLayout" name="gridLayout_4">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
          <number>0</number>
         </property>
         <property name="spacing">
@@ -662,7 +825,7 @@ p, li { white-space: pre-wrap; }
           <widget class="QWidget" name="tab_palNotes">
            <attribute name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/document_properties.png</normaloff>:/gfx/document_properties.png</iconset>
+             <normaloff>:/gfx/document-edit-sign.svg</normaloff>:/gfx/document-edit-sign.svg</iconset>
            </attribute>
            <attribute name="title">
             <string>Unterrichts&amp;notizen</string>
@@ -777,28 +940,8 @@ p, li { white-space: pre-wrap; }
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Nimbus Sans L'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
-&lt;tr&gt;
-&lt;td style=&quot;border: none;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -828,7 +971,7 @@ p, li { white-space: pre-wrap; }
                 </property>
                 <property name="icon">
                  <iconset resource="../resources/qupil.qrc">
-                  <normaloff>:/gfx/format-text-italic.png</normaloff>:/gfx/format-text-italic.png</iconset>
+                  <normaloff>:/gfx/format-text-italic.svg</normaloff>:/gfx/format-text-italic.svg</iconset>
                 </property>
                 <property name="shortcut">
                  <string>Ctrl+Shift+K</string>
@@ -848,7 +991,7 @@ p, li { white-space: pre-wrap; }
                 </property>
                 <property name="icon">
                  <iconset resource="../resources/qupil.qrc">
-                  <normaloff>:/gfx/format-text-bold.png</normaloff>:/gfx/format-text-bold.png</iconset>
+                  <normaloff>:/gfx/format-text-bold.svg</normaloff>:/gfx/format-text-bold.svg</iconset>
                 </property>
                 <property name="shortcut">
                  <string>Ctrl+Shift+F</string>
@@ -868,7 +1011,7 @@ p, li { white-space: pre-wrap; }
                 </property>
                 <property name="icon">
                  <iconset resource="../resources/qupil.qrc">
-                  <normaloff>:/gfx/format-text-underline.png</normaloff>:/gfx/format-text-underline.png</iconset>
+                  <normaloff>:/gfx/format-text-underline.svg</normaloff>:/gfx/format-text-underline.svg</iconset>
                 </property>
                 <property name="shortcut">
                  <string>Ctrl+Shift+U</string>
@@ -888,7 +1031,7 @@ p, li { white-space: pre-wrap; }
                 </property>
                 <property name="icon">
                  <iconset resource="../resources/qupil.qrc">
-                  <normaloff>:/gfx/format-text-color.png</normaloff>:/gfx/format-text-color.png</iconset>
+                  <normaloff>:/gfx/format-text-color.svg</normaloff>:/gfx/format-text-color.svg</iconset>
                 </property>
                 <property name="checkable">
                  <bool>true</bool>
@@ -904,7 +1047,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+                <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
               </property>
              </widget>
             </item>
@@ -915,7 +1058,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+                <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
               </property>
              </widget>
             </item>
@@ -924,7 +1067,7 @@ p, li { white-space: pre-wrap; }
           <widget class="QWidget" name="tab_palPieces">
            <attribute name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/sound.png</normaloff>:/gfx/sound.png</iconset>
+             <normaloff>:/gfx/document-print.svg</normaloff>:/gfx/document-print.svg</iconset>
            </attribute>
            <attribute name="title">
             <string>&amp;Werke</string>
@@ -1069,7 +1212,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+                <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
               </property>
              </widget>
             </item>
@@ -1086,7 +1229,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+                <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
               </property>
              </widget>
             </item>
@@ -1095,7 +1238,7 @@ p, li { white-space: pre-wrap; }
           <widget class="QWidget" name="tab_pupilPersonalData">
            <attribute name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/preferences_desktop_user.png</normaloff>:/gfx/preferences_desktop_user.png</iconset>
+             <normaloff>:/gfx/im-user.svg</normaloff>:/gfx/im-user.svg</iconset>
            </attribute>
            <attribute name="title">
             <string>&amp;Persönliche Daten</string>
@@ -1664,7 +1807,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/filesave.png</normaloff>:/gfx/filesave.png</iconset>
+                <normaloff>:/gfx/document-save.svg</normaloff>:/gfx/document-save.svg</iconset>
               </property>
              </widget>
             </item>
@@ -1673,7 +1816,7 @@ p, li { white-space: pre-wrap; }
           <widget class="QWidget" name="tab_pupilActivity">
            <attribute name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/view_refresh.png</normaloff>:/gfx/view_refresh.png</iconset>
+             <normaloff>:/gfx/view-refresh.svg</normaloff>:/gfx/view-refresh.svg</iconset>
            </attribute>
            <attribute name="title">
             <string>&amp;Aktivitäten</string>
@@ -1769,7 +1912,7 @@ p, li { white-space: pre-wrap; }
                      </property>
                      <property name="icon">
                       <iconset resource="../resources/qupil.qrc">
-                       <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+                       <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
                      </property>
                     </widget>
                    </item>
@@ -1792,7 +1935,7 @@ p, li { white-space: pre-wrap; }
                      </property>
                      <property name="icon">
                       <iconset resource="../resources/qupil.qrc">
-                       <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+                       <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
                      </property>
                     </widget>
                    </item>
@@ -2011,7 +2154,7 @@ p, li { white-space: pre-wrap; }
                      </property>
                      <property name="icon">
                       <iconset resource="../resources/qupil.qrc">
-                       <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+                       <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
                      </property>
                     </widget>
                    </item>
@@ -2034,7 +2177,7 @@ p, li { white-space: pre-wrap; }
                      </property>
                      <property name="icon">
                       <iconset resource="../resources/qupil.qrc">
-                       <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+                       <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
                      </property>
                     </widget>
                    </item>
@@ -2050,7 +2193,7 @@ p, li { white-space: pre-wrap; }
           <widget class="QWidget" name="tab">
            <attribute name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/document_multiple.png</normaloff>:/gfx/document_multiple.png</iconset>
+             <normaloff>:/gfx/edit-copy.svg</normaloff>:/gfx/edit-copy.svg</iconset>
            </attribute>
            <attribute name="title">
             <string>&amp;Geliehene Noten</string>
@@ -2101,7 +2244,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/document_import.png</normaloff>:/gfx/document_import.png</iconset>
+                <normaloff>:/gfx/document-import.svg</normaloff>:/gfx/document-import.svg</iconset>
               </property>
              </widget>
             </item>
@@ -2113,7 +2256,16 @@ p, li { white-space: pre-wrap; }
       </widget>
       <widget class="QWidget" name="page_pupilArchive">
        <layout class="QGridLayout" name="gridLayout_14">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
          <number>0</number>
         </property>
         <item row="0" column="0">
@@ -2128,7 +2280,7 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset resource="../resources/qupil.qrc">
-              <normaloff>:/gfx/printer1.png</normaloff>:/gfx/printer1.png</iconset>
+              <normaloff>:/gfx/document-print.svg</normaloff>:/gfx/document-print.svg</iconset>
             </property>
            </widget>
           </item>
@@ -2139,113 +2291,11 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="icon">
              <iconset resource="../resources/qupil.qrc">
-              <normaloff>:/gfx/pdf.png</normaloff>:/gfx/pdf.png</iconset>
+              <normaloff>:/gfx/application-pdf.svg</normaloff>:/gfx/application-pdf.svg</iconset>
             </property>
            </widget>
           </item>
          </layout>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QStackedWidget" name="stackedWidget_leftList">
-      <property name="minimumSize">
-       <size>
-        <width>250</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>250</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <widget class="QWidget" name="page">
-       <layout class="QGridLayout" name="gridLayout_2">
-        <property name="margin">
-         <number>0</number>
-        </property>
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="TimeTableTreeWidget" name="treeWidget_timeTable">
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>250</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="contextMenuPolicy">
-           <enum>Qt::CustomContextMenu</enum>
-          </property>
-          <column>
-           <property name="text">
-            <string>Uhrzeit</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>Unterricht</string>
-           </property>
-          </column>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="page_2">
-       <layout class="QGridLayout" name="gridLayout_13">
-        <property name="margin">
-         <number>0</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="PupilListTreeWidget" name="treeWidget_pupilList">
-          <property name="contextMenuPolicy">
-           <enum>Qt::CustomContextMenu</enum>
-          </property>
-          <property name="alternatingRowColors">
-           <bool>true</bool>
-          </property>
-          <column>
-           <property name="text">
-            <string>Name</string>
-           </property>
-          </column>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="page_3">
-       <layout class="QGridLayout" name="gridLayout_15">
-        <property name="margin">
-         <number>0</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="PupilArchiveListTreeWidget" name="treeWidget_pupilArchiveList">
-          <property name="contextMenuPolicy">
-           <enum>Qt::CustomContextMenu</enum>
-          </property>
-          <property name="alternatingRowColors">
-           <bool>true</bool>
-          </property>
-          <column>
-           <property name="text">
-            <string>Name</string>
-           </property>
-          </column>
-         </widget>
         </item>
        </layout>
       </widget>
@@ -2259,7 +2309,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>26</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQupil">
@@ -2272,7 +2322,7 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/document_new.png</normaloff>:/gfx/document_new.png</iconset>
+       <normaloff>:/gfx/document-new.svg</normaloff>:/gfx/document-new.svg</iconset>
      </property>
      <addaction name="actionNeuerSchueler"/>
      <addaction name="actionNeuerUnterricht"/>
@@ -2338,7 +2388,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionBeenden">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/application_exit.png</normaloff>:/gfx/application_exit.png</iconset>
+     <normaloff>:/gfx/application-exit.svg</normaloff>:/gfx/application-exit.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Beenden</string>
@@ -2355,7 +2405,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionQupil_einrichten">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/systemsettings.png</normaloff>:/gfx/systemsettings.png</iconset>
+     <normaloff>:/gfx/configure.svg</normaloff>:/gfx/configure.svg</iconset>
    </property>
    <property name="text">
     <string>Qupil &amp;einrichten ...</string>
@@ -2364,7 +2414,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionVorspielManager">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/media_podcast.png</normaloff>:/gfx/media_podcast.png</iconset>
+     <normaloff>:/gfx/x-office-contact.svg</normaloff>:/gfx/x-office-contact.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Veranstaltungs-Manager ...</string>
@@ -2373,7 +2423,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionInstrumentenManager">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/audio_input_microphone_small.png</normaloff>:/gfx/audio_input_microphone_small.png</iconset>
+     <normaloff>:/gfx/audio-input-microphone.svg</normaloff>:/gfx/audio-input-microphone.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Instrumenten-Manager ...</string>
@@ -2382,7 +2432,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionUeberQupil">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/system_users.png</normaloff>:/gfx/system_users.png</iconset>
+     <normaloff>:/gfx/qupil.png</normaloff>:/gfx/qupil.png</iconset>
    </property>
    <property name="text">
     <string>&amp;Über Qupil ...</string>
@@ -2391,7 +2441,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionGeburtstageAnzeigen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/kontact_date.png</normaloff>:/gfx/kontact_date.png</iconset>
+     <normaloff>:/gfx/view-calendar-birthday.svg</normaloff>:/gfx/view-calendar-birthday.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Geburtstage anzeigen ...</string>
@@ -2408,7 +2458,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionNeuerSchueler">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/list_add_user.png</normaloff>:/gfx/list_add_user.png</iconset>
+     <normaloff>:/gfx/list-add-user.svg</normaloff>:/gfx/list-add-user.svg</iconset>
    </property>
    <property name="text">
     <string>Schüler</string>
@@ -2420,7 +2470,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionNeuerUnterricht">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/view_calendar_day.png</normaloff>:/gfx/view_calendar_day.png</iconset>
+     <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
    </property>
    <property name="text">
     <string>Unterricht</string>
@@ -2432,7 +2482,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionUnterrichtLoeschen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/go_jump_today.png</normaloff>:/gfx/go_jump_today.png</iconset>
+     <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Unterricht löschen</string>
@@ -2441,7 +2491,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionSchuelerLoeschen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/list_remove_user.png</normaloff>:/gfx/list_remove_user.png</iconset>
+     <normaloff>:/gfx/list-remove-user.svg</normaloff>:/gfx/list-remove-user.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Schüler löschen</string>
@@ -2450,7 +2500,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionSchuelerArchivieren">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/archive_insert.png</normaloff>:/gfx/archive_insert.png</iconset>
+     <normaloff>:/gfx/archive-insert.svg</normaloff>:/gfx/archive-insert.svg</iconset>
    </property>
    <property name="text">
     <string>Schüler archi&amp;vieren</string>
@@ -2464,7 +2514,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionArchiveintragLoeschen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/archive_remove.png</normaloff>:/gfx/archive_remove.png</iconset>
+     <normaloff>:/gfx/archive-remove.svg</normaloff>:/gfx/archive-remove.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Archiveintrag löschen</string>
@@ -2473,7 +2523,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionMetronomStimmen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/speaker.png</normaloff>:/gfx/speaker.png</iconset>
+     <normaloff>:/gfx/player-time.svg</normaloff>:/gfx/player-time.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Metronom / Stimmen ...</string>
@@ -2485,7 +2535,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionNotenBibliothek">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/document_multiple.png</normaloff>:/gfx/document_multiple.png</iconset>
+     <normaloff>:/gfx/edit-copy.svg</normaloff>:/gfx/edit-copy.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Noten-Bibliothek ...</string>
@@ -2497,7 +2547,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionBackupErstellen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/document_export.png</normaloff>:/gfx/document_export.png</iconset>
+     <normaloff>:/gfx/document-export.svg</normaloff>:/gfx/document-export.svg</iconset>
    </property>
    <property name="text">
     <string>Backup erstellen ...</string>
@@ -2506,7 +2556,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionBackupZurueckspielen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/document_import.png</normaloff>:/gfx/document_import.png</iconset>
+     <normaloff>:/gfx/document-import.svg</normaloff>:/gfx/document-import.svg</iconset>
    </property>
    <property name="text">
     <string>Backup zurückspielen ...</string>
@@ -2515,7 +2565,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionAdressbuchCsvImportieren">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/book.png</normaloff>:/gfx/book.png</iconset>
+     <normaloff>:/gfx/address-book-new.svg</normaloff>:/gfx/address-book-new.svg</iconset>
    </property>
    <property name="text">
     <string>Adressbuch (CSV) importieren ...</string>
@@ -2524,7 +2574,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionStundenplanErstellen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/preferences_system_time.png</normaloff>:/gfx/preferences_system_time.png</iconset>
+     <normaloff>:/gfx/appointment-new.svg</normaloff>:/gfx/appointment-new.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Stundenplan-Dokument ...</string>
@@ -2533,7 +2583,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionVorspielkandidaten">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/sound.png</normaloff>:/gfx/sound.png</iconset>
+     <normaloff>:/gfx/document-print.svg</normaloff>:/gfx/document-print.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Vorspiel&amp;kandidaten ...</string>
@@ -2542,7 +2592,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionErinnerungen">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/preferences-desktop-notification-bell.png</normaloff>:/gfx/preferences-desktop-notification-bell.png</iconset>
+     <normaloff>:/gfx/preferences-desktop-notification-bell.svg</normaloff>:/gfx/preferences-desktop-notification-bell.svg</iconset>
    </property>
    <property name="text">
     <string>E&amp;rinnerungen ...</string>
@@ -2551,7 +2601,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionTagesuebersicht">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/view_calendar_day.png</normaloff>:/gfx/view_calendar_day.png</iconset>
+     <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Tagesübersicht ...</string>
@@ -2568,7 +2618,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionEnsemblekandidaten">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/system_users.png</normaloff>:/gfx/system_users.png</iconset>
+     <normaloff>:/gfx/user-group-new.svg</normaloff>:/gfx/user-group-new.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Ensemblekandidaten ...</string>

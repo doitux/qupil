@@ -255,7 +255,7 @@
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
-           <normaloff>:/gfx/arrow-up.png</normaloff>:/gfx/arrow-up.png</iconset>
+           <normaloff>:/gfx/arrow-up.svg</normaloff>:/gfx/arrow-up.svg</iconset>
          </property>
         </widget>
        </item>
@@ -278,7 +278,7 @@
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
-           <normaloff>:/gfx/filesave.png</normaloff>:/gfx/filesave.png</iconset>
+           <normaloff>:/gfx/document-save.svg</normaloff>:/gfx/document-save.svg</iconset>
          </property>
         </widget>
        </item>
@@ -307,7 +307,7 @@
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
-           <normaloff>:/gfx/arrow-down.png</normaloff>:/gfx/arrow-down.png</iconset>
+           <normaloff>:/gfx/arrow-down.svg</normaloff>:/gfx/arrow-down.svg</iconset>
          </property>
         </widget>
        </item>

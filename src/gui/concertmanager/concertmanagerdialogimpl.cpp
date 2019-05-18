@@ -69,7 +69,7 @@ ConcertManagerDialogImpl::ConcertManagerDialogImpl(ConfigFile *c, mainWindowImpl
     myAddRecitalDialog = new AddRecitalDialogImpl;
 
     archivePopupMenu = new QMenu();
-    delArchiveAction = new QAction(QIcon(":/gfx/archive_remove.png"), QString::fromUtf8(tr("Archiveintrag löschen").toStdString().c_str()), archivePopupMenu);
+    delArchiveAction = new QAction(QIcon(":/gfx/archive-remove.svg"), QString::fromUtf8(tr("Archiveintrag löschen").toStdString().c_str()), archivePopupMenu);
     archivePopupMenu->addAction(delArchiveAction);
 
     //lade orte aus der Config
@@ -447,7 +447,7 @@ QTextDocument* ConcertManagerDialogImpl::createRecitalDocument()
       <tr><td width='100%'><b>Reine Spielzeit:</b> "+QString("%1 Min.").arg(static_cast<RecitalTabs*>(tabWidget_recitals->currentWidget())->getCompletePiecesDuration())+"</td></tr>\
       <tr><td width='100%'><b>Gesch&auml;tzte Gesamtdauer:</b> "+QString("%1 Min.").arg(static_cast<RecitalTabs*>(tabWidget_recitals->currentWidget())->getCompleteAllInAllDuration())+"</td></tr>\
 		<tr><td width='100%'></td></tr>\
-		<tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;"+COPYRIGHT_TIME_STRING+" - Felix Hammer - www.lehrsaiten.de</i></td></tr>\
+        <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;2006-"+QDate::currentDate().toString("yyyy")+" - Felix Hammer - qupil.de</i></td></tr>\
 			</table>\
 			</table>\
 			</body>\

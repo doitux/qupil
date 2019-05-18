@@ -37,8 +37,12 @@ AboutQupilDialogImpl::AboutQupilDialogImpl(QWidget *parent, ConfigFile *c)
     textBrowser_licence->setPalette(myPalette);
     textBrowser_2->setPalette(myPalette);
 
-    label_qupilVersion->setStyleSheet("QLabel { font-size: 16px; font-weight: bold;}");
+    QFont labelQupilVersionFont = label_qupilVersion->font();
+    labelQupilVersionFont.setPointSize(labelQupilVersionFont.pointSize() * 2);
+    label_qupilVersion->setFont(labelQupilVersionFont);
     label_qupilVersion->setText(QString(tr("Qupil %1").arg(QString::fromStdString(RELEASE_STRING))));
+
+    label_copyright->setText(QString("© 2006-%1, Felix Hammer").arg(QDateTime::currentDateTime().toString("yyyy")));
 
     QFile gplFile(QDir::toNativeSeparators(myAppDataPath+"/gpl2.html"));
     QString gplString;

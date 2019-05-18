@@ -41,7 +41,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="../resources/qupil.qrc">:/gfx/system_users_big.png</pixmap>
+         <pixmap resource="../resources/qupil.qrc">:/gfx/user-group-new.svg</pixmap>
         </property>
        </widget>
       </item>

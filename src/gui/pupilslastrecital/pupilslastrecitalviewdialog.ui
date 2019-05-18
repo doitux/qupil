@@ -51,7 +51,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="../resources/qupil.qrc">:/gfx/audio-mid128.png</pixmap>
+         <pixmap resource="../resources/qupil.qrc">:/gfx/audio-midi.svg</pixmap>
         </property>
        </widget>
       </item>

@@ -64,7 +64,7 @@ void SheetMusicLibraryDialogImpl::loadPupilComboBox()
     }
     while(query.next()) {
 
-        comboBox_pupils->addItem(QIcon(":/gfx/user.png"), query.value(0).toString()+", "+query.value(1).toString(), query.value(2).toString());
+        comboBox_pupils->addItem(QIcon(":/gfx/im-user.svg"), query.value(0).toString()+", "+query.value(1).toString(), query.value(2).toString());
     }
     comboBox_pupils->setSizeAdjustPolicy(QComboBox::AdjustToContents);
 }

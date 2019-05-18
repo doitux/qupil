@@ -49,7 +49,7 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
 {
     setupUi(this);
 
-    this->setWindowTitle(QString::fromUtf8(tr("Qupil %1 - Unterrichtsmanagement für Instrumentalpädagogen - www.lehrsaiten.de®").arg(RELEASE_STRING).toStdString().c_str()));
+    this->setWindowTitle(QString::fromUtf8(tr("Qupil %1 - Unterrichtsmanagement für Instrumentalpädagogen - qupil.de").arg(RELEASE_STRING).toStdString().c_str()));
 
     this->installEventFilter(this);
 
@@ -57,7 +57,7 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
     statusBar()->addWidget(statusBarStats);
     statusBarSpace = new QLabel("");
     statusBar()->addWidget(statusBarSpace, 1);
-    statusBarLehrsaiten = new QLabel("<a href='http://www.lehrsaiten.de' target='_blank'> www.lehrsaiten.de</a>");
+    statusBarLehrsaiten = new QLabel("<a href='http://qupil.de' target='_blank'> qupil.de</a>");
     statusBarLehrsaiten->setOpenExternalLinks(true);
     statusBar()->addWidget(statusBarLehrsaiten);
 
@@ -236,7 +236,7 @@ void mainWindowImpl::checkForOldDataStructure()
             QMessageBox msgBox;
             msgBox.setWindowTitle(tr("Qupil"));
             msgBox.setTextFormat(Qt::RichText);
-            msgBox.setText(tr("Beim konvertieren der alten Daten ist ein Fehler aufgetreten. \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@lehrsaiten.de\">fhammer@lehrsaiten.de</a> um dieses Problem zu beheben!"));
+            msgBox.setText(tr("Beim konvertieren der alten Daten ist ein Fehler aufgetreten. \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!"));
             msgBox.setIcon(QMessageBox::Critical);
             msgBox.exec();
 
@@ -264,7 +264,7 @@ void mainWindowImpl::checkForOldDataStructure()
             QMessageBox msgBox;
             msgBox.setWindowTitle(tr("Qupil"));
             msgBox.setTextFormat(Qt::RichText);
-            msgBox.setText(QString::fromUtf8(tr("Beim Update der Datenbankstruktur ist ein Fehler aufgetreten. Möglicherweise kann Qupil die Daten nicht korrekt verarbeiten. \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@lehrsaiten.de\">fhammer@lehrsaiten.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
+            msgBox.setText(QString::fromUtf8(tr("Beim Update der Datenbankstruktur ist ein Fehler aufgetreten. Möglicherweise kann Qupil die Daten nicht korrekt verarbeiten. \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
             msgBox.setIcon(QMessageBox::Critical);
             msgBox.exec();
         }
@@ -276,7 +276,7 @@ void mainWindowImpl::checkForOldDataStructure()
             QMessageBox msgBox;
             msgBox.setWindowTitle(tr("Qupil - Fehler"));
             msgBox.setTextFormat(Qt::RichText);
-            msgBox.setText(QString::fromUtf8(tr("Beim Update der Datenbankstruktur von Revision %0 auf %1 ist folgender Fehler aufgetreten:<br><b>%2</b><br>Bitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@lehrsaiten.de\">fhammer@lehrsaiten.de</a> um dieses Problem zu beheben!").toStdString().c_str()).arg(returnValue.at(1)).arg(returnValue.at(2)).arg(returnValue.at(3)));
+            msgBox.setText(QString::fromUtf8(tr("Beim Update der Datenbankstruktur von Revision %0 auf %1 ist folgender Fehler aufgetreten:<br><b>%2</b><br>Bitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!").toStdString().c_str()).arg(returnValue.at(1)).arg(returnValue.at(2)).arg(returnValue.at(3)));
             msgBox.setIcon(QMessageBox::Critical);
             msgBox.exec();
         }
@@ -600,7 +600,7 @@ void mainWindowImpl::restoreBackup()
                         QMessageBox msgBox(this);
                         msgBox.setWindowTitle(tr("Qupil - Fehler"));
                         msgBox.setTextFormat(Qt::RichText);
-                        msgBox.setText(QString::fromUtf8(tr("Der Backup-Typ konnte nicht ermittelt werden! Somit kann das Backup nicht zurückgespielt werden.\nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@lehrsaiten.de\">fhammer@lehrsaiten.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
+                        msgBox.setText(QString::fromUtf8(tr("Der Backup-Typ konnte nicht ermittelt werden! Somit kann das Backup nicht zurückgespielt werden.\nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
                         msgBox.setIcon(QMessageBox::Critical);
                         msgBox.exec();
                     }
@@ -608,7 +608,7 @@ void mainWindowImpl::restoreBackup()
                     QMessageBox msgBox(this);
                     msgBox.setWindowTitle(tr("Qupil - Fehler"));
                     msgBox.setTextFormat(Qt::RichText);
-                    msgBox.setText(QString::fromUtf8(tr("Das Backup konnte nicht zurückgespielt werden! \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@lehrsaiten.de\">fhammer@lehrsaiten.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
+                    msgBox.setText(QString::fromUtf8(tr("Das Backup konnte nicht zurückgespielt werden! \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
                     msgBox.setIcon(QMessageBox::Critical);
                     msgBox.exec();
                 }

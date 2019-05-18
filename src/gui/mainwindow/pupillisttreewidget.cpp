@@ -29,9 +29,9 @@ PupilListTreeWidget::PupilListTreeWidget(QWidget *tab)
 {
 
     pupilPopupMenu = new QMenu();
-    delPupil = new QAction(QIcon(":/gfx/list_remove_user.png"), QString::fromUtf8(tr("Schüler löschen").toStdString().c_str()), pupilPopupMenu);
+    delPupil = new QAction(QIcon(":/gfx/list-remove-user.svg"), QString::fromUtf8(tr("Schüler löschen").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(delPupil);
-    archivePupil = new QAction(QIcon(":/gfx/archive_insert.png"),QString::fromUtf8(tr("Schüler archivieren").toStdString().c_str()), pupilPopupMenu);
+    archivePupil = new QAction(QIcon(":/gfx/archive-insert.svg"),QString::fromUtf8(tr("Schüler archivieren").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(archivePupil);
     archiveAndDelPupil = new QAction(QString::fromUtf8(tr("Schüler archivieren und löschen").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(archiveAndDelPupil);
@@ -68,7 +68,7 @@ void PupilListTreeWidget::refreshPupilList()
         pupilItem->setFirstColumnSpanned ( true );
         pupilItem->setData(0, Qt::UserRole, pupilQuery.value(0).toString());
         pupilItem->setData(0, Qt::DisplayRole, pupilQuery.value(2).toString()+", "+pupilQuery.value(1).toString());
-        pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/user.png"));
+        pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/im-user.svg"));
     }
 
     if(topLevelItemCount()) {
@@ -334,7 +334,7 @@ void PupilListTreeWidget::archiveCurrentPupil()
 	<tr><td></td></tr>"+completeLessonContentsList.join("")+"\
 	<tr><td></td></tr>\
 	<tr><td></td></tr>\
-        <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;"+COPYRIGHT_TIME_STRING+" - Felix Hammer- www.lehrsaiten.de</i></td></tr>\
+        <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;2006-"+QDate::currentDate().toString("yyyy")+" - Felix Hammer - qupil.de</i></td></tr>\
 	</table>\
 	</body>\
 	</html>");

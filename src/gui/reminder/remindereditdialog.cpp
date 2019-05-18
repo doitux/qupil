@@ -16,7 +16,7 @@ ReminderEditDialog::ReminderEditDialog(QWidget *parent, int mode, int reminderid
         qDebug() << "DB Error: 241 - " << query.lastError();
     } else {
         while(query.next()) {
-            ui->comboBox_schueler->addItem(QIcon(":/gfx/user.png"), query.value(0).toString()+", "+query.value(1).toString(), query.value(2).toString());
+            ui->comboBox_schueler->addItem(QIcon(":/gfx/im-user.svg"), query.value(0).toString()+", "+query.value(1).toString(), query.value(2).toString());
         }
         ui->comboBox_schueler->setSizeAdjustPolicy(QComboBox::AdjustToContents);
     }
