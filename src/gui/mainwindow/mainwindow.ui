@@ -1067,7 +1067,7 @@ p, li { white-space: pre-wrap; }
           <widget class="QWidget" name="tab_palPieces">
            <attribute name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/document-print.svg</normaloff>:/gfx/document-print.svg</iconset>
+             <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
            </attribute>
            <attribute name="title">
             <string>&amp;Werke</string>
@@ -2583,7 +2583,7 @@ p, li { white-space: pre-wrap; }
   <action name="actionVorspielkandidaten">
    <property name="icon">
     <iconset resource="../resources/qupil.qrc">
-     <normaloff>:/gfx/document-print.svg</normaloff>:/gfx/document-print.svg</iconset>
+     <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Vorspiel&amp;kandidaten ...</string>
