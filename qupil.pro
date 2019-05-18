@@ -6,7 +6,7 @@ CONFIG += qt \
     warn_on \
 #     release
 
-QT += sql uitools widgets printsupport
+QT += svg sql uitools widgets printsupport
 UI_DIR = uics
 MOC_DIR = mocs
 OBJECTS_DIR = obj
