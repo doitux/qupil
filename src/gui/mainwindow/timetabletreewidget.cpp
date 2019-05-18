@@ -171,8 +171,12 @@ void TimeTableTreeWidget::refreshTimeTable()
         resizeColumnToContents(1);
 
         //adjust parent stackwidget to fit the needed space depending on system font size (calculated above)
-        minimumTreeWidgetWidth += longestLessonDescriptionColumnWidth + 35;
-        if(minimumTreeWidgetWidth > 250) {
+#ifdef _WIN32
+	minimumTreeWidgetWidth += longestLessonDescriptionColumnWidth + 50;
+#else
+	minimumTreeWidgetWidth += longestLessonDescriptionColumnWidth + 35;
+#endif
+	if(minimumTreeWidgetWidth > 250) {
             this->setMinimumWidth(minimumTreeWidgetWidth);
             this->setMaximumWidth(minimumTreeWidgetWidth);
             myW->comboBox_leftListMode->setMinimumWidth(minimumTreeWidgetWidth);
