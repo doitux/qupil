@@ -3,7 +3,9 @@
     <file>qt_de.qm</file>
   </qresource>
   <qresource prefix="/gfx">
+    <file>folder-sound-120.png</file>
     <file>view-calendar-birthday.svg</file>
+    <file>user-group-new-120.png</file>
     <file>applications-education-mathematics.svg</file>
     <file>application-exit.svg</file>
     <file>qupil.png</file>
@@ -45,7 +47,6 @@
     <file>arrow-down.svg</file>
     <file>arrow-up.svg</file>
     <file>view-refresh.svg</file>
-    <file>audio-midi.svg</file>
     <file>x-office-contact.svg</file>
     <file>format-text-bold.svg</file>
     <file>format-text-color.svg</file>
