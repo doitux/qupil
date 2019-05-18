@@ -38,7 +38,6 @@ AboutQupilDialogImpl::AboutQupilDialogImpl(QWidget *parent, ConfigFile *c)
     textBrowser_2->setPalette(myPalette);
 
     QFont labelQupilVersionFont = label_qupilVersion->font();
-    qDebug() << labelQupilVersionFont.pointSize();
     labelQupilVersionFont.setPointSize(labelQupilVersionFont.pointSize() * 2);
     label_qupilVersion->setFont(labelQupilVersionFont);
     label_qupilVersion->setText(QString(tr("Qupil %1").arg(QString::fromStdString(RELEASE_STRING))));

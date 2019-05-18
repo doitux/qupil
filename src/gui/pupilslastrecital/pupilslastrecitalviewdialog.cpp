@@ -160,7 +160,7 @@ PupilsLastRecitalViewDialog::PupilsLastRecitalViewDialog(ConfigFile *c, QWidget 
     ui->treeWidget->sortByColumn(0, Qt::DescendingOrder);
 
     pupilPopupMenu = new QMenu();
-    addReminderAction = new QAction(QIcon(":/gfx/preferences-desktop-notification-bell.png"), QString::fromUtf8(tr("Erinnerung an Vorspielaktivität einrichten").toStdString().c_str()), pupilPopupMenu);
+    addReminderAction = new QAction(QIcon(":/gfx/preferences-desktop-notification-bell.svg"), QString::fromUtf8(tr("Erinnerung an Vorspielaktivität einrichten").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(addReminderAction);
 
     connect(ui->treeWidget, SIGNAL (customContextMenuRequested(const QPoint)), this, SLOT ( showPopupMenu(const QPoint)));

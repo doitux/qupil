@@ -195,7 +195,7 @@
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/document_preview.png</normaloff>:/gfx/document_preview.png</iconset>
+       <normaloff>:/gfx/document-preview-archive.svg</normaloff>:/gfx/document-preview-archive.svg</iconset>
      </property>
     </widget>
    </item>

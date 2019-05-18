@@ -85,12 +85,12 @@
         </property>
         <property name="icon">
          <iconset resource="../resources/qupil.qrc">
-          <normaloff>:/gfx/player_play.png</normaloff>
-          <normalon>:/gfx/player_stop.png</normalon>
-          <activeoff>:/gfx/player_play.png</activeoff>
-          <activeon>:/gfx/player_stop.png</activeon>
-          <selectedoff>:/gfx/player_play.png</selectedoff>
-          <selectedon>:/gfx/player_stop.png</selectedon>:/gfx/player_play.png</iconset>
+          <normaloff>:/gfx/media-playback-start.svg</normaloff>
+          <normalon>:/gfx/media-playback-stop.svg</normalon>
+          <activeoff>:/gfx/media-playback-start.svg</activeoff>
+          <activeon>:/gfx/media-playback-stop.svg</activeon>
+          <selectedoff>:/gfx/media-playback-start.svg</selectedoff>
+          <selectedon>:/gfx/media-playback-stop.svg</selectedon>:/gfx/media-playback-start.svg</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -176,7 +176,7 @@
           </property>
           <property name="icon">
            <iconset resource="../resources/qupil.qrc">
-            <normaloff>:/gfx/tools_wizard.png</normaloff>:/gfx/tools_wizard.png</iconset>
+            <normaloff>:/gfx/tools-wizard.svg</normaloff>:/gfx/tools-wizard.svg</iconset>
           </property>
          </widget>
         </item>
@@ -247,7 +247,7 @@
         </property>
         <property name="icon">
          <iconset resource="../resources/qupil.qrc">
-          <normaloff>:/gfx/player_play.png</normaloff>:/gfx/player_play.png</iconset>
+          <normaloff>:/gfx/media-playback-start.svg</normaloff>:/gfx/media-playback-start.svg</iconset>
         </property>
         <property name="iconSize">
          <size>

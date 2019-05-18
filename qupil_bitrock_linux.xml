@@ -3,7 +3,7 @@
     <fullName>Qupil</fullName>
     <version>1.3</version>
     <licenseFile>COPYING</licenseFile>
-    <logoImage>src/gui/resources/system_users_big.png</logoImage>
+    <logoImage>src/gui/resources/user-group-new.svg</logoImage>
     <defaultLanguage>de</defaultLanguage>
     <allowLanguageSelection>1</allowLanguageSelection>
     <compressionAlgorithm>lzma</compressionAlgorithm>

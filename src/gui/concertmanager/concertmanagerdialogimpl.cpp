@@ -69,7 +69,7 @@ ConcertManagerDialogImpl::ConcertManagerDialogImpl(ConfigFile *c, mainWindowImpl
     myAddRecitalDialog = new AddRecitalDialogImpl;
 
     archivePopupMenu = new QMenu();
-    delArchiveAction = new QAction(QIcon(":/gfx/archive_remove.png"), QString::fromUtf8(tr("Archiveintrag löschen").toStdString().c_str()), archivePopupMenu);
+    delArchiveAction = new QAction(QIcon(":/gfx/archive-remove.svg"), QString::fromUtf8(tr("Archiveintrag löschen").toStdString().c_str()), archivePopupMenu);
     archivePopupMenu->addAction(delArchiveAction);
 
     //lade orte aus der Config

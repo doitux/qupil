@@ -40,7 +40,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/systemsettings.png</normaloff>:/gfx/systemsettings.png</iconset>
+        <normaloff>:/gfx/configure.svg</normaloff>:/gfx/configure.svg</iconset>
       </property>
      </item>
      <item>
@@ -49,7 +49,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/preferences_system_time.png</normaloff>:/gfx/preferences_system_time.png</iconset>
+        <normaloff>:/gfx/appointment-new.svg</normaloff>:/gfx/appointment-new.svg</iconset>
       </property>
      </item>
      <item>
@@ -58,7 +58,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/applications_education.png</normaloff>:/gfx/applications_education.png</iconset>
+        <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
       </property>
      </item>
      <item>
@@ -67,7 +67,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/audio_input_microphone.png</normaloff>:/gfx/audio_input_microphone.png</iconset>
+        <normaloff>:/gfx/audio-input-microphone.svg</normaloff>:/gfx/audio-input-microphone.svg</iconset>
       </property>
      </item>
      <item>
@@ -76,7 +76,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/audio_x_monkey.png</normaloff>:/gfx/audio_x_monkey.png</iconset>
+        <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
       </property>
      </item>
      <item>
@@ -85,7 +85,7 @@
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/media_podcast64.png</normaloff>:/gfx/media_podcast64.png</iconset>
+        <normaloff>:/gfx/x-office-contact.svg</normaloff>:/gfx/x-office-contact.svg</iconset>
       </property>
      </item>
     </widget>
@@ -209,7 +209,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/folder_sound.png</normaloff>:/gfx/folder_sound.png</iconset>
+                <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
               </property>
              </widget>
             </item>
@@ -292,7 +292,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/folder_sound.png</normaloff>:/gfx/folder_sound.png</iconset>
+                <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
               </property>
              </widget>
             </item>
@@ -662,7 +662,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -673,7 +673,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -747,7 +747,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -758,7 +758,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -810,7 +810,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -821,7 +821,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -895,7 +895,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -906,7 +906,7 @@ p, li { white-space: pre-wrap; }
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>

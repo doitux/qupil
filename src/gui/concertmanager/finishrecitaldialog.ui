@@ -80,7 +80,7 @@ Möchten Sie diese Funktion nutzen?</string>
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="../resources/qupil.qrc">:/gfx/view-refresh48.png</pixmap>
+         <pixmap resource="../resources/qupil.qrc">:/gfx/view-refresh.svg</pixmap>
         </property>
        </widget>
       </item>
@@ -196,7 +196,7 @@ p, li { white-space: pre-wrap; }
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="../resources/qupil.qrc">:/gfx/sound48.png</pixmap>
+         <pixmap resource="../resources/qupil.qrc">:/gfx/folder-sound.svg</pixmap>
         </property>
        </widget>
       </item>

@@ -117,7 +117,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/audio_input_microphone_small.png</normaloff>:/gfx/audio_input_microphone_small.png</iconset>
+             <normaloff>:/gfx/audio-input-microphone.svg</normaloff>:/gfx/audio-input-microphone.svg</iconset>
            </property>
            <property name="popupMode">
             <enum>QToolButton::InstantPopup</enum>
@@ -137,7 +137,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/document_multiple.png</normaloff>:/gfx/document_multiple.png</iconset>
+             <normaloff>:/gfx/edit-copy.svg</normaloff>:/gfx/edit-copy.svg</iconset>
            </property>
            <property name="popupMode">
             <enum>QToolButton::InstantPopup</enum>
@@ -154,7 +154,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/document_preview.png</normaloff>:/gfx/document_preview.png</iconset>
+             <normaloff>:/gfx/document-preview-archive.svg</normaloff>:/gfx/document-preview-archive.svg</iconset>
            </property>
           </widget>
          </item>
@@ -238,7 +238,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/printer1.png</normaloff>:/gfx/printer1.png</iconset>
+             <normaloff>:/gfx/document-print.svg</normaloff>:/gfx/document-print.svg</iconset>
            </property>
           </widget>
          </item>
@@ -249,7 +249,7 @@
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/pdf.png</normaloff>:/gfx/pdf.png</iconset>
+             <normaloff>:/gfx/application-pdf.svg</normaloff>:/gfx/application-pdf.svg</iconset>
            </property>
           </widget>
          </item>

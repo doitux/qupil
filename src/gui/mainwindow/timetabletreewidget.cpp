@@ -27,7 +27,7 @@ TimeTableTreeWidget::TimeTableTreeWidget(QWidget *tab)
     : QTreeWidget(tab), headerSectionIndent(10)
 {
     lessonPopupMenu = new QMenu();
-    delLesson = new QAction(QIcon(":/gfx/go_jump_today.png"), QString::fromUtf8(tr("Unterricht löschen").toStdString().c_str()), lessonPopupMenu);
+    delLesson = new QAction(QIcon(":/gfx/x-office-calendar.svg"), QString::fromUtf8(tr("Unterricht löschen").toStdString().c_str()), lessonPopupMenu);
     lessonPopupMenu->addAction(delLesson);
 
     connect( this, SIGNAL ( currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT ( timeTableSelectionChanged(QTreeWidgetItem*, QTreeWidgetItem*)) );
@@ -102,7 +102,6 @@ void TimeTableTreeWidget::refreshTimeTable()
             setColumnWidth(0,firstColumnWidth);
             //set first half of the Width
             minimumTreeWidgetWidth = firstColumnWidth;
-
         }
 
         while (query.next()) {
@@ -144,8 +143,6 @@ void TimeTableTreeWidget::refreshTimeTable()
 
                 QFontMetrics fm(item->font(1));
                 longestLessonDescriptionColumnWidth = fm.width(longestLessonDescription);
-
-                qDebug() << longestLessonDescription << longestLessonDescriptionColumnWidth;
             }
 
             QSqlQuery pupilQuery("SELECT pal.palid, p.forename, p.surname FROM pupilatlesson pal, pupil p WHERE pal.lessonid= "+query.value(0).toString()+" AND p.pupilid = pal.pupilid AND pal.stopdate > '"+QDate::currentDate().toString(Qt::ISODate)+"' ORDER BY p.surname ASC");
@@ -157,7 +154,7 @@ void TimeTableTreeWidget::refreshTimeTable()
                 pupilItem->setFirstColumnSpanned ( true );
                 pupilItem->setData(0, Qt::UserRole, "p"+pupilQuery.value(0).toString());
                 pupilItem->setData(0, Qt::DisplayRole, pupilQuery.value(2).toString()+", "+pupilQuery.value(1).toString());
-                pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/user.png"));
+                pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/im-user.svg"));
                 pupilItem->setBackground(0, QBrush(QColor(QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",2,2).toInt())));
                 pupilItem->setForeground(0, QBrush(QColor(QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",2,2).toInt())));
                 QSize size = pupilItem->sizeHint(0);

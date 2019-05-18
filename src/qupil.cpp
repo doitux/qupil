@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 {
     QApplication a( argc, argv );
 
-    a.setStyleSheet("QDialogButtonBox { dialogbuttonbox-buttons-have-icons: 1; dialog-ok-icon: url(:/gfx/dialog_ok_apply.png); dialog-cancel-icon: url(:/gfx/dialog_close.png); dialog-close-icon: url(:/gfx/dialog_close.png);}");
+    a.setStyleSheet("QDialogButtonBox { dialogbuttonbox-buttons-have-icons: 1; dialog-ok-icon: url(:/gfx/dialog-ok-apply.svg); dialog-cancel-icon: url(:/gfx/dialog-close.svg); dialog-close-icon: url(:/gfx/dialog-close.svg);}");
 
     //create defaultconfig
     ConfigFile *myConfig = new ConfigFile(argv[0], false);

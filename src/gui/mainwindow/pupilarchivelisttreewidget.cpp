@@ -27,7 +27,7 @@ PupilArchiveListTreeWidget::PupilArchiveListTreeWidget(QWidget *tab)
     : QTreeWidget(tab), headerSectionIndent(10)
 {
     archivePopupMenu = new QMenu();
-    delArchive = new QAction(QIcon(":/gfx/archive_remove.png"), QString::fromUtf8(tr("Archiveintrag löschen").toStdString().c_str()), archivePopupMenu);
+    delArchive = new QAction(QIcon(":/gfx/archive-remove.svg"), QString::fromUtf8(tr("Archiveintrag löschen").toStdString().c_str()), archivePopupMenu);
     archivePopupMenu->addAction(delArchive);
 // 	archivePupil = new QAction(QString::fromUtf8(tr("Schüler archivieren").toStdString().c_str()), pupilPopupMenu);
 // 	pupilPopupMenu->addAction(archivePupil);
@@ -66,7 +66,7 @@ void PupilArchiveListTreeWidget::refreshPupilArchiveList( int pupilId )
         pupilItem->setFirstColumnSpanned ( true );
         pupilItem->setData(0, Qt::UserRole, pupilQuery.value(0).toString());
         pupilItem->setData(0, Qt::DisplayRole, pupilQuery.value(2).toString()+", "+pupilQuery.value(1).toString());
-        pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/archive_extract.png"));
+        pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/archive-extract.svg"));
     }
 //
     if(topLevelItemCount()) {
