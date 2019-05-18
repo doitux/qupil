@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>180</width>
-    <height>209</height>
+    <width>184</width>
+    <height>211</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,21 +36,21 @@
        <widget class="QLabel" name="label_gfx">
         <property name="minimumSize">
          <size>
-          <width>128</width>
-          <height>128</height>
+          <width>132</width>
+          <height>132</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>128</width>
-          <height>128</height>
+          <width>132</width>
+          <height>132</height>
          </size>
         </property>
         <property name="pixmap">
-         <pixmap resource="../resources/qupil.qrc">:/gfx/view-calendar-birthday.png</pixmap>
+         <pixmap resource="../resources/qupil.qrc">:/gfx/view-calendar-birthday-color.png</pixmap>
         </property>
         <property name="scaledContents">
-         <bool>true</bool>
+         <bool>false</bool>
         </property>
        </widget>
       </item>
