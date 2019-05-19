@@ -13,6 +13,7 @@ OBJECTS_DIR = obj
 DEFINES += PREFIX=\"$${PREFIX}\"
 TARGET = qupil
 RESOURCES = src/gui/resources/qupil.qrc
+TRANSLATIONS = ts/qupil_de.ts
 INCLUDEPATH += . \
     src \
     src/core \

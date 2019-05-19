@@ -44,12 +44,13 @@ int main(int argc, char *argv[])
 
     //Set translations
     QTranslator qtTranslator;
-    qtTranslator.load(QString(":/translation/qt_") + QString::fromStdString(myConfig->readConfigString("Language")));
+    qtTranslator.load(":/translation/qt_" + QLocale::system().name(),
+            QLibraryInfo::location(QLibraryInfo::TranslationsPath));
     a.installTranslator(&qtTranslator);
-//
-// 	QTranslator translator;
-// 	translator.load(QString(myAppDataPath +"translations/pokerth_") + QString::fromStdString(myConfig->readConfigString("Language")));
-// 	a.installTranslator(&translator);
+
+    QTranslator myappTranslator;
+    myappTranslator.load(":/translation/qupil_" + QLocale::system().name());
+    a.installTranslator(&myappTranslator);
 
 #ifdef __APPLE__
     QDir dir(QApplication::applicationDirPath());
