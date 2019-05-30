@@ -34,6 +34,7 @@ myMessageDialogImpl::myMessageDialogImpl(QWidget *parent, myDBHandler *db)
 
 void myMessageDialogImpl::show(int reminderId, bool showCheckBox, QString checkBoxString)
 {
+    retranslateUi(this);
     currentReminderId=reminderId;
 
     if(showCheckBox) {

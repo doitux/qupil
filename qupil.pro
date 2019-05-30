@@ -72,7 +72,7 @@ FORMS += src/gui/mainwindow/mainwindow.ui \
     src/gui/sheetmusiclibrary/sheetmusiclibrary.ui \
     src/gui/aboutqupil/aboutqupil.ui \
     src/gui/csvimportfields/csvimportfields.ui \
-    src/gui/instrumentmanager/addrecitaldialog.ui \
+    src/gui/concertmanager/addrecitaldialog.ui \
     src/gui/concertmanager/recitaltabs.ui \
     src/gui/concertmanager/selectpiecesdialog.ui \
     src/gui/concertmanager/finishrecitaldialog.ui \

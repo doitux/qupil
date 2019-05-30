@@ -18,8 +18,6 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 #include "configfile.h"
-// #include <qttoolsinterface.h>
-// #include <core/loghelper.h>
 #include "tinyxml.h"
 
 #define MODUS 0711
@@ -37,23 +35,22 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+#include <QApplication>
 #include <QtCore>
+#include <QObject>
 
 using namespace std;
 
 
-ConfigFile::ConfigFile(char *argv0, bool readonly) : noWriteAccess(readonly)
+ConfigFile::ConfigFile(char *argv0, bool readonly)
+: QObject(), noWriteAccess(readonly)
 {
-
     myArgv0 = argv0;
 
     // !!!! Revisionsnummer der Configdefaults !!!!!
     configRev = 30;
     // !!!! Revision of data structure !!!!!
     string dataStructureRev = "2";
-
-    //standard defaults
-    logOnOffDefault = "1";
 
     // Pfad und Dateinamen setzen
 #ifdef _WIN32
@@ -86,21 +83,14 @@ ConfigFile::ConfigFile(char *argv0, bool readonly) : noWriteAccess(readonly)
     }
     //define app-dir
     configFileName += "\\qupil\\";
-    ////define log-dir
-// 	logDir = configFileName;
-// 	logDir += "log-files\\";
-    ////define data-dir
+    //define data-dir
     dataDir = configFileName;
     dataDir += "db\\";
-    ////define cache-dir
-// 	cacheDir = configFileName;
-// 	cacheDir += "cache\\";
+    //define cache-dir
 
     //create directories on first start of app
     mkdir(configFileName.c_str());
-// 	mkdir(logDir.c_str());
     mkdir(dataDir.c_str());
-// 	mkdir(cacheDir.c_str());
 
 
 #else
@@ -109,20 +99,12 @@ ConfigFile::ConfigFile(char *argv0, bool readonly) : noWriteAccess(readonly)
     if(homePath) {
         configFileName = homePath;
         configFileName += "/.qupil/";
-        ////define log-dir
-// 		logDir = configFileName;
-// 		logDir += "log-files/";
-        ////define data-dir
+        //define data-dir
         dataDir = configFileName;
         dataDir += "db/";
-        ////define cache-dir
-// 		cacheDir = configFileName;
-// 		cacheDir += "cache/";
         //create directories on first start of app
         mkdir(configFileName.c_str(), MODUS) ;
-// 		mkdir(logDir.c_str(), MODUS);
         mkdir(dataDir.c_str(), MODUS);
-// 		mkdir(cacheDir.c_str(), MODUS);
     }
 
 #endif
@@ -142,38 +124,30 @@ ConfigFile::ConfigFile(char *argv0, bool readonly) : noWriteAccess(readonly)
     configList.push_back(ConfigInfo("CopyrightTimeString", CONFIG_TYPE_STRING, "2006-2010"));
 
     list<string> genreList;
-    genreList.push_back("Lied");
-    genreList.push_back("Barock");
-    genreList.push_back("Klassik");
-    genreList.push_back("Romantik");
-    genreList.push_back("Moderne");
-    genreList.push_back("neue Musik");
-    genreList.push_back("Musical");
-    genreList.push_back("Jazz");
-    genreList.push_back("Rock");
-    genreList.push_back("Pop");
-    genreList.push_back("Irish Folk");
+    genreList.push_back(QString(tr("Tune")).toUtf8().constData());
+    genreList.push_back(QString(tr("Baroque")).toUtf8().constData());
+    genreList.push_back(QString(tr("Classical")).toUtf8().constData());
+    genreList.push_back(QString(tr("Romantic")).toUtf8().constData());
+    genreList.push_back(QString(tr("Modernism")).toUtf8().constData());
+    genreList.push_back(QString(tr("New music")).toUtf8().constData());
+    genreList.push_back(QString(tr("Musical")).toUtf8().constData());
+    genreList.push_back(QString(tr("Jazz")).toUtf8().constData());
+    genreList.push_back(QString(tr("Rock")).toUtf8().constData());
+    genreList.push_back(QString(tr("Pop")).toUtf8().constData());
+    genreList.push_back(QString(tr("Irish Folk")).toUtf8().constData());
     configList.push_back(ConfigInfo("PalPiecesGenreList", CONFIG_TYPE_STRING_LIST, "PiecesGenre", genreList));
 
-    list<string> stateList;
-    stateList.push_back("Geplant");
-    stateList.push_back("In Arbeit");
-    stateList.push_back("Pause");
-    stateList.push_back("Vorspielreif");
-    stateList.push_back("Abgeschlossen");
-    configList.push_back(ConfigInfo("PalPiecesStateList", CONFIG_TYPE_STRING_LIST, "PiecesState", stateList));
-
     list<string> locationList;
-    locationList.push_back("R16");
-    locationList.push_back("R20");
-    locationList.push_back("Aula");
+    locationList.push_back(QString(tr("Room 20")).toUtf8().constData());
+    locationList.push_back(QString(tr("Room 16")).toUtf8().constData());
+    locationList.push_back(QString(tr("Auditorium")).toUtf8().constData());
     configList.push_back(ConfigInfo("LessonLocationList", CONFIG_TYPE_STRING_LIST, "LessonLocation", locationList));
 
     list<string> instrumentList;
-    instrumentList.push_back("Violine");
-    instrumentList.push_back("Viola");
-    instrumentList.push_back("Cello");
-    instrumentList.push_back("Kontrabass");
+    instrumentList.push_back(QString(tr("Violin")).toUtf8().constData());
+    instrumentList.push_back(QString(tr("Viola")).toUtf8().constData());
+    instrumentList.push_back(QString(tr("Cello")).toUtf8().constData());
+    instrumentList.push_back(QString(tr("Double Bass")).toUtf8().constData());
     configList.push_back(ConfigInfo("PupilInstrumentList", CONFIG_TYPE_STRING_LIST, "Instrument", instrumentList));
 
     list<string> instrumentSizeList;

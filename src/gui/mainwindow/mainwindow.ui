@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Qupil</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../resources/qupil.qrc">
@@ -46,7 +46,7 @@
         </item>
         <item>
          <property name="text">
-          <string>Pupil list</string>
+          <string>Pupil List</string>
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
@@ -55,7 +55,7 @@
         </item>
         <item>
          <property name="text">
-          <string>Pupil archive</string>
+          <string>Pupil Archive</string>
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
@@ -243,7 +243,7 @@
             <item row="0" column="0">
              <widget class="QGroupBox" name="groupBox_lessonType">
               <property name="title">
-               <string>Lesson type:</string>
+               <string>Lesson Type:</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_5">
                <property name="topMargin">
@@ -255,7 +255,7 @@
                <item row="0" column="0">
                 <widget class="QRadioButton" name="radioButton_singleLesson">
                  <property name="text">
-                  <string>Single lesson</string>
+                  <string>Individual Lesson</string>
                  </property>
                  <property name="checked">
                   <bool>true</bool>
@@ -265,14 +265,14 @@
                <item row="0" column="1">
                 <widget class="QRadioButton" name="radioButton_groupLesson">
                  <property name="text">
-                  <string>Group lesson</string>
+                  <string>Group Lesson</string>
                  </property>
                 </widget>
                </item>
                <item row="0" column="2">
                 <widget class="QRadioButton" name="radioButton_ensembleLesson">
                  <property name="text">
-                  <string>Ensemble lesson</string>
+                  <string>Ensemble Lesson</string>
                  </property>
                 </widget>
                </item>
@@ -282,7 +282,7 @@
             <item row="1" column="0">
              <widget class="QGroupBox" name="groupBox">
               <property name="title">
-               <string>Lesson description</string>
+               <string>Lesson Description</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_10">
                <property name="topMargin">
@@ -294,7 +294,7 @@
                <item row="0" column="0">
                 <widget class="QRadioButton" name="radioButton_autoLessonName">
                  <property name="text">
-                  <string>Create automatically:</string>
+                  <string>Create Automatically:</string>
                  </property>
                  <property name="checked">
                   <bool>true</bool>
@@ -324,7 +324,7 @@
             <item row="2" column="0">
              <widget class="QGroupBox" name="groupBox_lessonDate">
               <property name="title">
-               <string>Lesson time:</string>
+               <string>Lesson Time:</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_6">
                <property name="topMargin">
@@ -341,7 +341,7 @@
                  <item>
                   <widget class="QRadioButton" name="radioButton_steadyLessonDate">
                    <property name="text">
-                    <string>Fixed time:</string>
+                    <string>Fixed Time:</string>
                    </property>
                    <property name="checked">
                     <bool>true</bool>
@@ -351,7 +351,7 @@
                  <item>
                   <widget class="QRadioButton" name="radioButton_unsteadyLessonDate">
                    <property name="text">
-                    <string>Irregular lesson</string>
+                    <string>Irregular Lesson</string>
                    </property>
                   </widget>
                  </item>
@@ -471,7 +471,7 @@
                        </datetime>
                       </property>
                       <property name="displayFormat">
-                       <string>HH:mm</string>
+                       <string notr="true">HH:mm</string>
                       </property>
                      </widget>
                     </item>
@@ -494,7 +494,7 @@
                        </size>
                       </property>
                       <property name="displayFormat">
-                       <string>HH:mm</string>
+                       <string notr="true">HH:mm</string>
                       </property>
                      </widget>
                     </item>
@@ -583,7 +583,7 @@
                  <item>
                   <widget class="QLabel" name="label_6">
                    <property name="text">
-                    <string>Pupils in lesson:</string>
+                    <string>Pupils in Lesson:</string>
                    </property>
                   </widget>
                  </item>
@@ -625,7 +625,7 @@
                  <item>
                   <widget class="QPushButton" name="pushButton_addPupil">
                    <property name="text">
-                    <string>&amp;add</string>
+                    <string>&amp;Add</string>
                    </property>
                    <property name="icon">
                     <iconset resource="../resources/qupil.qrc">
@@ -639,7 +639,7 @@
                  <item>
                   <widget class="QPushButton" name="pushButton_delPupil">
                    <property name="text">
-                    <string>&amp;remove</string>
+                    <string>&amp;Remove</string>
                    </property>
                    <property name="icon">
                     <iconset resource="../resources/qupil.qrc">
@@ -683,7 +683,7 @@
                  <item>
                   <widget class="QLabel" name="label_7">
                    <property name="text">
-                    <string>Available pupils:</string>
+                    <string>Available Pupils:</string>
                    </property>
                   </widget>
                  </item>
@@ -742,7 +742,7 @@
             <item row="6" column="0">
              <widget class="QPushButton" name="pushButton_saveLessonDetails">
               <property name="text">
-               <string>&amp;save</string>
+               <string>&amp;Save</string>
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
@@ -790,7 +790,7 @@
              <normaloff>:/gfx/document-edit-sign.svg</normaloff>:/gfx/document-edit-sign.svg</iconset>
            </attribute>
            <attribute name="title">
-            <string>&amp;Lesson notes</string>
+            <string>&amp;Lesson Notes</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_22">
             <item row="0" column="0" colspan="2">
@@ -854,7 +854,7 @@
                  </size>
                 </property>
                 <property name="displayFormat">
-                 <string>dd.MM.yyyy</string>
+                 <string notr="true">dd.MM.yyyy</string>
                 </property>
                </widget>
               </item>
@@ -897,13 +897,6 @@
                   <width>16777215</width>
                   <height>93</height>
                  </size>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1032,7 +1025,7 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
            </attribute>
            <attribute name="title">
-            <string>&amp;Music pieces</string>
+            <string>&amp;Music Pieces</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_11">
             <item row="0" column="0" colspan="2">
@@ -1170,7 +1163,7 @@ p, li { white-space: pre-wrap; }
                </sizepolicy>
               </property>
               <property name="text">
-               <string>&amp;Delete piece</string>
+               <string>&amp;Delete Piece</string>
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
@@ -1187,7 +1180,7 @@ p, li { white-space: pre-wrap; }
                </sizepolicy>
               </property>
               <property name="text">
-               <string>&amp;Add new piece</string>
+               <string>&amp;Add new Piece</string>
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
@@ -1203,7 +1196,7 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/gfx/im-user.svg</normaloff>:/gfx/im-user.svg</iconset>
            </attribute>
            <attribute name="title">
-            <string>&amp;Personal data</string>
+            <string>&amp;Personal Data</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_16">
             <property name="spacing">
@@ -1217,7 +1210,7 @@ p, li { white-space: pre-wrap; }
               <item row="0" column="0">
                <widget class="QLabel" name="label_14">
                 <property name="text">
-                 <string>First name:</string>
+                 <string>First Name:</string>
                 </property>
                </widget>
               </item>
@@ -1240,7 +1233,7 @@ p, li { white-space: pre-wrap; }
               <item row="0" column="2">
                <widget class="QLabel" name="label_15">
                 <property name="text">
-                 <string>Last name:</string>
+                 <string>Last Name:</string>
                 </property>
                </widget>
               </item>
@@ -1374,7 +1367,7 @@ p, li { white-space: pre-wrap; }
                  </size>
                 </property>
                 <property name="displayFormat">
-                 <string>dd.MM.yyyy</string>
+                 <string notr="true">dd.MM.yyyy</string>
                 </property>
                </widget>
               </item>
@@ -1520,7 +1513,7 @@ p, li { white-space: pre-wrap; }
                    </sizepolicy>
                   </property>
                   <property name="displayFormat">
-                   <string>dd.MM.yyyy</string>
+                   <string notr="true">dd.MM.yyyy</string>
                   </property>
                  </widget>
                 </item>
@@ -1554,7 +1547,7 @@ p, li { white-space: pre-wrap; }
                 <item>
                  <widget class="QLabel" name="label_42">
                   <property name="text">
-                   <string>Personal concert interval:</string>
+                   <string>Personal Concert Interval:</string>
                   </property>
                  </widget>
                 </item>
@@ -1634,7 +1627,7 @@ p, li { white-space: pre-wrap; }
                    </sizepolicy>
                   </property>
                   <property name="text">
-                   <string>Participation in ensemble expected</string>
+                   <string>Participation in Ensemble Expected</string>
                   </property>
                  </widget>
                 </item>
@@ -1691,7 +1684,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QCheckBox" name="checkBox_pupilNeedsNextInstrumentSize">
                 <property name="text">
-                 <string>Next size needed</string>
+                 <string>Next Size needed</string>
                 </property>
                </widget>
               </item>
@@ -1700,7 +1693,7 @@ p, li { white-space: pre-wrap; }
             <item row="6" column="0" colspan="2">
              <widget class="QGroupBox" name="groupBox_pupilHasRentInstrument">
               <property name="title">
-               <string>Rental instrument</string>
+               <string>Rental Instrument</string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -1712,7 +1705,7 @@ p, li { white-space: pre-wrap; }
                <item>
                 <widget class="QLabel" name="label_39">
                  <property name="text">
-                  <string>Inventory number:</string>
+                  <string>Inventory Number:</string>
                  </property>
                 </widget>
                </item>
@@ -1735,7 +1728,7 @@ p, li { white-space: pre-wrap; }
                   </size>
                  </property>
                  <property name="displayFormat">
-                  <string>dd.MM.yyyy</string>
+                  <string notr="true">dd.MM.yyyy</string>
                  </property>
                 </widget>
                </item>
@@ -1787,7 +1780,7 @@ p, li { white-space: pre-wrap; }
             <item row="0" column="0">
              <widget class="QGroupBox" name="groupBox_5">
               <property name="title">
-               <string>Regular (e.g. ensembles):</string>
+               <string>Regular (e.g. Ensembles):</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_5">
                <property name="spacing">
@@ -1980,6 +1973,9 @@ p, li { white-space: pre-wrap; }
                        <height>0</height>
                       </size>
                      </property>
+                     <property name="displayFormat">
+                      <string notr="true">HH:mm</string>
+                     </property>
                     </widget>
                    </item>
                    <item>
@@ -1996,6 +1992,9 @@ p, li { white-space: pre-wrap; }
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
+                     </property>
+                     <property name="displayFormat">
+                      <string notr="true">dd.MM.yyyy</string>
                      </property>
                     </widget>
                    </item>
@@ -2025,7 +2024,7 @@ p, li { white-space: pre-wrap; }
             <item row="1" column="0">
              <widget class="QGroupBox" name="groupBox_6">
               <property name="title">
-               <string>Irregular (e.g. concerts, competitions):</string>
+               <string>Irregular (e.g. Concerts, Competitions):</string>
               </property>
               <layout class="QGridLayout" name="gridLayout_17">
                <property name="verticalSpacing">
@@ -2064,12 +2063,12 @@ p, li { white-space: pre-wrap; }
                   <widget class="QComboBox" name="comboBox_singularActivityType">
                    <item>
                     <property name="text">
-                     <string>Solo recital</string>
+                     <string>Solo Recital</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>Ensemble recital</string>
+                     <string>Ensemble Recital</string>
                     </property>
                    </item>
                    <item>
@@ -2087,7 +2086,11 @@ p, li { white-space: pre-wrap; }
                   </widget>
                  </item>
                  <item>
-                  <widget class="QDateEdit" name="dateEdit_singularActivityDate"/>
+                  <widget class="QDateEdit" name="dateEdit_singularActivityDate">
+                   <property name="displayFormat">
+                    <string notr="true">dd.MM.yyyy</string>
+                   </property>
+                  </widget>
                  </item>
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_18">
@@ -2155,7 +2158,7 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/gfx/edit-copy.svg</normaloff>:/gfx/edit-copy.svg</iconset>
            </attribute>
            <attribute name="title">
-            <string>&amp;Loaned music</string>
+            <string>&amp;Loaned Music</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_19">
             <item row="0" column="0">
@@ -2199,7 +2202,7 @@ p, li { white-space: pre-wrap; }
             <item row="1" column="0">
              <widget class="QPushButton" name="pushButton_sheetBackFromPupil">
               <property name="text">
-               <string>Selection &amp;returned by the pupil</string>
+               <string>Selection &amp;Returned by the Pupil</string>
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
@@ -2376,7 +2379,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/x-office-contact.svg</normaloff>:/gfx/x-office-contact.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Event manager ...</string>
+    <string>&amp;Event Manager ...</string>
    </property>
   </action>
   <action name="actionInstrumentenManager">
@@ -2403,7 +2406,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/view-calendar-birthday.svg</normaloff>:/gfx/view-calendar-birthday.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Show birthdays</string>
+    <string>&amp;Show Birthdays</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+B</string>
@@ -2444,7 +2447,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
    </property>
    <property name="text">
-    <string>Delete &amp;lesson</string>
+    <string>Delete &amp;Lesson</string>
    </property>
   </action>
   <action name="actionSchuelerLoeschen">
@@ -2453,7 +2456,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/list-remove-user.svg</normaloff>:/gfx/list-remove-user.svg</iconset>
    </property>
    <property name="text">
-    <string>Delete &amp;pupil</string>
+    <string>Delete &amp;Pupil</string>
    </property>
   </action>
   <action name="actionSchuelerArchivieren">
@@ -2462,12 +2465,12 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/archive-insert.svg</normaloff>:/gfx/archive-insert.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Archive pupil</string>
+    <string>&amp;Archive Pupil</string>
    </property>
   </action>
   <action name="actionSchuelerArchivierenUndLoeschen">
    <property name="text">
-    <string>Archive and &amp;delete pupil</string>
+    <string>Archive and &amp;Delete Pupil</string>
    </property>
   </action>
   <action name="actionArchiveintragLoeschen">
@@ -2476,7 +2479,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/archive-remove.svg</normaloff>:/gfx/archive-remove.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Delete archive entry</string>
+    <string>&amp;Delete Archive Entry</string>
    </property>
   </action>
   <action name="actionMetronomStimmen">
@@ -2497,7 +2500,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/edit-copy.svg</normaloff>:/gfx/edit-copy.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Music library ...</string>
+    <string>&amp;Music Library ...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+L</string>
@@ -2509,7 +2512,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/document-export.svg</normaloff>:/gfx/document-export.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Create backup ...</string>
+    <string>&amp;Create Backup ...</string>
    </property>
   </action>
   <action name="actionBackupZurueckspielen">
@@ -2518,7 +2521,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/document-import.svg</normaloff>:/gfx/document-import.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Replay backup...</string>
+    <string>&amp;Replay Backup...</string>
    </property>
   </action>
   <action name="actionAdressbuchCsvImportieren">
@@ -2527,7 +2530,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/address-book-new.svg</normaloff>:/gfx/address-book-new.svg</iconset>
    </property>
    <property name="text">
-    <string>Import (CVS) &amp;address book ...</string>
+    <string>Import (CVS) &amp;Address Book ...</string>
    </property>
   </action>
   <action name="actionStundenplanErstellen">
@@ -2536,7 +2539,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/appointment-new.svg</normaloff>:/gfx/appointment-new.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Timetable document ...</string>
+    <string>&amp;Timetable Document ...</string>
    </property>
   </action>
   <action name="actionVorspielkandidaten">
@@ -2545,7 +2548,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Concert candidates...</string>
+    <string>&amp;Concert Candidates ...</string>
    </property>
   </action>
   <action name="actionErinnerungen">
@@ -2563,7 +2566,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Daily schedule ...</string>
+    <string>&amp;Daily Schedule ...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+D</string>
@@ -2580,7 +2583,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/gfx/user-group-new.svg</normaloff>:/gfx/user-group-new.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Ensemble candidates ...</string>
+    <string>&amp;Ensemble Candidates ...</string>
    </property>
   </action>
  </widget>

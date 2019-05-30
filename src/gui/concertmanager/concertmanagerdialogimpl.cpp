@@ -41,11 +41,11 @@ ConcertManagerDialogImpl::ConcertManagerDialogImpl(ConfigFile *c, mainWindowImpl
     setupUi(this);
 
     managerRecitalMenu = new QMenu;
-    addRecitalAction = new QAction(QString::fromUtf8(tr("Hinzufügen ...").toStdString().c_str()), managerRecitalMenu);
+    addRecitalAction = new QAction(QString::fromUtf8(tr("Add ...").toStdString().c_str()), managerRecitalMenu);
     addRecitalAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_V, Qt::Key_H));
-    removeRecitalAction = new QAction(QString::fromUtf8(tr("Löschen").toStdString().c_str()), managerRecitalMenu);
+    removeRecitalAction = new QAction(QString::fromUtf8(tr("Delete").toStdString().c_str()), managerRecitalMenu);
     removeRecitalAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_V, Qt::Key_L));
-    removeAndArchiveRecitalAction = new QAction(QString::fromUtf8(tr("Archivieren und Löschen").toStdString().c_str()), managerRecitalMenu);
+    removeAndArchiveRecitalAction = new QAction(QString::fromUtf8(tr("Archive and Delete").toStdString().c_str()), managerRecitalMenu);
     removeAndArchiveRecitalAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_V, Qt::Key_A));
     managerRecitalMenu->addAction(addRecitalAction);
     managerRecitalMenu->addAction(removeRecitalAction);
@@ -54,11 +54,11 @@ ConcertManagerDialogImpl::ConcertManagerDialogImpl(ConfigFile *c, mainWindowImpl
     toolButton_recital->setMenu(managerRecitalMenu);
 
     managerPieceMenu = new QMenu;
-    addPieceAction = new QAction(QString::fromUtf8(tr("Hinzufügen ...").toStdString().c_str()), managerPieceMenu);
+    addPieceAction = new QAction(QString::fromUtf8(tr("Add ...").toStdString().c_str()), managerPieceMenu);
     addPieceAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_W, Qt::Key_H));
-    addExtPieceAction = new QAction(QString::fromUtf8(tr("Externen Beitrag hinzufügen...").toStdString().c_str()), managerPieceMenu);
+    addExtPieceAction = new QAction(QString::fromUtf8(tr("Add External Contribution ...").toStdString().c_str()), managerPieceMenu);
     addExtPieceAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_W, Qt::Key_E));
-    removePieceAction = new QAction(QString::fromUtf8(tr("Löschen").toStdString().c_str()), managerPieceMenu);
+    removePieceAction = new QAction(QString::fromUtf8(tr("Delete").toStdString().c_str()), managerPieceMenu);
     removePieceAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_W, Qt::Key_L));
     managerPieceMenu->addAction(addPieceAction);
     managerPieceMenu->addAction(addExtPieceAction);
@@ -69,7 +69,7 @@ ConcertManagerDialogImpl::ConcertManagerDialogImpl(ConfigFile *c, mainWindowImpl
     myAddRecitalDialog = new AddRecitalDialogImpl;
 
     archivePopupMenu = new QMenu();
-    delArchiveAction = new QAction(QIcon(":/gfx/archive-remove.svg"), QString::fromUtf8(tr("Archiveintrag löschen").toStdString().c_str()), archivePopupMenu);
+    delArchiveAction = new QAction(QIcon(":/gfx/archive-remove.svg"), QString::fromUtf8(tr("Delete Archive Entry").toStdString().c_str()), archivePopupMenu);
     archivePopupMenu->addAction(delArchiveAction);
 
     //lade orte aus der Config
@@ -80,7 +80,7 @@ ConcertManagerDialogImpl::ConcertManagerDialogImpl(ConfigFile *c, mainWindowImpl
     for(it2= locationList.begin(); it2 != locationList.end(); it2++) {
         myLessonLocationStringList << QString::fromUtf8(it2->c_str());
     }
-    comboBox_piecesByLocationFilter->insertItem(0, "alle");
+    comboBox_piecesByLocationFilter->insertItem(0, tr("All"));
     comboBox_piecesByLocationFilter->insertItems(1, myLessonLocationStringList );
 
 
@@ -136,7 +136,7 @@ void ConcertManagerDialogImpl::loadReadyPiecesView()
             item->setData(0, Qt::UserRole, query.value(10).toString());
             item->setData(1, Qt::DisplayRole, query.value(3).toString());
             item->setData(2, Qt::DisplayRole, query.value(4).toString());
-            item->setData(3, Qt::DisplayRole, query.value(5).toString()+" Min.");
+            item->setData(3, Qt::DisplayRole, query.value(5).toString()+" "+tr("Min."));
 
             QSqlQuery query2("SELECT pu.forename, pu.surname, pu.instrumenttype, CASE WHEN date(pu.birthday, '+' || (strftime('%Y', 'now') - strftime('%Y', pu.birthday)) || ' years') <= date('now') THEN strftime('%Y', 'now') - strftime('%Y', pu.birthday) ELSE strftime('%Y', 'now') - strftime('%Y', pu.birthday) -1 END AS age FROM pupil pu, pupilatlesson pal WHERE pal.pupilid= pu.pupilid AND pal.lessonid = "+query.value(0).toString()+" AND pal.stopdate > date('now') ORDER by age ASC");
             if (query2.lastError().isValid()) {
@@ -175,7 +175,7 @@ void ConcertManagerDialogImpl::loadReadyPiecesView()
             item->setData(0, Qt::DisplayRole, query.value(2).toString());
             item->setData(1, Qt::DisplayRole, query.value(3).toString());
             item->setData(2, Qt::DisplayRole, query.value(4).toString());
-            item->setData(3, Qt::DisplayRole, query.value(5).toString()+" Min.");
+            item->setData(3, Qt::DisplayRole, query.value(5).toString()+" "+tr("Min."));
             item->setData(4, Qt::DisplayRole, query.value(9).toString()+", "+query.value(8).toString()+" ("+query.value(7).toString()+") - "+query.value(6).toString());
 
             treeWidget->resizeColumnToContents(0);
@@ -192,6 +192,7 @@ void ConcertManagerDialogImpl::loadReadyPiecesView()
 
 int ConcertManagerDialogImpl::exec()
 {
+    retranslateUi(this);
     loadReadyPiecesView();
     loadConcertManager();
     return QDialog::exec();
@@ -270,8 +271,8 @@ void ConcertManagerDialogImpl::addRecital()
 
 void ConcertManagerDialogImpl::removeRecital()
 {
-    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Qupil - Vorspiel löschen").toStdString().c_str()),
-                                   QString::fromUtf8(tr("Möchten Sie das Vorspiel \"%1\" wirklich löschen?").arg(tabWidget_recitals->tabText(tabWidget_recitals->currentIndex())).toStdString().c_str()),
+    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Delete Event").toStdString().c_str()),
+                                   QString::fromUtf8(tr("Do you really want to delete the event: \"%1\" ?").arg(tabWidget_recitals->tabText(tabWidget_recitals->currentIndex())).toStdString().c_str()),
                                    QMessageBox::Yes | QMessageBox::No);
     if(ret == QMessageBox::Yes) {
         QSqlQuery query;
@@ -419,33 +420,33 @@ QTextDocument* ConcertManagerDialogImpl::createRecitalDocument()
 				 <html> \
 				 <head> \
 				 <meta content='text/html; charset=utf-8' http-equiv='content-type'> \
-				 <title>Qupil - Programm&uuml;bersicht f&uuml;r Veranstaltungen</title> \
+                 <title>Qupil - "+tr("Program overview for events")+"</title> \
 			</head> \
 			<body> \
 			<table style='text-align: left; margin-left: auto; margin-right: auto; width: 100%;' border='0' cellpadding='0' cellspacing='0'> \
-			<tr><td align='center' width='100%'><h2>Programm&uuml;bersicht f&uuml;r \""+recitalquery.value(0).toString()+"\"</h2></td></tr> \
+            <tr><td align='center' width='100%'><h2>"+tr("Program for")+" \""+recitalquery.value(0).toString()+"\"</h2></td></tr> \
 			<tr><td >\
 			<tr><td width='100%'></td></tr>\
 			<tr><td width='100%'>\
 			<table cellpadding='1' cellspacing='0' width='100%' style='text-align: left; border-width:0px;'> \
 			<tr> \
-			<td><b>Datum:</b> "+QDate::fromString(recitalquery.value(1).toString(), Qt::ISODate).toString("dd.MM.yyyy")+"<td>\
-		<td><b>Uhrzeit:</b> "+recitalquery.value(2).toString()+" Uhr<td>\
-		<td><b>Ort:</b> "+recitalquery.value(3).toString()+"<td>\
-		<td><b>Organisation:</b> "+recitalquery.value(4).toString()+"<td>\
-		<td><b>Begleitung:</b> "+recitalquery.value(5).toString()+"<td>\
+            <td><b>"+tr("Date")+":</b> "+QDate::fromString(recitalquery.value(1).toString(), Qt::ISODate).toString("dd.MM.yyyy")+"<td>\
+        <td><b>"+tr("Time")+":</b> "+recitalquery.value(2).toString()+"<td>\
+        <td><b>"+tr("Location")+":</b> "+recitalquery.value(3).toString()+"<td>\
+        <td><b>"+tr("Organiser")+":</b> "+recitalquery.value(4).toString()+"<td>\
+        <td><b>"+tr("Accompanist")+":</b> "+recitalquery.value(5).toString()+"<td>\
 		</tr>\
         </table>\
 		</td></tr>\
 		<tr><td width='100%'></td></tr>\
 		<tr><td width='100%'>\
         <table cellpadding='1' cellspacing='0' width='100%' style='text-align: left; border-width:1px; border-style:solid;'> \
-		<tr><th>Komponist</th><th>Werk/Satzbezeichnung</th><th>Genre</th><th>Dauer</th><th>Musiker (Alter) - Instrument</th></tr>"+string+"\
+        <tr><th>"+tr("Composer")+"</th><th>"+tr("Music Piece / Movements")+"</th><th>"+tr("Genre")+"</th><th>"+tr("Duration")+"</th><th>"+tr("Musician (Age) - Instrument")+"</th></tr>"+string+"\
 	  </table>\
       </td></tr>\
       <tr><td width='100%'></td></tr>\
-      <tr><td width='100%'><b>Reine Spielzeit:</b> "+QString("%1 Min.").arg(static_cast<RecitalTabs*>(tabWidget_recitals->currentWidget())->getCompletePiecesDuration())+"</td></tr>\
-      <tr><td width='100%'><b>Gesch&auml;tzte Gesamtdauer:</b> "+QString("%1 Min.").arg(static_cast<RecitalTabs*>(tabWidget_recitals->currentWidget())->getCompleteAllInAllDuration())+"</td></tr>\
+      <tr><td width='100%'><b>"+tr("Pure playing time")+":</b> "+QString("%1 "+tr("Min.")).arg(static_cast<RecitalTabs*>(tabWidget_recitals->currentWidget())->getCompletePiecesDuration())+"</td></tr>\
+      <tr><td width='100%'><b>"+tr("Estimated total duration")+":</b> "+QString("%1 "+tr("Min.")).arg(static_cast<RecitalTabs*>(tabWidget_recitals->currentWidget())->getCompleteAllInAllDuration())+"</td></tr>\
 		<tr><td width='100%'></td></tr>\
         <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;2006-"+QDate::currentDate().toString("yyyy")+" - Felix Hammer - qupil.de</i></td></tr>\
 			</table>\
@@ -529,8 +530,8 @@ void ConcertManagerDialogImpl::delCurrentArchive()
         selectedItemIdString = selectedItemList.first()->data(0,Qt::UserRole).toString();
     }
 
-    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Qupil - Archiveintrag löschen").toStdString().c_str()),
-                                   QString::fromUtf8(tr("Möchten Sie den Archiveintrag \"%1\" wirklich löschen?").arg(selectedItemList.first()->data(0,Qt::DisplayRole).toString().toUtf8().constData()).toStdString().c_str()),
+    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Delete Archive Entry").toStdString().c_str()),
+                                   QString::fromUtf8(tr("Do you really want to delete the archive entry \"%1\" ?").arg(selectedItemList.first()->data(0,Qt::DisplayRole).toString().toUtf8().constData()).toStdString().c_str()),
                                    QMessageBox::Ok | QMessageBox::Cancel);
     if(ret == QMessageBox::Ok) {
         QSqlQuery delArchiveQuery("DELETE FROM recitalarchive WHERE recitalid = "+selectedItemIdString);
@@ -561,9 +562,9 @@ void ConcertManagerDialogImpl::printCurrentArchiveDoc()
 
 void ConcertManagerDialogImpl::exportCurrentArchiveDocToPDF()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Exportiere Datei"),
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Export File"),
                        QDir::homePath(),
-                       tr("PDF Datei (*.pdf)"));
+                       tr("PDF File (*.pdf)"));
     if (!fileName.isEmpty()) {
         if (QFileInfo(fileName).suffix().isEmpty())
             fileName.append(".pdf");

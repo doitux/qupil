@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Ensemblekandidaten</string>
+   <string>Ensemble Candidates - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
@@ -94,17 +94,17 @@
           </property>
           <column>
            <property name="text">
-            <string>Sortierung</string>
+            <string>Sorting</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Schüler</string>
+            <string>Pupil</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Letzte Ensemblemitwirkung</string>
+            <string>Last Ensemble Participation</string>
            </property>
           </column>
           <column>

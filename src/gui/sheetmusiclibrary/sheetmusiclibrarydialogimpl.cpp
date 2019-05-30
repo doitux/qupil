@@ -142,6 +142,7 @@ void SheetMusicLibraryDialogImpl::loadRentToPupil()
 
 int SheetMusicLibraryDialogImpl::exec()
 {
+    retranslateUi(this);
     loadPupilComboBox();
     loadSheetMusicLibrary();
     return QDialog::exec();
@@ -150,9 +151,9 @@ int SheetMusicLibraryDialogImpl::exec()
 void SheetMusicLibraryDialogImpl::addNewSheetMusic()
 {
     if(lineEdit_author->text().isEmpty() || lineEdit_publisher->text().isEmpty() || lineEdit_title->text().isEmpty()) {
-        QMessageBox::warning(this, tr("Qupil"),
-                             QString::fromUtf8(tr("Sie müssen alle Felder (Komponist/Author, Titel, Verlag) ausfüllen\n"
-                                               "um den Eintrag hinzuzufügen!").toStdString().c_str()),
+        QMessageBox::warning(this, "Qupil",
+                             QString::fromUtf8(tr("You must complete all fields (composer / author, title, publisher) \n"
+                                                  "to add the entry!").toStdString().c_str()),
                              QMessageBox::Ok);
     } else {
         QString authorId;

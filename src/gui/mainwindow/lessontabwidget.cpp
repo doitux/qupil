@@ -253,9 +253,9 @@ void LessonTabWidget::saveLessonDetails()
 
     //save pupilAtLesson Data
     if(myW->radioButton_singleLesson->isChecked() && myW->treeWidget_pupilAtLesson->topLevelItemCount() > 1) {
-        QMessageBox::information(this, tr("Qupil"),
-                                 QString::fromUtf8(tr("Sie können einem Einzelunterricht nicht mehr als einen Schüler zuweisen\n"
-                                         "Bitte ändern Sie die Schüleranzahl um zu speichern!").toStdString().c_str()),
+        QMessageBox::information(this, "Qupil",
+                                 QString::fromUtf8(tr("You can not assign more than one student to an individual lesson \n"
+                                                      "Please change the number of students to save!").toStdString().c_str()),
                                  QMessageBox::Ok);
         saveOk = false;
     } else {
@@ -383,9 +383,9 @@ QString LessonTabWidget::updateAutoLessonName()
     //set autonaming string
     QString autoNameString;
 
-    if(myW->radioButton_singleLesson->isChecked()) autoNameString = "EU-";
-    else if(myW->radioButton_groupLesson->isChecked()) autoNameString = "GU-";
-    else autoNameString = "EnsU-";
+    if(myW->radioButton_singleLesson->isChecked()) autoNameString = tr("IL-");
+    else if(myW->radioButton_groupLesson->isChecked()) autoNameString = tr("GL-");
+    else autoNameString = tr("EnsL-");
 
     if(myW->radioButton_steadyLessonDate->isChecked())
         autoNameString += QString::number(myW->timeEdit_lessonStartTime->time().secsTo(myW->timeEdit_lessonStopTime->time())/60,10)+"-";

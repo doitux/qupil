@@ -29,11 +29,11 @@ PupilListTreeWidget::PupilListTreeWidget(QWidget *tab)
 {
 
     pupilPopupMenu = new QMenu();
-    delPupil = new QAction(QIcon(":/gfx/list-remove-user.svg"), QString::fromUtf8(tr("Schüler löschen").toStdString().c_str()), pupilPopupMenu);
+    delPupil = new QAction(QIcon(":/gfx/list-remove-user.svg"), QString::fromUtf8(tr("Delete Pupil").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(delPupil);
-    archivePupil = new QAction(QIcon(":/gfx/archive-insert.svg"),QString::fromUtf8(tr("Schüler archivieren").toStdString().c_str()), pupilPopupMenu);
+    archivePupil = new QAction(QIcon(":/gfx/archive-insert.svg"),QString::fromUtf8(tr("Archive Pupil").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(archivePupil);
-    archiveAndDelPupil = new QAction(QString::fromUtf8(tr("Schüler archivieren und löschen").toStdString().c_str()), pupilPopupMenu);
+    archiveAndDelPupil = new QAction(QString::fromUtf8(tr("Archive and Delete Pupil").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(archiveAndDelPupil);
 
     connect( this, SIGNAL (currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT (pupilListSelectionChanged(QTreeWidgetItem*, QTreeWidgetItem*)) );
@@ -124,8 +124,8 @@ void PupilListTreeWidget::delCurrentPupil(bool firstItemSelection, bool menuRefr
         selectedItemIdString = selectedItemList.first()->data(0,Qt::UserRole).toString();
     }
 
-    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Qupil - Schüler löschen").toStdString().c_str()),
-                                   QString::fromUtf8(tr("Möchten Sie den Schüler \"%1\" wirklich löschen?").arg(selectedItemList.first()->data(0,Qt::DisplayRole).toString().toUtf8().constData()).toStdString().c_str()),
+    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Delete Pupil").toStdString().c_str()),
+                                   QString::fromUtf8(tr("Do you really want to delete the pupil \"%1\" ?").arg(selectedItemList.first()->data(0,Qt::DisplayRole).toString().toUtf8().constData()).toStdString().c_str()),
                                    QMessageBox::Ok | QMessageBox::Cancel);
     if(ret == QMessageBox::Ok) {
         QSqlQuery delPupilQuery("DELETE FROM pupil WHERE pupilid = "+selectedItemIdString);
@@ -160,29 +160,26 @@ void PupilListTreeWidget::archiveCurrentPupil()
         if(lessonCountQuery.value(0).toInt()) { /*only show acts if there is something*/
 
             QStringList myStateStringList;
-            std::list<std::string> stateList = myConfig->readConfigStringList("PalPiecesStateList");
-            std::list<std::string>::iterator it;
-            for(it= stateList.begin(); it != stateList.end(); it++) {
-                myStateStringList << QString::fromUtf8(it->c_str());
-            }
+            myStateStringList << tr("Planned") << tr("In Progress") << tr("Paused") << tr("Ready for Concert") << tr("Finished");
+
             QString lessonStrings("");
             int lessonCounter = 0;
             QStringList lessonContentsList;
 
-            completeLessonContentsList << "<tr><td></td></tr><tr><td><h3><u>Unterrichtsnotizen und Werke:</u></h3></td></tr><tr><td></td></tr>";
+            completeLessonContentsList << "<tr><td></td></tr><tr><td><h3><u>"+tr("Lesson notes and music pieces")+":</u></h3></td></tr><tr><td></td></tr>";
             //inactive lessons
             QSqlQuery palQuery("SELECT pal.palid, lln.lessonname, pal.startdate, pal.stopdate FROM pupilatlesson pal, lastlessonname lln WHERE pal.llnid = lln.llnid AND pal.pupilid = "+selectedItemList.first()->data(0,Qt::UserRole).toString()+" AND pal.stopdate <= '"+QDate::currentDate().toString(Qt::ISODate)+"'", *myW->getMyDb()->getMyPupilDb());
             if (palQuery.lastError().isValid()) qDebug() << "DB Error: 97 - " << palQuery.lastError();
             while (palQuery.next()) {
                 lessonCounter++;
-                lessonStrings += "<tr><td>"+QString::number(lessonCounter)+". "+palQuery.value(1).toString()+" (vom "+QDate::fromString(palQuery.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" bis "+QDate::fromString(palQuery.value(3).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</td></tr>";
+                lessonStrings += "<tr><td>"+QString::number(lessonCounter)+". "+palQuery.value(1).toString()+" ("+tr("from")+" "+QDate::fromString(palQuery.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" "+tr("to")+" "+QDate::fromString(palQuery.value(3).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</td></tr>";
 
                 QSqlQuery noteQuery("SELECT strftime(\"%d.%m.%Y\", n.date), n.content FROM note n, pupilatlesson pal WHERE pal.palid = "+palQuery.value(0).toString()+" AND pal.palid=n.palid AND pal.startdate <= n.date AND pal.stopdate >= n.date ORDER BY n.date ASC", *myW->getMyDb()->getMyPupilDb());
                 if (noteQuery.lastError().isValid()) qDebug() << "DB Error: 98 - " << noteQuery.lastError();
                 QString noteString("");
                 if(noteQuery.next()) {
-                    noteString += "<tr><td><b>Unterrichtsnotizen ("+palQuery.value(1).toString()+" - vom "+QDate::fromString(palQuery.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" bis "+QDate::fromString(palQuery.value(3).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
-                    noteString += "<tr><td><u>Datum</u></td><td><u>Notiz</u></td></tr>";
+                    noteString += "<tr><td><b>"+tr("Lesson notes")+" ("+palQuery.value(1).toString()+" - "+tr("from")+" "+QDate::fromString(palQuery.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" "+tr("to")+" "+QDate::fromString(palQuery.value(3).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
+                    noteString += "<tr><td><u>"+tr("Date")+"</u></td><td><u>"+tr("Note")+"</u></td></tr>";
                     noteQuery.previous();
                     while (noteQuery.next()) {
                         noteString += "<tr><td>"+noteQuery.value(0).toString()+"</td><td>"+noteQuery.value(1).toString()+"</td></tr>";
@@ -196,8 +193,8 @@ void PupilListTreeWidget::archiveCurrentPupil()
                 if (pieceQuery.lastError().isValid()) qDebug() << "DB Error: 99 - " << pieceQuery.lastError();
                 QString pieceString("");
                 if(pieceQuery.next()) {
-                    pieceString += "<tr><td><b>Werke ("+palQuery.value(1).toString()+" - vom "+QDate::fromString(palQuery.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" bis "+QDate::fromString(palQuery.value(3).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
-                    pieceString += "<tr><td><u>Titel</u></td><td><u>Genre</u></td><td><u>Dauer</u></td><td><u>Beginn</u></td><td><u>Ende</u></td><td><u>Status</u></td></tr>";
+                    pieceString += "<tr><td><b>"+tr("Music pieces")+" ("+palQuery.value(1).toString()+" - "+tr("from")+" "+QDate::fromString(palQuery.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" "+tr("to")+" "+QDate::fromString(palQuery.value(3).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
+                    pieceString += "<tr><td><u>"+tr("Title")+"</u></td><td><u>"+tr("Genre")+"</u></td><td><u>"+tr("Duration")+"</u></td><td><u>"+tr("Start")+"</u></td><td><u>"+tr("End")+"</u></td><td><u>"+tr("State")+"</u></td></tr>";
                     pieceQuery.previous();
                     while (pieceQuery.next()) {
                         pieceString += "<tr><td>"+pieceQuery.value(0).toString()+"</td><td>"+pieceQuery.value(1).toString()+"</td><td>"+pieceQuery.value(2).toString()+"</td><td>"+pieceQuery.value(3).toString()+"</td><td>"+pieceQuery.value(4).toString()+"</td><td>"+myStateStringList.at(pieceQuery.value(5).toInt())+"</td></tr>";
@@ -212,14 +209,14 @@ void PupilListTreeWidget::archiveCurrentPupil()
             if (palQuery1.lastError().isValid()) qDebug() << "DB Error: 100 - " << palQuery1.lastError();
             while (palQuery1.next()) {
                 lessonCounter++;
-                lessonStrings += "<tr><td>"+QString::number(lessonCounter)+". "+palQuery1.value(1).toString()+" (seit "+QDate::fromString(palQuery1.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</td></tr>";
+                lessonStrings += "<tr><td>"+QString::number(lessonCounter)+". "+palQuery1.value(1).toString()+" ("+tr("since")+" "+QDate::fromString(palQuery1.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</td></tr>";
 
                 QSqlQuery noteQuery("SELECT strftime(\"%d.%m.%Y\", n.date), n.content FROM note n, pupilatlesson pal WHERE pal.palid = "+palQuery1.value(0).toString()+" AND pal.palid=n.palid AND pal.startdate <= n.date AND pal.stopdate >= n.date ORDER BY n.date ASC", *myW->getMyDb()->getMyPupilDb());
                 if (noteQuery.lastError().isValid()) qDebug() << "DB Error: 101 - " << noteQuery.lastError();
                 QString noteString("");
                 if(noteQuery.next()) {
-                    noteString += "<tr><td><b>Unterrichtsnotizen ("+palQuery1.value(1).toString()+" - seit "+QDate::fromString(palQuery1.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
-                    noteString += "<tr><td><u>Datum</u></td><td><u>Notiz</u></td></tr>";
+                    noteString += "<tr><td><b>"+tr("Lesson notes")+" ("+palQuery1.value(1).toString()+" - "+tr("since")+" "+QDate::fromString(palQuery1.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
+                    noteString += "<tr><td><u>"+tr("Date")+"</u></td><td><u>"+tr("Note")+"</u></td></tr>";
                     noteQuery.previous();
                     while (noteQuery.next()) {
                         noteString += "<tr><td>"+noteQuery.value(0).toString()+"</td><td>"+noteQuery.value(1).toString()+"</td></tr>";
@@ -232,8 +229,8 @@ void PupilListTreeWidget::archiveCurrentPupil()
                 if (pieceQuery.lastError().isValid()) qDebug() << "DB Error: 102 - " << pieceQuery.lastError();
                 QString pieceString("");
                 if(pieceQuery.next()) {
-                    pieceString += "<tr><td><b>Werke ("+palQuery1.value(1).toString()+" seit "+QDate::fromString(palQuery1.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
-                    pieceString += "<tr><td><u>Titel</u></td><td><u>Genre</u></td><td><u>Dauer</u></td><td><u>Beginn</u></td><td><u>Ende</u></td><td><u>Status</u></td></tr>";
+                    pieceString += "<tr><td><b>"+tr("Music pieces")+" ("+palQuery1.value(1).toString()+" "+tr("since")+" "+QDate::fromString(palQuery1.value(2).toString(), Qt::ISODate).toString("dd.MM.yyyy")+")</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
+                    pieceString += "<tr><td><u>"+tr("Title")+"</u></td><td><u>"+tr("Genre")+"</u></td><td><u>"+tr("Duration")+"</u></td><td><u>"+tr("Start")+"</u></td><td><u>"+tr("End")+"</u></td><td><u>"+tr("State")+"</u></td></tr>";
                     pieceQuery.previous();
                     while (pieceQuery.next()) {
                         pieceString += "<tr><td>"+pieceQuery.value(0).toString()+"</td><td>"+pieceQuery.value(1).toString()+"</td><td>"+pieceQuery.value(2).toString()+"</td><td>"+pieceQuery.value(3).toString()+"</td><td>"+pieceQuery.value(4).toString()+"</td><td>"+myStateStringList.at(pieceQuery.value(5).toInt())+"</td></tr>";
@@ -242,7 +239,7 @@ void PupilListTreeWidget::archiveCurrentPupil()
                     lessonContentsList << pieceString;
                 }
             }
-            completeLessonContentsList << "<tr><td><b>Der Sch&uuml;ler/die Sch&uuml;lerin nahm an folgenden Unterrichtsveranstaltungen teil:</b></td></tr>"+lessonStrings+"<tr><td><hr style='width: 100%; height: 1px;'></td></tr><tr><td></td></tr>";
+            completeLessonContentsList << "<tr><td><b>"+tr("The student took part in the following lessons")+":</b></td></tr>"+lessonStrings+"<tr><td><hr style='width: 100%; height: 1px;'></td></tr><tr><td></td></tr>";
             completeLessonContentsList << lessonContentsList.join("");
         }
 
@@ -252,15 +249,15 @@ void PupilListTreeWidget::archiveCurrentPupil()
         if (actCountQuery.lastError().isValid()) qDebug() << "DB Error: 103 - " << actCountQuery.lastError();
         actCountQuery.next();
         if(actCountQuery.value(0).toInt()) { /*only show acts if there is something*/
-            activityContentsList << "<tr><td></td></tr><tr><td></td></tr><tr><td><h3><u>Aktivit&auml;ten des Sch&uuml;lers:</u></h3></td></tr><tr><td></td></tr>";
+            activityContentsList << "<tr><td></td></tr><tr><td></td></tr><tr><td><h3><u>"+tr("Activities of the student")+":</u></h3></td></tr><tr><td></td></tr>";
             //continous activity
             QSqlQuery contActQuery("SELECT desc, continousday, continoustime, strftime(\"%d.%m.%Y\", date), strftime(\"%d.%m.%Y\", continousstopdate) FROM activity WHERE pupilid="+selectedItemList.first()->data(0,Qt::UserRole).toString()+" AND ifcontinous=1 ORDER BY date DESC", *myW->getMyDb()->getMyPupilDb());
             if (contActQuery.lastError().isValid()) qDebug() << "DB Error: 104 - " << contActQuery.lastError();
             QString contActString("");
-            contActString += "<tr><td><b>Regelm&auml;&szlig;ige Aktivit&auml;ten:</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
-            contActString += "<tr><td><u>Bezeichnung</u></td><td><u>Wochentag</u></td><td><u>Uhrzeit</u></td><td><u>Datum (Beginn)</u></td><td><u>Datum (Ende)</u></td></tr>";
+            contActString += "<tr><td><b>"+tr("Regular activities")+":</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
+            contActString += "<tr><td><u>"+tr("Description")+"</u></td><td><u>"+tr("Weekday")+"</u></td><td><u>"+tr("Time")+"</u></td><td><u>"+tr("Start")+"</u></td><td><u>"+tr("End")+"</u></td></tr>";
             QStringList dayList;
-            dayList << tr("Montag") << tr("Dienstag") << tr("Mittwoch") << tr("Donnerstag") << tr("Freitag") << tr("Samstag") << tr("Sonntag") << QString::fromUtf8(tr("unregelmäßig").toStdString().c_str());
+            dayList << tr("Monday") << tr("Tuesday") << tr("Wednesday") << tr("Thursday") << tr("Friday") << tr("Saturday") << tr("Sunday") << QString::fromUtf8(tr("irregular").toStdString().c_str());
             while (contActQuery.next()) {
                 contActString += "<tr><td>"+contActQuery.value(0).toString()+"</td><td>"+dayList.at(contActQuery.value(1).toInt())+"</td><td>"+contActQuery.value(2).toString()+"</td><td>"+contActQuery.value(3).toString()+"</td><td>"+contActQuery.value(4).toString()+"</td></tr>";
             }
@@ -269,12 +266,12 @@ void PupilListTreeWidget::archiveCurrentPupil()
 
             //singular activity
             QStringList myTypeList;
-            myTypeList << "Solo-Vortrag" << "Ensemble-Mitwirkung" << "sonstiges";
+            myTypeList << tr("Solo Recital") << tr("Ensemble Recital") << tr("Other");
             QSqlQuery singActQuery("SELECT desc, strftime(\"%d.%m.%Y\", date), noncontinoustype FROM activity WHERE pupilid="+selectedItemList.first()->data(0,Qt::UserRole).toString()+" AND ifcontinous=0 ORDER BY date DESC", *myW->getMyDb()->getMyPupilDb());
             if (singActQuery.lastError().isValid()) qDebug() << "DB Error: 105 - " << singActQuery.lastError();
             QString singActString("");
-            singActString += "<tr><td><b>Einmalige Aktivit&auml;ten:</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
-            singActString += "<tr><td><u>Bezeichnung</u></td><td><u>Datum</u></td><td><u>Typ</u></td></tr>";
+            singActString += "<tr><td><b>"+tr("Irregular activities")+":</b></td></tr><tr><td><table style='text-align: left;' cellpadding='1' cellspacing='0' width='100%' style=' border-width:1px; border-style:solid;'>";
+            singActString += "<tr><td><u>"+tr("Description")+"</u></td><td><u>"+tr("Date")+"</u></td><td><u>"+tr("Type")+"</u></td></tr>";
             while (singActQuery.next()) {
                 singActString += "<tr><td>"+singActQuery.value(0).toString()+"</td><td>"+singActQuery.value(1).toString()+"</td><td>"+myTypeList.at(singActQuery.value(2).toInt())+"</td></tr>";
             }
@@ -297,38 +294,38 @@ void PupilListTreeWidget::archiveCurrentPupil()
         QString htmlString("<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'> \
 	<html> \
 	<head> \
-	<meta content='text/html; charset=ISO-8859-1' http-equiv='content-type'> \
-	<title>Qupil - Archiveintrag "+selectedItemList.first()->data(0,Qt::UserRole).toString()+"</title> \
+    <meta content='text/html; charset=utf-8' http-equiv='content-type'> \
+    <title>Qupil - "+tr("Archive Entry")+" "+selectedItemList.first()->data(0,Qt::UserRole).toString()+"</title> \
 	</head> \
 	<body> \
 	<table style='text-align: left; margin-left: auto; margin-right: auto; width: 100%;' border='0' cellpadding='0' cellspacing='0'> \
-        <tr><td align='center' width='100%'><h1>Qupil "+RELEASE_STRING+" - Archiveintrag: "+query.value(0).toString()+" "+query.value(1).toString()+" (#"+selectedItemList.first()->data(0,Qt::UserRole).toString()+")</h2></td></tr> \
+        <tr><td align='center' width='100%'><h1>Qupil "+RELEASE_STRING+" - "+tr("Archive Entry")+": "+query.value(0).toString()+" "+query.value(1).toString()+" (#"+selectedItemList.first()->data(0,Qt::UserRole).toString()+")</h2></td></tr> \
 	<tr><td width='100%'></td></tr>\
 	<tr><td >\
 	<table style='text-align: left;' border='0' cellpadding='1' cellspacing='0' width='100%'> \
-		<tr width='100%'><td colspan='4' rowspan='1' width='100%'><h2>Datum: "+QDate::currentDate().toString("dd.MM.yyyy")+"</h3></td></tr>\
+        <tr width='100%'><td colspan='4' rowspan='1' width='100%'><h2>"+tr("Date")+": "+QDate::currentDate().toString("dd.MM.yyyy")+"</h3></td></tr>\
 		<tr><td colspan='4' rowspan='1'></td></tr>\
-		<tr><td colspan='4' rowspan='1'><h3><u>Pers&ouml;nliche Daten:</u></h3></td></tr>\
+        <tr><td colspan='4' rowspan='1'><h3><u>"+tr("Personal data")+":</u></h3></td></tr>\
 		<tr><td colspan='4' rowspan='1'></td></tr>\
-		<tr><td width='100%'><b>Vorname:</b></td><td width='100%'>"+query.value(0).toString()+"</td><td width='100%'><b>Nachname:</b></td><td width='100%'>"+query.value(1).toString()+"</td></tr>\
-		<tr><td width='100%'><b>Adresse:</b></td><td width='100%'>"+query.value(2).toString()+"</td><td width='100%'><b>E-Mail:</b></td><td width='100%'>"+query.value(3).toString()+"</td></tr>\
-		<tr><td width='100%'><b>Telefon:</b></td><td width='100%'>"+query.value(4).toString()+"</td><td width='100%'><b>Handy:</b></td><td width='100%'>"+query.value(5).toString()+"</td></tr>\
-		<tr><td width='100%'><b>Geburtstag:</b></td><td  colspan='3' rowspan='1'>"+QDate::fromString(query.value(6).toString(), Qt::ISODate).toString("dd.MM.yyyy")+"</td></tr>\
+        <tr><td width='100%'><b>"+tr("First name")+":</b></td><td width='100%'>"+query.value(0).toString()+"</td><td width='100%'><b>"+tr("Last name")+":</b></td><td width='100%'>"+query.value(1).toString()+"</td></tr>\
+        <tr><td width='100%'><b>"+tr("Address")+":</b></td><td width='100%'>"+query.value(2).toString()+"</td><td width='100%'><b>"+tr("E-Mail")+":</b></td><td width='100%'>"+query.value(3).toString()+"</td></tr>\
+        <tr><td width='100%'><b>"+tr("Phone")+":</b></td><td width='100%'>"+query.value(4).toString()+"</td><td width='100%'><b>"+tr("Mobile")+":</b></td><td width='100%'>"+query.value(5).toString()+"</td></tr>\
+        <tr><td width='100%'><b>"+tr("Birthday")+":</b></td><td  colspan='3' rowspan='1'>"+QDate::fromString(query.value(6).toString(), Qt::ISODate).toString("dd.MM.yyyy")+"</td></tr>\
 		<tr><td colspan='4' rowspan='1'></td></tr>\
 		<tr width='100%'><td colspan='4' rowspan='1' width='100%'>\
 		<table style='text-align: left; width: 100%;' border='0' cellpadding='0' cellspacing='0' width='100%'>\
-		<tr width='100%'><td width='17%'><b>Name des Vaters:</b></td><td width='17%'>"+query.value(8).toString()+"</td><td width='17%'><b>Beruf des Vaters:</b></td><td width='17%'>"+query.value(9).toString()+"</td><td width='17%'><b>Telefon (Vater):</b></td><td width='17%'>"+query.value(10).toString()+"</td></tr>\
-		<tr width='100%'><td width='17%'><b>Name der Mutter:</b></td><td width='17%'>"+query.value(11).toString()+"</td><td width='17%'><b>Beruf der Mutter:</b></td><td width='17%'>"+query.value(12).toString()+"</td><td width='17%'><b>Telefon (Mutter):</b></td><td width='17%'>"+query.value(13).toString()+"</td></tr>\
+        <tr width='100%'><td width='17%'><b>"+tr("Name (Father)")+":</b></td><td width='17%'>"+query.value(8).toString()+"</td><td width='17%'><b>"+tr("Job (Father)")+":</b></td><td width='17%'>"+query.value(9).toString()+"</td><td width='17%'><b>"+tr("Phone (Father)")+":</b></td><td width='17%'>"+query.value(10).toString()+"</td></tr>\
+        <tr width='100%'><td width='17%'><b>"+tr("Name (Mother)")+":</b></td><td width='17%'>"+query.value(11).toString()+"</td><td width='17%'><b>"+tr("Job (Mother)")+":</b></td><td width='17%'>"+query.value(12).toString()+"</td><td width='17%'><b>"+tr("Phone (Mother)")+":</b></td><td width='17%'>"+query.value(13).toString()+"</td></tr>\
 		</table></td></tr>\
 		<tr><td colspan='4' rowspan='1'><hr style='width: 100%; height: 1px;'></td></tr>\
-		<tr><td ><b>Unterricht seit:</b></td><td colspan='3' rowspan='1'>"+QDate::fromString(query.value(14).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" (insgesamt "+lessonyears.remove("-")+" Jahre)</td></tr>\
+        <tr><td ><b>"+tr("Lesson since")+":</b></td><td colspan='3' rowspan='1'>"+QDate::fromString(query.value(14).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" ("+tr("total")+" "+lessonyears.remove("-")+" "+tr("Years")+")</td></tr>\
 		<tr><td colspan='4' rowspan='1'><hr style='width: 100%; height: 1px;'></td></tr>\
-		<tr><td width='100%'><b>Instrument:</b></td><td width='100%'>"+query.value(15).toString()+"</td><td width='100%'><b>Gr&ouml;&szlig;e:</b></td><td width='100%'>"+query.value(16).toString()+"</td></tr>\
-		<tr style='width: 100%;'><td style='width: 100%;'><b>Leihinstrument Beschreibung:</b></td><td width='100%'>"+query.value(17).toString()+"</td><td width='100%'><b>geliehen seit:</b></td><td width='100%'>"+query.value(18).toString()+"</td></tr>\
+        <tr><td width='100%'><b>"+tr("Instrument")+":</b></td><td width='100%'>"+query.value(15).toString()+"</td><td width='100%'><b>"+tr("Size")+":</b></td><td width='100%'>"+query.value(16).toString()+"</td></tr>\
+        <tr style='width: 100%;'><td style='width: 100%;'><b>"+tr("Rental instrument description")+":</b></td><td width='100%'>"+query.value(17).toString()+"</td><td width='100%'><b>"+tr("Rented since")+":</b></td><td width='100%'>"+query.value(18).toString()+"</td></tr>\
 		<tr><td colspan='4' rowspan='1'><hr style='width: 100%; height: 1px;'></td></tr>\
 		<tr><td colspan='4' rowspan='1'>\
 		<table style='text-align: left; width: 100%;' border='0' cellpadding='0' cellspacing='0'>\
-		<tr><td style='vertical-align: top;'><b>Notizen: </b></td><td style='vertical-align: top;'>"+query.value(7).toString()+"</td></tr>\
+        <tr><td style='vertical-align: top;'><b>"+tr("Notes")+": </b></td><td style='vertical-align: top;'>"+query.value(7).toString()+"</td></tr>\
 		</table></td></tr>\
 	</table></td></tr>"+activityContentsList.join("")+"\
 	<tr><td></td></tr>"+completeLessonContentsList.join("")+"\

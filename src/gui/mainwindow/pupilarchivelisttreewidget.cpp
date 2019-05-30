@@ -27,11 +27,11 @@ PupilArchiveListTreeWidget::PupilArchiveListTreeWidget(QWidget *tab)
     : QTreeWidget(tab), headerSectionIndent(10)
 {
     archivePopupMenu = new QMenu();
-    delArchive = new QAction(QIcon(":/gfx/archive-remove.svg"), QString::fromUtf8(tr("Archiveintrag löschen").toStdString().c_str()), archivePopupMenu);
+    delArchive = new QAction(QIcon(":/gfx/archive-remove.svg"), QString::fromUtf8(tr("Delete Archive Entry").toStdString().c_str()), archivePopupMenu);
     archivePopupMenu->addAction(delArchive);
-// 	archivePupil = new QAction(QString::fromUtf8(tr("Schüler archivieren").toStdString().c_str()), pupilPopupMenu);
+// 	archivePupil = new QAction(QString::fromUtf8(tr("Delete Pupil").toStdString().c_str()), pupilPopupMenu);
 // 	pupilPopupMenu->addAction(archivePupil);
-//  	archiveAndDelPupil = new QAction(QString::fromUtf8(tr("Schüler archivieren und löschen").toStdString().c_str()), pupilPopupMenu);
+//  	archiveAndDelPupil = new QAction(QString::fromUtf8(tr("Archive and Delete Pupil").toStdString().c_str()), pupilPopupMenu);
 //  	pupilPopupMenu->addAction(archiveAndDelPupil);
 //
     connect( this, SIGNAL (currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT (pupilListSelectionChanged(QTreeWidgetItem*, QTreeWidgetItem*)) );
@@ -136,8 +136,8 @@ void PupilArchiveListTreeWidget::delCurrentArchive()
         selectedItemIdString = selectedItemList.first()->data(0,Qt::UserRole).toString();
     }
 
-    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Qupil - Archiveintrag löschen").toStdString().c_str()),
-                                   QString::fromUtf8(tr("Möchten Sie den Archiveintrag \"%1\" wirklich löschen?").arg(selectedItemList.first()->data(0,Qt::DisplayRole).toString().toUtf8().constData()).toStdString().c_str()),
+    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Delete Archive Entry").toStdString().c_str()),
+                                   QString::fromUtf8(tr("Do you really want to delete the archive entry \"%1\" ?").arg(selectedItemList.first()->data(0,Qt::DisplayRole).toString().toUtf8().constData()).toStdString().c_str()),
                                    QMessageBox::Ok | QMessageBox::Cancel);
     if(ret == QMessageBox::Ok) {
         QSqlQuery delArchiveQuery("DELETE FROM pupilarchive WHERE pupilid = "+selectedItemIdString, *myW->getMyDb()->getMyPupilDb());

@@ -35,7 +35,7 @@ BirthdaysDialogImpl::BirthdaysDialogImpl(ConfigFile *c, mainWindowImpl *w)
 
 int BirthdaysDialogImpl::exec(bool force)
 {
-
+    retranslateUi(this);
     checkBirthdays();
 
     if( lastWeekBirthdays || todayBirthdays)
@@ -61,21 +61,17 @@ void BirthdaysDialogImpl::checkBirthdays()
     queryTodayCount.next();
     todayBirthdays = queryTodayCount.value(0).toInt();
 
-// 	qDebug() << today.toString("MM-dd") << " " << lastWeek.toString("MM-dd");
     QSqlQuery queryLastWeekCount("SELECT count(*) FROM pupil WHERE strftime(\"%m-%d\",  birthday) < '"+today.toString("MM-dd")+"' AND strftime(\"%m-%d\",  birthday) > '"+lastWeek.toString("MM-dd")+"' ", *myW->getMyDb()->getMyPupilDb());
     if (queryLastWeekCount.lastError().isValid()) qDebug() << "DB Error: 38 - " << queryLastWeekCount.lastError();
     queryLastWeekCount.next();
     lastWeekBirthdays = queryLastWeekCount.value(0).toInt();
 
-// 	myW->dateEdit_pupilBirthday->setDate(QDate::fromString(query.value(6).toString(), Qt::ISODate));
-
     QString msg("");
-
     QString todayHead("");
     if(todayBirthdays == 1)
-        todayHead = tr("Folgender Schüler hat heute Geburtstag:");
+        todayHead = tr("The following student has his birthday today:");
     if(todayBirthdays > 1)
-        todayHead = tr("Folgende Schüler haben heute Geburtstag:");
+        todayHead = tr("The following students have their birthday today:");
     if(todayBirthdays > 0) {
         msg += "<span style='font-size:"+QString::number(font.pointSize()+3)+"pt; font-weight:600;'>"+QString::fromUtf8(todayHead.toStdString().c_str())+"</span><br><br>";
 
@@ -87,16 +83,16 @@ void BirthdaysDialogImpl::checkBirthdays()
 // 			calculate age
             int daysFromBirthday = today.daysTo(QDate::fromString(queryToday.value(0).toString(), Qt::ISODate));
             int years = daysFromBirthday/365;
-            msg += "<span style='font-size:"+QString::number(font.pointSize()+2)+"pt; '>&nbsp;&nbsp;&nbsp;&nbsp;"+birthdayThisYear.toString(Qt::SystemLocaleLongDate)+": </span><span style='font-size:"+QString::number(font.pointSize()+2)+"pt; color: blue; '>"+queryToday.value(1).toString()+" "+queryToday.value(2).toString()+"</span><span style='font-size:"+QString::number(font.pointSize()+1)+"pt; '> - </span><span style='font-size:"+QString::number(font.pointSize()+2)+"pt; color: green; '>"+QString( "%1" ).arg( years ).remove("-")+" Jahre</span><br>";
+            msg += "<span style='font-size:"+QString::number(font.pointSize()+2)+"pt; '>&nbsp;&nbsp;&nbsp;&nbsp;"+birthdayThisYear.toString(Qt::SystemLocaleLongDate)+": </span><span style='font-size:"+QString::number(font.pointSize()+2)+"pt; color: blue; '>"+queryToday.value(1).toString()+" "+queryToday.value(2).toString()+"</span><span style='font-size:"+QString::number(font.pointSize()+1)+"pt; '> - </span><span style='font-size:"+QString::number(font.pointSize()+2)+"pt; color: green; '>"+QString( "%1" ).arg( years ).remove("-")+" "+tr("Years")+"</span><br>";
         }
         msg += "<br>";
     }
 
     QString lastWeekHead("");
     if(lastWeekBirthdays == 1)
-        lastWeekHead = tr("Folgender Schüler hatte letzte Woche Geburtstag:");
+        lastWeekHead = tr("The following student had his birthday last week:");
     if(lastWeekBirthdays > 1)
-        lastWeekHead = tr("Folgende Schüler hatten letzte Woche Geburtstag:");
+        lastWeekHead = tr("The following students had their birthday last week:");
     if(lastWeekBirthdays > 0) {
         msg += "<span style='font-size:"+QString::number(font.pointSize()+3)+"pt; font-weight:600;'>"+QString::fromUtf8(lastWeekHead.toStdString().c_str())+"</span><br><br>";
 
@@ -108,12 +104,12 @@ void BirthdaysDialogImpl::checkBirthdays()
             // calculate age
             int daysFromBirthday = today.daysTo(QDate::fromString(queryLastWeek.value(0).toString(), Qt::ISODate));
             int years = daysFromBirthday/365;
-            msg += "<span style='font-size:"+QString::number(font.pointSize()+1)+"pt; '>&nbsp;&nbsp;&nbsp;&nbsp;"+birthdayThisYear.toString(Qt::SystemLocaleLongDate)+": </span><span style='font-size:"+QString::number(font.pointSize()+1)+"pt; color: blue; '>"+queryLastWeek.value(1).toString()+" "+queryLastWeek.value(2).toString()+"</span><span style='font-size:"+QString::number(font.pointSize()+1)+"pt; '> - </span><span style='font-size:"+QString::number(font.pointSize()+1)+"pt; color: green; '>"+QString( "%1" ).arg( years ).remove("-")+" Jahre</span><br>";
+            msg += "<span style='font-size:"+QString::number(font.pointSize()+1)+"pt; '>&nbsp;&nbsp;&nbsp;&nbsp;"+birthdayThisYear.toString(Qt::SystemLocaleLongDate)+": </span><span style='font-size:"+QString::number(font.pointSize()+1)+"pt; color: blue; '>"+queryLastWeek.value(1).toString()+" "+queryLastWeek.value(2).toString()+"</span><span style='font-size:"+QString::number(font.pointSize()+1)+"pt; '> - </span><span style='font-size:"+QString::number(font.pointSize()+1)+"pt; color: green; '>"+QString( "%1" ).arg( years ).remove("-")+" "+tr("Years")+"</span><br>";
         }
     }
 
     if((!lastWeekBirthdays) && (!todayBirthdays)) {
-        msg = QString::fromUtf8(tr("In der letzten Woche hatte kein Schüler Geburtstag!").toStdString().c_str());
+        msg = QString::fromUtf8(tr("In the last week no student had his birthday!").toStdString().c_str());
     }
 
     label_txt->setText(msg);

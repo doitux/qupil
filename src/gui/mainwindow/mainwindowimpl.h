@@ -92,6 +92,8 @@ public slots:
     void callBuildDayViewDialog();
 
 private:
+    QTranslator qtTranslator;
+    QTranslator myAppTranslator;
 
     ConfigFile *myConfig;
     myDBHandler *myDb;

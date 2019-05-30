@@ -44,6 +44,8 @@ CsvImportFieldsDialogImpl::CsvImportFieldsDialogImpl(ConfigFile *c, mainWindowIm
 
 void CsvImportFieldsDialogImpl::exec(QString fileName)
 {
+    retranslateUi(this);
+
     myFileName = fileName;
 
     QFile cvsFile(fileName);
@@ -70,15 +72,15 @@ void CsvImportFieldsDialogImpl::exec(QString fileName)
             QDialog::exec();
             qDebug() << "nach Dialog::exec()";
         } else {
-            QMessageBox::warning(this, tr("Qupil"),
-                                 QString::fromUtf8(tr("Trennerzeichen der CSV-Datei (üblicherweise Komma oder Semikolon) konnte nicht erkannt werden.\n"
-                                                   "CSV-Import wird abgebrochen!").toStdString().c_str()),
+            QMessageBox::warning(this, "Qupil",
+                                 QString::fromUtf8(tr("Separator of the CSV file (usually comma or semicolon) could not be recognized.\n"
+                                                      "CSV import is aborted!").toStdString().c_str()),
                                  QMessageBox::Close);
         }
     } else {
-        QMessageBox::warning(this, tr("Qupil"),
-                             QString::fromUtf8(tr("CSV-Datei konnte nicht geöffnet werden.\n"
-                                               "CSV-Import wird abgebrochen!").toStdString().c_str()),
+        QMessageBox::warning(this, "Qupil",
+                             QString::fromUtf8(tr("CSV file could not be opened.\n"
+                                               "CSV import is aborted!").toStdString().c_str()),
                              QMessageBox::Close);
     }
 
@@ -198,8 +200,8 @@ void CsvImportFieldsDialogImpl::accept()
         }
     }
 
-    QMessageBox::information(this, QString::fromUtf8(tr("Qupil - CSV Adressbuch Import").toStdString().c_str()),
-                             QString::fromUtf8(tr("Das Importieren der Daten aus der CSV-Datei wurde erfolgreich beendet! \nEs wurden %1 Einräge hinzugefügt").arg(model->rowCount()).toStdString().c_str()), QMessageBox::Ok);
+    QMessageBox::information(this, QString::fromUtf8(tr("CSV Address Book Import").toStdString().c_str()),
+                             QString::fromUtf8(tr("Importing the data from the CSV file was completed successfully! \n %1 entries added").arg(model->rowCount()).toStdString().c_str()), QMessageBox::Ok);
 
     QDialog::accept();
 }
@@ -213,9 +215,7 @@ void CsvImportFieldsDialogImpl::fileCodecChanged(int codec)
 void CsvImportFieldsDialogImpl::reloadCvsFileFields()
 {
     QStringList localeFieldsList;
-    if(QString::fromStdString(myConfig->readConfigString("Language")) == "de_DE") {
-        localeFieldsList << "Vorname" << "Nachname" << "Geburtstag" << QString::fromUtf8("Straße") << "Postleitzahl" << "Stadt" << "Telefon" << "Mobiltelefon" << "E-Mail";
-    }
+    localeFieldsList << tr("First Name") << tr("Last Name") << tr("Birthday") << tr("Street") << tr("Zip Code") << tr("City") << tr("Phone") << tr("Mobile") << tr("E-Mail");
 
     QStringList fieldsList;
     model->setSource(myFileName.toStdString().c_str(), true, mySeperator);
@@ -252,7 +252,7 @@ void CsvImportFieldsDialogImpl::reloadCvsFileFields()
         comboBox_email->addItem(fieldsList.at(j), j);
     }
 
-    QString dontImportString = tr("!!!Dieses Feld nicht importieren!!!");
+    QString dontImportString = tr("!!!Do Not Import This Field!!!");
 
     comboBox_forename->addItem(dontImportString);
     comboBox_surname->addItem(dontImportString);

@@ -77,9 +77,9 @@ void PupilSingularActivityModel::refresh()
 
     setQuery("SELECT activityid, desc, strftime(\"%d.%m.%Y\", date), CASE noncontinoustype WHEN 0 THEN '"+myTypeList.at(0)+"' WHEN 1 THEN '"+myTypeList.at(1)+"' WHEN 2 THEN '"+myTypeList.at(2)+"' END FROM activity WHERE pupilid="+QString::number(currentPupilId,10)+" AND ifcontinous=0 ORDER BY date DESC", *myW->getMyDb()->getMyPupilDb());
 // 	removeColumn(0);
-    setHeaderData(1, Qt::Horizontal, QObject::tr("Bezeichnung"));
-    setHeaderData(2, Qt::Horizontal, QObject::tr("Datum"));
-    setHeaderData(3, Qt::Horizontal, QObject::tr("Typ"));
+    setHeaderData(1, Qt::Horizontal, tr("Description"));
+    setHeaderData(2, Qt::Horizontal, tr("Date"));
+    setHeaderData(3, Qt::Horizontal, tr("Type"));
 }
 
 bool PupilSingularActivityModel::setDate(int activityId, const QString &date)

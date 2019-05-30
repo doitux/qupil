@@ -23,13 +23,16 @@
 #include <vector>
 #include <string>
 #include <list>
+#include <QtCore>
+#include <QObject>
 
 enum ConfigState { NONEXISTING, OLD };
 enum ConfigType { CONFIG_TYPE_INT, CONFIG_TYPE_STRING, CONFIG_TYPE_INT_LIST, CONFIG_TYPE_STRING_LIST };
 
 
-class ConfigFile
+class ConfigFile :public QObject
 {
+
 public:
     ConfigFile(char *argv0, bool readonly);
 

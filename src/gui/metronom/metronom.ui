@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>439</width>
-    <height>290</height>
+    <width>537</width>
+    <height>331</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qupil - Metronom / Stimmen</string>
+   <string>Metronome / Tuner - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Metronom</string>
+      <string>Metronome</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
@@ -111,7 +111,7 @@
         <item>
          <widget class="QCheckBox" name="checkBox_beat">
           <property name="text">
-           <string>Betonung alle</string>
+           <string>Accent every</string>
           </property>
          </widget>
         </item>
@@ -149,7 +149,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Schläge</string>
+           <string>Beats</string>
           </property>
          </widget>
         </item>
@@ -183,7 +183,7 @@
         <item>
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Klicken Sie rhythmisch auf den Knopf um das Tempo einzustellen.</string>
+           <string>Click rhythmically on the button to set the tempo.</string>
           </property>
          </widget>
         </item>
@@ -195,13 +195,13 @@
    <item row="1" column="0">
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>Stimmen</string>
+      <string>Tune</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Stimmton:</string>
+         <string>Tuning tone:</string>
         </property>
        </widget>
       </item>
@@ -266,7 +266,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>Stimmung:</string>
+         <string>Tuning pitch:</string>
         </property>
        </widget>
       </item>

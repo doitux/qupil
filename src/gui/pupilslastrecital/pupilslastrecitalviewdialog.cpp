@@ -105,9 +105,9 @@ PupilsLastRecitalViewDialog::PupilsLastRecitalViewDialog(ConfigFile *c, QWidget 
 						item->setData(1, Qt::DisplayRole, query.value(3).toString()+", "+query.value(2).toString());
 						if(currentIntervall> 30) {
 							currentIntervall = currentIntervall/30;
-							item->setData(2, Qt::DisplayRole, QString("%1 Monaten").arg(currentIntervall));
+                            item->setData(2, Qt::DisplayRole, QString(tr("%1 months")).arg(currentIntervall));
 						} else {
-							item->setData(2, Qt::DisplayRole, QString("%1 Tagen").arg(currentIntervall));
+                            item->setData(2, Qt::DisplayRole, QString(tr("%1 days")).arg(currentIntervall));
 						}
 						item->setData(3, Qt::DisplayRole, QDate::fromString(query2.value(0).toString(), Qt::ISODate).toString("dd.MM.yyyy"));
 
@@ -126,9 +126,9 @@ PupilsLastRecitalViewDialog::PupilsLastRecitalViewDialog(ConfigFile *c, QWidget 
 						item->setData(1, Qt::DisplayRole, query.value(3).toString()+", "+query.value(2).toString());
 						if(currentIntervall> 30) {
 							currentIntervall = currentIntervall/30;
-							item->setData(2, Qt::DisplayRole, QString("%1 Monaten").arg(currentIntervall));
+                            item->setData(2, Qt::DisplayRole, QString(tr("%1 months")).arg(currentIntervall));
 						} else {
-							item->setData(2, Qt::DisplayRole, QString("%1 Tagen").arg(currentIntervall));
+                            item->setData(2, Qt::DisplayRole, QString(tr("%1 days")).arg(currentIntervall));
 						}
 						item->setData(3, Qt::DisplayRole, QDate::fromString(query.value(4).toString(), Qt::ISODate).toString("dd.MM.yyyy"));
 
@@ -142,16 +142,16 @@ PupilsLastRecitalViewDialog::PupilsLastRecitalViewDialog(ConfigFile *c, QWidget 
 
     QString head;
     if(duePupilCounter) {
-        head = "Folgende überfällige Vorspielkandidaten wurden ermittelt:";
+        head = tr("The following overdue concert candidates were identified:");
     } else {
-        head = "Derzeit sind keine überfälligen Vorspielkandidaten vorhanden.<br><br>Gute Arbeit!";
+        head = tr("There are currently no overdue concert candidates.<br><br>Good job!");
     }
 
     msg += "<span style='font-weight:600;'>"+QString::fromUtf8(head.toStdString().c_str())+"</span><br><br>";
 
     ui->label_txt->setText(msg);
 
-    ui->pupilStats->setText(QString::fromUtf8(QString("Insgesamt <b>%1</b> überfällige Schüler").arg(duePupilCounter).toStdString().c_str()));
+    ui->pupilStats->setText(QString::fromUtf8(QString(tr("Total <b>%1</b> overdue Pupils")).arg(duePupilCounter).toStdString().c_str()));
 
     ui->treeWidget->resizeColumnToContents(1);
     ui->treeWidget->resizeColumnToContents(2);
@@ -160,7 +160,7 @@ PupilsLastRecitalViewDialog::PupilsLastRecitalViewDialog(ConfigFile *c, QWidget 
     ui->treeWidget->sortByColumn(0, Qt::DescendingOrder);
 
     pupilPopupMenu = new QMenu();
-    addReminderAction = new QAction(QIcon(":/gfx/preferences-desktop-notification-bell.svg"), QString::fromUtf8(tr("Erinnerung an Vorspielaktivität einrichten").toStdString().c_str()), pupilPopupMenu);
+    addReminderAction = new QAction(QIcon(":/gfx/preferences-desktop-notification-bell.svg"), QString::fromUtf8(tr("Set up reminder for concert activity").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(addReminderAction);
 
     connect(ui->treeWidget, SIGNAL (customContextMenuRequested(const QPoint)), this, SLOT ( showPopupMenu(const QPoint)));
@@ -204,7 +204,7 @@ void PupilsLastRecitalViewDialog::addReminder()
 
         QSqlQuery query;
         query.prepare("INSERT INTO reminder (desc, mode, pupilid, notificationsound) VALUES (?, ?, ?, ?)");
-        query.addBindValue(QString::fromUtf8(QString("Vorspielaktivität ansprechen!").toStdString().c_str()));
+        query.addBindValue(QString::fromUtf8(QString(tr("Speak about concert activity!")).toStdString().c_str()));
         query.addBindValue(2);
         query.addBindValue(selectedItemId);
         query.addBindValue(1);
@@ -212,7 +212,7 @@ void PupilsLastRecitalViewDialog::addReminder()
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 263 - " << query.lastError();
         } else {
-            QMessageBox::information(this, "Erinnerung eingetragen", QString("Erinnerung zum Thema \"Vorspielaktivit&auml;t\"<br>f&uuml;r den Sch&uuml;ler <i><b>%1</b></i> eingerichtet.").arg(pupil), QMessageBox::Ok);
+            QMessageBox::information(this, tr("Reminder set up"), QString(tr("Reminder concerning \"concert activity\"<br>set up for the pupil <i><b>%1</b></i>")).arg(pupil), QMessageBox::Ok);
         }
     }
 }

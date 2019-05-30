@@ -57,7 +57,7 @@ public slots:
     void instrumentsItemChanged( QListWidgetItem *current, QListWidgetItem *previous );
     void instrumentSizesItemChanged( QListWidgetItem *current, QListWidgetItem *previous );
     void lessonLocationsItemChanged( QListWidgetItem *current, QListWidgetItem *previous );
-
+    void retranslate();
 
 private:
     ConfigFile *myConfig;

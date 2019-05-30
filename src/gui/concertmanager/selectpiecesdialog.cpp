@@ -43,6 +43,7 @@ void SelectPiecesDialog::changeEvent(QEvent *e)
 
 int SelectPiecesDialog::exec(int recitalId)
 {
+    ui->retranslateUi(this);
     currentRecitalId = recitalId;
     loadPieces();
     return QDialog::exec();}

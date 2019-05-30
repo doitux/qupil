@@ -1,62 +1,59 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>CsvImportFieldsDialog</class>
- <widget class="QDialog" name="CsvImportFieldsDialog" >
-  <property name="geometry" >
+ <widget class="QDialog" name="CsvImportFieldsDialog">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>349</width>
-    <height>416</height>
+    <height>497</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>Qupil - CSV Adressbuch Import</string>
+  <property name="windowTitle">
+   <string>CSV Address Book Import - Qupil</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_3" >
-   <item row="0" column="0" >
-    <widget class="QFrame" name="frame" >
-     <property name="frameShape" >
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
-     <property name="frameShadow" >
+     <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QGridLayout" name="gridLayout_2" >
-      <item row="0" column="0" >
-       <widget class="QLabel" name="label_11" >
-        <property name="text" >
-         <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
-&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style="font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">CSV Adressbuch Import&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>CSV Address Book Import</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" >
-       <layout class="QHBoxLayout" name="horizontalLayout" >
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QLabel" name="label_12" >
-          <property name="text" >
-           <string>Datei-Codierung:</string>
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>File Coding</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="comboBox_fileCodec" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+         <widget class="QComboBox" name="comboBox_fileCodec">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
           <item>
-           <property name="text" >
+           <property name="text">
             <string>UTF-8</string>
            </property>
           </item>
           <item>
-           <property name="text" >
+           <property name="text">
             <string>Latin-1</string>
            </property>
           </item>
@@ -64,136 +61,136 @@ p, li { white-space: pre-wrap; }
         </item>
        </layout>
       </item>
-      <item row="2" column="0" >
-       <widget class="Line" name="line" >
-        <property name="orientation" >
+      <item row="2" column="0">
+       <widget class="Line" name="line">
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
-      <item row="3" column="0" >
-       <widget class="QLabel" name="label" >
-        <property name="text" >
-         <string>Bitte ordnen Sie den einzelnen Datenbank-Feldern die entsprechenden Felder aus Ihrer CSV-Datei zu:</string>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Please assign the database fields to the corresponding fields from your CSV-File:</string>
         </property>
-        <property name="alignment" >
+        <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
         </property>
-        <property name="wordWrap" >
+        <property name="wordWrap">
          <bool>true</bool>
         </property>
        </widget>
       </item>
-      <item row="4" column="0" >
-       <layout class="QGridLayout" name="gridLayout" >
-        <item row="0" column="0" >
-         <widget class="QLabel" name="label_2" >
-          <property name="text" >
-           <string>Vorname:</string>
+      <item row="4" column="0">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>First Name:</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1" >
-         <widget class="QComboBox" name="comboBox_forename" >
-          <property name="sizePolicy" >
-           <sizepolicy vsizetype="Fixed" hsizetype="MinimumExpanding" >
+        <item row="0" column="1">
+         <widget class="QComboBox" name="comboBox_forename">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
          </widget>
         </item>
-        <item row="1" column="0" >
-         <widget class="QLabel" name="label_3" >
-          <property name="text" >
-           <string>Nachname:</string>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Last Name:</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="1" >
-         <widget class="QComboBox" name="comboBox_surname" />
+        <item row="1" column="1">
+         <widget class="QComboBox" name="comboBox_surname"/>
         </item>
-        <item row="2" column="0" >
-         <widget class="QLabel" name="label_4" >
-          <property name="text" >
-           <string>Geburtstag:</string>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Birthday:</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="1" >
-         <widget class="QComboBox" name="comboBox_birthday" />
+        <item row="2" column="1">
+         <widget class="QComboBox" name="comboBox_birthday"/>
         </item>
-        <item row="3" column="0" >
-         <widget class="QLabel" name="label_5" >
-          <property name="text" >
-           <string>Straße:</string>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Street:</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="1" >
-         <widget class="QComboBox" name="comboBox_street" />
+        <item row="3" column="1">
+         <widget class="QComboBox" name="comboBox_street"/>
         </item>
-        <item row="4" column="0" >
-         <widget class="QLabel" name="label_6" >
-          <property name="text" >
-           <string>Postleitzahl:</string>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Zip Code:</string>
           </property>
          </widget>
         </item>
-        <item row="4" column="1" >
-         <widget class="QComboBox" name="comboBox_plz" />
+        <item row="4" column="1">
+         <widget class="QComboBox" name="comboBox_plz"/>
         </item>
-        <item row="5" column="0" >
-         <widget class="QLabel" name="label_7" >
-          <property name="text" >
-           <string>Stadt:</string>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>City:</string>
           </property>
          </widget>
         </item>
-        <item row="5" column="1" >
-         <widget class="QComboBox" name="comboBox_city" />
+        <item row="5" column="1">
+         <widget class="QComboBox" name="comboBox_city"/>
         </item>
-        <item row="6" column="0" >
-         <widget class="QLabel" name="label_10" >
-          <property name="text" >
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
            <string>E-Mail:</string>
           </property>
          </widget>
         </item>
-        <item row="6" column="1" >
-         <widget class="QComboBox" name="comboBox_email" />
+        <item row="6" column="1">
+         <widget class="QComboBox" name="comboBox_email"/>
         </item>
-        <item row="7" column="0" >
-         <widget class="QLabel" name="label_8" >
-          <property name="text" >
-           <string>Telefon:</string>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Phone:</string>
           </property>
          </widget>
         </item>
-        <item row="7" column="1" >
-         <widget class="QComboBox" name="comboBox_phone" />
+        <item row="7" column="1">
+         <widget class="QComboBox" name="comboBox_phone"/>
         </item>
-        <item row="8" column="0" >
-         <widget class="QLabel" name="label_9" >
-          <property name="text" >
-           <string>Handy:</string>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>Mobile:</string>
           </property>
          </widget>
         </item>
-        <item row="8" column="1" >
-         <widget class="QComboBox" name="comboBox_handy" />
+        <item row="8" column="1">
+         <widget class="QComboBox" name="comboBox_handy"/>
         </item>
        </layout>
       </item>
      </layout>
     </widget>
    </item>
-   <item row="1" column="0" >
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="orientation" >
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <property name="standardButtons" >
+     <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>
@@ -220,11 +217,11 @@ p, li { white-space: pre-wrap; }
    <receiver>CsvImportFieldsDialog</receiver>
    <slot>accept()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>248</x>
      <y>254</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>157</x>
      <y>274</y>
     </hint>
@@ -236,11 +233,11 @@ p, li { white-space: pre-wrap; }
    <receiver>CsvImportFieldsDialog</receiver>
    <slot>reject()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>316</x>
      <y>260</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>286</x>
      <y>274</y>
     </hint>

@@ -73,8 +73,8 @@ QVariant PalNotesModel::data(const QModelIndex &index, int role) const
 void PalNotesModel::refresh()
 {
     setQuery("SELECT n.noteid, n.cnoteid, strftime(\"%d.%m.%Y\", n.date), n.content FROM note n, pupilatlesson pal WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=n.palid AND pal.startdate <= n.date AND pal.stopdate >= n.date ORDER BY n.date DESC", *myW->getMyDb()->getMyPupilDb());
-    setHeaderData(2, Qt::Horizontal, QObject::tr("Datum"));
-    setHeaderData(3, Qt::Horizontal, QObject::tr("Notiz"));
+    setHeaderData(2, Qt::Horizontal, tr("Date"));
+    setHeaderData(3, Qt::Horizontal, tr("Note"));
 }
 
 bool PalNotesModel::setDate(int noteId, int cnoteId, const QString &date)

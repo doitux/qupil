@@ -29,7 +29,7 @@ class AboutQupilDialogImpl: public QDialog, public Ui::AboutQupilDialog
     Q_OBJECT
 public:
     AboutQupilDialogImpl(QWidget *parent = 0, ConfigFile *c=0);
-
+    void retranslate();
 private:
 
     ConfigFile *myConfig;

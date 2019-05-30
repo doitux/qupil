@@ -22,6 +22,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QtSql>
+#include <QLocale>
 
 #include "qupil_defs.h"
 #include "configfile.h"
@@ -47,13 +48,21 @@
 mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
     : myConfig(c), myDb(d), thisReminder1TimeAlreadyDone(""), thisReminder2TimeAlreadyDone(""), reminderAtLessonStartCounter(0)
 {
+    //Set translations
+    qtTranslator.load(":/translation/qt_" + QString::fromStdString(myConfig->readConfigString("Language")),
+    QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    QApplication::instance()->installTranslator(&qtTranslator);
+
+    myAppTranslator.load(":/translation/qupil_" + QString::fromStdString(myConfig->readConfigString("Language")));
+    QApplication::instance()->installTranslator(&myAppTranslator);
+
     setupUi(this);
 
-    this->setWindowTitle(QString::fromUtf8(tr("Qupil %1 - Unterrichtsmanagement für Instrumentalpädagogen - qupil.de").arg(RELEASE_STRING).toStdString().c_str()));
+    this->setWindowTitle(QString::fromUtf8(tr("Qupil %1 - Lesson Management for Instrumental Teacher - qupil.de").arg(RELEASE_STRING).toStdString().c_str()));
 
     this->installEventFilter(this);
 
-    statusBarStats = new QLabel(QString::fromUtf8("Unterrichtseinheiten: 0 - Schüler: 0 ").toStdString().c_str());
+    statusBarStats = new QLabel(QString::fromUtf8(tr("Lessons: 0 - Pupils: 0 ").toStdString().c_str()));
     statusBar()->addWidget(statusBarStats);
     statusBarSpace = new QLabel("");
     statusBar()->addWidget(statusBarSpace, 1);
@@ -95,7 +104,7 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
     mySDLPlayer = new SDLPlayer(myConfig);
     myMetronomPlayer = new MetronomPlayer(mySDLPlayer);
     if(!myMetronomPlayer->loadSounds(QString::fromUtf8(myConfig->readConfigString("AppDataDir").c_str())+"sounds/s2.wav", QString::fromUtf8(myConfig->readConfigString("AppDataDir").c_str())+"sounds/s2.wav",QString::fromUtf8(myConfig->readConfigString("AppDataDir").c_str())+"sounds/s3.wav")) {
-        qDebug() << "Konnte Metronom Sounds nicht laden";
+        qDebug() << tr("Could not load Metronoms Sounds");
     }
     mySDLPlayer->setMetronomPlayer(myMetronomPlayer);
 
@@ -108,7 +117,6 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
     mySheetMusicLibraryDialog = new SheetMusicLibraryDialogImpl(myConfig, this);
     myAboutQupilDialog = new AboutQupilDialogImpl(this, myConfig);
     myCsvImportFieldsDialog = new CsvImportFieldsDialogImpl(myConfig, this);
-
     myBuildTimeTableDoc = new BuildTimeTableDoc(myConfig);
 
     mySDLPlayer->setMyMetronomDialog(myMetronomDialog);
@@ -177,9 +185,7 @@ mainWindowImpl::mainWindowImpl(ConfigFile *c, myDBHandler *d)
     singShot3->setSingleShot(true);
     singShot3->start(1600);
 
-
     checkIfReminderTimerNeeded();
-
 }
 
 mainWindowImpl::~mainWindowImpl() {}
@@ -191,8 +197,8 @@ void mainWindowImpl::checkForOldDataStructure()
     QDir oldContentDir(QString::fromUtf8(myConfig->readConfigString("UserDir").c_str())+"/content");
     if(oldContentDir.exists() && myConfig->readConfigInt("CurrentDataStructureRevision") == 0 && myConfig->readConfigInt("ThisVersionDataStructureRevision") >= 1) {
 
-        QMessageBox::information(this, tr("Qupil"),
-                                 tr("Diese Version von Qupil verwendet ein neues Format um Daten zu speichern. \nQupil wird nun versuchen die alten Daten in das neue Format umzuwandeln.\nDieser Vorgang kann einige Minuten dauern."), QMessageBox::Ok);
+        QMessageBox::information(this, "Qupil",
+                                 tr("This version of Qupil uses a new format to store data. Qupil will now try to convert the old data into the new format. \nThis process may take several minutes."), QMessageBox::Ok);
 
         //count pupils for progress dialog
         QDir oldContentDir(QString::fromUtf8(myConfig->readConfigString("UserDir").c_str())+"/content");
@@ -219,24 +225,24 @@ void mainWindowImpl::checkForOldDataStructure()
         }
 
         convertOldDataProgress = new QProgressDialog(this);
-        convertOldDataProgress->setWindowTitle(tr("Qupil - Alte Daten konvertieren"));
-        QPushButton *cancel = new QPushButton(tr("Abbrechen"));
+        convertOldDataProgress->setWindowTitle(tr("Convert old data - Qupil"));
+        QPushButton *cancel = new QPushButton(tr("Cancel"));
         convertOldDataProgress->setCancelButton ( cancel );
         cancel->hide();
         convertOldDataProgress->setMinimum(0);
         convertOldDataProgress->setMinimumWidth(350);
         convertOldDataProgress->setMaximum(groupIdCounter+pupilDirsInt);
         convertOldDataProgress->setWindowModality(Qt::WindowModal);
-        convertOldDataProgress->setLabelText(tr("Konvertiere alte Daten ..."));
+        convertOldDataProgress->setLabelText(tr("Convert old data ..."));
 
         if(myDb->convertObsoletePersonalData()) {
-            QMessageBox::information(this, tr("Qupil"),
-                                     tr("Konvertieren der alten Daten in das neue Format erfolgreich Abgeschlossen!"), QMessageBox::Ok);
+            QMessageBox::information(this, "Qupil",
+                                     tr("Conversion of the old data into the new format successfully completed!"), QMessageBox::Ok);
         } else {
             QMessageBox msgBox;
-            msgBox.setWindowTitle(tr("Qupil"));
+            msgBox.setWindowTitle("Qupil");
             msgBox.setTextFormat(Qt::RichText);
-            msgBox.setText(tr("Beim konvertieren der alten Daten ist ein Fehler aufgetreten. \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!"));
+            msgBox.setText(tr("An error occurred while converting the old data. \nPlease contact the program author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> to fix this issue!"));
             msgBox.setIcon(QMessageBox::Critical);
             msgBox.exec();
 
@@ -262,9 +268,9 @@ void mainWindowImpl::checkForOldDataStructure()
             myConfig->writeBuffer();
         } else {
             QMessageBox msgBox;
-            msgBox.setWindowTitle(tr("Qupil"));
+            msgBox.setWindowTitle(tr("Error - Qupil"));
             msgBox.setTextFormat(Qt::RichText);
-            msgBox.setText(QString::fromUtf8(tr("Beim Update der Datenbankstruktur ist ein Fehler aufgetreten. Möglicherweise kann Qupil die Daten nicht korrekt verarbeiten. \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
+            msgBox.setText(QString::fromUtf8(tr("An error occurred while updating the database structure. Qupil may not be able to process the data correctly. \nPlease contact the program author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> to fix this issue!").toStdString().c_str()));
             msgBox.setIcon(QMessageBox::Critical);
             msgBox.exec();
         }
@@ -274,9 +280,9 @@ void mainWindowImpl::checkForOldDataStructure()
         QStringList returnValue = myDb->updateDB();
         if(returnValue.at(0) == "0") {
             QMessageBox msgBox;
-            msgBox.setWindowTitle(tr("Qupil - Fehler"));
+            msgBox.setWindowTitle(tr("Error - Qupil"));
             msgBox.setTextFormat(Qt::RichText);
-            msgBox.setText(QString::fromUtf8(tr("Beim Update der Datenbankstruktur von Revision %0 auf %1 ist folgender Fehler aufgetreten:<br><b>%2</b><br>Bitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!").toStdString().c_str()).arg(returnValue.at(1)).arg(returnValue.at(2)).arg(returnValue.at(3)));
+            msgBox.setText(QString::fromUtf8(tr("When updating the database structure from revision %0 to %1, the following error occurred:<br><b>%2</b><br>Please contact the program author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> to fix this problem!").toStdString().c_str()).arg(returnValue.at(1)).arg(returnValue.at(2)).arg(returnValue.at(3)));
             msgBox.setIcon(QMessageBox::Critical);
             msgBox.exec();
         }
@@ -287,7 +293,7 @@ void mainWindowImpl::updateConvertOldDataProgress(int value, QString text)
 {
 
     if(value != -1) {
-        convertOldDataProgress->setWindowTitle(tr("Qupil - Alte Daten konvertieren"));
+        convertOldDataProgress->setWindowTitle(tr("Convert old data - Qupil"));
         convertOldDataProgress->setLabelText(text);
         convertOldDataProgress->setValue(value);
     } else {
@@ -303,6 +309,20 @@ void mainWindowImpl::callSettingsDialog()
 
     mySettingsDialog->exec();
     if (mySettingsDialog->result() == QDialog::Accepted) {
+
+        //refresh translation
+        QApplication::instance()->removeTranslator(&qtTranslator);
+        QApplication::instance()->removeTranslator(&myAppTranslator);
+        qtTranslator.load(":/translation/qt_" + QString::fromStdString(myConfig->readConfigString("Language")),
+        QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+        QApplication::instance()->installTranslator(&qtTranslator);
+        qDebug() << QString::fromStdString(myConfig->readConfigString("Language"));
+        myAppTranslator.load(":/translation/qupil_" + QString::fromStdString(myConfig->readConfigString("Language")));
+        QApplication::instance()->installTranslator(&myAppTranslator);
+        retranslateUi(this);
+        mySettingsDialog->retranslate();
+        myAboutQupilDialog->retranslate();
+
         switch (comboBox_leftListMode->currentIndex()) {
         case 0: {
             treeWidget_timeTable->refreshTimeTable();
@@ -352,7 +372,7 @@ void mainWindowImpl::leftListModeChanged(int index)
 
 void mainWindowImpl::addNewPupil()
 {
-    QSqlQuery query("INSERT INTO pupil ( forename, surname, birthday, firstlessondate ) VALUES ( '"+tr("neuer")+"', '"+QString::fromUtf8(tr("Schüler").toStdString().c_str())+"', '2000-01-01', '"+QDate::currentDate().toString(Qt::ISODate)+"' ); ", *myDb->getMyPupilDb() );
+    QSqlQuery query("INSERT INTO pupil ( forename, surname, birthday, firstlessondate ) VALUES ( '"+tr("New")+"', '"+QString::fromUtf8(tr("Pupil").toStdString().c_str())+"', '2000-01-01', '"+QDate::currentDate().toString(Qt::ISODate)+"' ); ", *myDb->getMyPupilDb() );
     if (query.lastError().isValid()) qDebug() << "DB Error: 59 - "  << query.lastError();
     QSqlQuery query1("SELECT last_insert_rowid()", *myDb->getMyPupilDb() );
     if (query1.lastError().isValid()) qDebug() << "DB Error: 60 - " << query1.lastError();
@@ -517,7 +537,7 @@ void mainWindowImpl::callAboutQupilDialog()
 
 void mainWindowImpl::createBackup()
 {
-    QString dir = QFileDialog::getExistingDirectory(this, QString::fromUtf8(tr("Qupil - Backupverzeichnis wählen").toStdString().c_str()),
+    QString dir = QFileDialog::getExistingDirectory(this, QString::fromUtf8(tr("Select Backup Directory").toStdString().c_str()),
                   QDir::homePath(),
                   QFileDialog::ShowDirsOnly
                   | QFileDialog::DontResolveSymlinks);
@@ -533,11 +553,11 @@ void mainWindowImpl::createBackup()
         if (pupilDbFile.exists()) {
 
             if (pupilDbFile.copy(backupfile.fileName())) {
-                QMessageBox::information(this, tr("Qupil - Backup erstellen"),
-                                         tr("Das Backup wurde mit dem Dateinamen \"%1\" erfolgreich erstellt!").arg(backupfile.fileName()), QMessageBox::Ok);
+                QMessageBox::information(this, tr("Create Backup - Qupil"),
+                                         tr("The backup with the file name \"%1\" was successfully created!").arg(backupfile.fileName()), QMessageBox::Ok);
             } else {
-                QMessageBox::critical(this, tr("Qupil - Backup erstellen"),
-                                      QString::fromUtf8(tr("Das Backup konnte im ausgewählten Verzeichnis \"%1\"nicht erstellt werden.\nBitte überprüfen Sie ob Sie Schreibrechte für dieses Verzeichnis besitzen!").arg(dir).toStdString().c_str()), QMessageBox::Ok);
+                QMessageBox::critical(this, tr("Create Backup - Qupil"),
+                                      QString::fromUtf8(tr("The backup could not be created in the selected directory \"%1\". \nPlease check if you have write permission for this directory!").arg(dir).toStdString().c_str()), QMessageBox::Ok);
             }
         }
     }
@@ -545,9 +565,9 @@ void mainWindowImpl::createBackup()
 
 void mainWindowImpl::restoreBackup()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, QString::fromUtf8(tr("Qupil - Backupdatei öffnen").toStdString().c_str()),
+    QString fileName = QFileDialog::getOpenFileName(this, QString::fromUtf8(tr("Open Backup - Qupil").toStdString().c_str()),
                        QDir::homePath(),
-                       tr("Qupil Backupdatei (*.db)"));
+                       tr("Qupil Backup File (*.db)"));
 
     if(!fileName.isEmpty()) {
 
@@ -557,8 +577,8 @@ void mainWindowImpl::restoreBackup()
         QFile pupilDbFile(pupilDBPath);
 
         if (backupfile.exists() && backupfile.size()) {
-            int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Qupil - Backup zurückspielen").toStdString().c_str()),
-                                           QString::fromUtf8(tr("Ein Backup sollte nur als Datenwiederherstellung nach Datenverlust zurückgespielt werden.\nWenn Sie ein Backup zurückspielen werden Änderungen und neue Einträge,\ndie eventuell nach dem Backup geschrieben wurden wieder gelöscht.\n\nMöchten Sie das Backup wirklich zurückspielen?").toStdString().c_str()),
+            int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Replay Backup - Qupil").toStdString().c_str()),
+                                           QString::fromUtf8(tr("A backup should only be restored as data recovery after data loss. \nIf you restore a backup, changes and new entries \nthat may have been written after the backup will be deleted. \n\nWould you really like to restore the backup?").toStdString().c_str()),
                                            QMessageBox::Ok | QMessageBox::Cancel);
             if(ret == QMessageBox::Ok) {
 
@@ -593,38 +613,38 @@ void mainWindowImpl::restoreBackup()
                     }
 
                     if(ok2) {
-                        QMessageBox::information(this, QString::fromUtf8(tr("Qupil - Backup zurückspielen").toStdString().c_str()),
-                                                 QString::fromUtf8(tr("Das Backup wurde erfolgreich zurückgespielt.\nBitte starten Sie Qupil neu!").toStdString().c_str()), QMessageBox::Ok);
+                        QMessageBox::information(this, QString::fromUtf8(tr("Replay Backup - Qupil").toStdString().c_str()),
+                                                 QString::fromUtf8(tr("The backup has been successfully restored. \nPlease restart Qupil!").toStdString().c_str()), QMessageBox::Ok);
                         this->close();
                     } else {
                         QMessageBox msgBox(this);
-                        msgBox.setWindowTitle(tr("Qupil - Fehler"));
+                        msgBox.setWindowTitle(tr("Error - Qupil"));
                         msgBox.setTextFormat(Qt::RichText);
-                        msgBox.setText(QString::fromUtf8(tr("Der Backup-Typ konnte nicht ermittelt werden! Somit kann das Backup nicht zurückgespielt werden.\nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
+                        msgBox.setText(QString::fromUtf8(tr("The backup type could not be determined! Therefore, the backup can not be restored. \nPlease contact the program author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> to fix this problem!").toStdString().c_str()));
                         msgBox.setIcon(QMessageBox::Critical);
                         msgBox.exec();
                     }
                 } else {
                     QMessageBox msgBox(this);
-                    msgBox.setWindowTitle(tr("Qupil - Fehler"));
+                    msgBox.setWindowTitle(tr("Error - Qupil"));
                     msgBox.setTextFormat(Qt::RichText);
-                    msgBox.setText(QString::fromUtf8(tr("Das Backup konnte nicht zurückgespielt werden! \nBitte wenden Sie sich an den Programm-Author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> um dieses Problem zu beheben!").toStdString().c_str()));
+                    msgBox.setText(QString::fromUtf8(tr("The backup could not be restored! \nPlease contact the program author: <a href=\"mailto:fhammer@qupil.de\">fhammer@qupil.de</a> to fix this issue!").toStdString().c_str()));
                     msgBox.setIcon(QMessageBox::Critical);
                     msgBox.exec();
                 }
             }
         } else {
-            QMessageBox::critical(this, tr("Qupil - Fehler"),
-                                  QString::fromUtf8(tr("Die ausgewählte Backupdatei existiert nicht oder ist leer. \nDas Backup wird nicht zurückgespielt!").toStdString().c_str()), QMessageBox::Ok);
+            QMessageBox::critical(this, tr("Error - Qupil"),
+                                  QString::fromUtf8(tr("The selected backup file does not exist or is empty. \nThe backup will not be restored!").toStdString().c_str()), QMessageBox::Ok);
         }
     }
 }
 
 void mainWindowImpl::addNewPupilsFromCsv()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, QString::fromUtf8(tr("Qupil - Adressdatei öffnen").toStdString().c_str()),
+    QString fileName = QFileDialog::getOpenFileName(this, QString::fromUtf8(tr("Open Address File - Qupil").toStdString().c_str()),
                        QDir::homePath(),
-                       tr("Adressen CSV (*.csv)"));
+                       tr("Address CSV (*.csv)"));
     if(!fileName.isEmpty()) {
 
         myCsvImportFieldsDialog->exec(fileName);
@@ -651,8 +671,7 @@ void mainWindowImpl::checkForEnsemblePupils()
 
 void mainWindowImpl::refreshTimeTableStats(int lessons, int pupils)
 {
-    statusBarStats->setText(QString::fromUtf8("Unterrichtseinheiten: %1 - Schüler: %2 ").arg(lessons).arg( pupils).toStdString().c_str());
-
+    statusBarStats->setText((tr("Lessons: %1 - Pupils: %2 ")).arg(lessons).arg( pupils));
 }
 
 void mainWindowImpl::callReminderDialog()
@@ -673,7 +692,7 @@ void mainWindowImpl::checkForProgramStartReminder()
         while(query.next()) {
             QMessageBox *msgBox = new QMessageBox(this);
             msgBox->setModal(false);
-            msgBox->setWindowTitle(tr("Qupil"));
+            msgBox->setWindowTitle("Qupil");
             msgBox->setTextFormat(Qt::RichText);
             msgBox->setText(QString("<u>Erinnerung:</u><br><br><b>%1</b><br>").arg(query.value(1).toString()));
             msgBox->setIcon(QMessageBox::Information);
@@ -753,7 +772,7 @@ void mainWindowImpl::showReminder(bool directlyAfterStartup)
 
                             QMessageBox *msgBox = new QMessageBox(this);
                             msgBox->setModal(false);
-                            msgBox->setWindowTitle(tr("Qupil"));
+                            msgBox->setWindowTitle("Qupil");
                             msgBox->setTextFormat(Qt::RichText);
                             msgBox->setText(QString("<u>Erinnerung:</u><br><br><b>%1</b><br>").arg(query.value(1).toString()));
                             msgBox->setIcon(QMessageBox::Information);
@@ -800,7 +819,7 @@ void mainWindowImpl::showReminder(bool directlyAfterStartup)
                                         if(query4.next()) {
                                             myMessageDialogImpl *msgBox = new myMessageDialogImpl(this, myDb);
                                             msgBox->setModal(false);
-                                            msgBox->setWindowTitle(tr("Qupil"));
+                                            msgBox->setWindowTitle("Qupil");
                                             msgBox->setTextFormat(Qt::RichText);
                                             msgBox->setText(QString::fromUtf8(QString("<u>Erinnerung für den Schüler ").toStdString().c_str())+QString("\"%1\":</u><br><br><b>%2</b><br>").arg(query4.value(0).toString()+", "+query4.value(1).toString()).arg(query.value(1).toString()));
                                             msgBox->setIcon(QMessageBox::Information);

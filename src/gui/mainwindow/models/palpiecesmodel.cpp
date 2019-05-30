@@ -83,11 +83,7 @@ QVariant PalPiecesModel::data(const QModelIndex &idx, int role) const
     QVariant value = QSqlQueryModel::data(idx, role);
 
     QStringList myStateStringList;
-    std::list<std::string> stateList = myConfig->readConfigStringList("PalPiecesStateList");
-    std::list<std::string>::iterator it;
-    for(it= stateList.begin(); it != stateList.end(); it++) {
-        myStateStringList << QString::fromUtf8(it->c_str());
-    }
+    myStateStringList << tr("Planned") << tr("In Progress") << tr("Paused") << tr("Ready for Concert") << tr("Finished");
 
     if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(1))) {
         return QColor(156, 255, 103);
@@ -120,13 +116,13 @@ void PalPiecesModel::refresh()
     setQuery(query);
     if (query.lastError().isValid()) qDebug() << "DB Error: 68 - " << query.lastError();
 
-    setHeaderData(2, Qt::Horizontal, QObject::tr("Komponist"));
-    setHeaderData(3, Qt::Horizontal, QObject::tr("Titel"));
-    setHeaderData(4, Qt::Horizontal, QObject::tr("Genre               "));
-    setHeaderData(5, Qt::Horizontal, QObject::tr("Dauer"));
-    setHeaderData(6, Qt::Horizontal, QObject::tr("Beginn"));
-    setHeaderData(7, Qt::Horizontal, QObject::tr("Ende"));
-    setHeaderData(8, Qt::Horizontal, QObject::tr("Status"));
+    setHeaderData(2, Qt::Horizontal, tr("Composer"));
+    setHeaderData(3, Qt::Horizontal, tr("Title"));
+    setHeaderData(4, Qt::Horizontal, tr("Genre               "));
+    setHeaderData(5, Qt::Horizontal, tr("Duration"));
+    setHeaderData(6, Qt::Horizontal, tr("Start"));
+    setHeaderData(7, Qt::Horizontal, tr("End"));
+    setHeaderData(8, Qt::Horizontal, tr("State"));
 }
 
 

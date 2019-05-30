@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>259</width>
-    <height>194</height>
+    <width>308</width>
+    <height>231</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Vorspiel hinzufügen</string>
+   <string>Add Concert - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Beschreibung:</string>
+      <string>Description:</string>
      </property>
     </widget>
    </item>
@@ -29,7 +29,7 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Datum:</string>
+        <string>Date:</string>
        </property>
       </widget>
      </item>
@@ -46,7 +46,7 @@
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Uhrzeit:</string>
+        <string>Time:</string>
        </property>
       </widget>
      </item>
@@ -65,7 +65,7 @@
    <item row="2" column="0">
     <widget class="QLabel" name="label_4">
      <property name="text">
-      <string>Ort:</string>
+      <string>Location:</string>
      </property>
     </widget>
    </item>
@@ -75,7 +75,7 @@
    <item row="3" column="0">
     <widget class="QLabel" name="label_5">
      <property name="text">
-      <string>Organisator:</string>
+      <string>Organiser:</string>
      </property>
     </widget>
    </item>
@@ -85,7 +85,7 @@
    <item row="4" column="0">
     <widget class="QLabel" name="label_6">
      <property name="text">
-      <string>Begleiter:</string>
+      <string>Accompanist:</string>
      </property>
     </widget>
    </item>

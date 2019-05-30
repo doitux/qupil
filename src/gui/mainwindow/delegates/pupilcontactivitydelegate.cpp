@@ -36,7 +36,7 @@ QWidget *PupilContActivityDelegate::createEditor ( QWidget *parent, const QStyle
     switch ( index.column() ) {
     case 2: {
         QStringList typeList;
-        typeList << tr("Ensemble") << tr("Theorieunterricht") << tr("Korrepetition") << tr("Sonstiges");
+        typeList << tr("Ensemble") << tr("Theory lesson") << tr("Coaching with pianists") << tr("Other");
 
         QComboBox *combo = new QComboBox ( parent );
         combo->insertItems ( 0, typeList );
@@ -46,7 +46,7 @@ QWidget *PupilContActivityDelegate::createEditor ( QWidget *parent, const QStyle
     break;
     case 3: {
         QStringList dayList;
-        dayList << tr("Montag") << tr("Dienstag") << tr("Mittwoch") << tr("Donnerstag") << tr("Freitag") << tr("Samstag") << tr("Sonntag") << QString::fromUtf8(tr("unregelmäßig").toStdString().c_str());
+        dayList << tr("Monday") << tr("Tuesday") << tr("Wednesday") << tr("Thursday") << tr("Friday") << tr("Saturday") << tr("Sunday") << QString::fromUtf8(tr("irregular").toStdString().c_str());
 
         QComboBox *combo = new QComboBox ( parent );
         combo->insertItems ( 0, dayList );

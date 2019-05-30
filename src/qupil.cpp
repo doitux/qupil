@@ -42,16 +42,6 @@ int main(int argc, char *argv[])
     //create defaultconfig
     ConfigFile *myConfig = new ConfigFile(argv[0], false);
 
-    //Set translations
-    QTranslator qtTranslator;
-    qtTranslator.load(":/translation/qt_" + QLocale::system().name(),
-            QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-    a.installTranslator(&qtTranslator);
-
-    QTranslator myappTranslator;
-    myappTranslator.load(":/translation/qupil_" + QLocale::system().name());
-    a.installTranslator(&myappTranslator);
-
 #ifdef __APPLE__
     QDir dir(QApplication::applicationDirPath());
     dir.cdUp();

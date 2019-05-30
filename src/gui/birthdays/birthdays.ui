@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>184</width>
-    <height>211</height>
+    <width>188</width>
+    <height>215</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qupil - Geburtstag</string>
+   <string>Birthdays - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <property name="horizontalSpacing">

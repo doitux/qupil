@@ -27,7 +27,7 @@ TimeTableTreeWidget::TimeTableTreeWidget(QWidget *tab)
     : QTreeWidget(tab), headerSectionIndent(10)
 {
     lessonPopupMenu = new QMenu();
-    delLesson = new QAction(QIcon(":/gfx/x-office-calendar.svg"), QString::fromUtf8(tr("Unterricht löschen").toStdString().c_str()), lessonPopupMenu);
+    delLesson = new QAction(QIcon(":/gfx/x-office-calendar.svg"), QString::fromUtf8(tr("Delete Lesson").toStdString().c_str()), lessonPopupMenu);
     lessonPopupMenu->addAction(delLesson);
 
     connect( this, SIGNAL ( currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT ( timeTableSelectionChanged(QTreeWidgetItem*, QTreeWidgetItem*)) );
@@ -42,7 +42,6 @@ TimeTableTreeWidget::~TimeTableTreeWidget()
 
 void TimeTableTreeWidget::refreshTimeTable()
 {
-
     QList<QTreeWidgetItem *> selectedItemList = this->selectedItems();
     QString selectedItemIdString;
     if(!selectedItemList.empty()) {
@@ -58,7 +57,7 @@ void TimeTableTreeWidget::refreshTimeTable()
     setRootIsDecorated(false);
 
     QStringList dayList;
-    dayList << tr("Montag") << tr("Dienstag") << tr("Mittwoch") << tr("Donnerstag") << tr("Freitag") << tr("Samstag") << tr("Sonntag") << QString::fromUtf8(tr("unregelmäßig").toStdString().c_str());
+    dayList << tr("Monday") << tr("Tuesday") << tr("Wednesday") << tr("Thursday") << tr("Friday") << tr("Saturday") << tr("Sunday") << QString::fromUtf8(tr("irregular").toStdString().c_str());
 
     QString longestLessonDescription = "";
     int longestLessonDescriptionLength = 0;
@@ -293,8 +292,8 @@ void TimeTableTreeWidget::delCurrentLesson()
 
     }
 
-    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Qupil - Unterricht löschen").toStdString().c_str()),
-                                   QString::fromUtf8(tr("Möchten Sie den ausgewählten Unterricht wirklich löschen?").toStdString().c_str()),
+    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Delete Lesson - Qupil").toStdString().c_str()),
+                                   QString::fromUtf8(tr("Do you really want to delete the selected lesson?").toStdString().c_str()),
                                    QMessageBox::Ok | QMessageBox::Cancel);
     if(ret == QMessageBox::Ok) {
 

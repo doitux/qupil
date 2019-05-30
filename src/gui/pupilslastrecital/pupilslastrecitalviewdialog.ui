@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Vorspielkandidaten</string>
+   <string>Concert Candidates - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="2" column="0">
@@ -107,22 +107,22 @@
           </property>
           <column>
            <property name="text">
-            <string>Sortierung</string>
+            <string>Sorting</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Schüler</string>
+            <string>Pupil</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Letzter Auftritt vor</string>
+            <string>Last Concert Ago</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>Datum</string>
+            <string>Date</string>
            </property>
           </column>
           <column>

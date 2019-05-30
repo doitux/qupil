@@ -4,14 +4,98 @@
 <context>
     <name>AboutQupilDialog</name>
     <message>
+        <source>Qupil - about Qupil</source>
+        <translation type="vanished">Qupil - über Qupil</translation>
+    </message>
+    <message>
         <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="15"/>
-        <source>Qupil - über Qupil</source>
-        <translation type="unfinished"></translation>
+        <source>About Qupil </source>
+        <translation>Über Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="43"/>
-        <source>Über</source>
-        <translation type="unfinished"></translation>
+        <source>About</source>
+        <translation>Über</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="98"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Management of pupils and lessons data&lt;br /&gt;- Eventmanager&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Metronome, Tuner &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Music library &lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Verwaltung von Unterrichts- und Schülerdaten&lt;br /&gt;- Veranstaltungsmanager&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Metronom, Stimmgerät &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Notenbibliothek &lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="148"/>
+        <source>Project</source>
+        <translation>Projekt</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="172"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border: none;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Project website: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;     &lt;a href=&quot;http://qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://qupil.de&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;     Felix Hammer (&lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;fhammer@qupil.de&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border: none;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Projekt-Website: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;     &lt;a href=&quot;http://qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://qupil.de&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Autor: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;     Felix Hammer (&lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;fhammer@qupil.de&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="194"/>
+        <source>Translation</source>
+        <translation>Übersetzung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="200"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;English - Felix Hammer &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;German - Felix Hammer &lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please contact the Author via &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;fhammer@qupil.de&lt;/span&gt;&lt;/a&gt; if you want to help translating Qupil!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Englisch - Felix Hammer &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Deutsch - Felix Hammer &lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Wenn Sie bei der Übersetzung von Qupil helfen möchten, kontaktieren Sie bitte den Autor via &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;fhammer@qupil.de&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="221"/>
+        <source>License</source>
+        <translation>Lizenz</translation>
     </message>
     <message>
         <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="75"/>
@@ -20,91 +104,39 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://qupil.de&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="98"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Verwaltung von Schüler- und Unterrichtsdaten&lt;br /&gt;- Veranstaltungsmanager&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Metronom, Stimmgerät &lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Noten-Bibliothek &lt;/p&gt;
-&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="148"/>
-        <source>Projekt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="172"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
-&lt;tr&gt;
-&lt;td style=&quot;border: none;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Projektseite: &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;     &lt;a href=&quot;http://qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://qupil.de&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;     Felix Hammer (&lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;fhammer@qupil.de&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/aboutqupil/aboutqupil.ui" line="194"/>
-        <source>Lizenz</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>AboutQupilDialogImpl</name>
-    <message>
-        <location filename="../src/gui/aboutqupil/aboutqupildialogimpl.cpp" line="43"/>
-        <source>Qupil %1</source>
-        <translation type="unfinished"></translation>
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://qupil.de&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://qupil.de&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>AddExternalRecitalPieceDialog</name>
     <message>
         <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="14"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <source>Add External Concert Music - Qupil</source>
+        <translation>Vorspielstücke hinzufügen - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="20"/>
-        <source>Komponist:</source>
-        <translation type="unfinished"></translation>
+        <source>Composer:</source>
+        <translation>Komponist:</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="30"/>
-        <source>Titel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="40"/>
-        <source>Genre:</source>
-        <translation type="unfinished">Genre:</translation>
+        <source>Title:</source>
+        <translation>Titel:</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="50"/>
-        <source>Dauer:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="57"/>
-        <source> Min.</source>
-        <translation type="unfinished"> Min.</translation>
+        <source>Duration:</source>
+        <translation>Dauer:</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="64"/>
-        <source>Musiker:</source>
-        <translation type="unfinished"></translation>
+        <source>Musicians:</source>
+        <translation>Musiker:</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="79"/>
@@ -112,298 +144,396 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Format: last name, first name (age) - instrument&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;               &lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;last name, first name (age) - instrument&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Format: Name, Vorname (Alter) - Instrument&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;               &lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Name, Vorname (Alter) - Instrument&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;               &lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Name, Vorname (Alter) - Instrument&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.cpp" line="59"/>
-        <source>Qupil</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="40"/>
+        <source>Genre:</source>
+        <translation>Genre:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.ui" line="57"/>
+        <source> Min.</source>
+        <translation> Min.</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/addexternalrecitalpiecedialog.cpp" line="60"/>
-        <source>Sie müssen mindestens die Felder &quot;Komponist&quot;, &quot;Titel&quot; und &quot;Musiker&quot; ausfüllen
- um den Eintrag hinzuzufügen!</source>
-        <translation type="unfinished"></translation>
+        <source>You need to fill at least the fields &quot;Composer&quot;, &quot;Title&quot; und &quot;Musicians&quot;
+to add the entry!</source>
+        <translation>Sie müssen mindestens die Felder &quot;Komponist&quot;, &quot;Titel&quot; und &quot;Musiker&quot; ausfüllen
+um den Eintrag hinzuzufügen!</translation>
     </message>
 </context>
 <context>
     <name>AddRecitalDialog</name>
     <message>
-        <location filename="../src/gui/instrumentmanager/addrecitaldialog.ui" line="14"/>
-        <source>Vorspiel hinzufügen</source>
-        <translation type="unfinished"></translation>
+        <source>Add concert</source>
+        <translation type="vanished">Vorspiel hinzufügen</translation>
     </message>
     <message>
-        <location filename="../src/gui/instrumentmanager/addrecitaldialog.ui" line="20"/>
-        <source>Beschreibung:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/addrecitaldialog.ui" line="14"/>
+        <source>Add Concert - Qupil</source>
+        <translation>Vorspiel hinzufügen - Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/instrumentmanager/addrecitaldialog.ui" line="32"/>
-        <source>Datum:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/addrecitaldialog.ui" line="20"/>
+        <source>Description:</source>
+        <translation>Beschreibung:</translation>
     </message>
     <message>
-        <location filename="../src/gui/instrumentmanager/addrecitaldialog.ui" line="49"/>
-        <source>Uhrzeit:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/addrecitaldialog.ui" line="32"/>
+        <source>Date:</source>
+        <translation>Datum:</translation>
     </message>
     <message>
-        <location filename="../src/gui/instrumentmanager/addrecitaldialog.ui" line="68"/>
-        <source>Ort:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/addrecitaldialog.ui" line="49"/>
+        <source>Time:</source>
+        <translation>Uhrzeit:</translation>
     </message>
     <message>
-        <location filename="../src/gui/instrumentmanager/addrecitaldialog.ui" line="78"/>
-        <source>Organisator:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/addrecitaldialog.ui" line="68"/>
+        <source>Location:</source>
+        <translation>Ort:</translation>
     </message>
     <message>
-        <location filename="../src/gui/instrumentmanager/addrecitaldialog.ui" line="88"/>
-        <source>Begleiter:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/addrecitaldialog.ui" line="78"/>
+        <source>Organiser:</source>
+        <translation>Organisator:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/addrecitaldialog.ui" line="88"/>
+        <source>Accompanist:</source>
+        <translation>Begleiter:</translation>
     </message>
 </context>
 <context>
     <name>BirthdaysDialog</name>
     <message>
+        <source>Birthdays</source>
+        <translation type="vanished">Geburtstage</translation>
+    </message>
+    <message>
         <location filename="../src/gui/birthdays/birthdays.ui" line="14"/>
-        <source>Qupil - Geburtstag</source>
-        <translation type="unfinished"></translation>
+        <source>Birthdays - Qupil</source>
+        <translation>Geburtstage - Qupil</translation>
     </message>
 </context>
 <context>
     <name>BirthdaysDialogImpl</name>
     <message>
-        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="76"/>
-        <source>Folgender Schüler hat heute Geburtstag:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="72"/>
+        <source>The following student has his birthday today:</source>
+        <translation>Folgender Schüler hat heute Geburtstag:</translation>
     </message>
     <message>
-        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="78"/>
-        <source>Folgende Schüler haben heute Geburtstag:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="74"/>
+        <source>The following students have their birthday today:</source>
+        <translation>Folgende Schüler haben heute Geburtstag:</translation>
     </message>
     <message>
-        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="97"/>
-        <source>Folgender Schüler hatte letzte Woche Geburtstag:</source>
-        <translation type="unfinished"></translation>
+        <source>Jahre</source>
+        <translation type="vanished">Years</translation>
     </message>
     <message>
-        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="99"/>
-        <source>Folgende Schüler hatten letzte Woche Geburtstag:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="86"/>
+        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="107"/>
+        <source>Years</source>
+        <translation>Jahre</translation>
     </message>
     <message>
-        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="116"/>
-        <source>In der letzten Woche hatte kein Schüler Geburtstag!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="93"/>
+        <source>The following student had his birthday last week:</source>
+        <translation>Folgender Schüler hatte letzte Woche Geburtstag:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="95"/>
+        <source>The following students had their birthday last week:</source>
+        <translation>Folgende Schüler hatten letzte Woche Geburtstag:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/birthdays/birthdaysdialogimpl.cpp" line="112"/>
+        <source>In the last week no student had his birthday!</source>
+        <translation>In der letzten Woche hatte kein Schüler Geburtstag!</translation>
     </message>
 </context>
 <context>
     <name>BuildDayViewDialog</name>
     <message>
+        <source>Create Daily Schedule</source>
+        <translation type="vanished">Tagesübersicht erstellen</translation>
+    </message>
+    <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="14"/>
-        <source>Qupil - Tagesübersicht</source>
-        <translation type="unfinished"></translation>
+        <source>Create Daily Schedule - Qupil</source>
+        <translation>Tagesübersicht erstellen - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="20"/>
-        <source>Wochentag:</source>
-        <translation type="unfinished"></translation>
+        <source>Weekday:</source>
+        <translation>Wochentag:</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="34"/>
-        <source>Montag</source>
-        <translation type="unfinished"></translation>
+        <source>Monday</source>
+        <translation>Montag</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="39"/>
-        <source>Dienstag</source>
-        <translation type="unfinished"></translation>
+        <source>Tuesday</source>
+        <translation>Dienstag</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="44"/>
-        <source>Mittwoch</source>
-        <translation type="unfinished"></translation>
+        <source>Wednesday</source>
+        <translation>Mittwoch</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="49"/>
-        <source>Donnerstag</source>
-        <translation type="unfinished"></translation>
+        <source>Thursday</source>
+        <translation>Donnerstag</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="54"/>
-        <source>Freitag</source>
-        <translation type="unfinished"></translation>
+        <source>Friday</source>
+        <translation>Freitag</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="59"/>
-        <source>Samstag</source>
-        <translation type="unfinished"></translation>
+        <source>Saturday</source>
+        <translation>Samstag</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="64"/>
-        <source>Sonntag</source>
-        <translation type="unfinished"></translation>
+        <source>Sunday</source>
+        <translation>Sonntag</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="69"/>
-        <source>unregelmäßig</source>
-        <translation type="unfinished"></translation>
+        <source>Irregular</source>
+        <translation>Unregelmäßig</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="79"/>
-        <source>Zeige die letzten </source>
-        <translation type="unfinished"></translation>
+        <source>Show the last</source>
+        <translation>Zeige die letzten</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="99"/>
-        <source>Notizeinträge zu jedem Unterricht</source>
-        <translation type="unfinished"></translation>
+        <source>notes for every lesson</source>
+        <translation>Unterrichtsnotizen für jeden Unterricht</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="110"/>
-        <source>Füge ein ca.</source>
-        <translation type="unfinished"></translation>
+        <source>Add around</source>
+        <translation>Füge einen ca.</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="133"/>
+        <source>free space for handwritten notes</source>
+        <translation>großen Bereich für handschriftliche Notizen hinzu</translation>
     </message>
     <message>
         <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="117"/>
         <source> cm</source>
-        <translation type="unfinished"></translation>
+        <translation> cm</translation>
     </message>
     <message>
-        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.ui" line="133"/>
-        <source>hohes Leerfeld für handschriftliche Notizen hinzu</source>
-        <translation type="unfinished"></translation>
+        <source>dd.MM.yyyy</source>
+        <translation type="vanished">yyyy-MM-dd</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.cpp" line="63"/>
+        <source>Time</source>
+        <translation>Uhrzeit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.cpp" line="63"/>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.cpp" line="67"/>
+        <source>Lesson</source>
+        <translation>Unterricht</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.cpp" line="63"/>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.cpp" line="67"/>
+        <source>Pupil</source>
+        <translation>Schüler</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.cpp" line="66"/>
+        <source>irregular dates</source>
+        <translation>Unregelmäßige Termine</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.cpp" line="159"/>
+        <location filename="../src/gui/builddayviewdoc/builddayviewdialog.cpp" line="163"/>
+        <source>Daily schedule</source>
+        <translation>Tagesübersicht</translation>
     </message>
 </context>
 <context>
     <name>BuildTimeTableDoc</name>
     <message>
         <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="15"/>
-        <source>Montag</source>
-        <translation type="unfinished"></translation>
+        <source>Monday</source>
+        <translation>Montag</translation>
     </message>
     <message>
         <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="15"/>
-        <source>Dienstag</source>
-        <translation type="unfinished"></translation>
+        <source>Tuesday</source>
+        <translation>Dienstag</translation>
     </message>
     <message>
         <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="15"/>
-        <source>Mittwoch</source>
-        <translation type="unfinished"></translation>
+        <source>Wednesday</source>
+        <translation>Mittwoch</translation>
     </message>
     <message>
         <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="15"/>
-        <source>Donnerstag</source>
-        <translation type="unfinished"></translation>
+        <source>Thursday</source>
+        <translation>Donnerstag</translation>
     </message>
     <message>
         <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="15"/>
-        <source>Freitag</source>
-        <translation type="unfinished"></translation>
+        <source>Friday</source>
+        <translation>Freitag</translation>
     </message>
     <message>
         <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="15"/>
-        <source>Samstag</source>
-        <translation type="unfinished"></translation>
+        <source>Saturday</source>
+        <translation>Samstag</translation>
     </message>
     <message>
         <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="15"/>
-        <source>Sonntag</source>
-        <translation type="unfinished"></translation>
+        <source>Sunday</source>
+        <translation>Sonntag</translation>
     </message>
     <message>
         <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="15"/>
-        <source>unregelmäßig</source>
-        <translation type="unfinished"></translation>
+        <source>irregular</source>
+        <translation>unregelmäßig</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="68"/>
+        <source>Timetable</source>
+        <translation>Stundenplan</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="71"/>
+        <source>Status: </source>
+        <translation>Stand:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="75"/>
+        <source>Time</source>
+        <translation>Uhrzeit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="75"/>
+        <source>Lesson</source>
+        <translation>Unterricht</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/buildtimetabledoc/buildtimetabledoc.cpp" line="75"/>
+        <source>Pupil</source>
+        <translation>Schüler</translation>
     </message>
 </context>
 <context>
     <name>ConcertManagerDialog</name>
     <message>
+        <source>Event Manager</source>
+        <translation type="vanished">Veranstaltungsmanager</translation>
+    </message>
+    <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="20"/>
-        <source>Qupil - Veranstaltungs-Manager</source>
-        <translation type="unfinished"></translation>
+        <source>Event Manager - Qupil</source>
+        <translation>Veranstaltungsmanager - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="30"/>
-        <source>Vorspielbereite &amp;Werke</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Ready for Concert</source>
+        <translation>&amp;Vorspielbereite Werke</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="38"/>
-        <source>Zeige Schüler aus diesem Ort:</source>
-        <translation type="unfinished"></translation>
+        <source>Show pupils from:</source>
+        <translation>Zeige Schüler aus dem Ort:</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="79"/>
-        <source>Komponist</source>
-        <translation type="unfinished"></translation>
+        <source>Composer</source>
+        <translation>Komponist</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="84"/>
-        <source>Titel</source>
-        <translation type="unfinished"></translation>
+        <source>Title</source>
+        <translation>Titel</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="89"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Genre</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="94"/>
-        <source>Dauer</source>
-        <translation type="unfinished"></translation>
+        <source>Duration</source>
+        <translation>Dauer</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="99"/>
-        <source>Schüler (Alter) - Instrument</source>
-        <translation type="unfinished"></translation>
+        <source>Pupil (Age) - Instrument</source>
+        <translation>Schüler (Alter) - Instrument</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="108"/>
-        <source>Veranstaltungs-&amp;Manager</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Event Manager</source>
+        <translation>Veranstaltungs&amp;manager</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="116"/>
-        <source>&amp;Veranstaltung</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Event</source>
+        <translation>Ver&amp;anstaltung</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="136"/>
-        <source>Wer&amp;k</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Music Piece</source>
+        <translation>&amp;Werk</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="153"/>
-        <source>&amp;Dokument ...</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Document ...</source>
+        <translation>&amp;Dokument ...</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="187"/>
-        <source>&amp;Archiv</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Archive</source>
+        <translation>&amp;Archiv</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="224"/>
-        <source>Veranstaltung</source>
-        <translation type="unfinished"></translation>
+        <source>Event</source>
+        <translation>Veranstaltung</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="237"/>
-        <source>&amp;Drucken</source>
-        <translation type="unfinished">&amp;Print</translation>
+        <source>&amp;Print</source>
+        <translation>&amp;Drucken</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanager.ui" line="248"/>
-        <source>Nach &amp;PDF exportieren</source>
-        <translation type="unfinished"></translation>
+        <source>Export to &amp;PDF</source>
+        <translation>Nach &amp;PDF exportieren</translation>
+    </message>
+    <message>
+        <source>&amp;Drucken</source>
+        <translation type="obsolete">&amp;Print</translation>
     </message>
 </context>
 <context>
@@ -411,380 +541,658 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="44"/>
         <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="57"/>
-        <source>Hinzufügen ...</source>
-        <translation type="unfinished"></translation>
+        <source>Add ...</source>
+        <translation>Hinzufügen ...</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="46"/>
         <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="61"/>
-        <source>Löschen</source>
-        <translation type="unfinished"></translation>
+        <source>Delete</source>
+        <translation>Löschen</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="48"/>
-        <source>Archivieren und Löschen</source>
-        <translation type="unfinished"></translation>
+        <source>Archive and Delete</source>
+        <translation>Archivieren und Löschen</translation>
+    </message>
+    <message>
+        <source>Add External Contribution...</source>
+        <translation type="obsolete">Externen Beitrag Hinzufügen ...</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="59"/>
-        <source>Externen Beitrag hinzufügen...</source>
-        <translation type="unfinished"></translation>
+        <source>Add External Contribution ...</source>
+        <translation>Externen Beitrag Hinzufügen ...</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="72"/>
-        <source>Archiveintrag löschen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="533"/>
+        <source>Delete Archive Entry</source>
+        <translation>Archiveintrag Löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="273"/>
-        <source>Qupil - Vorspiel löschen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="83"/>
+        <source>All</source>
+        <translation>Alle</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="139"/>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="178"/>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="448"/>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="449"/>
+        <source>Min.</source>
+        <translation>Min.</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="274"/>
-        <source>Möchten Sie das Vorspiel &quot;%1&quot; wirklich löschen?</source>
-        <translation type="unfinished"></translation>
+        <source>Delete Event</source>
+        <translation>Veranstaltung Löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="532"/>
-        <source>Qupil - Archiveintrag löschen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="275"/>
+        <source>Do you really want to delete the event: &quot;%1&quot; ?</source>
+        <translation>Möchten Sie die Veranstaltung: &quot;%1&quot; wirklich löschen?</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="533"/>
-        <source>Möchten Sie den Archiveintrag &quot;%1&quot; wirklich löschen?</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="423"/>
+        <source>Program overview for events</source>
+        <translation>Programmübersicht für Veranstaltungen</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="564"/>
-        <source>Exportiere Datei</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="427"/>
+        <source>Program for</source>
+        <translation>Programmübersicht für</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="566"/>
-        <source>PDF Datei (*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="433"/>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="434"/>
+        <source>Time</source>
+        <translation>Uhrzeit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="435"/>
+        <source>Location</source>
+        <translation>Ort</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="436"/>
+        <source>Organiser</source>
+        <translation>Organisator</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="437"/>
+        <source>Accompanist</source>
+        <translation>Begleiter</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="444"/>
+        <source>Composer</source>
+        <translation>Komponist</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="444"/>
+        <source>Music Piece / Movements</source>
+        <translation>Werk / Satzbezeichnung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="444"/>
+        <source>Genre</source>
+        <translation>Genre</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="444"/>
+        <source>Duration</source>
+        <translation>Dauer</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="444"/>
+        <source>Musician (Age) - Instrument</source>
+        <translation>Musiker (Alter) - Instrument</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="448"/>
+        <source>Pure playing time</source>
+        <translation>Reine Spielzeit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="449"/>
+        <source>Estimated total duration</source>
+        <translation>Geschätzte Gesamtdauer</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="534"/>
+        <source>Do you really want to delete the archive entry &quot;%1&quot; ?</source>
+        <translation>Möchten Sie den Archiveintrag: &quot;%1&quot; wirklich löschen?</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="565"/>
+        <source>Export File</source>
+        <translation>Datei Exportieren</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/concertmanagerdialogimpl.cpp" line="567"/>
+        <source>PDF File (*.pdf)</source>
+        <translation>PDF Datei (*.pdf)</translation>
+    </message>
+</context>
+<context>
+    <name>ConfigFile</name>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="127"/>
+        <source>Tune</source>
+        <translation>Lied</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="128"/>
+        <source>Baroque</source>
+        <translation>Barock</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="129"/>
+        <source>Classical</source>
+        <translation>Klassik</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="130"/>
+        <source>Romantic</source>
+        <translation>Romantik</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="131"/>
+        <source>Modernism</source>
+        <translation>Moderne</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="132"/>
+        <source>New music</source>
+        <translation>Neue Musik</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="133"/>
+        <source>Musical</source>
+        <translation>Musical</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="134"/>
+        <source>Jazz</source>
+        <translation>Jazz</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="135"/>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="136"/>
+        <source>Pop</source>
+        <translation>Pop</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="137"/>
+        <source>Irish Folk</source>
+        <translation>Irish Folk</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="141"/>
+        <source>Room 20</source>
+        <translation>Raum 20</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="142"/>
+        <source>Room 16</source>
+        <translation>Raum 16</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="143"/>
+        <source>Auditorium</source>
+        <translation>Aula</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="147"/>
+        <source>Violin</source>
+        <translation>Violine</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="148"/>
+        <source>Viola</source>
+        <translation>Viola</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="149"/>
+        <source>Cello</source>
+        <translation>Cello</translation>
+    </message>
+    <message>
+        <location filename="../src/core/config/configfile.cpp" line="150"/>
+        <source>Double Bass</source>
+        <translation>Kontrabass</translation>
     </message>
 </context>
 <context>
     <name>CsvImportFieldsDialog</name>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="13"/>
-        <source>Qupil - CSV Adressbuch Import</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="14"/>
+        <source>CSV Address Book Import - Qupil</source>
+        <translation>Adressbuch (CVS) Import - Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="28"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot;font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;CSV Adressbuch Import&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="29"/>
+        <source>CSV Address Book Import</source>
+        <translation>Adressbuch (CVS) Import</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="41"/>
-        <source>Datei-Codierung:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="38"/>
+        <source>File Coding</source>
+        <translation>Datei-Codierung</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="55"/>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="52"/>
         <source>UTF-8</source>
-        <translation type="unfinished"></translation>
+        <translation>UTF-8</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="60"/>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="57"/>
         <source>Latin-1</source>
-        <translation type="unfinished"></translation>
+        <translation>Latin-1</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="77"/>
-        <source>Bitte ordnen Sie den einzelnen Datenbank-Feldern die entsprechenden Felder aus Ihrer CSV-Datei zu:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="74"/>
+        <source>Please assign the database fields to the corresponding fields from your CSV-File:</source>
+        <translation>Bitte ordnen Sie den einzelnen Datenbank-Feldern die entsprechenden Felder aus Ihrer CSV-Datei zu:</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="92"/>
-        <source>Vorname:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="89"/>
+        <source>First Name:</source>
+        <translation>Vorname:</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="109"/>
-        <source>Nachname:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="106"/>
+        <source>Last Name:</source>
+        <translation>Nachname:</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="119"/>
-        <source>Geburtstag:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="116"/>
+        <source>Birthday:</source>
+        <translation>Geburtstag:</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="129"/>
-        <source>Straße:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="126"/>
+        <source>Street:</source>
+        <translation>Straße:</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="139"/>
-        <source>Postleitzahl:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="136"/>
+        <source>Zip Code:</source>
+        <translation>Postleitzahl:</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="149"/>
-        <source>Stadt:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="146"/>
+        <source>City:</source>
+        <translation>City:</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="159"/>
+        <source>City</source>
+        <translation type="vanished">Ort:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="166"/>
+        <source>Phone:</source>
+        <translation>Telefon:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="176"/>
+        <source>Mobile:</source>
+        <translation>Handy:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="156"/>
         <source>E-Mail:</source>
-        <translation type="unfinished">E-Mail:</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="169"/>
-        <source>Telefon:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/csvimportfields/csvimportfields.ui" line="179"/>
-        <source>Handy:</source>
-        <translation type="unfinished"></translation>
+        <translation>E-Mail:</translation>
     </message>
 </context>
 <context>
     <name>CsvImportFieldsDialogImpl</name>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="73"/>
-        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="79"/>
-        <source>Qupil</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="76"/>
+        <source>Separator of the CSV file (usually comma or semicolon) could not be recognized.
+CSV import is aborted!</source>
+        <translation>Trennzeichen der CSV-Datei (üblicherweise Komma oder Semikolon) konnte nicht erkannt werden.
+CSV-Import wird abgebrochen!</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="74"/>
-        <source>Trennerzeichen der CSV-Datei (üblicherweise Komma oder Semikolon) konnte nicht erkannt werden.
-CSV-Import wird abgebrochen!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="82"/>
+        <source>CSV file could not be opened.
+CSV import is aborted!</source>
+        <translation>CSV-Datei konnte nicht geöffnet werden
+CSV-Import wird abgebrochen!</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="80"/>
-        <source>CSV-Datei konnte nicht geöffnet werden.
-CSV-Import wird abgebrochen!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="203"/>
+        <source>CSV Address Book Import</source>
+        <translation>Adressbuch (CVS) Import</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="201"/>
-        <source>Qupil - CSV Adressbuch Import</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="204"/>
+        <source>Importing the data from the CSV file was completed successfully! 
+ %1 entries added</source>
+        <translation>Das Importieren der Daten aus der CSV-Datei wurde erfolgreich beendet!
+Es wurden %1 Einräge hinzugefügt</translation>
     </message>
     <message>
-        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="202"/>
-        <source>Das Importieren der Daten aus der CSV-Datei wurde erfolgreich beendet! 
-Es wurden %1 Einräge hinzugefügt</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>First Name</source>
+        <translation>Vorname</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>Last Name</source>
+        <translation>Nachname</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>Birthday</source>
+        <translation>Geburtstag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>Street</source>
+        <translation>Straße</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>Zip Code</source>
+        <translation>Postleitzahl</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>City</source>
+        <translation>Ort</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>Phone</source>
+        <translation>Telefon</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>Mobile</source>
+        <translation>Handy</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="218"/>
+        <source>E-Mail</source>
+        <translation>E-Mail</translation>
     </message>
     <message>
         <location filename="../src/gui/csvimportfields/csvimportfieldsdialogimpl.cpp" line="255"/>
-        <source>!!!Dieses Feld nicht importieren!!!</source>
-        <translation type="unfinished"></translation>
+        <source>!!!Do Not Import This Field!!!</source>
+        <translation>!!!Dieses Feld nicht imporieren!!!</translation>
     </message>
 </context>
 <context>
     <name>DocViewerDialog</name>
     <message>
+        <source>Document Viewer</source>
+        <translation type="vanished">Dokumenten Ansicht</translation>
+    </message>
+    <message>
         <location filename="../src/gui/docviewer/docviewer.ui" line="14"/>
-        <source>Qupil</source>
-        <translation type="unfinished"></translation>
+        <source>Document Viewer - Qupil</source>
+        <translation>Dokumenten Ansicht - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/docviewer/docviewer.ui" line="23"/>
-        <source>Drucken</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Print</source>
+        <translation>&amp;Drucken</translation>
     </message>
     <message>
         <location filename="../src/gui/docviewer/docviewer.ui" line="34"/>
-        <source>Nach PDF exportieren</source>
-        <translation type="unfinished"></translation>
+        <source>Export to &amp;PDF</source>
+        <translation>Nach &amp;PDF exportieren</translation>
     </message>
 </context>
 <context>
     <name>DocViewerDialogImpl</name>
     <message>
-        <location filename="../src/gui/docviewer/docviewerdialogimpl.cpp" line="66"/>
-        <source>Exportiere Datei</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/docviewer/docviewerdialogimpl.cpp" line="67"/>
+        <source>Export File</source>
+        <translation>Datei Exportieren</translation>
     </message>
     <message>
-        <location filename="../src/gui/docviewer/docviewerdialogimpl.cpp" line="68"/>
-        <source>PDF Datei (*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/docviewer/docviewerdialogimpl.cpp" line="69"/>
+        <source>PDF File (*.pdf)</source>
+        <translation>PDF Datei (*.pdf)</translation>
     </message>
 </context>
 <context>
     <name>FinishRecitalDialog</name>
     <message>
+        <source>Automatic Functions</source>
+        <translation type="vanished">Automatische Funktionen</translation>
+    </message>
+    <message>
         <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="14"/>
-        <source>Automatische Funktionen</source>
-        <translation type="unfinished"></translation>
+        <source>Automatic Functions - Qupil</source>
+        <translation>Automatische Funktionen - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="20"/>
-        <source>Qupil kann zu Ihrer Unterstützung einige automatische Funktionen ausführen. Bitte wählen Sie welche Funktionen ausgeführt werden sollen:</source>
-        <translation type="unfinished"></translation>
+        <source>Qupil can perform some automatic functions to assist you. Please select which functions should be executed:</source>
+        <translation>Qupil kann zu Ihrer Unterstützung einige automatische Funktionen ausführen. Bitte wählen Sie welche Funktionen ausgeführt werden sollen:</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="39"/>
-        <source>Aktivitäten </source>
-        <translation type="unfinished"></translation>
+        <source>Activities</source>
+        <translation>Aktivitäten</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="54"/>
-        <source>Bei jedem Teilnehmer wir die Veranstaltung automatisch als einmalige Aktivität eingetragen. 
-Möchten Sie diese Funktion nutzen?</source>
-        <translation type="unfinished"></translation>
+        <source>For each participant, the event is automatically entered as a one-time activity.  
+Do you want to use this feature?</source>
+        <translation>Bei jedem Teilnehmer wir die Veranstaltung automatisch als einmalige Aktivität eingetragen.
+Möchten Sie diese Funktion nutzen?</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="92"/>
-        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="208"/>
-        <source>Ja</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="95"/>
+        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="211"/>
+        <source>Yes</source>
+        <translation>Ja</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="102"/>
-        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="218"/>
-        <source>Nein</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="105"/>
+        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="221"/>
+        <source>No</source>
+        <translation>Nein</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="146"/>
-        <source>Werke</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="149"/>
+        <source>Music Pieces</source>
+        <translation>Werke</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="167"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Der Status der vorgetragenen Werke wird beim jedem Teilnehmer automatisch auf &amp;quot;abgeschlossen&amp;quot; gesetzt.&lt;br /&gt;Möchten Sie diese Funktion nutzen?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/finishrecitaldialog.ui" line="170"/>
+        <source>The status of the performed music pieces is automatically set to &quot;completed&quot; for each participant.
+Do you want to use this feature?</source>
+        <translation>Der Status der vorgetragenen Werke wird bei jedem Teilnehmer automatisch auf &quot;abgeschlossen&quot; gesetzt.
+Möchten Sie diese Funktion nutzen?</translation>
     </message>
 </context>
 <context>
     <name>InstrumentManagerDialog</name>
     <message>
+        <source>Instrumenten Manager</source>
+        <translation type="vanished">Instrumentenmanager</translation>
+    </message>
+    <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="14"/>
-        <source>Qupil - Instrumenten-Manager</source>
-        <translation type="unfinished"></translation>
+        <source>Instrumenten Manager - Qupil</source>
+        <translation>Instrumentenmanager -Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="20"/>
-        <source>Schüler - Instrumente</source>
-        <translation type="unfinished"></translation>
+        <source>Pupils - Instruments</source>
+        <translation>Schüler - Instrumente</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="45"/>
         <source>Name</source>
-        <translation type="unfinished">Name</translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="50"/>
         <source>Instrument</source>
-        <translation type="unfinished"></translation>
+        <translation>Instrument</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="55"/>
-        <source>Größe</source>
-        <translation type="unfinished"></translation>
+        <source>Size</source>
+        <translation>Größe</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="60"/>
-        <source>Leihinstrument</source>
-        <translation type="unfinished"></translation>
+        <source>Rental Instrument</source>
+        <translation>Leihinstrument</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="65"/>
-        <source>nächste Größe erforderlich</source>
-        <translation type="unfinished"></translation>
+        <source>Next size required</source>
+        <translation>Nächste Größe erforderlich</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="76"/>
-        <source>Instrumente - Anzahl</source>
-        <translation type="unfinished"></translation>
+        <source>Instruments - Number</source>
+        <translation>Instrumente - Anzahl</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="101"/>
-        <source>Größen - Anzahl</source>
-        <translation type="unfinished"></translation>
+        <source>Sizes - Number</source>
+        <translation>Größen - Anzahl</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="126"/>
-        <source>Statistik</source>
-        <translation type="unfinished"></translation>
+        <source>Statistic</source>
+        <translation>Statistik</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="132"/>
-        <source>Leihinstrumente:</source>
-        <translation type="unfinished"></translation>
+        <source>Rental Instruments:</source>
+        <translation>Leihinstrumente:</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="155"/>
-        <source>nächste Größe erforderlich:</source>
-        <translation type="unfinished"></translation>
+        <source>Next size required:</source>
+        <translation>Nächste Größe erforderlich:</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanager.ui" line="194"/>
-        <source>Inventurliste Leihstrumente ...</source>
-        <translation type="unfinished"></translation>
+        <source>Rental Instruments Inventory List ...</source>
+        <translation>Leihinstrumente Inventarliste ...</translation>
     </message>
 </context>
 <context>
     <name>InstrumentManagerDialogImpl</name>
     <message>
-        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="48"/>
-        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="112"/>
-        <source>ja</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="49"/>
-        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="113"/>
-        <source>nein</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="72"/>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="139"/>
         <source>Instrument</source>
-        <translation type="unfinished"></translation>
+        <translation>Instrument</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="73"/>
         <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="82"/>
-        <source>Anzahl</source>
-        <translation type="unfinished"></translation>
+        <source>Number</source>
+        <translation>Anzahl</translation>
     </message>
     <message>
         <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="81"/>
-        <source>Größe</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="139"/>
+        <source>Size</source>
+        <translation>Größe</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="48"/>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="113"/>
+        <source>Yes</source>
+        <translation>Ja</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="49"/>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="114"/>
+        <source>No</source>
+        <translation>Nein</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="128"/>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="132"/>
+        <source>Rental instrument inventory list</source>
+        <translation>Leihinstrumente Inventarliste</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="135"/>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="139"/>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="139"/>
+        <source>Birthday</source>
+        <translation>Geburtstag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="139"/>
+        <source>Description</source>
+        <translation>Beschreibung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/instrumentmanager/instrumentmanagerdialogimpl.cpp" line="139"/>
+        <source>Next size required</source>
+        <translation>Nächste Größe erforderlich</translation>
     </message>
 </context>
 <context>
     <name>LessonTabWidget</name>
     <message>
-        <location filename="../src/gui/mainwindow/lessontabwidget.cpp" line="256"/>
-        <source>Qupil</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/lessontabwidget.cpp" line="257"/>
+        <source>You can not assign more than one student to an individual lesson 
+Please change the number of students to save!</source>
+        <translation>Sie können einem Einzelunterricht nicht mehr als einen Schüler zuweisen.
+Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/lessontabwidget.cpp" line="257"/>
-        <source>Sie können einem Einzelunterricht nicht mehr als einen Schüler zuweisen
-Bitte ändern Sie die Schüleranzahl um zu speichern!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/lessontabwidget.cpp" line="386"/>
+        <source>IL-</source>
+        <translation>EU-</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/lessontabwidget.cpp" line="387"/>
+        <source>GL-</source>
+        <translation>GU-</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/lessontabwidget.cpp" line="388"/>
+        <source>EnsL-</source>
+        <translation>EnsU-</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="20"/>
-        <source>MainWindow</source>
-        <translation></translation>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="49"/>
+        <source>Pupil List</source>
+        <translation>Schülerliste</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="58"/>
+        <source>Pupil Archive</source>
+        <translation>Schülerarchiv</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/mainwindow.ui" line="159"/>
@@ -798,14 +1206,12 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</source>
         <translation>Stundenplan</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="49"/>
         <source>Pupil list</source>
-        <translation>Schülerliste</translation>
+        <translation type="vanished">Schülerliste</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="58"/>
         <source>Pupil archive</source>
-        <translation>Schülerarchiv</translation>
+        <translation type="vanished">Schülerarchiv</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/mainwindow.ui" line="123"/>
@@ -823,34 +1229,28 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</source>
         <translation>Details</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="246"/>
         <source>Lesson type:</source>
-        <translation>Unterrichtsart:</translation>
+        <translation type="vanished">Unterrichtsart:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="258"/>
         <source>Single lesson</source>
-        <translation>Einzelunterricht</translation>
+        <translation type="vanished">Einzelunterricht</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="268"/>
         <source>Group lesson</source>
-        <translation>Gruppenunterricht</translation>
+        <translation type="vanished">Gruppenunterricht</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="275"/>
         <source>Ensemble lesson</source>
-        <translation>Ensembleunterricht</translation>
+        <translation type="vanished">Ensembleunterricht</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="285"/>
         <source>Lesson description</source>
-        <translation>Unterrichtsbeschreibung</translation>
+        <translation type="vanished">Unterrichtsbeschreibung</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="297"/>
         <source>Create automatically:</source>
-        <translation>Automatisch erstellen:</translation>
+        <translation type="vanished">Automatisch erstellen:</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/mainwindow.ui" line="307"/>
@@ -858,276 +1258,259 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</source>
         <translation>Manuell:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="327"/>
         <source>Lesson time:</source>
-        <translation>Unterrichtszeit:</translation>
+        <translation type="vanished">Unterrichtszeit:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="341"/>
         <source>Fixed time:</source>
-        <translation>Fester Termin:</translation>
+        <translation type="vanished">Fester Termin:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="351"/>
         <source>Irregular lesson</source>
-        <translation>Unregelmäßiger Unterricht</translation>
+        <translation type="vanished">Unregelmäßiger Unterricht</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="388"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="391"/>
         <source>Weekday:</source>
         <translation>Wochentag:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="399"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1920"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="408"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1922"/>
         <source>Monday</source>
         <translation>Montag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="404"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1925"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="413"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1927"/>
         <source>Tuesday</source>
         <translation>Dienstag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="409"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1930"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="418"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1932"/>
         <source>Wednesday</source>
         <translation>Mittwoch</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="414"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1935"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="423"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1937"/>
         <source>Thursday</source>
         <translation>Donnerstag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="419"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1940"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="428"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1942"/>
         <source>Friday</source>
         <translation>Freitag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="424"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1945"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="433"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1947"/>
         <source>Saturday</source>
         <translation>Samstag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="429"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1950"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="438"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1952"/>
         <source>Sunday</source>
         <translation>Sonntag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="439"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1979"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="448"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1984"/>
         <source>Start:</source>
         <translation>Start:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="465"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="488"/>
         <source>HH:mm</source>
-        <translation>HH:mm &apos;Uhr&apos;</translation>
+        <translation type="vanished">HH:mm &apos;Uhr&apos;</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="472"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="481"/>
         <source>End:</source>
         <translation>Ende:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="495"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1108"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="504"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1110"/>
         <source>Duration:</source>
         <translation>Dauer:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="517"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="526"/>
         <source> Minutes</source>
         <translation> Minuten</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="537"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="546"/>
         <source>Location:</source>
-        <translation>Ort:</translation>
+        <translation>Unterrichtsort:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="569"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="578"/>
         <source>Pupils:</source>
         <translation>Schüler:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="577"/>
         <source>Pupils in lesson:</source>
-        <translation>Schüler im Unterricht:</translation>
+        <translation type="vanished">Schüler im Unterricht:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="619"/>
         <source>&amp;add</source>
-        <translation>&amp;hinzufügen</translation>
+        <translation type="vanished">&amp;hinzufügen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="633"/>
         <source>&amp;remove</source>
-        <translation>&amp;entfernen</translation>
+        <translation type="vanished">&amp;entfernen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="677"/>
         <source>Available pupils:</source>
-        <translation>Verfügbare Schüler:</translation>
+        <translation type="vanished">Verfügbare Schüler:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="736"/>
         <source>&amp;save</source>
-        <translation>&amp;speichern</translation>
+        <translation type="vanished">&amp;speichern</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="784"/>
         <source>&amp;Lesson notes</source>
-        <translation>Unterrichts&amp;notizen</translation>
+        <translation type="vanished">Unterrichts&amp;notizen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="792"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1034"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="801"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1036"/>
         <source>Lesson:</source>
         <translation>Unterricht:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="835"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1906"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2076"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="844"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1908"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2084"/>
         <source>Date:</source>
         <translation>Datum:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="868"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1739"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="877"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1741"/>
         <source>Notes:</source>
         <translation>Notizen:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="999"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1001"/>
         <source>&amp;Add new note</source>
-        <translation>Neue Notiz &amp;hinzufügen</translation>
+        <translation>Neue Notiz &amp;Hinzufügen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1010"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1012"/>
         <source>&amp;Delete note</source>
-        <translation>Notiz &amp;löschen</translation>
+        <translation>Notiz &amp;Löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1026"/>
         <source>&amp;Music pieces</source>
-        <translation>&amp;Werke</translation>
+        <translation type="vanished">&amp;Werke</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1067"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1069"/>
         <source>Composer:</source>
         <translation>Komponist:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1077"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1079"/>
         <source>Title:</source>
         <translation>Titel:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1137"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1139"/>
         <source>State:</source>
         <translation>Status:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1164"/>
         <source>&amp;Delete piece</source>
-        <translation>Werk &amp;löschen</translation>
+        <translation type="vanished">Werk &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1181"/>
         <source>&amp;Add new piece</source>
-        <translation>Neues Werk &amp;hinzufügen</translation>
+        <translation type="vanished">Neues Werk &amp;hinzufügen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1197"/>
         <source>&amp;Personal data</source>
-        <translation>Persönliche &amp;Daten</translation>
+        <translation type="vanished">Persönliche &amp;Daten</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1211"/>
         <source>First name:</source>
-        <translation>Vorname:</translation>
+        <translation type="vanished">Vorname:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1234"/>
         <source>Last name:</source>
-        <translation>Nachname:</translation>
+        <translation type="vanished">Nachname:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1257"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1259"/>
         <source>Address:</source>
         <translation>Adresse:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1303"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1305"/>
         <source>Phone:</source>
         <translation>Telefon:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1326"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1328"/>
         <source>Mobile:</source>
         <translation>Handy:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1349"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1351"/>
         <source>Birthday:</source>
         <translation>Geburtstag:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1375"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1377"/>
         <source>Age:</source>
         <translation>Alter:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1403"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1405"/>
         <source>Parents:</source>
         <translation>Eltern:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1421"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1423"/>
         <source>Name (Mother):</source>
         <translation>Name (Mutter):</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1431"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1433"/>
         <source>Job (Mother):</source>
         <translation>Arbeit (Mutter):</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1441"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1443"/>
         <source>Phone (Mother):</source>
         <translation>Telefon (Mutter):</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1451"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1453"/>
         <source>Name (Father):</source>
         <translation>Name (Vater):</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1461"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1463"/>
         <source>Job (Father):</source>
         <translation>Arbeit (Vater):</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1471"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1473"/>
         <source>Phone (Father):</source>
         <translation>Telefon (Vater):</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1501"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1503"/>
         <source>Lesson since:</source>
         <translation>Unterricht seit:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1521"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1523"/>
         <source>Total:</source>
         <translation>Gesamt:</translation>
     </message>
@@ -1136,412 +1519,579 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</source>
         <translation type="obsolete">Persönliches Vorspielintervall</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1562"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1564"/>
         <source>Never</source>
         <translation>Niemals</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1567"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1569"/>
         <source>1 month</source>
         <translation>1 Monat</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1572"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1574"/>
         <source>2 months</source>
         <translation>2 Monate</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1577"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1579"/>
         <source>3 months</source>
         <translation>3 Monate</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1582"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1584"/>
         <source>4 months</source>
         <translation>4 Monate</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1587"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1589"/>
         <source>6 months</source>
         <translation>6 Monate</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1592"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1594"/>
         <source>9 months</source>
         <translation>9 Monate</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1597"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1599"/>
         <source>12 months</source>
         <translation>12 Monate</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1602"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1604"/>
         <source>18 months</source>
         <translation>18 Monate</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1607"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1609"/>
         <source>24 months</source>
         <translation>24 Monate</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1628"/>
         <source>Participation in ensemble expected</source>
-        <translation>Ensembleteilnahme wird erwartet</translation>
+        <translation type="vanished">Ensembleteilnahme wird erwartet</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1668"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1670"/>
         <source>Size:</source>
         <translation>Größe:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1685"/>
         <source>Next size needed</source>
-        <translation>Nächste Größe erforderlich</translation>
+        <translation type="vanished">Nächste Größe erforderlich</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1694"/>
         <source>Rental instrument</source>
-        <translation>Leihinstrument</translation>
+        <translation type="vanished">Leihinstrument</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1706"/>
         <source>Inventory number:</source>
-        <translation>Inventarnummer:</translation>
+        <translation type="vanished">Inventarnummer:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1716"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1718"/>
         <source>Rented since:</source>
         <translation>Geliehen seit:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1759"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="745"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1761"/>
         <source>&amp;Save</source>
         <translation>&amp;Speichern</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1775"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="20"/>
+        <source>Qupil</source>
+        <translation>Qupil</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="246"/>
+        <source>Lesson Type:</source>
+        <translation>Unterrichtsart:</translation>
+    </message>
+    <message>
+        <source>Single Lesson</source>
+        <translation type="vanished">Einzelunterricht</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="258"/>
+        <source>Individual Lesson</source>
+        <translation>Einzelunterricht</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="268"/>
+        <source>Group Lesson</source>
+        <translation>Gruppenunterricht</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="275"/>
+        <source>Ensemble Lesson</source>
+        <translation>Ensembleunterricht</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="285"/>
+        <source>Lesson Description</source>
+        <translation>Unterrichtsbeschreibung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="297"/>
+        <source>Create Automatically:</source>
+        <translation>Automatisch erstellen:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="327"/>
+        <source>Lesson Time:</source>
+        <translation>Unterrichtszeit:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="344"/>
+        <source>Fixed Time:</source>
+        <translation>Fester Termin:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="354"/>
+        <source>Irregular Lesson</source>
+        <translation>Unregelmäßiger Unterricht</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="586"/>
+        <source>Pupils in Lesson:</source>
+        <translation>Schüler im Unterricht:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="628"/>
+        <source>&amp;Add</source>
+        <translation>&amp;Hinzufügen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="642"/>
+        <source>&amp;Remove</source>
+        <translation>&amp;Entfernen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="686"/>
+        <source>Available Pupils:</source>
+        <translation>Verfügbare Schüler:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="793"/>
+        <source>&amp;Lesson Notes</source>
+        <translation>Unterrichts&amp;notizen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1028"/>
+        <source>&amp;Music Pieces</source>
+        <translation>&amp;Werke</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1166"/>
+        <source>&amp;Delete Piece</source>
+        <translation>Werk &amp;löschen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1183"/>
+        <source>&amp;Add new Piece</source>
+        <translation>Neues Werk &amp;hinzufügen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1199"/>
+        <source>&amp;Personal Data</source>
+        <translation>Persönliche &amp;Daten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1213"/>
+        <source>First Name:</source>
+        <translation>Vorname:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1236"/>
+        <source>Last Name:</source>
+        <translation>Nachname:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1550"/>
+        <source>Personal Concert Interval:</source>
+        <translation>Persönliches Vorspielintervall:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1630"/>
+        <source>Participation in Ensemble Expected</source>
+        <translation>Ensembleteilnahme wird erwartet</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1687"/>
+        <source>Next Size needed</source>
+        <translation>Nächste Größe erforderlich</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1696"/>
+        <source>Rental Instrument</source>
+        <translation>Leihinstrument</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1708"/>
+        <source>Inventory Number:</source>
+        <translation>Inventarnummer:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1777"/>
         <source>&amp;Activities</source>
         <translation>&amp;Aktivitäten</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1781"/>
-        <source>Regular (e.g. ensembles):</source>
-        <translation>Regelmäig (z.B. Ensembles):</translation>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2205"/>
+        <source>Selection &amp;Returned by the Pupil</source>
+        <translation>Auswahl vom Schüler &amp;zurückgegeben</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1804"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2040"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2503"/>
+        <source>&amp;Music Library ...</source>
+        <translation>Noten-&amp;Bibliothek ...</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2515"/>
+        <source>&amp;Create Backup ...</source>
+        <translation>Backup &amp;erstellen ...</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2524"/>
+        <source>&amp;Replay Backup...</source>
+        <translation>Backup &amp;zurückspielen ...</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2533"/>
+        <source>Import (CVS) &amp;Address Book ...</source>
+        <translation>Adressbuch (CVS) &amp;importieren ...</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2542"/>
+        <source>&amp;Timetable Document ...</source>
+        <translation>&amp;Stundenplan-Dokument ...</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2551"/>
+        <source>&amp;Concert Candidates ...</source>
+        <translation>&amp;Vorspielkandidaten ...</translation>
+    </message>
+    <message>
+        <source>&amp;Concert Candidates...</source>
+        <translation type="vanished">&amp;Vorspielkandidaten ...</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2569"/>
+        <source>&amp;Daily Schedule ...</source>
+        <translation>&amp;Tagesübersicht ...</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2586"/>
+        <source>&amp;Ensemble Candidates ...</source>
+        <translation>&amp;Ensemblekandidaten ...</translation>
+    </message>
+    <message>
+        <source>Regular (e.g. ensembles):</source>
+        <translation type="vanished">Regelmäig (z.B. Ensembles):</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1806"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2048"/>
         <source>Description:</source>
         <translation>Beschreibung:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1814"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1816"/>
         <source>Type: </source>
         <translation>Typ: </translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1827"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1829"/>
         <source>Theory lesson</source>
         <translation>Theorieunterricht</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1832"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1834"/>
         <source>Coaching with pianists</source>
         <translation>Korrepetition</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1837"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2068"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1839"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2076"/>
         <source>Other</source>
         <translation>Sonstiges</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1955"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1957"/>
         <source>irregular</source>
         <translation>Unregelmäßig</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2019"/>
         <source>Irregular (e.g. concerts, competitions):</source>
-        <translation>Unregelmäßig (z.B. Vorspiele, Wettbewerbe):</translation>
+        <translation type="vanished">Unregelmäßig (z.B. Vorspiele, Wettbewerbe):</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2050"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2058"/>
         <source>Type:</source>
         <translation>Typ:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2058"/>
         <source>Solo recital</source>
-        <translation>Solo-Beitrag</translation>
+        <translation type="vanished">Solo-Beitrag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2063"/>
         <source>Ensemble recital</source>
-        <translation>Ensemblemitwirkung</translation>
+        <translation type="vanished">Ensemblemitwirkung</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2149"/>
         <source>&amp;Loaned music</source>
-        <translation>Geliehene &amp;Noten</translation>
+        <translation type="vanished">Geliehene &amp;Noten</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2170"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2182"/>
         <source>Composer / Author</source>
         <translation>Komponist / Autor</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2175"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2187"/>
         <source>Title</source>
         <translation>Titel</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2180"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2192"/>
         <source>Publisher</source>
         <translation>Verlag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2185"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2197"/>
         <source>Loaned at</source>
         <translation>Verliehen am</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2193"/>
         <source>Selection &amp;returned by the pupil</source>
-        <translation>Auswahl vom Schüler &amp;zurückgegeben</translation>
+        <translation type="vanished">Auswahl vom Schüler &amp;zurückgegeben</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2229"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2241"/>
         <source>&amp;Print</source>
         <translation>&amp;Drucken</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2240"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2252"/>
         <source>Export to &amp;PDF</source>
         <translation>Nach &amp;PDF exportieren</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2271"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2283"/>
         <source>&amp;New ...</source>
         <translation>&amp;Neu ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2307"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2319"/>
         <source>&amp;Edit</source>
         <translation>&amp;Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2317"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2329"/>
         <source>&amp;Document</source>
         <translation>&amp;Dokument</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2324"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2336"/>
         <source>&amp;Tools</source>
         <translation>&amp;Werkzeuge</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2344"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2356"/>
         <source>&amp;Quit</source>
         <translation>&amp;Beenden</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2361"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2373"/>
         <source>&amp;Configure Qupil ...</source>
         <translation>Qupil &amp;einrichten ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2370"/>
         <source>&amp;Event manager ...</source>
-        <translation>&amp;Veranstaltungsmanager ...</translation>
+        <translation type="vanished">&amp;Veranstaltungsmanager ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2379"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2391"/>
         <source>&amp;Instrument manager ...</source>
         <translation>&amp;Instrumentenmanager ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2388"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2400"/>
         <source>&amp;About Qupil ...</source>
         <translation>&amp;Über Qupil ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2397"/>
         <source>&amp;Show birthdays</source>
-        <translation>Zeige &amp;Geburtstage</translation>
+        <translation type="vanished">Zeige &amp;Geburtstage</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2414"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2426"/>
         <source>&amp;Pupil</source>
         <translation>&amp;Schüler</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2417"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2429"/>
         <source>Ctrl+N, P</source>
         <translation>Ctrl+N, S</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2426"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2438"/>
         <source>&amp;Lesson</source>
         <translation>&amp;Unterricht</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2429"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2441"/>
         <source>Ctrl+N, L</source>
         <translation>Ctrl+N, U</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2438"/>
         <source>Delete &amp;lesson</source>
-        <translation>Unterricht &amp;löschen</translation>
+        <translation type="vanished">Unterricht &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2447"/>
         <source>Delete &amp;pupil</source>
-        <translation>Schüler &amp;löschen</translation>
+        <translation type="vanished">Schüler &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2456"/>
         <source>&amp;Archive pupil</source>
-        <translation>Schüler &amp;archivieren</translation>
+        <translation type="vanished">Schüler &amp;archivieren</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2461"/>
         <source>Archive and &amp;delete pupil</source>
-        <translation>Schüler archivieren und l&amp;öschen</translation>
+        <translation type="vanished">Schüler archivieren und l&amp;öschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2470"/>
         <source>&amp;Delete archive entry</source>
-        <translation>Archiveintrag &amp;löschen</translation>
+        <translation type="vanished">Archiveintrag &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2479"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2491"/>
         <source>&amp;Metronome / Tuner ...</source>
         <translation>&amp;Metronom / Stimmen ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2491"/>
         <source>&amp;Music library ...</source>
-        <translation>Noten-&amp;Bibliothek ...</translation>
+        <translation type="vanished">Noten-&amp;Bibliothek ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2494"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2506"/>
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2503"/>
         <source>&amp;Create backup ...</source>
-        <translation>Backup &amp;erstellen ...</translation>
+        <translation type="vanished">Backup &amp;erstellen ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2512"/>
         <source>&amp;Replay backup...</source>
-        <translation>Backup &amp;zurückspielen ...</translation>
+        <translation type="vanished">Backup &amp;zurückspielen ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2521"/>
         <source>Import (CVS) &amp;address book ...</source>
-        <translation>Adressbuch (CVS) &amp;importieren ...</translation>
+        <translation type="vanished">Adressbuch (CVS) &amp;importieren ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2530"/>
         <source>&amp;Timetable document ...</source>
-        <translation>&amp;Stundenplan-Dokument ...</translation>
+        <translation type="vanished">&amp;Stundenplan-Dokument ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2539"/>
         <source>&amp;Concert candidates...</source>
-        <translation>&amp;Vorspielkandidaten ...</translation>
+        <translation type="vanished">&amp;Vorspielkandidaten ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2548"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2560"/>
         <source>&amp;Reminder ...</source>
         <translation>E&amp;rinnerungen ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2557"/>
         <source>&amp;Daily schedule ...</source>
-        <translation>&amp;Tagesübersicht ...</translation>
+        <translation type="vanished">&amp;Tagesübersicht ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2560"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2572"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2574"/>
         <source>&amp;Ensemble candidates ...</source>
-        <translation>&amp;Ensemblekandidaten ...</translation>
+        <translation type="vanished">&amp;Ensemblekandidaten ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="594"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="694"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="603"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="703"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="848"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1368"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1514"/>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1729"/>
-        <source>dd.MM.yyyy</source>
-        <translation>dd.MM.yyyy</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="893"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="930"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="932"/>
         <source>Ctrl+Shift+K</source>
         <translation>Ctrl+Shift+K</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="950"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="952"/>
         <source>Ctrl+Shift+F</source>
         <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="970"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="972"/>
         <source>Ctrl+Shift+U</source>
         <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1091"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1093"/>
         <source>Genre:</source>
         <translation>Genre:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1127"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1129"/>
         <source> Min.</source>
         <translation> Min.</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1280"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1282"/>
         <source>E-Mail:</source>
         <translation>E-Mail:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1651"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1653"/>
         <source>Instrument:</source>
         <translation>Instrument:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1822"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1783"/>
+        <source>Regular (e.g. Ensembles):</source>
+        <translation>Regelmäig (z.B. Ensembles):</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1824"/>
         <source>Ensemble</source>
         <translation>Ensemble</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2165"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2027"/>
+        <source>Irregular (e.g. Concerts, Competitions):</source>
+        <translation>Unregelmäßig (z.B. Vorspiele, Wettbewerbe):</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2066"/>
+        <source>Solo Recital</source>
+        <translation>Solo-Beitrag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2071"/>
+        <source>Ensemble Recital</source>
+        <translation>Ensemblemitwirkung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2161"/>
+        <source>&amp;Loaned Music</source>
+        <translation>Geliehene &amp;Noten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2177"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -1550,148 +2100,262 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">&amp;Print</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2267"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2279"/>
         <source>Q&amp;upil</source>
         <translation>Q&amp;upil</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2291"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2303"/>
         <source>&amp;Settings</source>
         <translation>&amp;Einstellungen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2297"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2309"/>
         <source>&amp;Extras</source>
         <translation>&amp;Extras</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2347"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2359"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2352"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2364"/>
         <source>Einstellungen ...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2405"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2382"/>
+        <source>&amp;Event Manager ...</source>
+        <translation>&amp;Veranstaltungsmanager ...</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2409"/>
+        <source>&amp;Show Birthdays</source>
+        <translation>Zeige &amp;Geburtstage</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2417"/>
         <source>Neuer Unterricht ...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2450"/>
+        <source>Delete &amp;Lesson</source>
+        <translation>Unterricht &amp;löschen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2459"/>
+        <source>Delete &amp;Pupil</source>
+        <translation>Schüler &amp;löschen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2468"/>
+        <source>&amp;Archive Pupil</source>
+        <translation>Schüler &amp;archivieren</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2473"/>
+        <source>Archive and &amp;Delete Pupil</source>
+        <translation>Schüler archivieren und l&amp;öschen</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/mainwindow.ui" line="2482"/>
+        <source>&amp;Delete Archive Entry</source>
+        <translation>Archiveintrag &amp;löschen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2494"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2400"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2412"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="1548"/>
         <source>Personal concert interval:</source>
-        <translation>Persönliches Vorspielintervall:</translation>
+        <translation type="vanished">Persönliches Vorspielintervall:</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2565"/>
+        <location filename="../src/gui/mainwindow/mainwindow.ui" line="2577"/>
         <source>&amp;Jo</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
     <name>MetronomDialog</name>
     <message>
-        <location filename="../src/gui/metronom/metronom.ui" line="14"/>
         <source>Qupil - Metronom / Stimmen</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">&amp;Metronom / Stimmen ...</translation>
+    </message>
+    <message>
+        <source>Metronome / Tuner</source>
+        <translation type="vanished">Metronom / Stimmen</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="20"/>
-        <source>Metronom</source>
-        <translation type="unfinished"></translation>
+        <source>Metronome</source>
+        <translation>Metronom</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="28"/>
         <source>Tempo:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempo:</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="35"/>
         <source> bpm</source>
-        <translation type="unfinished"></translation>
+        <translation> bpm</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="114"/>
-        <source>Betonung alle</source>
-        <translation type="unfinished"></translation>
+        <source>Accent every</source>
+        <translation>Betonung alle</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="152"/>
-        <source>Schläge</source>
-        <translation type="unfinished"></translation>
+        <source>Beats</source>
+        <translation>Schläge</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="186"/>
-        <source>Klicken Sie rhythmisch auf den Knopf um das Tempo einzustellen.</source>
-        <translation type="unfinished"></translation>
+        <source>Click rhythmically on the button to set the tempo.</source>
+        <translation>Klicken Sie rhythmisch auf den Knopf um das Tempo einzustellen.</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="198"/>
-        <source>Stimmen</source>
-        <translation type="unfinished"></translation>
+        <source>Tune</source>
+        <translation>Stimmen</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="204"/>
-        <source>Stimmton:</source>
-        <translation type="unfinished"></translation>
+        <source>Tuning tone:</source>
+        <translation>Stimmton:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/metronom/metronom.ui" line="269"/>
+        <source>Tuning pitch:</source>
+        <translation>Frequenz:</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="218"/>
         <source>A</source>
-        <translation type="unfinished"></translation>
+        <translation>A</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/metronom/metronom.ui" line="14"/>
+        <source>Metronome / Tuner - Qupil</source>
+        <translation>Metronom / Stimmen - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/metronom/metronom.ui" line="223"/>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation>H</translation>
+    </message>
+</context>
+<context>
+    <name>PalNotesModel</name>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="76"/>
+        <source>Date</source>
+        <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../src/gui/metronom/metronom.ui" line="269"/>
-        <source>Stimmung:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="77"/>
+        <source>Note</source>
+        <translation>Notiz</translation>
+    </message>
+</context>
+<context>
+    <name>PalPiecesModel</name>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="86"/>
+        <source>Planned</source>
+        <translation>Geplant</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="86"/>
+        <source>In Progress</source>
+        <translation>In Arbeit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="86"/>
+        <source>Paused</source>
+        <translation>Pause</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="86"/>
+        <source>Ready for Concert</source>
+        <translation>Vorspielreif</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="86"/>
+        <source>Finished</source>
+        <translation>Beendet</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="119"/>
+        <source>Composer</source>
+        <translation>Komponist</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="120"/>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="121"/>
+        <source>Genre               </source>
+        <translation>Genre               </translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="122"/>
+        <source>Duration</source>
+        <translation>Dauer</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="123"/>
+        <source>Start</source>
+        <translation>Start</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="124"/>
+        <source>End</source>
+        <translation>Ende</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="125"/>
+        <source>State</source>
+        <translation>Status</translation>
     </message>
 </context>
 <context>
     <name>PupilArchiveListTreeWidget</name>
     <message>
         <location filename="../src/gui/mainwindow/pupilarchivelisttreewidget.cpp" line="30"/>
-        <source>Archiveintrag löschen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/gui/mainwindow/pupilarchivelisttreewidget.cpp" line="139"/>
-        <source>Qupil - Archiveintrag löschen</source>
-        <translation type="unfinished"></translation>
+        <source>Delete Archive Entry</source>
+        <translation>Archiveintrag Löschen</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/pupilarchivelisttreewidget.cpp" line="140"/>
-        <source>Möchten Sie den Archiveintrag &quot;%1&quot; wirklich löschen?</source>
-        <translation type="unfinished"></translation>
+        <source>Do you really want to delete the archive entry &quot;%1&quot; ?</source>
+        <translation>Möchten Sie den Archiveintrag: &quot;%1&quot; wirklich löschen?</translation>
     </message>
 </context>
 <context>
     <name>PupilArchiveTextBrowser</name>
     <message>
         <location filename="../src/gui/mainwindow/pupilarchivetextbrowser.cpp" line="81"/>
-        <source>Exportiere Datei</source>
-        <translation type="unfinished"></translation>
+        <source>Export File</source>
+        <translation>Datei Exportieren</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/pupilarchivetextbrowser.cpp" line="83"/>
-        <source>PDF Datei (*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <source>PDF File (*.pdf)</source>
+        <translation>PDF Datei (*.pdf)</translation>
     </message>
 </context>
 <context>
@@ -1699,1229 +2363,1653 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="39"/>
         <source>Ensemble</source>
-        <translation type="unfinished">Ensemble</translation>
+        <translation>Ensemble</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="39"/>
-        <source>Theorieunterricht</source>
-        <translation type="unfinished"></translation>
+        <source>Theory lesson</source>
+        <translation>Theorieunterricht</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="39"/>
-        <source>Korrepetition</source>
-        <translation type="unfinished"></translation>
+        <source>Coaching with pianists</source>
+        <translation>Korrepetition</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="39"/>
-        <source>Sonstiges</source>
-        <translation type="unfinished"></translation>
+        <source>Other</source>
+        <translation>Sonstiges</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="49"/>
-        <source>Montag</source>
-        <translation type="unfinished"></translation>
+        <source>Monday</source>
+        <translation>Montag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="49"/>
-        <source>Dienstag</source>
-        <translation type="unfinished"></translation>
+        <source>Tuesday</source>
+        <translation>Dienstag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="49"/>
-        <source>Mittwoch</source>
-        <translation type="unfinished"></translation>
+        <source>Wednesday</source>
+        <translation>Mittwoch</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="49"/>
-        <source>Donnerstag</source>
-        <translation type="unfinished"></translation>
+        <source>Thursday</source>
+        <translation>Donnerstag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="49"/>
-        <source>Freitag</source>
-        <translation type="unfinished"></translation>
+        <source>Friday</source>
+        <translation>Freitag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="49"/>
-        <source>Samstag</source>
-        <translation type="unfinished"></translation>
+        <source>Saturday</source>
+        <translation>Samstag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="49"/>
-        <source>Sonntag</source>
-        <translation type="unfinished"></translation>
+        <source>Sunday</source>
+        <translation>Sonntag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/delegates/pupilcontactivitydelegate.cpp" line="49"/>
-        <source>unregelmäßig</source>
-        <translation type="unfinished"></translation>
+        <source>irregular</source>
+        <translation>unregelmäßig</translation>
     </message>
 </context>
 <context>
     <name>PupilContActivityModel</name>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="81"/>
-        <source>Montag</source>
-        <translation type="unfinished"></translation>
+        <source>Monday</source>
+        <translation>Montag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="81"/>
-        <source>Dienstag</source>
-        <translation type="unfinished"></translation>
+        <source>Tuesday</source>
+        <translation>Dienstag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="81"/>
-        <source>Mittwoch</source>
-        <translation type="unfinished"></translation>
+        <source>Wednesday</source>
+        <translation>Mittwoch</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="81"/>
-        <source>Donnerstag</source>
-        <translation type="unfinished"></translation>
+        <source>Thursday</source>
+        <translation>Donnerstag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="81"/>
-        <source>Freitag</source>
-        <translation type="unfinished"></translation>
+        <source>Friday</source>
+        <translation>Freitag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="81"/>
-        <source>Samstag</source>
-        <translation type="unfinished"></translation>
+        <source>Saturday</source>
+        <translation>Samstag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="81"/>
-        <source>Sonntag</source>
-        <translation type="unfinished"></translation>
+        <source>Sunday</source>
+        <translation>Sonntag</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="81"/>
-        <source>unregelmäßig</source>
-        <translation type="unfinished"></translation>
+        <source>irregular</source>
+        <translation>unregelmäßig</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="84"/>
         <source>Ensemble</source>
-        <translation type="unfinished">Ensemble</translation>
+        <translation>Ensemble</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="84"/>
-        <source>Theorieunterricht</source>
-        <translation type="unfinished"></translation>
+        <source>Theory lesson</source>
+        <translation>Theorieunterricht</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="84"/>
-        <source>Korrepetition</source>
-        <translation type="unfinished"></translation>
+        <source>Coaching with pianists</source>
+        <translation>Korrepetition</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="84"/>
-        <source>Sonstiges</source>
-        <translation type="unfinished"></translation>
+        <source>Other</source>
+        <translation>Sonstiges</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="102"/>
+        <source>Description</source>
+        <translation>Beschreibung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="103"/>
+        <source>Type</source>
+        <translation>Typ</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="104"/>
+        <source>Weekday</source>
+        <translation>Wochentag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="105"/>
+        <source>Time   </source>
+        <translation>Uhrzeit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="106"/>
+        <source>Start</source>
+        <translation>Start</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="107"/>
+        <source>End</source>
+        <translation>Ende</translation>
     </message>
 </context>
 <context>
     <name>PupilListTreeWidget</name>
     <message>
         <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="32"/>
-        <source>Schüler löschen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="127"/>
+        <source>Delete Pupil</source>
+        <translation>Schüler Löschen</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="34"/>
-        <source>Schüler archivieren</source>
-        <translation type="unfinished"></translation>
+        <source>Archive Pupil</source>
+        <translation>Schüler Archivieren</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="36"/>
-        <source>Schüler archivieren und löschen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="127"/>
-        <source>Qupil - Schüler löschen</source>
-        <translation type="unfinished"></translation>
+        <source>Archive and Delete Pupil</source>
+        <translation>Schüler Archivieren und Löschen</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="128"/>
-        <source>Möchten Sie den Schüler &quot;%1&quot; wirklich löschen?</source>
-        <translation type="unfinished"></translation>
+        <source>Do you really want to delete the pupil &quot;%1&quot; ?</source>
+        <translation>Möchten Sie den Schüler &quot;%1&quot; wirklich löschen?</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="263"/>
-        <source>Montag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="163"/>
+        <source>Planned</source>
+        <translation>Geplant</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="263"/>
-        <source>Dienstag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="163"/>
+        <source>In Progress</source>
+        <translation>In Arbeit</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="263"/>
-        <source>Mittwoch</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="163"/>
+        <source>Paused</source>
+        <translation>Pause</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="263"/>
-        <source>Donnerstag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="163"/>
+        <source>Ready for Concert</source>
+        <translation>Vorspielreif</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="263"/>
-        <source>Freitag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="163"/>
+        <source>Finished</source>
+        <translation>Beendet</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="263"/>
-        <source>Samstag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="169"/>
+        <source>Lesson notes and music pieces</source>
+        <translation>Unterrichtsnotizen und Werke</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="263"/>
-        <source>Sonntag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="175"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="181"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="196"/>
+        <source>from</source>
+        <translation>vom</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="263"/>
-        <source>unregelmäßig</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="175"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="181"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="196"/>
+        <source>to</source>
+        <translation>bis</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="181"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="218"/>
+        <source>Lesson notes</source>
+        <translation>Unterrichtsnotizen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="182"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="219"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="274"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="306"/>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="182"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="219"/>
+        <source>Note</source>
+        <translation>Notiz</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="196"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="232"/>
+        <source>Music pieces</source>
+        <translation>Werke</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="197"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="233"/>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="197"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="233"/>
+        <source>Genre</source>
+        <translation>Genre</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="197"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="233"/>
+        <source>Duration</source>
+        <translation>Dauer</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="197"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="233"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="258"/>
+        <source>Start</source>
+        <translation>Start</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="197"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="233"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="258"/>
+        <source>End</source>
+        <translation>Ende</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="197"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="233"/>
+        <source>State</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="212"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="218"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="232"/>
+        <source>since</source>
+        <translation>seit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="242"/>
+        <source>The student took part in the following lessons</source>
+        <translation>Der Schüler hat an folgenden Unterrichtsveranstaltungen teilgenommen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="252"/>
+        <source>Activities of the student</source>
+        <translation>Aktivitäten des Schülers</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="257"/>
+        <source>Regular activities</source>
+        <translation>Regelmäßige Aktivitäten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="258"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="274"/>
+        <source>Description</source>
+        <translation>Beschreibung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="258"/>
+        <source>Weekday</source>
+        <translation>Wochentag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="258"/>
+        <source>Time</source>
+        <translation>Uhrzeit</translation>
+    </message>
+    <message>
+        <source>Date (Start)</source>
+        <translation type="vanished">Datum (Beginn)</translation>
+    </message>
+    <message>
+        <source>Date (End)</source>
+        <translation type="vanished">Datum (Ende)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="260"/>
+        <source>Monday</source>
+        <translation>Montag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="260"/>
+        <source>Tuesday</source>
+        <translation>Dienstag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="260"/>
+        <source>Wednesday</source>
+        <translation>Mittwoch</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="260"/>
+        <source>Thursday</source>
+        <translation>Donnerstag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="260"/>
+        <source>Friday</source>
+        <translation>Freitag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="260"/>
+        <source>Saturday</source>
+        <translation>Samstag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="260"/>
+        <source>Sunday</source>
+        <translation>Sonntag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="260"/>
+        <source>irregular</source>
+        <translation>unregelmäßig</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="269"/>
+        <source>Solo Recital</source>
+        <translation>Solo-Beitrag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="269"/>
+        <source>Ensemble Recital</source>
+        <translation>Ensemblemitwirkung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="269"/>
+        <source>Other</source>
+        <translation>Sonstiges</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="273"/>
+        <source>Irregular activities</source>
+        <translation>Unregelmäßige Aktivitäten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="274"/>
+        <source>Type</source>
+        <translation>Typ</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="298"/>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="302"/>
+        <source>Archive Entry</source>
+        <translation>Archiveintrag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="308"/>
+        <source>Personal data</source>
+        <translation>Persönliche Daten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="310"/>
+        <source>First name</source>
+        <translation>Vorname</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="310"/>
+        <source>Last name</source>
+        <translation>Nachname</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="311"/>
+        <source>Address</source>
+        <translation>Adresse</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="311"/>
+        <source>E-Mail</source>
+        <translation>E-Mail</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="312"/>
+        <source>Phone</source>
+        <translation>Telefon</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="312"/>
+        <source>Mobile</source>
+        <translation>Handy</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="313"/>
+        <source>Birthday</source>
+        <translation>Geburtstag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="317"/>
+        <source>Name (Father)</source>
+        <translation>Name (Vater)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="317"/>
+        <source>Job (Father)</source>
+        <translation>Arbeit (Vater)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="317"/>
+        <source>Phone (Father)</source>
+        <translation>Telefon (Vater)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="318"/>
+        <source>Name (Mother)</source>
+        <translation>Name (Mutter)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="318"/>
+        <source>Job (Mother)</source>
+        <translation>Arbeit (Mutter)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="318"/>
+        <source>Phone (Mother)</source>
+        <translation>Telefon (Mutter)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="321"/>
+        <source>Lesson since</source>
+        <translation>Unterricht seit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="321"/>
+        <source>total</source>
+        <translation>gesamt</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="321"/>
+        <source>Years</source>
+        <translation>Jahre</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="323"/>
+        <source>Instrument</source>
+        <translation>Instrument</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="323"/>
+        <source>Size</source>
+        <translation>Größe</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="324"/>
+        <source>Rental instrument description</source>
+        <translation>Leihinstrument Bezeichnung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="324"/>
+        <source>Rented since</source>
+        <translation>Geliehen seit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupillisttreewidget.cpp" line="328"/>
+        <source>Notes</source>
+        <translation>Notizen</translation>
+    </message>
+</context>
+<context>
+    <name>PupilSingularActivityModel</name>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilsingularactivitymodel.cpp" line="80"/>
+        <source>Description</source>
+        <translation>Beschreibung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilsingularactivitymodel.cpp" line="81"/>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/models/pupilsingularactivitymodel.cpp" line="82"/>
+        <source>Type</source>
+        <translation>Typ</translation>
     </message>
 </context>
 <context>
     <name>PupilTabWidget</name>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="122"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="130"/>
-        <source>(inaktiv)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
+        <source>Planned</source>
+        <translation>Geplant</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="456"/>
-        <source>Qupil</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
+        <source>In Progress</source>
+        <translation>In Arbeit</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="457"/>
-        <source>Sie müssen mindestens die Felder &quot;Komponist&quot; und &quot;Titel&quot; ausfüllen
- um den Eintrag hinzuzufügen!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
+        <source>Paused</source>
+        <translation>Pause</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
+        <source>Ready for Concert</source>
+        <translation>Vorspielreif</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
+        <source>Finished</source>
+        <translation>Beendet</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="119"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="127"/>
+        <source>(inactive)</source>
+        <translation>(inaktiv)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="296"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="309"/>
+        <source>Years</source>
+        <translation>Jahre</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="451"/>
+        <source>You have to complete at least the fields &quot;Composer&quot; and &quot;Title&quot; to add the entry!</source>
+        <translation>Sie müssen mindestens die Felder &quot;Komponist&quot; und &quot;Titel&quot; ausfüllen, um den Eintrag hinzuzufügen!</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="631"/>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="632"/>
+        <source>Genre               </source>
+        <translation>Genre               </translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="633"/>
+        <source>Duration</source>
+        <translation>Dauer</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="634"/>
+        <source>Start</source>
+        <translation>Start</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="635"/>
+        <source>End</source>
+        <translation>Ende</translation>
+    </message>
+    <message>
+        <source>Date (Start)</source>
+        <translation type="obsolete">Datum (Beginn)</translation>
+    </message>
+    <message>
+        <source>Date (End)</source>
+        <translation type="obsolete">Datum (Ende)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="636"/>
+        <source>State</source>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="648"/>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="649"/>
+        <source>Note</source>
+        <translation>Notiz</translation>
     </message>
 </context>
 <context>
     <name>PupilsLastRecitalViewDialog</name>
     <message>
+        <source>Concert Candidates</source>
+        <translation type="vanished">Vorspielkandidaten</translation>
+    </message>
+    <message>
         <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.ui" line="14"/>
-        <source>Vorspielkandidaten</source>
-        <translation type="unfinished"></translation>
+        <source>Concert Candidates - Qupil</source>
+        <translation>Vorspielkandidaten - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.ui" line="110"/>
-        <source>Sortierung</source>
-        <translation type="unfinished"></translation>
+        <source>Sorting</source>
+        <translation>Sortierung</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.ui" line="115"/>
-        <source>Schüler</source>
-        <translation type="unfinished"></translation>
+        <source>Pupil</source>
+        <translation>Schüler</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.ui" line="120"/>
-        <source>Letzter Auftritt vor</source>
-        <translation type="unfinished"></translation>
+        <source>Last Concert Ago</source>
+        <translation>Letztes Vorspiel vor</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.ui" line="125"/>
-        <source>Datum</source>
-        <translation type="unfinished"></translation>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="108"/>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="129"/>
+        <source>%1 months</source>
+        <translation>%1 Monaten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="110"/>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="131"/>
+        <source>%1 days</source>
+        <translation>%1 Tagen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="145"/>
+        <source>The following overdue concert candidates were identified:</source>
+        <translation>Folgende überfällige Vorspielkandidaten wurden ermittelt:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="147"/>
+        <source>There are currently no overdue concert candidates.&lt;br&gt;&lt;br&gt;Good job!</source>
+        <translation>Derzeit sind keine überfälligen Vorspielkandidaten vorhanden.&lt;br&gt;&lt;br&gt;Gute Arbeit!</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="154"/>
+        <source>Total &lt;b&gt;%1&lt;/b&gt; overdue Pupils</source>
+        <translation>Insgesamt &lt;b&gt;%1&lt;/b&gt; überfällige Schüler</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="163"/>
-        <source>Erinnerung an Vorspielaktivität einrichten</source>
-        <translation type="unfinished"></translation>
+        <source>Set up reminder for concert activity</source>
+        <translation>Erinnerung zu Vorspielaktivität einrichten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="207"/>
+        <source>Speak about concert activity!</source>
+        <translation>Vorspielaktivität ansprechen!</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="215"/>
+        <source>Reminder set up</source>
+        <translation>Erinnerung eingerichtet</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilslastrecital/pupilslastrecitalviewdialog.cpp" line="215"/>
+        <source>Reminder concerning &quot;concert activity&quot;&lt;br&gt;set up for the pupil &lt;i&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/i&gt;</source>
+        <translation>Erinnerung zum Thema &quot;Vorspielaktivität&quot;&lt;br&gt;für den Schüler &lt;i&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/i&gt; eingerichtet.</translation>
     </message>
 </context>
 <context>
     <name>PupilsNotInEnsembleDialog</name>
     <message>
+        <source>Ensemble Candidates</source>
+        <translation type="vanished">Ensemblekandidaten</translation>
+    </message>
+    <message>
         <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.ui" line="14"/>
-        <source>Ensemblekandidaten</source>
-        <translation type="unfinished"></translation>
+        <source>Ensemble Candidates - Qupil</source>
+        <translation>Ensemblekandidaten - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.ui" line="97"/>
-        <source>Sortierung</source>
-        <translation type="unfinished"></translation>
+        <source>Sorting</source>
+        <translation>Sortierung</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.ui" line="102"/>
-        <source>Schüler</source>
-        <translation type="unfinished"></translation>
+        <source>Pupil</source>
+        <translation>Schüler</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.ui" line="107"/>
-        <source>Letzte Ensemblemitwirkung</source>
-        <translation type="unfinished"></translation>
+        <source>Last Ensemble Participation</source>
+        <translation>Letzte Ensemblemitwirkung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.cpp" line="68"/>
+        <source>none</source>
+        <translation>keine</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.cpp" line="82"/>
+        <source>The following students are currently not active in any ensemble:</source>
+        <translation>Folgender Schüler sind derzeit in keinem Ensemble aktiv:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.cpp" line="84"/>
+        <source>Currently all students are active in ensembles.&lt;br&gt;&lt;br&gt;Good job!</source>
+        <translation>Aktuell sind alle Schüler in Ensembles aktiv.&lt;br&gt;&lt;br&gt;Gute Arbeit!</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.cpp" line="90"/>
+        <source>Total &lt;span style=&apos;color:red; font-weight:600;&apos;&gt;%1&lt;/span&gt; inactive pupils | &lt;span style=&apos;color:green; font-weight:600;&apos;&gt;%2&lt;/span&gt; pupils are active in ensembles</source>
+        <translation>Insgesamt &lt;span style=&apos;color:red; font-weight:600;&apos;&gt;%1&lt;/span&gt; inaktive Schüler | &lt;span style=&apos;color:green; font-weight:600;&apos;&gt;%2&lt;/span&gt; Schüler sind in Ensembles aktiv</translation>
     </message>
     <message>
         <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.cpp" line="97"/>
-        <source>Erinnerung an Ensemblemitwirkung einrichten</source>
-        <translation type="unfinished"></translation>
+        <source>Set up reminder for ensemble activity</source>
+        <translation>Erinnerung zu Ensembleaktivität einrichten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.cpp" line="142"/>
+        <source>Speak about ensemble activity!</source>
+        <translation>Ensembleaktivität ansprechen!</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.cpp" line="150"/>
+        <source>Reminder set up</source>
+        <translation>Erinnerung eingerichtet</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/pupilsnotinensemble/pupilsnotinensembledialog.cpp" line="150"/>
+        <source>Reminder concerning &quot;ensemble activity&quot;&lt;br&gt;set up for the pupil &lt;i&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/i&gt;</source>
+        <translation>Erinnerung zum Thema &quot;Ensemblemitwirkung&quot;&lt;br&gt;für den Schüler &lt;i&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/i&gt; eingerichtet.</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="76"/>
-        <location filename="../src/gui/mainwindow/models/pupilsingularactivitymodel.cpp" line="81"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="654"/>
-        <source>Datum</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="77"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="655"/>
-        <source>Notiz</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="123"/>
-        <source>Komponist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="124"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="637"/>
-        <location filename="../src/gui/sheetmusiclibrary/models/smlallmodel.cpp" line="114"/>
-        <source>Titel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="125"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="638"/>
-        <source>Genre               </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="126"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="639"/>
-        <source>Dauer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="127"/>
-        <source>Beginn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="128"/>
-        <source>Ende</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="129"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="642"/>
-        <source>Status</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="102"/>
-        <location filename="../src/gui/mainwindow/models/pupilsingularactivitymodel.cpp" line="80"/>
-        <source>Bezeichnung</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="103"/>
-        <location filename="../src/gui/mainwindow/models/pupilsingularactivitymodel.cpp" line="82"/>
-        <source>Typ</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="104"/>
-        <source>Wochentag</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="105"/>
-        <source>Uhrzeit   </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="106"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="640"/>
-        <source>Datum (Beginn)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/models/pupilcontactivitymodel.cpp" line="107"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="641"/>
-        <source>Datum (Ende)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/models/smlallmodel.cpp" line="112"/>
         <source>Index</source>
-        <translation type="unfinished">Index</translation>
+        <translation type="obsolete">Index</translation>
     </message>
     <message>
-        <location filename="../src/gui/sheetmusiclibrary/models/smlallmodel.cpp" line="113"/>
-        <source>Komponist / Author</source>
-        <translation type="unfinished"></translation>
+        <source>Description</source>
+        <translation type="obsolete">Beschreibung</translation>
     </message>
     <message>
-        <location filename="../src/gui/sheetmusiclibrary/models/smlallmodel.cpp" line="115"/>
-        <source>Verlag</source>
-        <translation type="unfinished"></translation>
+        <source>Type</source>
+        <translation type="obsolete">Typ</translation>
+    </message>
+    <message>
+        <source>Weekday</source>
+        <translation type="obsolete">Wochentag</translation>
+    </message>
+    <message>
+        <source>Date (Start)</source>
+        <translation type="obsolete">Datum (Beginn)</translation>
+    </message>
+    <message>
+        <source>Date (End)</source>
+        <translation type="obsolete">Datum (Ende)</translation>
+    </message>
+    <message>
+        <source>Title</source>
+        <translation type="obsolete">Titel</translation>
+    </message>
+    <message>
+        <source>Duration</source>
+        <translation type="obsolete">Dauer</translation>
+    </message>
+    <message>
+        <source>State</source>
+        <translation type="obsolete">Status</translation>
+    </message>
+    <message>
+        <source>Date</source>
+        <translation type="obsolete">Datum</translation>
+    </message>
+    <message>
+        <source>Note</source>
+        <translation type="obsolete">Notiz</translation>
     </message>
 </context>
 <context>
     <name>RecitalTabs</name>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="14"/>
-        <source>Form</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="19"/>
+        <source>Location:</source>
+        <translation>Ort:</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="22"/>
-        <source>Ort:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="46"/>
+        <source>Date:</source>
+        <translation>Datum:</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="49"/>
-        <source>Datum:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="73"/>
+        <source>Time:</source>
+        <translation>Uhrzeit:</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="76"/>
-        <source>Uhrzeit:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="100"/>
+        <source>Organiser:</source>
+        <translation>Organisator:</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="103"/>
-        <source>Organisation:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="154"/>
+        <source>State:</source>
+        <translation>Status:</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="130"/>
-        <source>Begleitung:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="168"/>
+        <source>planned</source>
+        <translation>geplant</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="157"/>
-        <source>Status:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="173"/>
+        <source>done</source>
+        <translation>erledigt</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="171"/>
-        <source>geplant</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="203"/>
+        <source>Composer</source>
+        <translation>Komponist</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="176"/>
-        <source>erledigt</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="208"/>
+        <source>Title</source>
+        <translation>Titel</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="201"/>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="218"/>
+        <source>Duration</source>
+        <translation>Dauer</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="223"/>
+        <source>Musician (Age) - Instrument</source>
+        <translation>Musiker (Alter) - Instrument</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="127"/>
+        <source>Accompanist:</source>
+        <translation>Begleiter:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="198"/>
         <source>sorting</source>
-        <translation type="unfinished"></translation>
+        <translation>sorting</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="206"/>
-        <source>Komponist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="211"/>
-        <source>Titel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="216"/>
+        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="213"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="221"/>
-        <source>Dauer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/concertmanager/recitaltabs.ui" line="226"/>
-        <source>Musiker (Alter) - Instrument</source>
-        <translation type="unfinished"></translation>
+        <translation>Genre</translation>
     </message>
 </context>
 <context>
     <name>ReminderDialog</name>
     <message>
         <location filename="../src/gui/reminder/reminderdialog.ui" line="14"/>
-        <source>Qupil - Erinnerungen</source>
-        <translation type="unfinished"></translation>
+        <source>Reminder - Qupil</source>
+        <translation>Erinnerungen - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/reminderdialog.ui" line="30"/>
-        <source>Erinnerung</source>
-        <translation type="unfinished"></translation>
+        <source>Reminder</source>
+        <translation>Erinnerungen</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/reminderdialog.ui" line="35"/>
-        <source>Modus</source>
-        <translation type="unfinished"></translation>
+        <source>Mode</source>
+        <translation>Modus</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/reminderdialog.ui" line="40"/>
-        <source>Klang</source>
-        <translation type="unfinished"></translation>
+        <source>Sound</source>
+        <translation>Klang</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/reminderdialog.ui" line="48"/>
-        <source>Hinzufügen</source>
-        <translation type="unfinished"></translation>
+        <source>Add</source>
+        <translation>Hinzufügen</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/reminderdialog.ui" line="59"/>
-        <source>Bearbeiten</source>
-        <translation type="unfinished"></translation>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/reminderdialog.ui" line="70"/>
-        <source>Löschen</source>
-        <translation type="unfinished"></translation>
+        <source>Delete</source>
+        <translation>Löschen</translation>
     </message>
 </context>
 <context>
     <name>ReminderEditDialog</name>
     <message>
         <location filename="../src/gui/reminder/remindereditdialog.ui" line="14"/>
-        <source>Qupil - Erinnerung einrichten</source>
-        <translation type="unfinished"></translation>
+        <source>Edit Reminder - Qupil</source>
+        <translation>Erinnerungen einrichten - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/remindereditdialog.ui" line="22"/>
-        <source>Erinnerungstext:</source>
-        <translation type="unfinished"></translation>
+        <source>Reminder Text:</source>
+        <translation>Erinnerungstext:</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/remindereditdialog.ui" line="41"/>
-        <source>Erinnerungsmodus</source>
-        <translation type="unfinished"></translation>
+        <source>Reminder Mode</source>
+        <translation>Erinnerungsmodus</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/remindereditdialog.ui" line="47"/>
-        <source>Nur beim Programmstart erinnern</source>
-        <translation type="unfinished"></translation>
+        <source>Remember at programm start</source>
+        <translation>Erinnerung nur bei Programmstart</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/remindereditdialog.ui" line="57"/>
-        <source>Am Anfang jeder Unterrichtseinheit erinnern</source>
-        <translation type="unfinished"></translation>
+        <source>Remember at the beginning of each lesson</source>
+        <translation>Am Anfang jeder Unterrichtseinheit erinnern</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/remindereditdialog.ui" line="66"/>
-        <source>Nur bei folgendem Schüler erinnern:</source>
-        <translation type="unfinished"></translation>
+        <source>Remember only with the following student:</source>
+        <translation>Nur bei folgendem Schüler erinnern:</translation>
     </message>
     <message>
         <location filename="../src/gui/reminder/remindereditdialog.ui" line="81"/>
-        <source>Spiele Klangdatei beim Anzeigen der Erinnerung</source>
-        <translation type="unfinished"></translation>
+        <source>Play sound file while displaying the reminder</source>
+        <translation>Spiele Klangdatei beim Anzeigen der Erinnerung</translation>
     </message>
 </context>
 <context>
     <name>SelectPiecesDialog</name>
     <message>
         <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="14"/>
-        <source>Vorspielstücke Auswahl</source>
-        <translation type="unfinished"></translation>
+        <source>Concert Music Selection - Qupil</source>
+        <translation>Vorspielstücke auswählen - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="20"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Bitte wählen Sie eines oder mehrere Stücke aus um sie zum aktuellen Vorspiel hinzuzufügen!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>Please select one or more pieces to add to the current concert!</source>
+        <translation>Bitte wählen Sie eines oder mehrere Stücke aus um sie zum aktuellen Konzert hinzuzufügen!</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="33"/>
-        <source>Zeige Schüler aus diesem Ort:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="29"/>
+        <source>Show students from this location:</source>
+        <translation>Zeige Schüler aus diesem Ort:</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="65"/>
-        <source>Komponist</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="61"/>
+        <source>Composer</source>
+        <translation>Komponist</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="70"/>
-        <source>Titel</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="66"/>
+        <source>Title</source>
+        <translation>Titel</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="75"/>
+        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="71"/>
         <source>Genre</source>
-        <translation type="unfinished"></translation>
+        <translation>Genre</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="80"/>
-        <source>Dauer</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="76"/>
+        <source>Duration</source>
+        <translation>Dauer</translation>
     </message>
     <message>
-        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="85"/>
-        <source>Schüler (Alter) - Instrument</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/concertmanager/selectpiecesdialog.ui" line="81"/>
+        <source>Musician (Age) - Instrument</source>
+        <translation>Musiker (Alter) - Instrument</translation>
     </message>
 </context>
 <context>
     <name>SettingsDialog</name>
     <message>
+        <location filename="../src/gui/settings/settings.ui" line="242"/>
+        <location filename="../src/gui/settings/settings.ui" line="325"/>
+        <source>1</source>
+        <translation>1</translation>
+    </message>
+    <message>
         <location filename="../src/gui/settings/settings.ui" line="14"/>
-        <source>Qupil - Einstellungen</source>
-        <translation type="unfinished"></translation>
+        <source>Settings - Qupil</source>
+        <translation>Einstellungen - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="39"/>
-        <source>Allgemein</source>
-        <translation type="unfinished"></translation>
+        <source>General</source>
+        <translation>Allgemein</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="48"/>
-        <source>Stundenplan</source>
-        <translation type="unfinished"></translation>
+        <source>Timetable</source>
+        <translation>Stundenplan</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="57"/>
-        <source>Unterricht</source>
-        <translation type="unfinished"></translation>
+        <source>Lesson</source>
+        <translation>Unterricht</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="66"/>
-        <location filename="../src/gui/settings/settings.ui" line="713"/>
-        <source>Instrumente</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="659"/>
+        <source>Instruments</source>
+        <translation>Instrumente</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="75"/>
-        <source>Werke</source>
-        <translation type="unfinished"></translation>
+        <source>Music Pieces</source>
+        <translation>Werke</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="84"/>
-        <source>Veranstaltungen</source>
-        <translation type="unfinished"></translation>
+        <source>Events</source>
+        <translation>Veranstaltungen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="120"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Allgemein&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="350"/>
+        <source>Save notes / music pieces together for all students of the lesson</source>
+        <translation>Notizen / Werke für alle Schüler des Unterrichts gemeinsam speichern</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="138"/>
-        <source>Geburtstags-Erinnerung aktivieren</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="160"/>
+        <source>Notification at the end of lessons</source>
+        <translation>Meldung am Ende des Unterrichts</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="148"/>
-        <source>Meldung zum Unterrichtsende  </source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="184"/>
+        <source>before the end of the lesson</source>
+        <translation>vor Unterrichtsende</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="159"/>
-        <source> Minuten</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="198"/>
+        <location filename="../src/gui/settings/settings.ui" line="281"/>
+        <source>Play Sound:</source>
+        <translation>Spiele Klang:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="172"/>
-        <source>vor Unterrichtsende</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="235"/>
+        <location filename="../src/gui/settings/settings.ui" line="318"/>
+        <source>Volume:</source>
+        <translation>Lautstärke:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="186"/>
-        <location filename="../src/gui/settings/settings.ui" line="269"/>
-        <source>Klang abspielen: </source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="267"/>
+        <source>Sound for the reminder tool</source>
+        <translation>Klang für Erinnerungen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="223"/>
-        <location filename="../src/gui/settings/settings.ui" line="306"/>
-        <source>Lautstärke:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="360"/>
+        <source>Concert Interval Check (Concert Candidates) considered:</source>
+        <translation>Vorspielintervall-Prüfung (Vorspielkandidaten) berücksichtig:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="230"/>
-        <location filename="../src/gui/settings/settings.ui" line="313"/>
-        <source>1</source>
-        <translation type="unfinished">1</translation>
+        <location filename="../src/gui/settings/settings.ui" line="366"/>
+        <source>Only Solo Recitals</source>
+        <translation>Nur Solo-Vorträge</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="255"/>
-        <source>Klang für Erinnerungsfunktion</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="376"/>
+        <source>Solo Recitals and Ensemble Participation</source>
+        <translation>Solo-Vorträge und Ensemblemitwirkung</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="338"/>
-        <source>Notizen / Werke für alle Schüler eines Unterrichtes gemeinsam speichern</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="150"/>
+        <source>Activate Birthday Reminder</source>
+        <translation>Geburtstagserinnerung aktivieren</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="348"/>
-        <source>Vorspielintervall-Prüfung (Vorspielkandidaten) berücksichtigt:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="122"/>
+        <source>Language:</source>
+        <translation>Sprache:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="354"/>
-        <source>Nur Solo-Vorträge</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="364"/>
-        <source>Solo-Vorträge und Ensemblemitwirkung</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="391"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stundenplan&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="403"/>
+        <source>Colors</source>
+        <translation>Farben</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="409"/>
-        <source>Farben</source>
-        <translation type="unfinished"></translation>
+        <source>Weekday:</source>
+        <translation>Wochentag:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="415"/>
-        <source>Wochentage:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="428"/>
+        <source>D</source>
+        <translation>D</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="434"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="454"/>
-        <location filename="../src/gui/settings/settings.ui" line="513"/>
-        <location filename="../src/gui/settings/settings.ui" line="566"/>
+        <location filename="../src/gui/settings/settings.ui" line="444"/>
+        <location filename="../src/gui/settings/settings.ui" line="499"/>
+        <location filename="../src/gui/settings/settings.ui" line="548"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="473"/>
-        <location filename="../src/gui/settings/settings.ui" line="526"/>
-        <location filename="../src/gui/settings/settings.ui" line="579"/>
-        <source>Hintergrund</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="463"/>
+        <location filename="../src/gui/settings/settings.ui" line="512"/>
+        <location filename="../src/gui/settings/settings.ui" line="561"/>
+        <source>Background</source>
+        <translation>Hintergrund</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="480"/>
-        <source>Unterricht:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="470"/>
+        <source>Lesson:</source>
+        <translation>Unterricht:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="493"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;L&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="483"/>
+        <source>L</source>
+        <translation>L</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="533"/>
-        <source>Schüler:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="519"/>
+        <source>Pupil:</source>
+        <translation>Schüler:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="546"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;P&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="532"/>
+        <source>P</source>
+        <translation>P</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="606"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Unterricht&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="592"/>
+        <source>Lesson Locations</source>
+        <translation>Unterrichtsorte</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="628"/>
-        <source>Unterrichtsorte</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="613"/>
+        <source>Location:</source>
+        <translation>Ort:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="649"/>
-        <source>Ort:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="625"/>
+        <location filename="../src/gui/settings/settings.ui" line="692"/>
+        <location filename="../src/gui/settings/settings.ui" line="755"/>
+        <location filename="../src/gui/settings/settings.ui" line="822"/>
+        <source>Add</source>
+        <translation>Hinzufügen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="661"/>
-        <location filename="../src/gui/settings/settings.ui" line="746"/>
-        <location filename="../src/gui/settings/settings.ui" line="809"/>
-        <location filename="../src/gui/settings/settings.ui" line="894"/>
-        <source>Hinzufügen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="636"/>
+        <location filename="../src/gui/settings/settings.ui" line="703"/>
+        <location filename="../src/gui/settings/settings.ui" line="766"/>
+        <location filename="../src/gui/settings/settings.ui" line="833"/>
+        <source>Delete</source>
+        <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="672"/>
-        <location filename="../src/gui/settings/settings.ui" line="757"/>
-        <location filename="../src/gui/settings/settings.ui" line="820"/>
-        <location filename="../src/gui/settings/settings.ui" line="905"/>
-        <source>Löschen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="715"/>
+        <source>Sizes</source>
+        <translation>Größen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="691"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Instrumente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settings.ui" line="736"/>
+        <source>Size:</source>
+        <translation>Größe:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="734"/>
+        <location filename="../src/gui/settings/settings.ui" line="789"/>
+        <source>Music Styles</source>
+        <translation>Stilrichtungen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settings.ui" line="810"/>
+        <source>Style:</source>
+        <translation>Stil:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settings.ui" line="852"/>
+        <source>Calculate total playing time of events</source>
+        <translation>Gesamtspielzeit von Veranstaltungen berechnen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settings.ui" line="858"/>
+        <source>Total time for moderation:</source>
+        <translation>Gesamtdauer für An- und Abmoderation:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settings.ui" line="872"/>
+        <source>Break between each music piece:</source>
+        <translation>Auf- und Abtrittszeit zwischen den Werken:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settings.ui" line="680"/>
         <source>Instrument:</source>
-        <translation type="unfinished">Instrument:</translation>
+        <translation>Instrument:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="769"/>
-        <source>Größen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="790"/>
-        <source>Größe:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="839"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Werke&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="861"/>
-        <source>Stilrichtungen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="882"/>
-        <source>Stil:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="924"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Veranstaltungen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="942"/>
-        <source>Gesamtspielzeit von Veranstaltungen berechnen    </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="948"/>
-        <source>Gesamtzeit für An- und Abmoderation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="955"/>
-        <location filename="../src/gui/settings/settings.ui" line="969"/>
+        <location filename="../src/gui/settings/settings.ui" line="171"/>
+        <location filename="../src/gui/settings/settings.ui" line="865"/>
+        <location filename="../src/gui/settings/settings.ui" line="879"/>
         <source> Min.</source>
-        <translation type="unfinished"> Min.</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/settings/settings.ui" line="962"/>
-        <source>Auf- und Abtrittszeit zwischen jedem Werk:</source>
-        <translation type="unfinished"></translation>
+        <translation> Min.</translation>
     </message>
 </context>
 <context>
     <name>SettingsDialogImpl</name>
     <message>
-        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="193"/>
-        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="201"/>
-        <source>Klangdatei auswählen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="41"/>
+        <source>English</source>
+        <translation>Englisch</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="193"/>
-        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="201"/>
-        <source>Klangdateien (*.wav *.ogg *.mp3)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="45"/>
+        <source>German</source>
+        <translation>Deutsch</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="225"/>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="233"/>
+        <source>Select Sound File</source>
+        <translation>Klangdatei auswählen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="225"/>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="233"/>
+        <source>Sound Files (*.wav *.ogg *.mp3)</source>
+        <translation>Klangdateien (*.wav *.ogg *.mp3)</translation>
     </message>
 </context>
 <context>
     <name>SheetMusicLibraryDialog</name>
     <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="14"/>
-        <source>Qupil - Noten-Bibliothek</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="24"/>
-        <source>Alle</source>
-        <translation type="unfinished"></translation>
+        <source>All</source>
+        <translation>Alle</translation>
     </message>
     <message>
         <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="47"/>
-        <source>Komponist / Autor:</source>
-        <translation type="unfinished"></translation>
+        <source>Composer / Author:</source>
+        <translation>Komponist / Autor:</translation>
     </message>
     <message>
         <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="57"/>
-        <source>Titel:</source>
-        <translation type="unfinished"></translation>
+        <source>Title:</source>
+        <translation>Titel:</translation>
     </message>
     <message>
         <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="67"/>
-        <source>Verlag:</source>
-        <translation type="unfinished"></translation>
+        <source>Publisher:</source>
+        <translation>Verlag:</translation>
     </message>
     <message>
         <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="160"/>
-        <source>Verfügbar</source>
-        <translation type="unfinished"></translation>
+        <source>Available</source>
+        <translation>Verfügbar</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="181"/>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="255"/>
+        <source>Composer / Author</source>
+        <translation>Komponist / Autor</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="186"/>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="260"/>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="191"/>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="265"/>
+        <source>Publisher</source>
+        <translation>Verlag</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="199"/>
+        <source>Give selection to</source>
+        <translation>Auswahl verleihen an</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="223"/>
+        <source>Pupil:</source>
+        <translation>Schüler:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="234"/>
+        <source>Loaned</source>
+        <translation>Verliehen</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="270"/>
+        <source>Lent to</source>
+        <translation>Verliehen an</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="275"/>
+        <source>Lent on</source>
+        <translation>Verliehen am</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="283"/>
+        <source>Selection returned by the pupil</source>
+        <translation>Auswahl vom Schüler zurückgegeben</translation>
     </message>
     <message>
         <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="176"/>
         <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="250"/>
         <source>Index</source>
-        <translation type="unfinished">Index</translation>
+        <translation>Index</translation>
     </message>
     <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="181"/>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="255"/>
-        <source>Komponist / Autor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="186"/>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="260"/>
-        <source>Titel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="191"/>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="265"/>
-        <source>Verlag</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="199"/>
-        <source>Auswahl verleihen an</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="223"/>
-        <source>Schüler:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="234"/>
-        <source>Verliehen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="270"/>
-        <source>Verliehen an</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="275"/>
-        <source>Verliehen am</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="283"/>
-        <source>Auswahl von Schüler zurückgegeben</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="14"/>
+        <source>Music Library - Qupil</source>
+        <translation>Noten-Bibliothek - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrary.ui" line="324"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;OK</translation>
     </message>
 </context>
 <context>
     <name>SheetMusicLibraryDialogImpl</name>
     <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrarydialogimpl.cpp" line="153"/>
         <source>Qupil</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrarydialogimpl.cpp" line="154"/>
-        <source>Sie müssen alle Felder (Komponist/Author, Titel, Verlag) ausfüllen
-um den Eintrag hinzuzufügen!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/sheetmusiclibrary/sheetmusiclibrarydialogimpl.cpp" line="155"/>
+        <source>You must complete all fields (composer / author, title, publisher) 
+to add the entry!</source>
+        <translation>Sie müssen alle Felder (Komponist/Author, Titel, Verlag) ausfüllen
+um den Eintrag hinzuzufügen!</translation>
+    </message>
+</context>
+<context>
+    <name>SmlAllModel</name>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/models/smlallmodel.cpp" line="112"/>
+        <source>Index</source>
+        <translation>Index</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/models/smlallmodel.cpp" line="113"/>
+        <source>Composer / Author</source>
+        <translation>Komponist / Autor</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/models/smlallmodel.cpp" line="114"/>
+        <source>Title</source>
+        <translation>Titel</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/sheetmusiclibrary/models/smlallmodel.cpp" line="115"/>
+        <source>Publisher</source>
+        <translation>Verlag</translation>
     </message>
 </context>
 <context>
     <name>TimeTableTreeWidget</name>
     <message>
         <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="30"/>
-        <source>Unterricht löschen</source>
-        <translation type="unfinished"></translation>
+        <source>Delete Lesson</source>
+        <translation>Unterricht löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="61"/>
-        <source>Montag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="60"/>
+        <source>Monday</source>
+        <translation>Montag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="61"/>
-        <source>Dienstag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="60"/>
+        <source>Tuesday</source>
+        <translation>Dienstag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="61"/>
-        <source>Mittwoch</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="60"/>
+        <source>Wednesday</source>
+        <translation>Mittwoch</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="61"/>
-        <source>Donnerstag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="60"/>
+        <source>Thursday</source>
+        <translation>Donnerstag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="61"/>
-        <source>Freitag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="60"/>
+        <source>Friday</source>
+        <translation>Freitag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="61"/>
-        <source>Samstag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="60"/>
+        <source>Saturday</source>
+        <translation>Samstag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="61"/>
-        <source>Sonntag</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="60"/>
+        <source>Sunday</source>
+        <translation>Sonntag</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="61"/>
-        <source>unregelmäßig</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="60"/>
+        <source>irregular</source>
+        <translation>unregelmäßig</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="295"/>
+        <source>Delete Lesson - Qupil</source>
+        <translation>Unterricht löschen - Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="296"/>
-        <source>Qupil - Unterricht löschen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/timetabletreewidget.cpp" line="297"/>
-        <source>Möchten Sie den ausgewählten Unterricht wirklich löschen?</source>
-        <translation type="unfinished"></translation>
+        <source>Do you really want to delete the selected lesson?</source>
+        <translation>Möchten Sie den ausgewählten Unterricht wirklich löschen?</translation>
     </message>
 </context>
 <context>
     <name>mainWindowImpl</name>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="52"/>
-        <source>Qupil %1 - Unterrichtsmanagement für Instrumentalpädagogen - qupil.de</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="194"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="233"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="237"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="265"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="676"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="756"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="803"/>
         <source>Qupil</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="195"/>
-        <source>Diese Version von Qupil verwendet ein neues Format um Daten zu speichern. 
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="61"/>
+        <source>Qupil %1 - Lesson Management for Instrumental Teacher - qupil.de</source>
+        <translation>Qupil %1 - Unterrichtsmanagement für Instrumentalpädagogen - qupil.de</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="65"/>
+        <source>Lessons: 0 - Pupils: 0 </source>
+        <translation>Unterrichtseinheiten: 0 - Schüler: 0 </translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="107"/>
+        <source>Could not load Metronoms Sounds</source>
+        <translation>Kann Metronom Klänge nicht laden</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="201"/>
+        <source>This version of Qupil uses a new format to store data. Qupil will now try to convert the old data into the new format. 
+This process may take several minutes.</source>
+        <translation>Diese Version von Qupil verwendet ein neues Format um Daten zu speichern. 
 Qupil wird nun versuchen die alten Daten in das neue Format umzuwandeln.
-Dieser Vorgang kann einige Minuten dauern.</source>
-        <translation type="unfinished"></translation>
+Dieser Vorgang kann einige Minuten dauern.</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="222"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="290"/>
-        <source>Qupil - Alte Daten konvertieren</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="228"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="296"/>
+        <source>Convert old data - Qupil</source>
+        <translation>Alte Daten konvertieren - Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="223"/>
-        <source>Abbrechen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="229"/>
+        <source>Cancel</source>
+        <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="230"/>
-        <source>Konvertiere alte Daten ...</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="236"/>
+        <source>Convert old data ...</source>
+        <translation>Alte Daten konvertieren ...</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="234"/>
-        <source>Konvertieren der alten Daten in das neue Format erfolgreich Abgeschlossen!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="240"/>
+        <source>Conversion of the old data into the new format successfully completed!</source>
+        <translation>Konvertieren der alten Daten in das neue Format erfolgreich Abgeschlossen!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="239"/>
-        <source>Beim konvertieren der alten Daten ist ein Fehler aufgetreten. 
-Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="245"/>
+        <source>An error occurred while converting the old data. 
+Please contact the program author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; to fix this issue!</source>
+        <translation>Beim konvertieren der alten Daten ist ein Fehler aufgetreten.
+Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="267"/>
-        <source>Beim Update der Datenbankstruktur ist ein Fehler aufgetreten. Möglicherweise kann Qupil die Daten nicht korrekt verarbeiten. 
-Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="271"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="283"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="621"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="629"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="637"/>
+        <source>Error - Qupil</source>
+        <translation>Fehler - Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="277"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="601"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="609"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="617"/>
-        <source>Qupil - Fehler</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="273"/>
+        <source>An error occurred while updating the database structure. Qupil may not be able to process the data correctly. 
+Please contact the program author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; to fix this issue!</source>
+        <translation>Beim Update der Datenbankstruktur ist ein Fehler aufgetreten. Möglicherweise kann Qupil die Daten nicht korrekt verarbeiten.
+Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="279"/>
-        <source>Beim Update der Datenbankstruktur von Revision %0 auf %1 ist folgender Fehler aufgetreten:&lt;br&gt;&lt;b&gt;%2&lt;/b&gt;&lt;br&gt;Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="285"/>
+        <source>When updating the database structure from revision %0 to %1, the following error occurred:&lt;br&gt;&lt;b&gt;%2&lt;/b&gt;&lt;br&gt;Please contact the program author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; to fix this problem!</source>
+        <translation>Beim Update der Datenbankstruktur von Revision %0 auf %1 ist folgender Fehler aufgetreten:&lt;br&gt;&lt;b&gt;%2&lt;/b&gt;&lt;br&gt;Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="355"/>
-        <source>neuer</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="375"/>
+        <source>New</source>
+        <translation>Neuer</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="355"/>
-        <source>Schüler</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="520"/>
-        <source>Qupil - Backupverzeichnis wählen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="536"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="539"/>
-        <source>Qupil - Backup erstellen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="537"/>
-        <source>Das Backup wurde mit dem Dateinamen &quot;%1&quot; erfolgreich erstellt!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="375"/>
+        <source>Pupil</source>
+        <translation>Schüler</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="540"/>
-        <source>Das Backup konnte im ausgewählten Verzeichnis &quot;%1&quot;nicht erstellt werden.
-Bitte überprüfen Sie ob Sie Schreibrechte für dieses Verzeichnis besitzen!</source>
-        <translation type="unfinished"></translation>
+        <source>Select Backup Directory</source>
+        <translation>Backupverzeichnis auswählen</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="548"/>
-        <source>Qupil - Backupdatei öffnen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="556"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="559"/>
+        <source>Create Backup - Qupil</source>
+        <translation>Backup erstellen - Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="550"/>
-        <source>Qupil Backupdatei (*.db)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="557"/>
+        <source>The backup with the file name &quot;%1&quot; was successfully created!</source>
+        <translation>Das Backup mit dem Dateinamen &quot;%1&quot; wurde erfolgreich erstellt!</translation>
     </message>
     <message>
         <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="560"/>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="596"/>
-        <source>Qupil - Backup zurückspielen</source>
-        <translation type="unfinished"></translation>
+        <source>The backup could not be created in the selected directory &quot;%1&quot;. 
+Please check if you have write permission for this directory!</source>
+        <translation>Das Backup konnte im ausgewählten Verzeichnis &quot;%1&quot;nicht erstellt werden.
+Bitte überprüfen Sie ob Sie Schreibrechte für dieses Verzeichnis besitzen!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="561"/>
-        <source>Ein Backup sollte nur als Datenwiederherstellung nach Datenverlust zurückgespielt werden.
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="568"/>
+        <source>Open Backup - Qupil</source>
+        <translation>Backup öffnen - Qupil</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="570"/>
+        <source>Qupil Backup File (*.db)</source>
+        <translation>Qupil Backup Datei (*.db)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="580"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="616"/>
+        <source>Replay Backup - Qupil</source>
+        <translation>Backup zurückspielen - Qupil</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="581"/>
+        <source>A backup should only be restored as data recovery after data loss. 
+If you restore a backup, changes and new entries 
+that may have been written after the backup will be deleted. 
+
+Would you really like to restore the backup?</source>
+        <translation>Ein Backup sollte nur als Datenwiederherstellung nach Datenverlust zurückgespielt werden.
 Wenn Sie ein Backup zurückspielen werden Änderungen und neue Einträge,
 die eventuell nach dem Backup geschrieben wurden wieder gelöscht.
 
-Möchten Sie das Backup wirklich zurückspielen?</source>
-        <translation type="unfinished"></translation>
+Möchten Sie das Backup wirklich zurückspielen?</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="597"/>
-        <source>Das Backup wurde erfolgreich zurückgespielt.
-Bitte starten Sie Qupil neu!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="617"/>
+        <source>The backup has been successfully restored. 
+Please restart Qupil!</source>
+        <translation>Das Backup wurde erfolgreich zurückgespielt.
+Bitte starten Sie Qupil neu!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="603"/>
-        <source>Der Backup-Typ konnte nicht ermittelt werden! Somit kann das Backup nicht zurückgespielt werden.
-Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="623"/>
+        <source>The backup type could not be determined! Therefore, the backup can not be restored. 
+Please contact the program author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; to fix this problem!</source>
+        <translation>Der Backup-Typ konnte nicht ermittelt werden! Daher kann das Backup nicht zurückgespielt werden.
+Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="611"/>
-        <source>Das Backup konnte nicht zurückgespielt werden! 
-Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="631"/>
+        <source>The backup could not be restored! 
+Please contact the program author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; to fix this issue!</source>
+        <translation>Das Backup konnte nicht zurückgespielt werden!
+Bitte wenden Sie sich an den Programm-Author: &lt;a href=&quot;mailto:fhammer@qupil.de&quot;&gt;fhammer@qupil.de&lt;/a&gt; um dieses Problem zu beheben!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="618"/>
-        <source>Die ausgewählte Backupdatei existiert nicht oder ist leer. 
-Das Backup wird nicht zurückgespielt!</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="638"/>
+        <source>The selected backup file does not exist or is empty. 
+The backup will not be restored!</source>
+        <translation>Die ausgewählte Backupdatei existiert nicht oder ist leer.
+Das Backup wird nicht zurückgespielt!</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="625"/>
-        <source>Qupil - Adressdatei öffnen</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="645"/>
+        <source>Open Address File - Qupil</source>
+        <translation>Adressdatei öffnen - Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="627"/>
-        <source>Adressen CSV (*.csv)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="647"/>
+        <source>Address CSV (*.csv)</source>
+        <translation>Adress CSV (*.csv)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="674"/>
+        <source>Lessons: %1 - Pupils: %2 </source>
+        <translation type="unfinished">Unterrichtseinheiten: %1 - Schüler: %2 </translation>
     </message>
 </context>
 <context>
     <name>myMessageDialog</name>
     <message>
         <location filename="../src/gui/mymessagedialog/mymessagedialog.ui" line="20"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <source>Qupil</source>
+        <translation>Qupil</translation>
     </message>
     <message>
         <location filename="../src/gui/mymessagedialog/mymessagedialog.ui" line="41"/>
         <source>MessageText</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/gui/mymessagedialog/mymessagedialog.ui" line="64"/>
         <source>Do not show this message again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Nachricht nicht mehr anzeigen</translation>
     </message>
 </context>
 </TS>

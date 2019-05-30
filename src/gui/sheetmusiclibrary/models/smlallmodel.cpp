@@ -109,10 +109,10 @@ void SmlAllModel::refresh(int orderColumn, int orderMode)
     setQuery(query);
     if (query.lastError().isValid()) qDebug() << "DB Error: 148 - " << query.lastError();
 
-    setHeaderData(0, Qt::Horizontal, QObject::tr("Index"));
-    setHeaderData(1, Qt::Horizontal, QObject::tr("Komponist / Author"));
-    setHeaderData(2, Qt::Horizontal, QObject::tr("Titel"));
-    setHeaderData(3, Qt::Horizontal, QObject::tr("Verlag"));
+    setHeaderData(0, Qt::Horizontal, tr("Index"));
+    setHeaderData(1, Qt::Horizontal, tr("Composer / Author"));
+    setHeaderData(2, Qt::Horizontal, tr("Title"));
+    setHeaderData(3, Qt::Horizontal, tr("Publisher"));
 }
 
 bool SmlAllModel::setTitle(int smlId, const QString &title)

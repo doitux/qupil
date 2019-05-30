@@ -60,11 +60,11 @@ QTextDocument* BuildDayViewDialog::returnDoc()
         //build strings for days of week
 
         dayString = ui->comboBox_dayOfWeek->itemData(ui->comboBox_dayOfWeek->currentIndex()).toDate().toString(Qt::DefaultLocaleLongDate);
-        tableHeadString = "<tr><th>Uhrzeit</th><th>Unterricht</th><th>Sch&uuml;ler</th></tr>";
+        tableHeadString = "<tr><th>"+tr("Time")+"</th><th>"+tr("Lesson")+"</th><th>"+tr("Pupil")+"</th></tr>";
         query.exec("SELECT lessonid, lessonname, lessonstarttime, lessonstoptime FROM lesson WHERE state = 1 AND lessonday="+QString("%1").arg(day,10)+" ORDER BY lessonstarttime ASC");
     } else {
-        dayString = "unregelm&auml;&szlig;ige Termine";
-        tableHeadString = "<tr><th>Unterricht</th><th>Sch&uuml;ler</th></tr>";
+        dayString = tr("irregular dates");
+        tableHeadString = "<tr><th>"+tr("Lesson")+"</th><th>"+tr("Pupil")+"</th></tr>";
         query.exec("SELECT lessonid, lessonname FROM lesson WHERE state = 1 AND unsteadylesson = 1");
     }
 
@@ -155,12 +155,12 @@ QTextDocument* BuildDayViewDialog::returnDoc()
     doc->setHtml("<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'> \
     <html> \
     <head> \
-    <meta content='text/html; charset=ISO-8859-1' http-equiv='content-type'> \
-    <title>Qupil - Tages&uuml;bersicht</title> \
+    <meta content='text/html; charset=utf-8' http-equiv='content-type'> \
+    <title>Qupil - "+tr("Daily schedule")+"</title> \
     </head> \
     <body> \
     <table style='text-align: left; margin-left: auto; margin-right: auto; width: 100%;' border='0' cellpadding='0' cellspacing='0'> \
-      <tr><td align='center' width='100%'><h2>Qupil "+QString(RELEASE_STRING)+" - Tages&uuml;bersicht - "+ dayString+"</h2></td></tr> \
+      <tr><td align='center' width='100%'><h2>Qupil "+QString(RELEASE_STRING)+" - "+tr("Daily schedule")+" - "+ dayString+"</h2></td></tr> \
       <tr><td >\
       <tr><td width='100%'></td></tr>\
       <tr><td width='100%'>\
