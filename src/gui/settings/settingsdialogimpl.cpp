@@ -161,6 +161,8 @@ void SettingsDialogImpl::loadSettings()
     spinBox_moderationDuration->setValue(myConfig->readConfigInt("RecitalModerationDuration"));
     spinBox_durationBetweenPieces->setValue(myConfig->readConfigInt("RecitalBetweenPiecesDuration"));
 
+    groupBox_limitLessonNotes->setChecked(myConfig->readConfigInt("LimitLoadLessonNotes"));
+    spinBox_displayLessonNotesNumber->setValue(myConfig->readConfigInt("LoadLessonNotesNumber"));
 }
 
 void SettingsDialogImpl::saveSettings()
@@ -215,6 +217,9 @@ void SettingsDialogImpl::saveSettings()
 
     myConfig->writeConfigInt("RecitalModerationDuration", spinBox_moderationDuration->value());
     myConfig->writeConfigInt("RecitalBetweenPiecesDuration", spinBox_durationBetweenPieces->value());
+
+    myConfig->writeConfigInt("LimitLoadLessonNotes",  groupBox_limitLessonNotes->isChecked());
+    myConfig->writeConfigInt("LoadLessonNotesNumber", spinBox_displayLessonNotesNumber->value());
 
     myConfig->writeBuffer();
 }

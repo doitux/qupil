@@ -48,7 +48,7 @@ ConfigFile::ConfigFile(char *argv0, bool readonly)
     myArgv0 = argv0;
 
     // !!!! Revisionsnummer der Configdefaults !!!!!
-    configRev = 30;
+    configRev = 31;
     // !!!! Revision of data structure !!!!!
     string dataStructureRev = "2";
 
@@ -173,8 +173,10 @@ ConfigFile::ConfigFile(char *argv0, bool readonly)
     configList.push_back(ConfigInfo("TimeTableLessonTColor", CONFIG_TYPE_STRING, "0,0,0"));
     configList.push_back(ConfigInfo("TimeTablePupilBColor", CONFIG_TYPE_STRING, "255,255,255"));
     configList.push_back(ConfigInfo("TimeTablePupilTColor", CONFIG_TYPE_STRING, "0,0,0"));
-    configList.push_back(ConfigInfo("SaveNotesPiecesForAllPupil", CONFIG_TYPE_INT, "1"));
     configList.push_back(ConfigInfo("RecitalIntervalCheckerOnlySolo", CONFIG_TYPE_INT, "1"));
+    configList.push_back(ConfigInfo("SaveNotesPiecesForAllPupil", CONFIG_TYPE_INT, "1"));
+    configList.push_back(ConfigInfo("LimitLoadLessonNotes", CONFIG_TYPE_INT, "1"));
+    configList.push_back(ConfigInfo("LoadLessonNotesNumber", CONFIG_TYPE_INT, "30"));
 
     configList.push_back(ConfigInfo("RecitalModerationDuration", CONFIG_TYPE_INT, "4"));
     configList.push_back(ConfigInfo("RecitalBetweenPiecesDuration", CONFIG_TYPE_INT, "2"));
