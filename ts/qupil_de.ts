@@ -2258,12 +2258,12 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
 <context>
     <name>PalNotesModel</name>
     <message>
-        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="81"/>
+        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="78"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="82"/>
+        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="79"/>
         <source>Note</source>
         <translation>Notiz</translation>
     </message>
@@ -2296,37 +2296,37 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
         <translation>Beendet</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="119"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="123"/>
         <source>Composer</source>
         <translation>Komponist</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="120"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="124"/>
         <source>Title</source>
         <translation>Titel</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="121"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="125"/>
         <source>Genre               </source>
         <translation>Genre               </translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="122"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="126"/>
         <source>Duration</source>
         <translation>Dauer</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="123"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="127"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="124"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="128"/>
         <source>End</source>
         <translation>Ende</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="125"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="129"/>
         <source>State</source>
         <translation>Status</translation>
     </message>
@@ -3388,33 +3388,33 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
         <translation>Einstellungen - Qupil</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="39"/>
+        <location filename="../src/gui/settings/settings.ui" line="46"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="48"/>
+        <location filename="../src/gui/settings/settings.ui" line="55"/>
         <source>Timetable</source>
         <translation>Stundenplan</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="57"/>
+        <location filename="../src/gui/settings/settings.ui" line="64"/>
         <source>Lesson</source>
         <translation>Unterricht</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="66"/>
-        <location filename="../src/gui/settings/settings.ui" line="692"/>
+        <location filename="../src/gui/settings/settings.ui" line="82"/>
+        <location filename="../src/gui/settings/settings.ui" line="792"/>
         <source>Instruments</source>
         <translation>Instrumente</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="75"/>
+        <location filename="../src/gui/settings/settings.ui" line="73"/>
         <source>Music Pieces</source>
         <translation>Werke</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="84"/>
+        <location filename="../src/gui/settings/settings.ui" line="91"/>
         <source>Events</source>
         <translation>Veranstaltungen</translation>
     </message>
@@ -3532,7 +3532,7 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="599"/>
         <source>Number of displayed lesson notes:</source>
-        <translation type="unfinished">Anzahl der angezeigten Unterrichtsnotizen:</translation>
+        <translation>Anzahl der angezeigten Unterrichtsnotizen:</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="625"/>
@@ -3546,64 +3546,74 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="658"/>
-        <location filename="../src/gui/settings/settings.ui" line="725"/>
-        <location filename="../src/gui/settings/settings.ui" line="788"/>
-        <location filename="../src/gui/settings/settings.ui" line="855"/>
+        <location filename="../src/gui/settings/settings.ui" line="769"/>
+        <location filename="../src/gui/settings/settings.ui" line="825"/>
+        <location filename="../src/gui/settings/settings.ui" line="888"/>
         <source>Add</source>
         <translation>Hinzufügen</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="669"/>
-        <location filename="../src/gui/settings/settings.ui" line="736"/>
-        <location filename="../src/gui/settings/settings.ui" line="799"/>
-        <location filename="../src/gui/settings/settings.ui" line="866"/>
+        <location filename="../src/gui/settings/settings.ui" line="758"/>
+        <location filename="../src/gui/settings/settings.ui" line="836"/>
+        <location filename="../src/gui/settings/settings.ui" line="899"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="748"/>
+        <location filename="../src/gui/settings/settings.ui" line="688"/>
+        <source>Limit the number of displayed music pieces   </source>
+        <translation>Begrenze die Anzahl angezeigter Werke    </translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settings.ui" line="699"/>
+        <source>Number of displayed music pieces:</source>
+        <translation>Anzahl der angezeigten Werke:</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/settings/settings.ui" line="848"/>
         <source>Sizes</source>
         <translation>Größen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="769"/>
+        <location filename="../src/gui/settings/settings.ui" line="869"/>
         <source>Size:</source>
         <translation>Größe:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="822"/>
+        <location filename="../src/gui/settings/settings.ui" line="725"/>
         <source>Music Styles</source>
         <translation>Stilrichtungen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="843"/>
+        <location filename="../src/gui/settings/settings.ui" line="746"/>
         <source>Style:</source>
         <translation>Stil:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="885"/>
+        <location filename="../src/gui/settings/settings.ui" line="918"/>
         <source>Calculate total playing time of events</source>
         <translation>Gesamtspielzeit von Veranstaltungen berechnen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="891"/>
+        <location filename="../src/gui/settings/settings.ui" line="924"/>
         <source>Total time for moderation:</source>
         <translation>Gesamtdauer für An- und Abmoderation:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="905"/>
+        <location filename="../src/gui/settings/settings.ui" line="938"/>
         <source>Break between each music piece:</source>
         <translation>Auf- und Abtrittszeit zwischen den Werken:</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settings.ui" line="713"/>
+        <location filename="../src/gui/settings/settings.ui" line="813"/>
         <source>Instrument:</source>
         <translation>Instrument:</translation>
     </message>
     <message>
         <location filename="../src/gui/settings/settings.ui" line="171"/>
-        <location filename="../src/gui/settings/settings.ui" line="898"/>
-        <location filename="../src/gui/settings/settings.ui" line="912"/>
+        <location filename="../src/gui/settings/settings.ui" line="931"/>
+        <location filename="../src/gui/settings/settings.ui" line="945"/>
         <source> Min.</source>
         <translation> Min.</translation>
     </message>
@@ -3621,14 +3631,14 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
         <translation>Deutsch</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="230"/>
-        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="238"/>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="234"/>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="242"/>
         <source>Select Sound File</source>
         <translation>Klangdatei auswählen</translation>
     </message>
     <message>
-        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="230"/>
-        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="238"/>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="234"/>
+        <location filename="../src/gui/settings/settingsdialogimpl.cpp" line="242"/>
         <source>Sound Files (*.wav *.ogg *.mp3)</source>
         <translation>Klangdateien (*.wav *.ogg *.mp3)</translation>
     </message>
@@ -4001,7 +4011,7 @@ Das Backup wird nicht zurückgespielt!</translation>
     <message>
         <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="674"/>
         <source>Lessons: %1 - Pupils: %2 </source>
-        <translation type="unfinished">Unterrichtseinheiten: %1 - Schüler: %2 </translation>
+        <translation>Unterrichtseinheiten: %1 - Schüler: %2 </translation>
     </message>
 </context>
 <context>

@@ -163,6 +163,8 @@ void SettingsDialogImpl::loadSettings()
 
     groupBox_limitLessonNotes->setChecked(myConfig->readConfigInt("LimitLoadLessonNotes"));
     spinBox_displayLessonNotesNumber->setValue(myConfig->readConfigInt("LoadLessonNotesNumber"));
+    groupBox_limitMusicPieces->setChecked(myConfig->readConfigInt("LimitLoadMusicPieces"));
+    spinBox_displayMusicPiecesNumber->setValue(myConfig->readConfigInt("LoadMusicPiecesNumber"));
 }
 
 void SettingsDialogImpl::saveSettings()
@@ -220,6 +222,8 @@ void SettingsDialogImpl::saveSettings()
 
     myConfig->writeConfigInt("LimitLoadLessonNotes",  groupBox_limitLessonNotes->isChecked());
     myConfig->writeConfigInt("LoadLessonNotesNumber", spinBox_displayLessonNotesNumber->value());
+    myConfig->writeConfigInt("LimitLoadMusicPieces",  groupBox_limitMusicPieces->isChecked());
+    myConfig->writeConfigInt("LoadMusicPiecesNumber", spinBox_displayMusicPiecesNumber->value());
 
     myConfig->writeBuffer();
 }

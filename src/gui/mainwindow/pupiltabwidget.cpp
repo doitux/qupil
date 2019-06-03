@@ -376,7 +376,7 @@ void PupilTabWidget::loadPalNotes( int palId )
     query.next();
     QDate startDate(QDate::fromString( query.value(0).toString(), Qt::ISODate));
 
-    myW->treeView_palNotes->setItemDelegate(new PalNotesDelegate(startDate));
+    myW->treeView_palNotes->setItemDelegate(new PalNotesDelegate(startDate, myConfig));
     myW->treeView_palNotes->hideColumn(0);
     myW->treeView_palNotes->hideColumn(1);
 

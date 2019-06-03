@@ -14,6 +14,13 @@
    <string>Settings - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0" colspan="2">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0">
     <widget class="QListWidget" name="listWidget">
      <property name="minimumSize">
@@ -63,20 +70,20 @@
      </item>
      <item>
       <property name="text">
-       <string>Instruments</string>
-      </property>
-      <property name="icon">
-       <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/audio-input-microphone.svg</normaloff>:/gfx/audio-input-microphone.svg</iconset>
-      </property>
-     </item>
-     <item>
-      <property name="text">
        <string>Music Pieces</string>
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
         <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Instruments</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../resources/qupil.qrc">
+        <normaloff>:/gfx/audio-input-microphone.svg</normaloff>:/gfx/audio-input-microphone.svg</iconset>
       </property>
      </item>
      <item>
@@ -88,13 +95,6 @@
         <normaloff>:/gfx/x-office-contact.svg</normaloff>:/gfx/x-office-contact.svg</iconset>
       </property>
      </item>
-    </widget>
-   </item>
-   <item row="1" column="0" colspan="2">
-    <widget class="Line" name="line">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
     </widget>
    </item>
    <item row="2" column="0" colspan="2">
@@ -680,6 +680,106 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="page_2">
+      <layout class="QGridLayout" name="gridLayout_13">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_limitMusicPieces">
+         <property name="title">
+          <string>Limit the number of displayed music pieces   </string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_18">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Number of displayed music pieces:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_displayMusicPiecesNumber">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTabWidget" name="tabWidget_11">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_5">
+          <attribute name="title">
+           <string>Music Styles</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0" colspan="2">
+            <widget class="QListWidget" name="listWidget_piecesGenre">
+             <property name="dragEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="dragDropMode">
+              <enum>QAbstractItemView::InternalMove</enum>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Style:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_newPiecesGenre"/>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="pushButton_delPiecesGenre">
+             <property name="text">
+              <string>Delete</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../resources/qupil.qrc">
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="pushButton_addPiecesGenre">
+             <property name="text">
+              <string>Add</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../resources/qupil.qrc">
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="page_3">
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="0" column="0" colspan="2">
@@ -795,73 +895,6 @@
            </item>
            <item row="2" column="1">
             <widget class="QPushButton" name="pushButton_delInstrumentSize">
-             <property name="text">
-              <string>Delete</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="page_2">
-      <layout class="QGridLayout" name="gridLayout_13">
-       <item row="0" column="0" colspan="2">
-        <widget class="QTabWidget" name="tabWidget_11">
-         <property name="currentIndex">
-          <number>0</number>
-         </property>
-         <widget class="QWidget" name="tab_5">
-          <attribute name="title">
-           <string>Music Styles</string>
-          </attribute>
-          <layout class="QGridLayout" name="gridLayout_9">
-           <item row="0" column="0" colspan="2">
-            <widget class="QListWidget" name="listWidget_piecesGenre">
-             <property name="dragEnabled">
-              <bool>true</bool>
-             </property>
-             <property name="dragDropMode">
-              <enum>QAbstractItemView::InternalMove</enum>
-             </property>
-             <property name="alternatingRowColors">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="2">
-            <layout class="QHBoxLayout" name="horizontalLayout_7">
-             <item>
-              <widget class="QLabel" name="label_10">
-               <property name="text">
-                <string>Style:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_newPiecesGenre"/>
-             </item>
-            </layout>
-           </item>
-           <item row="2" column="0">
-            <widget class="QPushButton" name="pushButton_addPiecesGenre">
-             <property name="text">
-              <string>Add</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QPushButton" name="pushButton_delPiecesGenre">
              <property name="text">
               <string>Delete</string>
              </property>

@@ -22,13 +22,14 @@
 
 #include <QStyledItemDelegate>
 #include <QDate>
+class ConfigFile;
 
 class PalNotesDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
 
-    PalNotesDelegate(QDate &d, QObject *parent = nullptr );
+    PalNotesDelegate(QDate &d, ConfigFile *c, QObject *parent = nullptr );
     QWidget *createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const override;
     void setEditorData( QWidget *editor, const QModelIndex &index ) const override;
     void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const override;
@@ -44,6 +45,7 @@ private slots:
 
 private:
     QDate myStartDate;
+    ConfigFile *myConfig;
 
 protected:
     bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) override;

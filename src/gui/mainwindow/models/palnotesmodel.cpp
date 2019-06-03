@@ -64,9 +64,6 @@ QVariant PalNotesModel::data(const QModelIndex &index, int role) const
 {
     QVariant value = QSqlQueryModel::data(index, role);
 
-    if (role == Qt::TextColorRole && index.column() == 2)
-        return qVariantFromValue(QColor(Qt::blue));
-
     return value;
 }
 

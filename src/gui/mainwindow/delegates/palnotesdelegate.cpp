@@ -26,10 +26,11 @@
 #include <QtGui>
 #include <QtWidgets>
 #include <QtCore>
+#include "configfile.h"
 #include "delegatetextedit.h"
 
-PalNotesDelegate::PalNotesDelegate (QDate &d, QObject *parent )
-    : QStyledItemDelegate ( parent ), myStartDate(d) {}
+PalNotesDelegate::PalNotesDelegate (QDate &d, ConfigFile *c, QObject *parent )
+    : QStyledItemDelegate ( parent ), myStartDate(d), myConfig(c) {}
 
 QWidget *PalNotesDelegate::createEditor ( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
@@ -140,6 +141,16 @@ void PalNotesDelegate::paint(QPainter *painter, const QStyleOptionViewItem &opti
 
     QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &o);
     painter->save();
+
+//    if(myConfig->readConfigInt("LimitLoadLessonNotes")) {
+//        int limit = myConfig->readConfigInt("LoadLessonNotesNumber");
+//        QColor textColor = o.palette.color(QPalette::Text);
+//        if(index.row() == limit) { textColor.setAlpha(170); }
+//        if(index.row() == limit+1) { textColor.setAlpha(100); }
+//        if(index.row() == limit+2) { textColor.setAlpha(50); }
+//        ctx.palette.setColor(QPalette::Text, textColor);
+//    }
+
     painter->translate(textRect.topLeft());
     painter->setClipRect(textRect.translated(-textRect.topLeft()));
     doc.documentLayout()->draw(painter, ctx);
