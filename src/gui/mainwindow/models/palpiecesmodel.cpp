@@ -112,7 +112,7 @@ QVariant PalPiecesModel::data(const QModelIndex &idx, int role) const
 
 void PalPiecesModel::refresh()
 {
-    QSqlQuery query("SELECT p.pieceid, p.cpieceid, pc.composer, p.title, p.genre, p.duration, strftime(\"%d.%m.%Y\", p.startdate), strftime(\"%d.%m.%Y\", p.stopdate), p.state FROM piece p, pupilatlesson pal, piececomposer pc WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=p.palid AND p.piececomposerid=pc.piececomposerid AND pal.startdate <= p.startdate AND pal.stopdate >= p.startdate ORDER BY p.startdate ASC", *myW->getMyDb()->getMyPupilDb());
+    QSqlQuery query("SELECT p.pieceid, p.cpieceid, pc.composer, p.title, p.genre, p.duration, strftime(\"%d.%m.%Y\", p.startdate), strftime(\"%d.%m.%Y\", p.stopdate), p.state FROM piece p, pupilatlesson pal, piececomposer pc WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=p.palid AND p.piececomposerid=pc.piececomposerid AND pal.startdate <= p.startdate AND pal.stopdate >= p.startdate ORDER BY p.startdate DESC", *myW->getMyDb()->getMyPupilDb());
     setQuery(query);
     if (query.lastError().isValid()) qDebug() << "DB Error: 68 - " << query.lastError();
 
