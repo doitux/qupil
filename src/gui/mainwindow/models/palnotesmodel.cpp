@@ -62,9 +62,7 @@ bool PalNotesModel::setData(const QModelIndex &index, const QVariant &value, int
 
 QVariant PalNotesModel::data(const QModelIndex &index, int role) const
 {
-    QVariant value = QSqlQueryModel::data(index, role);
-
-    return value;
+    return QSqlQueryModel::data(index, role);
 }
 
 void PalNotesModel::refresh()

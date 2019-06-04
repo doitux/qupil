@@ -175,9 +175,9 @@ ConfigFile::ConfigFile(char *argv0, bool readonly)
     configList.push_back(ConfigInfo("TimeTablePupilTColor", CONFIG_TYPE_STRING, "0,0,0"));
     configList.push_back(ConfigInfo("RecitalIntervalCheckerOnlySolo", CONFIG_TYPE_INT, "1"));
     configList.push_back(ConfigInfo("SaveNotesPiecesForAllPupil", CONFIG_TYPE_INT, "1"));
-    configList.push_back(ConfigInfo("LimitLoadLessonNotes", CONFIG_TYPE_INT, "1"));
+    configList.push_back(ConfigInfo("LimitLoadLessonNotes", CONFIG_TYPE_INT, "0"));
     configList.push_back(ConfigInfo("LoadLessonNotesNumber", CONFIG_TYPE_INT, "30"));
-    configList.push_back(ConfigInfo("LimitLoadMusicPieces", CONFIG_TYPE_INT, "1"));
+    configList.push_back(ConfigInfo("LimitLoadMusicPieces", CONFIG_TYPE_INT, "0"));
     configList.push_back(ConfigInfo("LoadMusicPiecesNumber", CONFIG_TYPE_INT, "20"));
 
     configList.push_back(ConfigInfo("RecitalModerationDuration", CONFIG_TYPE_INT, "4"));

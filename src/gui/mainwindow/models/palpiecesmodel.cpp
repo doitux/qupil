@@ -85,23 +85,21 @@ QVariant PalPiecesModel::data(const QModelIndex &idx, int role) const
     QStringList myStateStringList;
     myStateStringList << tr("Planned") << tr("In Progress") << tr("Paused") << tr("Ready for Concert") << tr("Finished");
 
-    if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(1))) {
-        return QColor(156, 255, 103);
-    }
-    if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(2))) {
-        return QColor(Qt::yellow);
-    }
-    if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(3))) {
-        return QColor(255, 128, 128);
-    }
-    if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(4))) {
-        return QColor(Qt::lightGray);
-    }
-
-    if (value.isValid() && role == Qt::DisplayRole) {
-        if (idx.column() == 8) {
-            return myStateStringList.at(value.toInt());
-        }
+    switch (role) {
+        case Qt::BackgroundRole:
+            {
+                QString data = index(idx.row(), 8, idx.parent()).data().toString();
+                if(data == myStateStringList.at(1)) { return QColor(156, 255, 103); }
+                else if (data == myStateStringList.at(2)) { return QColor(Qt::yellow); }
+                else if (data == myStateStringList.at(3)) { return QColor(255, 128, 128); }
+                else if (data == myStateStringList.at(4)) { return QColor(Qt::lightGray); }
+            }
+        break;
+        case Qt::DisplayRole:
+            if (idx.column() == 8) {
+                return myStateStringList.at(value.toInt());
+            }
+        break;
     }
 
     return value;
