@@ -46,11 +46,6 @@ PupilTabWidget::~PupilTabWidget()
 
 void PupilTabWidget::init()
 {
-
-    myW->dateEdit_palNotes->setDate(QDate::currentDate());
-    myW->dateEdit_singularActivityDate->setDate(QDate::currentDate());
-    myW->dateEdit_continousActivityStartdate->setDate(QDate::currentDate());
-
     connect( myW->pushButton_addPalPiece, SIGNAL( clicked() ), this, SLOT( addNewPiece() ) );
     connect( myW->pushButton_delPalPiece, SIGNAL( clicked() ), this, SLOT( delPiece() ) );
     connect( myW->pushButton_addPalNotes, SIGNAL( clicked() ), this, SLOT( addNewNote() ) );
@@ -323,6 +318,9 @@ void PupilTabWidget::pupilFirstLessonChanged(QDate date)
 
 void PupilTabWidget::loadPupilActivity()
 {
+    myW->dateEdit_singularActivityDate->setDate(QDate::currentDate());
+    myW->dateEdit_continousActivityStartdate->setDate(QDate::currentDate());
+
     myPupilSingularActivityModel->setCurrentPupilId(currentPupilId);
     myW->treeView_singularActivity->setModel(myPupilSingularActivityModel);
     myPupilSingularActivityModel->refresh();
@@ -359,6 +357,8 @@ void PupilTabWidget::loadPupilActivity()
 
 void PupilTabWidget::loadPalNotes( int palId )
 {
+    myW->dateEdit_palNotes->setDate(QDate::currentDate());
+
     QSqlQuery query("SELECT startdate FROM pupilatlesson WHERE palid= ?");
     if(palId == -1) {
         myPalNotesModel->setCurrentPalId(currentPalId);
