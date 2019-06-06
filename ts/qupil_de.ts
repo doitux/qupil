@@ -2258,12 +2258,12 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
 <context>
     <name>PalNotesModel</name>
     <message>
-        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="78"/>
+        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="76"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="79"/>
+        <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="77"/>
         <source>Note</source>
         <translation>Notiz</translation>
     </message>
@@ -2296,37 +2296,37 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
         <translation>Beendet</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="123"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="121"/>
         <source>Composer</source>
         <translation>Komponist</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="124"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="122"/>
         <source>Title</source>
         <translation>Titel</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="125"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="123"/>
         <source>Genre               </source>
         <translation>Genre               </translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="126"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="124"/>
         <source>Duration</source>
         <translation>Dauer</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="127"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="125"/>
         <source>Start</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="128"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="126"/>
         <source>End</source>
         <translation>Ende</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="129"/>
+        <location filename="../src/gui/mainwindow/models/palpiecesmodel.cpp" line="127"/>
         <source>State</source>
         <translation>Status</translation>
     </message>
@@ -2894,44 +2894,44 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
 <context>
     <name>PupilTabWidget</name>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="96"/>
         <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
         <source>Planned</source>
         <translation>Geplant</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="96"/>
         <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
         <source>In Progress</source>
         <translation>In Arbeit</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="96"/>
         <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
         <source>Paused</source>
         <translation>Pause</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="96"/>
         <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
         <source>Ready for Concert</source>
         <translation>Vorspielreif</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="101"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="96"/>
         <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="413"/>
         <source>Finished</source>
         <translation>Beendet</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="119"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="127"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="114"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="122"/>
         <source>(inactive)</source>
         <translation>(inaktiv)</translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="296"/>
-        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="309"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="291"/>
+        <location filename="../src/gui/mainwindow/pupiltabwidget.cpp" line="304"/>
         <source>Years</source>
         <translation>Jahre</translation>
     </message>
@@ -4013,6 +4013,16 @@ Das Backup wird nicht zurückgespielt!</translation>
         <source>Lessons: %1 - Pupils: %2 </source>
         <translation>Unterrichtseinheiten: %1 - Schüler: %2 </translation>
     </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="825"/>
+        <source>Reminder for the pupil </source>
+        <translation>Erinnerung für den Schüler </translation>
+    </message>
+    <message>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="827"/>
+        <source>Done? - Reminder will be removed!</source>
+        <translation>Erledigt? - Erinnerung wird gelöscht!</translation>
+    </message>
 </context>
 <context>
     <name>myMessageDialog</name>
@@ -4020,11 +4030,6 @@ Das Backup wird nicht zurückgespielt!</translation>
         <location filename="../src/gui/mymessagedialog/mymessagedialog.ui" line="20"/>
         <source>Qupil</source>
         <translation>Qupil</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/mymessagedialog/mymessagedialog.ui" line="41"/>
-        <source>MessageText</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../src/gui/mymessagedialog/mymessagedialog.ui" line="64"/>

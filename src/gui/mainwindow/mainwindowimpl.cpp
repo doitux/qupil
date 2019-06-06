@@ -821,9 +821,9 @@ void mainWindowImpl::showReminder(bool directlyAfterStartup)
                                             msgBox->setModal(false);
                                             msgBox->setWindowTitle("Qupil");
                                             msgBox->setTextFormat(Qt::RichText);
-                                            msgBox->setText(QString::fromUtf8(QString("<u>Erinnerung für den Schüler ").toStdString().c_str())+QString("\"%1\":</u><br><br><b>%2</b><br>").arg(query4.value(0).toString()+", "+query4.value(1).toString()).arg(query.value(1).toString()));
+                                            msgBox->setText("<u>"+QString::fromUtf8(QString(tr("Reminder for the pupil ")).toStdString().c_str())+QString("\"%1\":</u><br><br><b>%2</b><br>").arg(query4.value(0).toString()+", "+query4.value(1).toString()).arg(query.value(1).toString()));
                                             msgBox->setIcon(QMessageBox::Information);
-                                            msgBox->show(query.value(0).toInt(), true, "Erledigt? - Die Erinnerung wird entfernt!");
+                                            msgBox->show(query.value(0).toInt(), true, tr("Done? - Reminder will be removed!"));
 
                                             if(query.value(4).toInt()) {
                                                 mySDLPlayer->playSound(QString::fromUtf8(myConfig->readConfigString("RemSoundFilePath").c_str()), myConfig->readConfigInt("RemSoundVolume"), true);
