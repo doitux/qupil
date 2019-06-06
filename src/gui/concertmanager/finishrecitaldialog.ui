@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>396</width>
-    <height>359</height>
+    <width>500</width>
+    <height>440</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Automatische Funktionen</string>
+   <string>Automatic Functions - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Qupil kann zu Ihrer Unterstützung einige automatische Funktionen ausführen. Bitte wählen Sie welche Funktionen ausgeführt werden sollen:</string>
+      <string>Qupil can perform some automatic functions to assist you. Please select which functions should be executed:</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -36,7 +36,7 @@
       </size>
      </property>
      <property name="title">
-      <string>Aktivitäten </string>
+      <string>Activities</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <property name="topMargin">
@@ -44,9 +44,15 @@
       </property>
       <item row="0" column="0" colspan="2">
        <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
-         <string>Bei jedem Teilnehmer wir die Veranstaltung automatisch als einmalige Aktivität eingetragen. 
-Möchten Sie diese Funktion nutzen?</string>
+         <string>For each participant, the event is automatically entered as a one-time activity.  
+Do you want to use this feature?</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -74,7 +80,10 @@ Möchten Sie diese Funktion nutzen?</string>
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="../resources/qupil.qrc">:/gfx/view-refresh48.png</pixmap>
+         <pixmap resource="../resources/qupil.qrc">:/gfx/view-refresh-48.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
         </property>
        </widget>
       </item>
@@ -83,7 +92,7 @@ Möchten Sie diese Funktion nutzen?</string>
         <item>
          <widget class="QRadioButton" name="radioButton_activityYes">
           <property name="text">
-           <string>Ja</string>
+           <string>Yes</string>
           </property>
           <property name="checked">
            <bool>true</bool>
@@ -93,7 +102,7 @@ Möchten Sie diese Funktion nutzen?</string>
         <item>
          <widget class="QRadioButton" name="radioButton_activityNo">
           <property name="text">
-           <string>Nein</string>
+           <string>No</string>
           </property>
          </widget>
         </item>
@@ -137,7 +146,7 @@ Möchten Sie diese Funktion nutzen?</string>
       </size>
      </property>
      <property name="title">
-      <string>Werke</string>
+      <string>Music Pieces</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <property name="topMargin">
@@ -145,6 +154,12 @@ Möchten Sie diese Funktion nutzen?</string>
       </property>
       <item row="0" column="0" colspan="2">
        <widget class="QLabel" name="label_4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -152,11 +167,8 @@ Möchten Sie diese Funktion nutzen?</string>
          </size>
         </property>
         <property name="text">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Nimbus Sans L'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Der Status der vorgetragenen Werke wird beim jedem Teilnehmer automatisch auf &amp;quot;abgeschlossen&amp;quot; gesetzt.&lt;br /&gt;Möchten Sie diese Funktion nutzen?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>The status of the performed music pieces is automatically set to &quot;completed&quot; for each participant.
+Do you want to use this feature?</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -184,7 +196,10 @@ p, li { white-space: pre-wrap; }
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="../resources/qupil.qrc">:/gfx/sound48.png</pixmap>
+         <pixmap resource="../resources/qupil.qrc">:/gfx/folder-sound-48.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
         </property>
        </widget>
       </item>
@@ -193,7 +208,7 @@ p, li { white-space: pre-wrap; }
         <item>
          <widget class="QRadioButton" name="radioButton_PieceYes">
           <property name="text">
-           <string>Ja</string>
+           <string>Yes</string>
           </property>
           <property name="checked">
            <bool>true</bool>
@@ -203,7 +218,7 @@ p, li { white-space: pre-wrap; }
         <item>
          <widget class="QRadioButton" name="radioButton_PieceNo">
           <property name="text">
-           <string>Nein</string>
+           <string>No</string>
           </property>
          </widget>
         </item>

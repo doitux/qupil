@@ -10,16 +10,13 @@
     <height>286</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>Form</string>
-  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Ort:</string>
+        <string>Location:</string>
        </property>
       </widget>
      </item>
@@ -46,7 +43,7 @@
      <item>
       <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>Datum:</string>
+        <string>Date:</string>
        </property>
       </widget>
      </item>
@@ -73,7 +70,7 @@
      <item>
       <widget class="QLabel" name="label_6">
        <property name="text">
-        <string>Uhrzeit:</string>
+        <string>Time:</string>
        </property>
       </widget>
      </item>
@@ -100,7 +97,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Organisation:</string>
+        <string>Organiser:</string>
        </property>
       </widget>
      </item>
@@ -127,7 +124,7 @@
      <item>
       <widget class="QLabel" name="label_5">
        <property name="text">
-        <string>Begleitung:</string>
+        <string>Accompanist:</string>
        </property>
       </widget>
      </item>
@@ -154,7 +151,7 @@
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Status:</string>
+        <string>State:</string>
        </property>
       </widget>
      </item>
@@ -168,12 +165,12 @@
        </property>
        <item>
         <property name="text">
-         <string>geplant</string>
+         <string>planned</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>erledigt</string>
+         <string>done</string>
         </property>
        </item>
       </widget>
@@ -203,12 +200,12 @@
        </column>
        <column>
         <property name="text">
-         <string>Komponist</string>
+         <string>Composer</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>Titel</string>
+         <string>Title</string>
         </property>
        </column>
        <column>
@@ -218,12 +215,12 @@
        </column>
        <column>
         <property name="text">
-         <string>Dauer</string>
+         <string>Duration</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>Musiker (Alter) - Instrument</string>
+         <string>Musician (Age) - Instrument</string>
         </property>
        </column>
       </widget>
@@ -255,7 +252,7 @@
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
-           <normaloff>:/gfx/arrow-up.png</normaloff>:/gfx/arrow-up.png</iconset>
+           <normaloff>:/gfx/arrow-up.svg</normaloff>:/gfx/arrow-up.svg</iconset>
          </property>
         </widget>
        </item>
@@ -278,7 +275,7 @@
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
-           <normaloff>:/gfx/filesave.png</normaloff>:/gfx/filesave.png</iconset>
+           <normaloff>:/gfx/document-save.svg</normaloff>:/gfx/document-save.svg</iconset>
          </property>
         </widget>
        </item>
@@ -307,7 +304,7 @@
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
-           <normaloff>:/gfx/arrow-down.png</normaloff>:/gfx/arrow-down.png</iconset>
+           <normaloff>:/gfx/arrow-down.svg</normaloff>:/gfx/arrow-down.svg</iconset>
          </property>
         </widget>
        </item>

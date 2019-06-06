@@ -12,7 +12,7 @@ void BuildTimeTableDoc::run()
     QString string("");
 
     QStringList dayList;
-    dayList << tr("Montag") << tr("Dienstag") << tr("Mittwoch") << tr("Donnerstag") << tr("Freitag") << tr("Samstag") << tr("Sonntag") << QString::fromUtf8(tr("unregelmäßig").toStdString().c_str());
+    dayList << tr("Monday") << tr("Tuesday") << tr("Wednesday") << tr("Thursday") << tr("Friday") << tr("Saturday") << tr("Sunday") << QString::fromUtf8(tr("irregular").toStdString().c_str());
 
     int i;
     for(i = 0; i < 8; i++)  {
@@ -60,23 +60,23 @@ void BuildTimeTableDoc::run()
     doc->setHtml("<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'> \
 				 <html> \
 				 <head> \
-				 <meta content='text/html; charset=ISO-8859-1' http-equiv='content-type'> \
+                 <meta content='text/html; charset=utf-8' http-equiv='content-type'> \
 				 <title>Qupil - Stundenplan</title> \
 				 </head> \
 				 <body> \
 				 <table style='text-align: left; margin-left: auto; margin-right: auto; width: 100%;' border='0' cellpadding='0' cellspacing='0'> \
-				 <tr><td align='center' width='100%'><h1>Qupil "+QString(RELEASE_STRING)+" - Stundenplan</h2></td></tr> \
+                 <tr><td align='center' width='100%'><h1>Qupil "+QString(RELEASE_STRING)+" - "+tr("Timetable")+"</h2></td></tr> \
 				 <tr><td >\
 				 <tr><td width='100%'></td></tr>\
-				 <tr><td width='100%'><h3>Stand: "+QDate::currentDate().toString("dd.MM.yyyy")+"</h3></td></tr>\
+                 <tr><td width='100%'><h3>"+tr("Status: ")+QDate::currentDate().toString("dd.MM.yyyy")+"</h3></td></tr>\
 				 <tr><td width='100%'></td></tr>\
 				 <tr><td width='100%'>\
 				 <table cellpadding='1' cellspacing='0' width='100%' style='text-align: left; border-width:1px; border-style:solid;'> \
-				 <tr><th>Uhrzeit</th><th>Unterricht</th><th>Sch&uuml;ler</th></tr>"+string+" \
+                 <tr><th>"+tr("Time")+"</th><th>"+tr("Lesson")+"</th><th>"+tr("Pupil")+"</th></tr>"+string+" \
 			</table> \
 			</td></tr> \
 			<tr><td width='100%'></td></tr> \
-			<tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;"+COPYRIGHT_TIME_STRING+" - Felix Hammer - www.lehrsaiten.de</i></td></tr> \
+            <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;2006-"+QDate::currentDate().toString("yyyy")+" - Felix Hammer - qupil.de</i></td></tr> \
 			</table> \
 			</table> \
 			</body> \

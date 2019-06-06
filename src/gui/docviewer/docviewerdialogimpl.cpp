@@ -38,6 +38,7 @@ DocViewerDialogImpl::~DocViewerDialogImpl() {}
 
 void DocViewerDialogImpl::exec(QTextDocument *myDoc)
 {
+    retranslateUi(this);
     textBrowser->setDocument(myDoc);
     QDialog::exec();
 }
@@ -63,9 +64,9 @@ void DocViewerDialogImpl::printCurrentDoc()
 
 void DocViewerDialogImpl::exportCurrentDocToPDF()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Exportiere Datei"),
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Export File"),
                        QDir::homePath()+"/"+suggestedfileName+".pdf",
-                       tr("PDF Datei (*.pdf)"));
+                       tr("PDF File (*.pdf)"));
     if (!fileName.isEmpty()) {
         if (QFileInfo(fileName).suffix().isEmpty())
             fileName.append(".pdf");

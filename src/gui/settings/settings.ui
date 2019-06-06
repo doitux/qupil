@@ -6,25 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>608</width>
-    <height>478</height>
+    <width>903</width>
+    <height>590</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qupil - Einstellungen</string>
+   <string>Settings - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0" colspan="2">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0">
     <widget class="QListWidget" name="listWidget">
      <property name="minimumSize">
       <size>
-       <width>145</width>
+       <width>250</width>
        <height>0</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>200</width>
+       <width>250</width>
        <height>16777215</height>
       </size>
      </property>
@@ -36,65 +43,58 @@
      </property>
      <item>
       <property name="text">
-       <string>Allgemein</string>
+       <string>General</string>
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/systemsettings.png</normaloff>:/gfx/systemsettings.png</iconset>
+        <normaloff>:/gfx/configure.svg</normaloff>:/gfx/configure.svg</iconset>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Stundenplan</string>
+       <string>Timetable</string>
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/preferences_system_time.png</normaloff>:/gfx/preferences_system_time.png</iconset>
+        <normaloff>:/gfx/appointment-new.svg</normaloff>:/gfx/appointment-new.svg</iconset>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Unterricht</string>
+       <string>Lesson</string>
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/applications_education.png</normaloff>:/gfx/applications_education.png</iconset>
+        <normaloff>:/gfx/x-office-calendar.svg</normaloff>:/gfx/x-office-calendar.svg</iconset>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Instrumente</string>
+       <string>Music Pieces</string>
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/audio_input_microphone.png</normaloff>:/gfx/audio_input_microphone.png</iconset>
+        <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Werke</string>
+       <string>Instruments</string>
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/audio_x_monkey.png</normaloff>:/gfx/audio_x_monkey.png</iconset>
+        <normaloff>:/gfx/audio-input-microphone.svg</normaloff>:/gfx/audio-input-microphone.svg</iconset>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Veranstaltungen</string>
+       <string>Events</string>
       </property>
       <property name="icon">
        <iconset resource="../resources/qupil.qrc">
-        <normaloff>:/gfx/media_podcast64.png</normaloff>:/gfx/media_podcast64.png</iconset>
+        <normaloff>:/gfx/x-office-contact.svg</normaloff>:/gfx/x-office-contact.svg</iconset>
       </property>
      </item>
-    </widget>
-   </item>
-   <item row="1" column="0" colspan="2">
-    <widget class="Line" name="line">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
     </widget>
    </item>
    <item row="2" column="0" colspan="2">
@@ -115,37 +115,49 @@
      <widget class="QWidget" name="page">
       <layout class="QGridLayout" name="gridLayout_16">
        <item row="0" column="0">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Allgemein&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="_2">
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>Language:</string>
+           </property>
+           <property name="buddy">
+            <cstring>comboBox_switchLanguage</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_switchLanguage"/>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="Line" name="line_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="2">
+       <item row="1" column="0">
         <widget class="QCheckBox" name="checkBox_birthdayReminder">
          <property name="text">
-          <string>Geburtstags-Erinnerung aktivieren</string>
+          <string>Activate Birthday Reminder</string>
          </property>
          <property name="checked">
           <bool>true</bool>
          </property>
         </widget>
        </item>
-       <item row="3" column="0" colspan="2">
+       <item row="2" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBox_lessonEndMsg">
          <property name="title">
-          <string>Meldung zum Unterrichtsende </string>
+          <string>Notification at the end of lessons</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -156,7 +168,7 @@ p, li { white-space: pre-wrap; }
             <item>
              <widget class="QSpinBox" name="spinBox_minutesToLessonEndForMsg">
               <property name="suffix">
-               <string> Minuten</string>
+               <string> Min.</string>
               </property>
               <property name="minimum">
                <number>1</number>
@@ -169,7 +181,7 @@ p, li { white-space: pre-wrap; }
             <item>
              <widget class="QLabel" name="label_2">
               <property name="text">
-               <string>vor Unterrichtsende</string>
+               <string>before the end of the lesson</string>
               </property>
              </widget>
             </item>
@@ -183,7 +195,7 @@ p, li { white-space: pre-wrap; }
             <item>
              <widget class="QLabel" name="label_3">
               <property name="text">
-               <string>Klang abspielen: </string>
+               <string>Play Sound:</string>
               </property>
              </widget>
             </item>
@@ -209,7 +221,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/folder_sound.png</normaloff>:/gfx/folder_sound.png</iconset>
+                <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
               </property>
              </widget>
             </item>
@@ -220,7 +232,7 @@ p, li { white-space: pre-wrap; }
             <item>
              <widget class="QLabel" name="label_9">
               <property name="text">
-               <string>Lautstärke:</string>
+               <string>Volume:</string>
               </property>
              </widget>
             </item>
@@ -249,10 +261,10 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </item>
-       <item row="4" column="0" colspan="2">
+       <item row="3" column="0">
         <widget class="QGroupBox" name="groupBox_lessonEndMsg_2">
          <property name="title">
-          <string>Klang für Erinnerungsfunktion</string>
+          <string>Sound for the reminder tool</string>
          </property>
          <property name="checkable">
           <bool>false</bool>
@@ -266,7 +278,7 @@ p, li { white-space: pre-wrap; }
             <item>
              <widget class="QLabel" name="label_21">
               <property name="text">
-               <string>Klang abspielen: </string>
+               <string>Play Sound:</string>
               </property>
              </widget>
             </item>
@@ -292,7 +304,7 @@ p, li { white-space: pre-wrap; }
               </property>
               <property name="icon">
                <iconset resource="../resources/qupil.qrc">
-                <normaloff>:/gfx/folder_sound.png</normaloff>:/gfx/folder_sound.png</iconset>
+                <normaloff>:/gfx/folder-sound.svg</normaloff>:/gfx/folder-sound.svg</iconset>
               </property>
              </widget>
             </item>
@@ -303,7 +315,7 @@ p, li { white-space: pre-wrap; }
             <item>
              <widget class="QLabel" name="label_22">
               <property name="text">
-               <string>Lautstärke:</string>
+               <string>Volume:</string>
               </property>
              </widget>
             </item>
@@ -332,26 +344,26 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </item>
-       <item row="5" column="0" colspan="2">
+       <item row="4" column="0" colspan="2">
         <widget class="QCheckBox" name="checkBox_saveNotesPiecesForAllPupil">
          <property name="text">
-          <string>Notizen / Werke für alle Schüler eines Unterrichtes gemeinsam speichern</string>
+          <string>Save notes / music pieces together for all students of the lesson</string>
          </property>
          <property name="checked">
           <bool>true</bool>
          </property>
         </widget>
        </item>
-       <item row="6" column="0" colspan="2">
+       <item row="5" column="0" colspan="2">
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
-          <string>Vorspielintervall-Prüfung (Vorspielkandidaten) berücksichtigt:</string>
+          <string>Concert Interval Check (Concert Candidates) considered:</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
            <widget class="QRadioButton" name="radioButton_recitalIntervallCheckerSoloOnly">
             <property name="text">
-             <string>Nur Solo-Vorträge</string>
+             <string>Only Solo Recitals</string>
             </property>
             <property name="checked">
              <bool>true</bool>
@@ -361,14 +373,14 @@ p, li { white-space: pre-wrap; }
           <item row="0" column="1">
            <widget class="QRadioButton" name="radioButton_recitalIntervallCheckerSoloAndEns">
             <property name="text">
-             <string>Solo-Vorträge und Ensemblemitwirkung</string>
+             <string>Solo Recitals and Ensemble Participation</string>
             </property>
            </widget>
           </item>
          </layout>
         </widget>
        </item>
-       <item row="7" column="1">
+       <item row="6" column="1">
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -386,33 +398,15 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="page_4">
       <layout class="QGridLayout" name="gridLayout_12">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_12">
-         <property name="text">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Stundenplan&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="Line" name="line_5">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>Farben</string>
+          <string>Colors</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_11">
           <item row="0" column="0">
            <widget class="QLabel" name="label_13">
             <property name="text">
-             <string>Wochentage:</string>
+             <string>Weekday:</string>
             </property>
            </widget>
           </item>
@@ -431,11 +425,7 @@ p, li { white-space: pre-wrap; }
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>D</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -470,14 +460,14 @@ p, li { white-space: pre-wrap; }
              </size>
             </property>
             <property name="text">
-             <string>Hintergrund</string>
+             <string>Background</string>
             </property>
            </widget>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_14">
             <property name="text">
-             <string>Unterricht:</string>
+             <string>Lesson:</string>
             </property>
            </widget>
           </item>
@@ -490,11 +480,7 @@ p, li { white-space: pre-wrap; }
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;L&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>L</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -523,14 +509,14 @@ p, li { white-space: pre-wrap; }
              </size>
             </property>
             <property name="text">
-             <string>Hintergrund</string>
+             <string>Background</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="label_15">
             <property name="text">
-             <string>Schüler:</string>
+             <string>Pupil:</string>
             </property>
            </widget>
           </item>
@@ -543,11 +529,7 @@ p, li { white-space: pre-wrap; }
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;P&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>P</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -576,14 +558,14 @@ p, li { white-space: pre-wrap; }
              </size>
             </property>
             <property name="text">
-             <string>Hintergrund</string>
+             <string>Background</string>
             </property>
            </widget>
           </item>
          </layout>
         </widget>
        </item>
-       <item row="3" column="0">
+       <item row="1" column="0">
         <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -599,33 +581,48 @@ p, li { white-space: pre-wrap; }
       </layout>
      </widget>
      <widget class="QWidget" name="page_5">
-      <layout class="QGridLayout" name="gridLayout_14">
+      <layout class="QGridLayout" name="gridLayout_17">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_16">
-         <property name="text">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Unterricht&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <widget class="QGroupBox" name="groupBox_limitLessonNotes">
+         <property name="title">
+          <string>Limit the number of displayed lesson notes    </string>
          </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_14">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Number of displayed lesson notes:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_displayLessonNotesNumber">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="Line" name="line_6">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
         <widget class="QTabWidget" name="tabWidget_2">
          <property name="currentIndex">
           <number>0</number>
          </property>
          <widget class="QWidget" name="tab_3">
           <attribute name="title">
-           <string>Unterrichtsorte</string>
+           <string>Lesson Locations</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_7">
            <item row="0" column="0" colspan="2">
@@ -646,7 +643,7 @@ p, li { white-space: pre-wrap; }
              <item>
               <widget class="QLabel" name="label_8">
                <property name="text">
-                <string>Ort:</string>
+                <string>Location:</string>
                </property>
               </widget>
              </item>
@@ -658,22 +655,122 @@ p, li { white-space: pre-wrap; }
            <item row="2" column="0">
             <widget class="QPushButton" name="pushButton_addLessonLocation">
              <property name="text">
-              <string>Hinzufügen</string>
+              <string>Add</string>
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
            <item row="2" column="1">
             <widget class="QPushButton" name="pushButton_delLessonLocation">
              <property name="text">
-              <string>Löschen</string>
+              <string>Delete</string>
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <layout class="QGridLayout" name="gridLayout_13">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_limitMusicPieces">
+         <property name="title">
+          <string>Limit the number of displayed music pieces   </string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_18">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Number of displayed music pieces:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_displayMusicPiecesNumber">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTabWidget" name="tabWidget_11">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_5">
+          <attribute name="title">
+           <string>Music Styles</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0" colspan="2">
+            <widget class="QListWidget" name="listWidget_piecesGenre">
+             <property name="dragEnabled">
+              <bool>true</bool>
+             </property>
+             <property name="dragDropMode">
+              <enum>QAbstractItemView::InternalMove</enum>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Style:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_newPiecesGenre"/>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="pushButton_delPiecesGenre">
+             <property name="text">
+              <string>Delete</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../resources/qupil.qrc">
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="pushButton_addPiecesGenre">
+             <property name="text">
+              <string>Add</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../resources/qupil.qrc">
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
@@ -686,31 +783,13 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="page_3">
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="0" column="0" colspan="2">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Instrumente&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="Line" name="line_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="2">
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
-           <string>Instrumente</string>
+           <string>Instruments</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_5">
            <item row="0" column="0" colspan="2">
@@ -743,22 +822,22 @@ p, li { white-space: pre-wrap; }
            <item row="2" column="0">
             <widget class="QPushButton" name="pushButton_addInstrument">
              <property name="text">
-              <string>Hinzufügen</string>
+              <string>Add</string>
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
            <item row="2" column="1">
             <widget class="QPushButton" name="pushButton_delInstrument">
              <property name="text">
-              <string>Löschen</string>
+              <string>Delete</string>
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -766,7 +845,7 @@ p, li { white-space: pre-wrap; }
          </widget>
          <widget class="QWidget" name="tab_2">
           <attribute name="title">
-           <string>Größen</string>
+           <string>Sizes</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="0" colspan="2">
@@ -787,7 +866,7 @@ p, li { white-space: pre-wrap; }
              <item>
               <widget class="QLabel" name="label_6">
                <property name="text">
-                <string>Größe:</string>
+                <string>Size:</string>
                </property>
               </widget>
              </item>
@@ -806,107 +885,22 @@ p, li { white-space: pre-wrap; }
            <item row="2" column="0">
             <widget class="QPushButton" name="pushButton_addInstrumentSize">
              <property name="text">
-              <string>Hinzufügen</string>
+              <string>Add</string>
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
             </widget>
            </item>
            <item row="2" column="1">
             <widget class="QPushButton" name="pushButton_delInstrumentSize">
              <property name="text">
-              <string>Löschen</string>
+              <string>Delete</string>
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="page_2">
-      <layout class="QGridLayout" name="gridLayout_13">
-       <item row="0" column="0" colspan="2">
-        <widget class="QLabel" name="label_7">
-         <property name="text">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Werke&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="Line" name="line_4">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="2">
-        <widget class="QTabWidget" name="tabWidget_11">
-         <property name="currentIndex">
-          <number>0</number>
-         </property>
-         <widget class="QWidget" name="tab_5">
-          <attribute name="title">
-           <string>Stilrichtungen</string>
-          </attribute>
-          <layout class="QGridLayout" name="gridLayout_9">
-           <item row="0" column="0" colspan="2">
-            <widget class="QListWidget" name="listWidget_piecesGenre">
-             <property name="dragEnabled">
-              <bool>true</bool>
-             </property>
-             <property name="dragDropMode">
-              <enum>QAbstractItemView::InternalMove</enum>
-             </property>
-             <property name="alternatingRowColors">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="2">
-            <layout class="QHBoxLayout" name="horizontalLayout_7">
-             <item>
-              <widget class="QLabel" name="label_10">
-               <property name="text">
-                <string>Stil:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_newPiecesGenre"/>
-             </item>
-            </layout>
-           </item>
-           <item row="2" column="0">
-            <widget class="QPushButton" name="pushButton_addPiecesGenre">
-             <property name="text">
-              <string>Hinzufügen</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QPushButton" name="pushButton_delPiecesGenre">
-             <property name="text">
-              <string>Löschen</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
             </widget>
            </item>
@@ -919,33 +913,15 @@ p, li { white-space: pre-wrap; }
      <widget class="QWidget" name="page_6">
       <layout class="QGridLayout" name="gridLayout_15">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_17">
-         <property name="text">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
-&lt;p style=&quot;margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Veranstaltungen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="Line" name="line_7">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
         <widget class="QGroupBox" name="groupBox_3">
          <property name="title">
-          <string>Gesamtspielzeit von Veranstaltungen berechnen</string>
+          <string>Calculate total playing time of events</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_10">
           <item row="0" column="0">
            <widget class="QLabel" name="label_18">
             <property name="text">
-             <string>Gesamtzeit für An- und Abmoderation:</string>
+             <string>Total time for moderation:</string>
             </property>
            </widget>
           </item>
@@ -959,7 +935,7 @@ p, li { white-space: pre-wrap; }
           <item row="1" column="0">
            <widget class="QLabel" name="label_19">
             <property name="text">
-             <string>Auf- und Abtrittszeit zwischen jedem Werk:</string>
+             <string>Break between each music piece:</string>
             </property>
            </widget>
           </item>
@@ -973,7 +949,7 @@ p, li { white-space: pre-wrap; }
          </layout>
         </widget>
        </item>
-       <item row="3" column="0">
+       <item row="1" column="0">
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>

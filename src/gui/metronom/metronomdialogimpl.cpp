@@ -60,6 +60,7 @@ MetronomDialogImpl::~MetronomDialogImpl() {}
 
 void MetronomDialogImpl::show()
 {
+    retranslateUi(this);
     timer->start(1000);
     QDialog::show();
 }

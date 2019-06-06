@@ -77,7 +77,7 @@ void ReminderDialog::refreshList()
 
             item->setData(1, Qt::DisplayRole, rmodeString);
             if(query.value(4).toInt())
-                item->setIcon(2, QIcon(":/gfx/speaker.png"));
+                item->setIcon(2, QIcon(":/gfx/player-time.svg"));
 
         }
 

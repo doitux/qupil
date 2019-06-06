@@ -4,16 +4,16 @@ CODECFORSRC = UTF-8
 CONFIG += qt \
     thread \
     warn_on \
-    release
+#     release
 
-# CONFIG += qt thread warn_on debug
-QT += sql uitools widgets printsupport
+QT += svg sql uitools widgets printsupport
 UI_DIR = uics
 MOC_DIR = mocs
 OBJECTS_DIR = obj
 DEFINES += PREFIX=\"$${PREFIX}\"
 TARGET = qupil
 RESOURCES = src/gui/resources/qupil.qrc
+TRANSLATIONS = ts/qupil_de.ts
 INCLUDEPATH += . \
     src \
     src/core \
@@ -72,7 +72,7 @@ FORMS += src/gui/mainwindow/mainwindow.ui \
     src/gui/sheetmusiclibrary/sheetmusiclibrary.ui \
     src/gui/aboutqupil/aboutqupil.ui \
     src/gui/csvimportfields/csvimportfields.ui \
-    src/gui/instrumentmanager/addrecitaldialog.ui \
+    src/gui/concertmanager/addrecitaldialog.ui \
     src/gui/concertmanager/recitaltabs.ui \
     src/gui/concertmanager/selectpiecesdialog.ui \
     src/gui/concertmanager/finishrecitaldialog.ui \
@@ -208,7 +208,7 @@ win32 {
         debug:LIBPATH += debug/lib
         release:LIBPATH += release/lib
         win32-g++-cross {
-            LIBS += -lntlm -lmikmod -lddraw -ldxguid -lsmpeg -lvorbisfile -lvorbis -logg
+            LIBS += -lntlm -lmikmod -lddraw -ldxguid -lsmpeg -lvorbisfile -lvorbis -logg -lmodplug
         }
         win32-g++ {
 

@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qupil - Instrumenten-Manager</string>
+   <string>Instrumenten Manager - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_4">
    <item row="0" column="0" colspan="4">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Schüler - Instrumente</string>
+      <string>Pupils - Instruments</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_5">
       <item row="0" column="0">
@@ -52,17 +52,17 @@
         </column>
         <column>
          <property name="text">
-          <string>Größe</string>
+          <string>Size</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>Leihinstrument</string>
+          <string>Rental Instrument</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>nächste Größe erforderlich</string>
+          <string>Next size required</string>
          </property>
         </column>
        </widget>
@@ -73,7 +73,7 @@
    <item row="1" column="0" colspan="2">
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>Instrumente - Anzahl</string>
+      <string>Instruments - Number</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
@@ -98,7 +98,7 @@
    <item row="1" column="2">
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
-      <string>Größen - Anzahl</string>
+      <string>Sizes - Number</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
@@ -123,13 +123,13 @@
    <item row="1" column="3">
     <widget class="QGroupBox" name="groupBox_4">
      <property name="title">
-      <string>Statistik</string>
+      <string>Statistic</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Leihinstrumente:</string>
+         <string>Rental Instruments:</string>
         </property>
        </widget>
       </item>
@@ -152,7 +152,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>nächste Größe erforderlich:</string>
+         <string>Next size required:</string>
         </property>
        </widget>
       </item>
@@ -191,11 +191,11 @@
    <item row="2" column="0">
     <widget class="QPushButton" name="pushButton_createRentInstrumentList">
      <property name="text">
-      <string>Inventurliste Leihstrumente ...</string>
+      <string>Rental Instruments Inventory List ...</string>
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/document_preview.png</normaloff>:/gfx/document_preview.png</iconset>
+       <normaloff>:/gfx/document-preview-archive.svg</normaloff>:/gfx/document-preview-archive.svg</iconset>
      </property>
     </widget>
    </item>

@@ -56,8 +56,8 @@ void AddExternalRecitalPieceDialog::accept()
 {
     //zuerst Komponist suchen oder hinzufügen
     if(ui->lineEdit_composer->text().isEmpty() || ui->lineEdit_title->text().isEmpty() || ui->plainTextEdit_musician->toPlainText().isEmpty()) {
-        QMessageBox::warning(this, tr("Qupil"),
-                             QString::fromUtf8(tr("Sie müssen mindestens die Felder \"Komponist\", \"Titel\" und \"Musiker\" ausfüllen\n um den Eintrag hinzuzufügen!").toStdString().c_str()),
+        QMessageBox::warning(this, "Qupil",
+                             QString::fromUtf8(tr("You need to fill at least the fields \"Composer\", \"Title\" und \"Musicians\"\nto add the entry!").toStdString().c_str()),
                              QMessageBox::Ok);
     } else {
 

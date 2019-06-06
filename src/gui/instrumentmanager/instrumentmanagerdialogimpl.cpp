@@ -45,8 +45,8 @@ void InstrumentManagerDialogImpl::loadInstrumentManager()
 {
     treeWidget_pupilInstrument->clear();
 
-    QString yes(tr("ja"));
-    QString no(tr("nein"));
+    QString yes(tr("Yes"));
+    QString no(tr("No"));
     QSqlQuery query("SELECT (surname||', '||forename) AS name, instrumenttype, instrumentsize, CASE ifrentinstrument WHEN 1 THEN '"+yes+"' WHEN 0 THEN '"+no+"' END, CASE ifinstrumentnextsize WHEN 1 THEN '"+yes+"' WHEN 0 THEN '"+no+"' END FROM pupil WHERE instrumenttype NOT NULL AND instrumentsize NOT NULL");
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 45 - " << query.lastError();
@@ -70,7 +70,7 @@ void InstrumentManagerDialogImpl::loadInstrumentManager()
     QSqlQueryModel *model = new QSqlQueryModel;
     model->setQuery("SELECT instrumenttype, count(instrumenttype) FROM pupil WHERE instrumenttype NOT NULL AND instrumenttype != '' GROUP by instrumenttype");
     model->setHeaderData(0, Qt::Horizontal, tr("Instrument"));
-    model->setHeaderData(1, Qt::Horizontal, tr("Anzahl"));
+    model->setHeaderData(1, Qt::Horizontal, tr("Number"));
     treeView_InstrumentsNumber->setModel(model);
     treeView_InstrumentsNumber->show();
     treeView_InstrumentsNumber->resizeColumnToContents(0);
@@ -78,8 +78,8 @@ void InstrumentManagerDialogImpl::loadInstrumentManager()
 
     QSqlQueryModel *model1 = new QSqlQueryModel;
     model1->setQuery("SELECT instrumentsize, count(instrumentsize) FROM pupil WHERE instrumentsize NOT NULL AND instrumentsize != '' GROUP by instrumentsize");
-    model1->setHeaderData(0, Qt::Horizontal, QString::fromUtf8(tr("Größe").toStdString().c_str()));
-    model1->setHeaderData(1, Qt::Horizontal, tr("Anzahl"));
+    model1->setHeaderData(0, Qt::Horizontal, QString::fromUtf8(tr("Size").toStdString().c_str()));
+    model1->setHeaderData(1, Qt::Horizontal, tr("Number"));
     treeView_SizesNumber->setModel(model1);
     treeView_SizesNumber->show();
     treeView_SizesNumber->resizeColumnToContents(0);
@@ -102,15 +102,16 @@ void InstrumentManagerDialogImpl::loadInstrumentManager()
 
 int InstrumentManagerDialogImpl::exec()
 {
+    retranslateUi(this);
     loadInstrumentManager();
-    QDialog::exec();
+    return QDialog::exec();
 }
 
 void InstrumentManagerDialogImpl::createRentInstrumentList()
 {
     QString string("");
-    QString yes = tr("ja");
-    QString no = tr("nein");
+    QString yes = tr("Yes");
+    QString no = tr("No");
     QSqlQuery query("SELECT (surname||', '||forename) AS name, strftime(\"%d.%m.%Y\", birthday), instrumenttype, instrumentsize, rentinstrumentdesc,  CASE ifinstrumentnextsize WHEN 1 THEN '"+yes+"' WHEN 0 THEN '"+no+"' END FROM pupil WHERE instrumenttype NOT NULL AND instrumentsize NOT NULL AND ifrentinstrument=1");
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 48 - " << query.lastError();
@@ -123,23 +124,23 @@ void InstrumentManagerDialogImpl::createRentInstrumentList()
     doc->setHtml("<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'> \
 	<html> \
 	<head> \
-	<meta content='text/html; charset=ISO-8859-1' http-equiv='content-type'> \
-	<title>Qupil - Leihinstrument-Inventurliste</title> \
+    <meta content='text/html; charset=utf-8' http-equiv='content-type'> \
+    <title>Qupil - "+tr("Rental instrument inventory list")+"</title> \
 	</head> \
 	<body> \
 	<table style='text-align: left; margin-left: auto; margin-right: auto; width: 100%;' border='0' cellpadding='0' cellspacing='0'> \
-          <tr><td align='center' width='100%'><h1>Qupil "+QString(RELEASE_STRING)+" - Leihinstrument-Inventurliste</h2></td></tr> \
+          <tr><td align='center' width='100%'><h1>Qupil "+QString(RELEASE_STRING)+" - "+tr("Rental instrument inventory list")+"</h2></td></tr> \
 	  <tr><td >\
 	  <tr><td width='100%'></td></tr>\
-	  <tr><td width='100%'><h2>Datum: "+QDate::currentDate().toString("dd.MM.yyyy")+"</h2></td></tr>\
+      <tr><td width='100%'><h2>"+tr("Date")+": "+QDate::currentDate().toString("dd.MM.yyyy")+"</h2></td></tr>\
 	  <tr><td width='100%'></td></tr>\
 	  <tr><td width='100%'>\
 	    <table cellpadding='1' cellspacing='0' width='100%' style='text-align: left; border-width:1px; border-style:solid;'> \
-	      <tr><th>Name</th><th>Geburtsdatum</th><th>Instrument</th><th>Gr&ouml;&szlig;e</th><th>Beschreibung</th><th>n&auml;chste Gr&ouml;&szlig;e erforderlich</th></tr>"+string+"\
-	    </table>\
+          <tr><th>"+tr("Name")+"</th><th>"+tr("Birthday")+"</th><th>"+tr("Instrument")+"</th><th>"+tr("Size")+"</th><th>"+tr("Description")+"</th><th>"+tr("Next size required")+"</th></tr>"+string+"\
+        </table>\
           </td></tr>\
 	<tr><td width='100%'></td></tr>\
-        <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;"+COPYRIGHT_TIME_STRING+" - Felix Hammer - www.lehrsaiten.de</i></td></tr>\
+        <tr><td align='center'><i>Qupil "+RELEASE_STRING+" - &copy;2006-"+QDate::currentDate().toString("yyyy")+" - Felix Hammer - qupil.de</i></td></tr>\
 	</table>\
         </table>\
         </body>\

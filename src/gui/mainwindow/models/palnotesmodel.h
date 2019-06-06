@@ -31,7 +31,7 @@ class PalNotesModel : public QSqlQueryModel
     Q_OBJECT
 
 public:
-    PalNotesModel(QObject *parent = 0);
+    PalNotesModel(QObject *parent = nullptr);
 
     Qt::ItemFlags flags(const QModelIndex &index) const;
     bool setData(const QModelIndex &index, const QVariant &value, int role);

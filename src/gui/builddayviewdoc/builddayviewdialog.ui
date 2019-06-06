@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>423</width>
-    <height>141</height>
+    <width>538</width>
+    <height>168</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qupil - Tagesübersicht</string>
+   <string>Create Daily Schedule - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Wochentag:</string>
+      <string>Weekday:</string>
      </property>
     </widget>
    </item>
@@ -31,42 +31,42 @@
      </property>
      <item>
       <property name="text">
-       <string>Montag</string>
+       <string>Monday</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Dienstag</string>
+       <string>Tuesday</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Mittwoch</string>
+       <string>Wednesday</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Donnerstag</string>
+       <string>Thursday</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Freitag</string>
+       <string>Friday</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Samstag</string>
+       <string>Saturday</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Sonntag</string>
+       <string>Sunday</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>unregelmäßig</string>
+       <string>Irregular</string>
       </property>
      </item>
     </widget>
@@ -76,7 +76,7 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Zeige die letzten </string>
+        <string>Show the last</string>
        </property>
       </widget>
      </item>
@@ -96,7 +96,7 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>Notizeinträge zu jedem Unterricht</string>
+        <string>notes for every lesson</string>
        </property>
       </widget>
      </item>
@@ -107,7 +107,7 @@
      <item>
       <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>Füge ein ca.</string>
+        <string>Add around</string>
        </property>
       </widget>
      </item>
@@ -130,7 +130,7 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>hohes Leerfeld für handschriftliche Notizen hinzu</string>
+        <string>free space for handwritten notes</string>
        </property>
       </widget>
      </item>

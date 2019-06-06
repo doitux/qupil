@@ -96,6 +96,15 @@ public slots:
 
     void palNotesEditSelectionChanged();
 
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate and scrollState is not saved during editing
+    void palNotesRestoreViewLayout();
+    void palPiecesRestoreViewLayout();
+    void activityRestoreViewLayout();
+    void palNotesSaveScrollState();
+    void palPiecesSaveScrollState();
+    void activitySaveScrollState();
+
+
 private:
     mainWindowImpl *myW;
     int currentPupilId;
@@ -107,6 +116,10 @@ private:
     PupilSingularActivityModel *myPupilSingularActivityModel;
     PupilContActivityModel *myPupilContActivityModel;
     QItemSelectionModel *myPalNotesSelectionModel;
+    int palNotesTreeViewVerticalScrollValue;
+    int palPiecesTreeViewVerticalScrollValue;
+    int continousActivityTreeViewVerticalScrollValue;
+    int singularActivityTreeViewVerticalScrollValue;
 };
 
 #endif

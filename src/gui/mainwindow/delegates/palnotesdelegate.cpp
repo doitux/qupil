@@ -26,13 +26,15 @@
 #include <QtGui>
 #include <QtWidgets>
 #include <QtCore>
+#include "configfile.h"
 #include "delegatetextedit.h"
 
-PalNotesDelegate::PalNotesDelegate (QDate &d, QObject *parent )
-    : QStyledItemDelegate ( parent ), myStartDate(d) {}
+PalNotesDelegate::PalNotesDelegate (QDate &d, ConfigFile *c, QObject *parent )
+    : QStyledItemDelegate ( parent ), myStartDate(d), myConfig(c) {}
 
 QWidget *PalNotesDelegate::createEditor ( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 {
+    emit editorCreated();
     switch ( index.column() ) {
     case 2: {
         QDateEdit *cal = new QDateEdit ( parent );
@@ -40,17 +42,13 @@ QWidget *PalNotesDelegate::createEditor ( QWidget *parent, const QStyleOptionVie
         connect ( cal, SIGNAL ( dateChanged ( const QDate ) ), this, SLOT ( emitCommitData() ) );
         return cal;
     }
-    break;
     case 3: {
         DelegateTextEdit *te = new DelegateTextEdit ( parent );
         connect ( te, SIGNAL ( editingFinished() ), this, SLOT ( emitCommitData() ) );
         return te;
     }
-    break;
-
     default:
         return QStyledItemDelegate::createEditor ( parent, option, index );
-        break;
     }
 }
 
@@ -118,31 +116,41 @@ void PalNotesDelegate::setModelData ( QWidget *editor, QAbstractItemModel *model
 
 void PalNotesDelegate::emitCommitData()
 {
-    emit commitData ( qobject_cast<QWidget *> ( sender() ) );
+    emit commitData(qobject_cast<QWidget *> ( sender()) );
 }
 
 void PalNotesDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    QStyleOptionViewItemV4 optionV4 = option;
-    initStyleOption(&optionV4, index);
+    QStyleOptionViewItem o = option;
+    initStyleOption(&o, index);
 
-    QStyle *style = optionV4.widget? optionV4.widget->style() : QApplication::style();
+    QStyle *style = o.widget? o.widget->style() : QApplication::style();
 
     QTextDocument doc;
-    doc.setHtml(optionV4.text);
+    doc.setHtml(o.text);
 
     /// Painting item without text
-    optionV4.text = QString();
-    style->drawControl(QStyle::CE_ItemViewItem, &optionV4, painter);
+    o.text = QString();
+    style->drawControl(QStyle::CE_ItemViewItem, &o, painter);
 
     QAbstractTextDocumentLayout::PaintContext ctx;
 
     // Highlighting text if item is selected
-    if (optionV4.state & QStyle::State_Selected)
-        ctx.palette.setColor(QPalette::Text, optionV4.palette.color(QPalette::Active, QPalette::HighlightedText));
+    if (o.state & QStyle::State_Selected)
+        ctx.palette.setColor(QPalette::Text, o.palette.color(QPalette::Active, QPalette::HighlightedText));
 
-    QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &optionV4);
+    QRect textRect = style->subElementRect(QStyle::SE_ItemViewItemText, &o);
     painter->save();
+
+//    if(myConfig->readConfigInt("LimitLoadLessonNotes")) {
+//        int limit = myConfig->readConfigInt("LoadLessonNotesNumber");
+//        QColor textColor = o.palette.color(QPalette::Text);
+//        if(index.row() == limit) { textColor.setAlpha(170); }
+//        if(index.row() == limit+1) { textColor.setAlpha(100); }
+//        if(index.row() == limit+2) { textColor.setAlpha(50); }
+//        ctx.palette.setColor(QPalette::Text, textColor);
+//    }
+
     painter->translate(textRect.topLeft());
     painter->setClipRect(textRect.translated(-textRect.topLeft()));
     doc.documentLayout()->draw(painter, ctx);
@@ -151,11 +159,17 @@ void PalNotesDelegate::paint(QPainter *painter, const QStyleOptionViewItem &opti
 
 QSize PalNotesDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    QStyleOptionViewItemV4 optionV4 = option;
-    initStyleOption(&optionV4, index);
+    QStyleOptionViewItem o = option;
+    initStyleOption(&o, index);
 
     QTextDocument doc;
-    doc.setHtml(optionV4.text);
-    doc.setTextWidth(optionV4.rect.width());
+    doc.setHtml(o.text);
+    doc.setTextWidth(o.rect.width());
     return QSize(doc.idealWidth()+10, doc.size().height());
+}
+
+
+bool PalNotesDelegate::editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) {
+
+    return QStyledItemDelegate::editorEvent( event, model, option, index);
 }

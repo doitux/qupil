@@ -21,30 +21,34 @@
 #define PALNOTESDELEGATE_H
 
 #include <QStyledItemDelegate>
-
 #include <QDate>
+class ConfigFile;
 
 class PalNotesDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
 
-    PalNotesDelegate(QDate &d, QObject *parent = 0 );
-    QWidget *createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const;
-    void setEditorData( QWidget *editor, const QModelIndex &index ) const;
-    void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const;
+    PalNotesDelegate(QDate &d, ConfigFile *c, QObject *parent = nullptr );
+    QWidget *createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const override;
+    void setEditorData( QWidget *editor, const QModelIndex &index ) const override;
+    void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const override;
+
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+
+signals:
+    void editorCreated() const;
 
 private slots:
     void emitCommitData();
 
 private:
-
     QDate myStartDate;
+    ConfigFile *myConfig;
 
 protected:
-    void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const;
-    QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const;
-
+    bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) override;
 };
 
 #endif

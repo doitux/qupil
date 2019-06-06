@@ -83,50 +83,48 @@ QVariant PalPiecesModel::data(const QModelIndex &idx, int role) const
     QVariant value = QSqlQueryModel::data(idx, role);
 
     QStringList myStateStringList;
-    std::list<std::string> stateList = myConfig->readConfigStringList("PalPiecesStateList");
-    std::list<std::string>::iterator it;
-    for(it= stateList.begin(); it != stateList.end(); it++) {
-        myStateStringList << QString::fromUtf8(it->c_str());
-    }
+    myStateStringList << tr("Planned") << tr("In Progress") << tr("Paused") << tr("Ready for Concert") << tr("Finished");
 
-    if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(1))) {
-        return QColor(156, 255, 103);
+    switch (role) {
+        case Qt::BackgroundRole:
+            {
+                QString data = index(idx.row(), 8, idx.parent()).data().toString();
+                if(data == myStateStringList.at(1)) { return QColor(156, 255, 103); }
+                else if (data == myStateStringList.at(2)) { return QColor(Qt::yellow); }
+                else if (data == myStateStringList.at(3)) { return QColor(255, 128, 128); }
+                else if (data == myStateStringList.at(4)) { return QColor(Qt::lightGray); }
+            }
+        break;
+        case Qt::DisplayRole:
+            if (idx.column() == 8) {
+                return myStateStringList.at(value.toInt());
+            }
+        break;
     }
-    if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(2))) {
-        return QColor(Qt::yellow);
-    }
-    if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(3))) {
-        return QColor(255, 128, 128);
-    }
-    if ((role == Qt::BackgroundRole) && (index(idx.row(), 8, idx.parent()).data().toString() == myStateStringList.at(4))) {
-        return QColor(Qt::lightGray);
-    }
-
-    if (value.isValid() && role == Qt::DisplayRole) {
-        if (idx.column() == 8) {
-            return myStateStringList.at(value.toInt());
-        }
-    }
-
-//      if (role == Qt::TextColorRole && index.column() == 1)
-//          return qVariantFromValue(QColor(Qt::blue));
 
     return value;
 }
 
 void PalPiecesModel::refresh()
 {
-    QSqlQuery query("SELECT p.pieceid, p.cpieceid, pc.composer, p.title, p.genre, p.duration, strftime(\"%d.%m.%Y\", p.startdate), strftime(\"%d.%m.%Y\", p.stopdate), p.state FROM piece p, pupilatlesson pal, piececomposer pc WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=p.palid AND p.piececomposerid=pc.piececomposerid AND pal.startdate <= p.startdate AND pal.stopdate >= p.startdate ORDER BY p.startdate ASC", *myW->getMyDb()->getMyPupilDb());
+    QString queryLimit("SELECT p.pieceid, p.cpieceid, pc.composer, p.title, p.genre, p.duration, strftime(\"%d.%m.%Y\", p.startdate), strftime(\"%d.%m.%Y\", p.stopdate), p.state FROM piece p, pupilatlesson pal, piececomposer pc WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=p.palid AND p.piececomposerid=pc.piececomposerid AND pal.startdate <= p.startdate AND pal.stopdate >= p.startdate ORDER BY p.startdate DESC LIMIT " + QString::number(myConfig->readConfigInt("LoadMusicPiecesNumber")));
+    QString queryNoLimit("SELECT p.pieceid, p.cpieceid, pc.composer, p.title, p.genre, p.duration, strftime(\"%d.%m.%Y\", p.startdate), strftime(\"%d.%m.%Y\", p.stopdate), p.state FROM piece p, pupilatlesson pal, piececomposer pc WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=p.palid AND p.piececomposerid=pc.piececomposerid AND pal.startdate <= p.startdate AND pal.stopdate >= p.startdate ORDER BY p.startdate DESC");
+    QString finalQueryString;
+
+    if(myConfig->readConfigInt("LimitLoadMusicPieces")) { finalQueryString = queryLimit; }
+    else { finalQueryString = queryNoLimit; }
+
+    QSqlQuery query(finalQueryString);
     setQuery(query);
     if (query.lastError().isValid()) qDebug() << "DB Error: 68 - " << query.lastError();
 
-    setHeaderData(2, Qt::Horizontal, QObject::tr("Komponist"));
-    setHeaderData(3, Qt::Horizontal, QObject::tr("Titel"));
-    setHeaderData(4, Qt::Horizontal, QObject::tr("Genre               "));
-    setHeaderData(5, Qt::Horizontal, QObject::tr("Dauer"));
-    setHeaderData(6, Qt::Horizontal, QObject::tr("Beginn"));
-    setHeaderData(7, Qt::Horizontal, QObject::tr("Ende"));
-    setHeaderData(8, Qt::Horizontal, QObject::tr("Status"));
+    setHeaderData(2, Qt::Horizontal, tr("Composer"));
+    setHeaderData(3, Qt::Horizontal, tr("Title"));
+    setHeaderData(4, Qt::Horizontal, tr("Genre               "));
+    setHeaderData(5, Qt::Horizontal, tr("Duration"));
+    setHeaderData(6, Qt::Horizontal, tr("Start"));
+    setHeaderData(7, Qt::Horizontal, tr("End"));
+    setHeaderData(8, Qt::Horizontal, tr("State"));
 }
 
 

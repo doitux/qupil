@@ -1,44 +1,56 @@
+06.06.2019 - Version 1.4:
+    - Feature: Multi-language support - english interface #4
+    - Feature: Language selectable via settings #9
+    - Feature: Option to limit the displayed music pieces #12
+    - Feature: Option to limit the displayed lesson notes number #11
+    - Enhancement: Automatically switch lesson note date during day change #8
+    - Enhancement: Bad sqlite performance in current qt5 versions #7
+    - Enhancement: Too small font sizes on high dpi screens #3
+    - Bugfix: Editing in pieces loses selection and jump to top of the table #6
+    - Bugfix: Refreshed tables shows internal ids #2
+    - Bugfix: Crash when closing concert manager #1
+
 12.10.2011 - Version 1.3:
-  - Neue Funktion: In der Übersicht der vorspielreifen Stücke kann man nun die Stücke nach Unterrichtsorten filtern lassen
-  - Neue Funktion: Rechtsklick auf einen "Vorspielkandidaten" bietet die Funktion zum automatischen Eintragen einer Errinnerung bzgl. einer Vorspielteilnahme
-  - Verbesserung: Das Metronom/Stimmgerät-Fenster ist nun unabhängiger vom Qupil-Hauptfenster und blockiert dieses nicht mehr
-  - Verbesserung: Wird eine Erinnerung bei einem speziellen Schüler angezeigt, kann man per Häckchen direkt im Dialog die Erinnerung mit "Erledigt" markieren und damit automatisch löschen
-  - Verbesserung: Beim Dokumentenexport nach PDF von Vorspielmeldungen wird automatische ein Dateiname wie "AllgemeinesVorspiel_OrtdesVorspiels_2011-09-09.pdf" vorgeschlagen
-  - Verbesserung: Wenn das Programm im laufenden Unterricht gestartet wird, dann werden trotzdem noch die Errinnerungen zum aktuellen Unterricht angezeigt
-  - Fehlerbehebung: Beim Stundenplandokument waren bei manchen Gruppen haben die Schülernamen nicht untereinander <-- behoben!
-  - Fehlerbehebung: Im Veranstaltungsmanager beim Dokumentenexport PDF wurde ungefragt ein falscher Dialog angezeigt <-- behoben!
-  - Fehlerbehebung: Erinnerungen bei zwei Schülern in einem Gruppenunterricht wird nun wirklich bei beiden seperat angezeigt
-  - Fehlerbehebung: Beim Schülerarchiv werden nachträglich eingetragene Unterrichtsnotizen nun an der richtigen Stelle und nicht ganz am Ende der Liste angezeigt.
+  - New feature: In the overview of the pre-play pieces, you can now filter the pieces by class
+  - New function: Right-click on a "Vorspielkandidaten" offers the function for the automatic entry of a reminder for a Vorspielteilnahme
+  - Improvement: The Metronome / Tuner window is now more independent of the Qupil main window and no longer blocks it
+  - Improvement: If a reminder is displayed for a special student, you can tick the reminder with "done" directly in the dialog box and delete it automatically
+  - Improvement: When exporting documents to PDF of foreplay messages, a file name such as "GeneralPrevention_Presentation_2011-09-09.pdf" is automatically suggested
+  - Improvement: If the program is started in the current classroom, the memories of the current lesson will still be displayed
+  - Bug fix: In the timetable document some pupils did not have the names of each other <- fixed!
+  - Bugfix: A false dialog was displayed in the event manager during the document export PDF <- fixed!
+  - Bug fix: Reminders of two students in a group lesson will now really be displayed separately
+  - Bug fix: In the student archive, subsequently entered lesson notes are now displayed in the right place and not at the very end of the list.
 
 08.02.2010 - Version 1.2:
-  - Neue Funktion: Ensemblekandidaten (zeigt die Schüler an, die eigentlich in Ensembles spielen sollten aber im Moment in keinem Ensemble aktiv sind)
-  - Neue Funktion: Erinnerungen (abhängig von verschiedenen Ereignissen wie Programmstart, am Beginn jeder Unterrichtseinheit oder bei einem bestimmten Schüler können Erinnerungsmeldung eingeblendet und auf Wunsch akkustisch signalisiert werden)
-  - Neue Funktion: Tagesübersicht (erstellt ein Dokument welches die Unterrichtseinheiten für den angegebenen Wochentag incl. der letzten Unterrichtsnotizen und einem Leerfeld für handschriftliche Notizen auflistet)
-  - Verbesserung: Unterrichtsnotizen können nun auch mehrzeilig und mit formatiertem Text geschrieben werden
-  - Verbesserung: Für regelmäßige Aktivitäten kann nun auch der Typ gespeichert werden (z.B. Ensemble)
+  - New feature: Ensemble candidates (displays the students who should actually play in ensembles but are not currently active in any ensemble)
+  - New function: Reminders (depending on various events such as program start, at the beginning of each lesson or at a specific student message can be displayed and on request acoustically signaled)
+  - New function: daily overview (creates a document which lists the lesson units for the specified weekday incl. The last lesson notes and a blank field for handwritten notes)
+  - Improvement: Lesson notes can now be written in multiple lines and with formatted text
+  - Improvement: For regular activities now also the type can be saved (for example ensemble)
 
 21.01.2010 - Version 1.1:
-  - Neue Funktion: Veranstaltungsmanager (z.B. Verwaltung von Vorspielprogrammen) incl. Archivfunktion
-  - Neue Funktion: Automatische Eintragungen bei "Werke" und Aktivitäten für alle Schüler die an Veranstaltungen teilgenommen haben
-  - Neue Funktion: Geschätze Gesamtdauer von Veranstaltungen wird anhand individuell einstellbarer Zeitfaktoren berechnet
-  - Neue Funktion: Programmliste für Veranstaltungen mit PDF-Export- und Druckmöglichkeit
-  - Neue Funktion: Stundenplandokument mit PDF-Export- und Druckmöglichkeit
-  - Neue Funktion: Vorspielkandidaten (zeigt die Schüler an, deren letztes Vorspiel bereits länger als das individuell eingestellte Vorspielintervall her ist)
-  - Verbesserung: Beim Programmstart springt die Auswahl nun nicht mehr zum aktuellen Unterricht sondern zum ersten Schüler des aktuellen Unterrichts
-  - Verbesserung: Neue minimale Fenstergröße passt besser zu Netbook-Bildschirmauflösungen
-  - Fehlerbehebung: mehrere "vorspielbereite" Werke für eine Gruppe werden nun korrekt in der Verspielmanager-Übersicht angezeigt
-  - Fehlerbehebung: Absturz beim Systemen ohne Soundkarte behoben
+  - New function: Event manager (for example, administration of audition programs) including archive function
+  - New feature: Automatic entries in "Works" and activities for all students who participated in events
+  - New function: Estimated total duration of events is calculated using individually adjustable time factors
+  - New function: Program list for events with PDF export and print option
+  - New function: Timetable document with PDF export and print option
+  - New function: Presumption candidate (displays the students whose last foreplay is already longer than the individually set foreplay interval)
+  - Improvement: At the start of the program the selection no longer jumps to the current lesson but to the first student of the current lesson
+  - Improvement: New minimum window size fits better to netbook screen resolutions
+  - Bug fix: several "ready to play" works for a group are now displayed correctly in the play manager overview
+  - Bugfix: Crash on systems without soundcard fixed
 
 14.12.2008 - Version 1.0.2:
-  - Verbesserung: CSV-Adressbuch Import (automatische Seperator-Erkennung, verschiedene Dateikodierungen möglich)
-  - Verbesserung: Werke --> Status auf "Abgeschlossen" setzt End-Datum automatisch
-  - Fehlerbehebung: Hochkomma in Unterrichtsnotizen, Werken und Notenbibliothek funktionieren nun
-  - Fehlerbehebung: Absturz beim Leeren der Unterrichtsort-, Instrumenten-, Größenlisten in Einstellungen behoben
-  - Fehlerbehebung: Datumformatierung in der Notenbibliothek nun auf Deutsch
+  - Improvement: CSV address book import (automatic separator detection, different file codes possible)
+  - Improvement: Works -> Status on "Completed" sets end date automatically
+  - Bug fix: Quotes in Classroom Notes, Works and Grade Library now work
+  - Bug fix: Crash when emptying the classroom, instrument, size lists in settings fixed
+  - Bugfix: Date formatting in the music library now in German
 
 28.08.2008 - Version 1.0.1:
-  - Backup-Fehler unter Windows behoben
-  - Tippfehler im Hauptfenster bereinigt
+  - Fixed a bug under Windows
+  - Fixed typos in the main window
 
 15.08.2008 - Version 1.0:
-  - Kompletter Rewrite von Qupil 0.3.2 
+  - Complete rewrite of Qupil 0.3.2

@@ -78,9 +78,9 @@ void PupilArchiveTextBrowser::printCurrentDoc()
 
 void PupilArchiveTextBrowser::exportCurrentDocToPDF()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, tr("Exportiere Datei"),
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Export File"),
                        QDir::homePath(),
-                       tr("PDF Datei (*.pdf)"));
+                       tr("PDF File (*.pdf)"));
     if (!fileName.isEmpty()) {
         if (QFileInfo(fileName).suffix().isEmpty())
             fileName.append(".pdf");

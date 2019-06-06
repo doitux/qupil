@@ -46,11 +46,6 @@ PupilTabWidget::~PupilTabWidget()
 
 void PupilTabWidget::init()
 {
-
-    myW->dateEdit_palNotes->setDate(QDate::currentDate());
-    myW->dateEdit_singularActivityDate->setDate(QDate::currentDate());
-    myW->dateEdit_continousActivityStartdate->setDate(QDate::currentDate());
-
     connect( myW->pushButton_addPalPiece, SIGNAL( clicked() ), this, SLOT( addNewPiece() ) );
     connect( myW->pushButton_delPalPiece, SIGNAL( clicked() ), this, SLOT( delPiece() ) );
     connect( myW->pushButton_addPalNotes, SIGNAL( clicked() ), this, SLOT( addNewNote() ) );
@@ -98,11 +93,8 @@ void PupilTabWidget::loadComboBoxItems()
     }
 
     QStringList myStateStringList;
-    std::list<std::string> stateList = myConfig->readConfigStringList("PalPiecesStateList");
-    std::list<std::string>::iterator it2;
-    for(it2= stateList.begin(); it2 != stateList.end(); it2++) {
-        myStateStringList << QString::fromUtf8(it2->c_str());
-    }
+    myStateStringList << tr("Planned") << tr("In Progress") << tr("Paused") << tr("Ready for Concert") << tr("Finished");
+
     QStringList myGenreStringList;
     std::list<std::string> genreList = myConfig->readConfigStringList("PalPiecesGenreList");
     std::list<std::string>::iterator it3;
@@ -119,7 +111,7 @@ void PupilTabWidget::loadComboBoxItems()
     QSqlQuery palLessonNameQuery("SELECT pal.palid, lln.lessonname FROM pupilatlesson pal, lastlessonname lln WHERE pal.llnid = lln.llnid AND pal.pupilid = "+QString::number(currentPupilId,10)+" AND pal.stopdate <= '"+QDate::currentDate().toString(Qt::ISODate)+"'");
     if (palLessonNameQuery.lastError().isValid()) qDebug() << "DB Error: 108 - " << palLessonNameQuery.lastError();
     while (palLessonNameQuery.next()) {
-        myW->comboBox_palPiecesSelection->addItem(palLessonNameQuery.value(1).toString()+" "+tr("(inaktiv)"), palLessonNameQuery.value(0).toString());
+        myW->comboBox_palPiecesSelection->addItem(palLessonNameQuery.value(1).toString()+" "+tr("(inactive)"), palLessonNameQuery.value(0).toString());
         // 		qDebug() << myW->comboBox_palPiecesSelection->findData(palLessonNameQuery.value(0).toString());
         //TODO 		myW->comboBox_palPiecesSelection->setItemData(myW->comboBox_palPiecesSelection->findData(palLessonNameQuery.value(0).toString()), 29, Qt::UserRole+1);
         // 		qDebug() << myW->comboBox_palPiecesSelection->itemData(myW->comboBox_palPiecesSelection->findData(palLessonNameQuery.value(0).toString(), Qt::UserRole+1)).toInt();
@@ -127,7 +119,7 @@ void PupilTabWidget::loadComboBoxItems()
         // 		qDebug() << myW->comboBox_palPiecesSelection->findData(20);
         // 		myW->comboBox_palPiecesSelection->setItemData(myW->comboBox_palPiecesSelection->findData(20), 89, Qt::UserRole-1);
         // 		qDebug() << myW->comboBox_palPiecesSelection->itemData(myW->comboBox_palPiecesSelection->findData(20, Qt::UserRole-1)).toInt();
-        myW->comboBox_palNotesSelection->addItem(palLessonNameQuery.value(1).toString()+" "+tr("(inaktiv)"), palLessonNameQuery.value(0).toString());
+        myW->comboBox_palNotesSelection->addItem(palLessonNameQuery.value(1).toString()+" "+tr("(inactive)"), palLessonNameQuery.value(0).toString());
         // 	TODO	myW->comboBox_palNotesSelection->setItemData(myW->comboBox_palNotesSelection->findData(palLessonNameQuery.value(0).toString()), 0, 33);
     }
     //lessonnames for active lessons
@@ -296,7 +288,7 @@ void PupilTabWidget::calcPupilAge(QString birthdayString)
     if (birthdayString != "") {
         int daysFromBirthday = QDate::currentDate().daysTo(QDate::fromString(birthdayString, Qt::ISODate));
         int years = daysFromBirthday/365;
-        myW->label_pupilAge->setText(QString( "%1" ).arg( years ).remove("-")+" Jahre");
+        myW->label_pupilAge->setText(QString( "%1" ).arg( years ).remove("-")+" "+tr("Years"));
     } else {
         myW->label_pupilAge->setText("");
     }
@@ -309,7 +301,7 @@ void PupilTabWidget::calcSinceFirstLesson(QString firstLessonString)
     if (firstLessonString != "") {
         int daysFromFirstLesson = QDate::currentDate().daysTo(QDate::fromString(firstLessonString, Qt::ISODate));
         int lessonyears = daysFromFirstLesson/365;
-        myW->label_pupilWholeLessonTime->setText(QString( "%1" ).arg( lessonyears ).remove("-")+" Jahre");
+        myW->label_pupilWholeLessonTime->setText(QString( "%1" ).arg( lessonyears ).remove("-")+" "+tr("Years"));
     } else {
         myW->label_pupilWholeLessonTime->setText("");
     }
@@ -326,6 +318,9 @@ void PupilTabWidget::pupilFirstLessonChanged(QDate date)
 
 void PupilTabWidget::loadPupilActivity()
 {
+    myW->dateEdit_singularActivityDate->setDate(QDate::currentDate());
+    myW->dateEdit_continousActivityStartdate->setDate(QDate::currentDate());
+
     myPupilSingularActivityModel->setCurrentPupilId(currentPupilId);
     myW->treeView_singularActivity->setModel(myPupilSingularActivityModel);
     myPupilSingularActivityModel->refresh();
@@ -348,10 +343,21 @@ void PupilTabWidget::loadPupilActivity()
 
     QHeaderView *head1 = myW->treeView_continousActivity->header();
     head1->setSectionResizeMode(QHeaderView::ResizeToContents);
+
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate and scrollState is not saved during editing
+    QAbstractItemDelegate *myContinousActivityItemDelegate = myW->treeView_continousActivity->itemDelegate();
+    connect( myContinousActivityItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( activityRestoreViewLayout() ) );
+    connect( myContinousActivityItemDelegate, SIGNAL ( editorCreated()), this, SLOT ( activitySaveScrollState() ) );
+
+    QAbstractItemDelegate *mySingularActivityItemDelegate = myW->treeView_singularActivity->itemDelegate();
+    connect( mySingularActivityItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( activityRestoreViewLayout() ) );
+    connect( mySingularActivityItemDelegate, SIGNAL ( editorCreated()), this, SLOT ( activitySaveScrollState() ) );
+
 }
 
 void PupilTabWidget::loadPalNotes( int palId )
 {
+    myW->dateEdit_palNotes->setDate(QDate::currentDate());
 
     QSqlQuery query("SELECT startdate FROM pupilatlesson WHERE palid= ?");
     if(palId == -1) {
@@ -370,7 +376,7 @@ void PupilTabWidget::loadPalNotes( int palId )
     query.next();
     QDate startDate(QDate::fromString( query.value(0).toString(), Qt::ISODate));
 
-    myW->treeView_palNotes->setItemDelegate(new PalNotesDelegate(startDate));
+    myW->treeView_palNotes->setItemDelegate(new PalNotesDelegate(startDate, myConfig));
     myW->treeView_palNotes->hideColumn(0);
     myW->treeView_palNotes->hideColumn(1);
 
@@ -379,6 +385,11 @@ void PupilTabWidget::loadPalNotes( int palId )
 
     myPalNotesSelectionModel = myW->treeView_palNotes->selectionModel();
     connect( myPalNotesSelectionModel, SIGNAL (currentChanged( const QModelIndex &, const QModelIndex & )), this, SLOT ( notesItemSelected( const QModelIndex &, const QModelIndex & ) ) );
+
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate and scrollState is not saved during editing
+    PalNotesDelegate *myPalNotesItemDelegate =  qobject_cast<PalNotesDelegate *> (myW->treeView_palNotes->itemDelegate());
+    connect( myPalNotesItemDelegate, SIGNAL ( commitData(QWidget *)), this, SLOT ( palNotesRestoreViewLayout() ) );
+    connect( myPalNotesItemDelegate, SIGNAL ( editorCreated()), this, SLOT ( palNotesSaveScrollState() ) );
 }
 
 void PupilTabWidget::loadPalPieces( int palId )
@@ -399,11 +410,8 @@ void PupilTabWidget::loadPalPieces( int palId )
     myW->treeView_palPieces->hideColumn(1);
 
     QStringList myStateStringList;
-    std::list<std::string> stateList = myConfig->readConfigStringList("PalPiecesStateList");
-    std::list<std::string>::iterator it;
-    for(it= stateList.begin(); it != stateList.end(); it++) {
-        myStateStringList << QString::fromUtf8(it->c_str());
-    }
+    myStateStringList << tr("Planned") << tr("In Progress") << tr("Paused") << tr("Ready for Concert") << tr("Finished");
+
     QStringList myGenreStringList;
     std::list<std::string> genreList = myConfig->readConfigStringList("PalPiecesGenreList");
     std::list<std::string>::iterator it1;
@@ -425,6 +433,11 @@ void PupilTabWidget::loadPalPieces( int palId )
     head->setSectionResizeMode(QHeaderView::ResizeToContents);
 
     refreshPiecesComposerCompleter();
+
+    //HACK because of regression in Qt-5.x where hidden columns are shown after editing finished via delegate and scrollState is not saved during editing
+    QAbstractItemDelegate *myPalPiecesItemDelegate = myW->treeView_palPieces->itemDelegate();
+    connect( myPalPiecesItemDelegate, SIGNAL ( commitData(QWidget *) ), this, SLOT ( palPiecesRestoreViewLayout() ) );
+    connect( myPalPiecesItemDelegate, SIGNAL ( editorCreated() ), this, SLOT ( palPiecesSaveScrollState() ) );
 }
 
 void PupilTabWidget::addNewPiece()
@@ -434,8 +447,8 @@ void PupilTabWidget::addNewPiece()
 
     //zuerst Komponist suchen oder hinzufügen
     if(myW->lineEdit_newPieceComposer->text().isEmpty() || myW->lineEdit_newPieceTitle->text().isEmpty()) {
-        QMessageBox::warning(this, tr("Qupil"),
-                             QString::fromUtf8(tr("Sie müssen mindestens die Felder \"Komponist\" und \"Titel\" ausfüllen\n um den Eintrag hinzuzufügen!").toStdString().c_str()),
+        QMessageBox::warning(this, "Qupil",
+                             QString::fromUtf8(tr("You have to complete at least the fields \"Composer\" and \"Title\" to add the entry!").toStdString().c_str()),
                              QMessageBox::Ok);
     } else {
         QString authorId;
@@ -615,12 +628,12 @@ void PupilTabWidget::piecesSelectionChanged(int index)
         loadPalPieces(myW->comboBox_palPiecesSelection->itemData(index).toInt());
     else {
         myPalPiecesModel->clear();
-        myPalPiecesModel->setHeaderData(2, Qt::Horizontal, QObject::tr("Titel"));
-        myPalPiecesModel->setHeaderData(3, Qt::Horizontal, QObject::tr("Genre               "));
-        myPalPiecesModel->setHeaderData(4, Qt::Horizontal, QObject::tr("Dauer"));
-        myPalPiecesModel->setHeaderData(5, Qt::Horizontal, QObject::tr("Datum (Beginn)"));
-        myPalPiecesModel->setHeaderData(6, Qt::Horizontal, QObject::tr("Datum (Ende)"));
-        myPalPiecesModel->setHeaderData(7, Qt::Horizontal, QObject::tr("Status"));
+        myPalPiecesModel->setHeaderData(2, Qt::Horizontal, tr("Title"));
+        myPalPiecesModel->setHeaderData(3, Qt::Horizontal, tr("Genre               "));
+        myPalPiecesModel->setHeaderData(4, Qt::Horizontal, tr("Duration"));
+        myPalPiecesModel->setHeaderData(5, Qt::Horizontal, tr("Start"));
+        myPalPiecesModel->setHeaderData(6, Qt::Horizontal, tr("End"));
+        myPalPiecesModel->setHeaderData(7, Qt::Horizontal, tr("State"));
     }
     // 	if(myW->comboBox_palPiecesSelection->itemData(index,33).toInt() == 1) {qDebug() << "yes" << myW->comboBox_palPiecesSelection->itemText(index); }
     // 	if(myW->comboBox_palPiecesSelection->itemData(index,33).toInt() == 2) {qDebug() << "no" << myW->comboBox_palPiecesSelection->itemText(index);}
@@ -632,8 +645,8 @@ void PupilTabWidget::notesSelectionChanged(int index)
         loadPalNotes(myW->comboBox_palNotesSelection->itemData(index).toInt());
     else {
         myPalNotesModel->clear();
-        myPalNotesModel->setHeaderData(2, Qt::Horizontal, QObject::tr("Datum"));
-        myPalNotesModel->setHeaderData(3, Qt::Horizontal, QObject::tr("Notiz"));
+        myPalNotesModel->setHeaderData(2, Qt::Horizontal, tr("Date"));
+        myPalNotesModel->setHeaderData(3, Qt::Horizontal, tr("Note"));
 
     }
 }
@@ -842,4 +855,42 @@ void PupilTabWidget::palNotesEditSelectionChanged()
     else
         myW->pushButton_boldNotesText->setChecked(false);
 
+}
+
+void PupilTabWidget::palNotesRestoreViewLayout()
+{
+    myW->treeView_palNotes->hideColumn(0);
+    myW->treeView_palNotes->hideColumn(1);
+    myW->treeView_palNotes->verticalScrollBar()->setValue(palNotesTreeViewVerticalScrollValue);
+}
+
+void PupilTabWidget::palPiecesRestoreViewLayout()
+{
+    myW->treeView_palPieces->hideColumn(0);
+    myW->treeView_palPieces->hideColumn(1);
+    myW->treeView_palPieces->verticalScrollBar()->setValue(palPiecesTreeViewVerticalScrollValue);
+}
+
+void PupilTabWidget::activityRestoreViewLayout()
+{
+    myW->treeView_continousActivity->hideColumn(0);
+    myW->treeView_singularActivity->hideColumn(0);
+    myW->treeView_continousActivity->verticalScrollBar()->setValue(continousActivityTreeViewVerticalScrollValue);
+    myW->treeView_singularActivity->verticalScrollBar()->setValue(singularActivityTreeViewVerticalScrollValue);
+}
+
+void PupilTabWidget::palNotesSaveScrollState()
+{
+    palNotesTreeViewVerticalScrollValue = myW->treeView_palNotes->verticalScrollBar()->value();
+}
+
+void PupilTabWidget::palPiecesSaveScrollState()
+{
+    palPiecesTreeViewVerticalScrollValue = myW->treeView_palPieces->verticalScrollBar()->value();
+}
+
+void PupilTabWidget::activitySaveScrollState()
+{
+    continousActivityTreeViewVerticalScrollValue = myW->treeView_continousActivity->verticalScrollBar()->value();
+    singularActivityTreeViewVerticalScrollValue = myW->treeView_singularActivity->verticalScrollBar()->value();
 }

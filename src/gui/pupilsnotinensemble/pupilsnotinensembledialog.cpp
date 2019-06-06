@@ -65,7 +65,7 @@ PupilsNotInEnsembleDialog::PupilsNotInEnsembleDialog(ConfigFile *c, QWidget *par
                             if(anyEnsemble) {
                                 item->setData(2, Qt::DisplayRole, QDate::fromString(query3.value(1).toString(), Qt::ISODate).toString("dd.MM.yyyy")+" ("+query3.value(0).toString()+")");
                             } else {
-                                item->setData(2, Qt::DisplayRole, "keine");
+                                item->setData(2, Qt::DisplayRole, tr("none"));
                             }
 
 
@@ -79,22 +79,22 @@ PupilsNotInEnsembleDialog::PupilsNotInEnsembleDialog(ConfigFile *c, QWidget *par
 
     QString head;
     if(duePupilCounter) {
-        head = "Folgende Schüler sind derzeit in keinem Ensemble aktiv:";
+        head = tr("The following students are currently not active in any ensemble:");
     } else {
-        head = "Aktuell sind alle Schüler in Ensembles aktiv.<br><br>Gute Arbeit!";
+        head = tr("Currently all students are active in ensembles.<br><br>Good job!");
     }
 
-    msg += "<span style='font-size:10pt; font-weight:600;'>"+QString::fromUtf8(head.toStdString().c_str())+"</span><br><br>";
+    msg += "<span style='font-weight:600;'>"+QString::fromUtf8(head.toStdString().c_str())+"</span><br><br>";
 
     ui->label_txt->setText(msg);
-    ui->pupilStats->setText(QString::fromUtf8(QString("Insgesamt <span style='color:red; font-weight:600;'>%1</span> inaktive Schüler | <span style='color:green; font-weight:600;'>%2</span> Schüler sind in Ensembles aktiv").arg(duePupilCounter).arg(activeEnsembleCounter).toStdString().c_str()));
+    ui->pupilStats->setText(QString::fromUtf8(QString(tr("Total <span style='color:red; font-weight:600;'>%1</span> inactive pupils | <span style='color:green; font-weight:600;'>%2</span> pupils are active in ensembles")).arg(duePupilCounter).arg(activeEnsembleCounter).toStdString().c_str()));
 
     ui->treeWidget->resizeColumnToContents(1);
     ui->treeWidget->resizeColumnToContents(2);
     ui->treeWidget->sortByColumn(0, Qt::DescendingOrder);
 
     pupilPopupMenu = new QMenu();
-    addReminderAction = new QAction(QIcon(":/gfx/preferences-desktop-notification-bell.png"), QString::fromUtf8(tr("Erinnerung an Ensemblemitwirkung einrichten").toStdString().c_str()), pupilPopupMenu);
+    addReminderAction = new QAction(QIcon(":/gfx/preferences-desktop-notification-bell.svg"), QString::fromUtf8(tr("Set up reminder for ensemble activity").toStdString().c_str()), pupilPopupMenu);
     pupilPopupMenu->addAction(addReminderAction);
 
     connect(ui->treeWidget, SIGNAL (customContextMenuRequested(const QPoint)), this, SLOT ( showPopupMenu(const QPoint)));
@@ -139,7 +139,7 @@ void PupilsNotInEnsembleDialog::addReminder()
 
         QSqlQuery query;
         query.prepare("INSERT INTO reminder (desc, mode, pupilid, notificationsound) VALUES (?, ?, ?, ?)");
-        query.addBindValue(QString::fromUtf8(QString("Ensemblemitwirkung ansprechen!").toStdString().c_str()));
+        query.addBindValue(QString::fromUtf8(QString(tr("Speak about ensemble activity!")).toStdString().c_str()));
         query.addBindValue(2);
         query.addBindValue(selectedItemId);
         query.addBindValue(1);
@@ -147,7 +147,7 @@ void PupilsNotInEnsembleDialog::addReminder()
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 262 - " << query.lastError();
         } else {
-            QMessageBox::information(this, "Erinnerung eingetragen", QString("Erinnerung zum Thema \"Ensemblemitwirkung\"<br>f&uuml;r den Sch&uuml;ler <i><b>%1</b></i> eingerichtet.").arg(pupil), QMessageBox::Ok);
+            QMessageBox::information(this, tr("Reminder set up"), QString(tr("Reminder concerning \"ensemble activity\"<br>set up for the pupil <i><b>%1</b></i>")).arg(pupil), QMessageBox::Ok);
         }
     }
 }

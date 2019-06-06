@@ -27,7 +27,7 @@ TimeTableTreeWidget::TimeTableTreeWidget(QWidget *tab)
     : QTreeWidget(tab), headerSectionIndent(10)
 {
     lessonPopupMenu = new QMenu();
-    delLesson = new QAction(QIcon(":/gfx/go_jump_today.png"), QString::fromUtf8(tr("Unterricht löschen").toStdString().c_str()), lessonPopupMenu);
+    delLesson = new QAction(QIcon(":/gfx/x-office-calendar.svg"), QString::fromUtf8(tr("Delete Lesson").toStdString().c_str()), lessonPopupMenu);
     lessonPopupMenu->addAction(delLesson);
 
     connect( this, SIGNAL ( currentItemChanged(QTreeWidgetItem*, QTreeWidgetItem*)), this, SLOT ( timeTableSelectionChanged(QTreeWidgetItem*, QTreeWidgetItem*)) );
@@ -42,7 +42,6 @@ TimeTableTreeWidget::~TimeTableTreeWidget()
 
 void TimeTableTreeWidget::refreshTimeTable()
 {
-
     QList<QTreeWidgetItem *> selectedItemList = this->selectedItems();
     QString selectedItemIdString;
     if(!selectedItemList.empty()) {
@@ -52,11 +51,17 @@ void TimeTableTreeWidget::refreshTimeTable()
     int pupilCounter = 0;
     int lessonCounter = 0;
 
+    int minimumTreeWidgetWidth = 0;
+
     clear();
     setRootIsDecorated(false);
 
     QStringList dayList;
-    dayList << tr("Montag") << tr("Dienstag") << tr("Mittwoch") << tr("Donnerstag") << tr("Freitag") << tr("Samstag") << tr("Sonntag") << QString::fromUtf8(tr("unregelmäßig").toStdString().c_str());
+    dayList << tr("Monday") << tr("Tuesday") << tr("Wednesday") << tr("Thursday") << tr("Friday") << tr("Saturday") << tr("Sunday") << QString::fromUtf8(tr("irregular").toStdString().c_str());
+
+    QString longestLessonDescription = "";
+    int longestLessonDescriptionLength = 0;
+    int longestLessonDescriptionColumnWidth = 0;
 
     int i;
     for(i = 0; i < 8; i++)  {
@@ -92,8 +97,10 @@ void TimeTableTreeWidget::refreshTimeTable()
             QFontMetrics fm(tempFont);
             int pixelsWide = fm.width("99:99 - 99:99");
             //set correct size of first column
-            setColumnWidth(0,pixelsWide+13);
-
+            int firstColumnWidth = pixelsWide+13;
+            setColumnWidth(0,firstColumnWidth);
+            //set first half of the Width
+            minimumTreeWidgetWidth = firstColumnWidth;
         }
 
         while (query.next()) {
@@ -102,11 +109,13 @@ void TimeTableTreeWidget::refreshTimeTable()
             item->setData(0, Qt::UserRole, "l"+query.value(0).toString());
 
             if(i < 7) {
+                //lesson time
                 item->setData(0, Qt::DisplayRole, query.value(2).toString()+" - "+query.value(3).toString());
                 QFont tempFont;
                 tempFont.setBold(true);
                 tempFont.setPointSize(item->font(0).pointSize()+1);
                 item->setFont(0, tempFont);
+                //lesson description
                 item->setData(1, Qt::DisplayRole, query.value(1).toString());
                 item->setBackground(0, QBrush(QColor(QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",2,2).toInt())));
                 item->setBackground(1, QBrush(QColor(QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTableLessonBColor").c_str()).section(",",2,2).toInt())));
@@ -125,6 +134,16 @@ void TimeTableTreeWidget::refreshTimeTable()
                 size.rheight() += 25;
                 item->setSizeHint ( 0, size );
             }
+
+            //check for the item lenght compare and set the longest lenth to calculate the needed space with font metrics
+            if(item->data(1, Qt::DisplayRole).toString().length() > longestLessonDescriptionLength) {
+                longestLessonDescriptionLength = item->data(1, Qt::DisplayRole).toString().length();
+                longestLessonDescription = item->data(1, Qt::DisplayRole).toString();
+
+                QFontMetrics fm(item->font(1));
+                longestLessonDescriptionColumnWidth = fm.width(longestLessonDescription);
+            }
+
             QSqlQuery pupilQuery("SELECT pal.palid, p.forename, p.surname FROM pupilatlesson pal, pupil p WHERE pal.lessonid= "+query.value(0).toString()+" AND p.pupilid = pal.pupilid AND pal.stopdate > '"+QDate::currentDate().toString(Qt::ISODate)+"' ORDER BY p.surname ASC");
             if (pupilQuery.lastError().isValid()) qDebug() << "DB Error: 136 - " << pupilQuery.lastError();
 
@@ -134,7 +153,7 @@ void TimeTableTreeWidget::refreshTimeTable()
                 pupilItem->setFirstColumnSpanned ( true );
                 pupilItem->setData(0, Qt::UserRole, "p"+pupilQuery.value(0).toString());
                 pupilItem->setData(0, Qt::DisplayRole, pupilQuery.value(2).toString()+", "+pupilQuery.value(1).toString());
-                pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/user.png"));
+                pupilItem->setData(0, Qt::DecorationRole, QIcon(":/gfx/im-user.svg"));
                 pupilItem->setBackground(0, QBrush(QColor(QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTablePupilBColor").c_str()).section(",",2,2).toInt())));
                 pupilItem->setForeground(0, QBrush(QColor(QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",0,0).toInt(), QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",1,1).toInt(), QString(myConfig->readConfigString("TimeTablePupilTColor").c_str()).section(",",2,2).toInt())));
                 QSize size = pupilItem->sizeHint(0);
@@ -150,6 +169,20 @@ void TimeTableTreeWidget::refreshTimeTable()
 
         resizeColumnToContents(1);
 
+        //adjust parent stackwidget to fit the needed space depending on system font size (calculated above)
+#ifdef _WIN32
+	minimumTreeWidgetWidth += longestLessonDescriptionColumnWidth + 50;
+#else
+	minimumTreeWidgetWidth += longestLessonDescriptionColumnWidth + 35;
+#endif
+	if(minimumTreeWidgetWidth > 250) {
+            this->setMinimumWidth(minimumTreeWidgetWidth);
+            this->setMaximumWidth(minimumTreeWidgetWidth);
+            myW->comboBox_leftListMode->setMinimumWidth(minimumTreeWidgetWidth);
+            myW->comboBox_leftListMode->setMaximumWidth(minimumTreeWidgetWidth);
+            myW->stackedWidget_leftList->setMinimumWidth(minimumTreeWidgetWidth);
+            myW->stackedWidget_leftList->setMaximumWidth(minimumTreeWidgetWidth);
+        }
         // 	find Selection
         int i;
         for (i=0; i<topLevelItemCount(); i++) {
@@ -179,6 +212,7 @@ void TimeTableTreeWidget::refreshTimeTable()
     }
 
     myW->refreshTimeTableStats(lessonCounter, pupilCounter);
+
 }
 
 void TimeTableTreeWidget::timeTableSelectionChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous)
@@ -258,8 +292,8 @@ void TimeTableTreeWidget::delCurrentLesson()
 
     }
 
-    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Qupil - Unterricht löschen").toStdString().c_str()),
-                                   QString::fromUtf8(tr("Möchten Sie den ausgewählten Unterricht wirklich löschen?").toStdString().c_str()),
+    int ret = QMessageBox::warning(this, QString::fromUtf8(tr("Delete Lesson - Qupil").toStdString().c_str()),
+                                   QString::fromUtf8(tr("Do you really want to delete the selected lesson?").toStdString().c_str()),
                                    QMessageBox::Ok | QMessageBox::Cancel);
     if(ret == QMessageBox::Ok) {
 

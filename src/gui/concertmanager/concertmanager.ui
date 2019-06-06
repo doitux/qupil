@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Qupil - Veranstaltungs-Manager</string>
+   <string>Event Manager - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -27,7 +27,7 @@
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Vorspielbereite &amp;Werke</string>
+       <string>&amp;Ready for Concert</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
@@ -35,7 +35,7 @@
          <item>
           <widget class="QLabel" name="label">
            <property name="text">
-            <string>Zeige Schüler aus diesem Ort:</string>
+            <string>Show pupils from:</string>
            </property>
           </widget>
          </item>
@@ -76,12 +76,12 @@
          </property>
          <column>
           <property name="text">
-           <string>Komponist</string>
+           <string>Composer</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Titel</string>
+           <string>Title</string>
           </property>
          </column>
          <column>
@@ -91,12 +91,12 @@
          </column>
          <column>
           <property name="text">
-           <string>Dauer</string>
+           <string>Duration</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Schüler (Alter) - Instrument</string>
+           <string>Pupil (Age) - Instrument</string>
           </property>
          </column>
         </widget>
@@ -105,7 +105,7 @@
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
-       <string>Veranstaltungs-&amp;Manager</string>
+       <string>&amp;Event Manager</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
@@ -113,11 +113,11 @@
          <item>
           <widget class="QToolButton" name="toolButton_recital">
            <property name="text">
-            <string>&amp;Veranstaltung</string>
+            <string>&amp;Event</string>
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/audio_input_microphone_small.png</normaloff>:/gfx/audio_input_microphone_small.png</iconset>
+             <normaloff>:/gfx/audio-input-microphone.svg</normaloff>:/gfx/audio-input-microphone.svg</iconset>
            </property>
            <property name="popupMode">
             <enum>QToolButton::InstantPopup</enum>
@@ -133,11 +133,11 @@
          <item>
           <widget class="QToolButton" name="toolButton_piece">
            <property name="text">
-            <string>Wer&amp;k</string>
+            <string>&amp;Music Piece</string>
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/document_multiple.png</normaloff>:/gfx/document_multiple.png</iconset>
+             <normaloff>:/gfx/edit-copy.svg</normaloff>:/gfx/edit-copy.svg</iconset>
            </property>
            <property name="popupMode">
             <enum>QToolButton::InstantPopup</enum>
@@ -150,11 +150,11 @@
          <item>
           <widget class="QPushButton" name="pushButton_createRecitalDocument">
            <property name="text">
-            <string>&amp;Dokument ...</string>
+            <string>&amp;Document ...</string>
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/document_preview.png</normaloff>:/gfx/document_preview.png</iconset>
+             <normaloff>:/gfx/document-preview-archive.svg</normaloff>:/gfx/document-preview-archive.svg</iconset>
            </property>
           </widget>
          </item>
@@ -184,7 +184,7 @@
      </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
-       <string>&amp;Archiv</string>
+       <string>&amp;Archive</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="0" rowspan="2">
@@ -221,7 +221,7 @@
          </property>
          <column>
           <property name="text">
-           <string>Veranstaltung</string>
+           <string>Event</string>
           </property>
          </column>
         </widget>
@@ -234,22 +234,22 @@
          <item>
           <widget class="QPushButton" name="pushButton_printCurrentRecitalArchive">
            <property name="text">
-            <string>&amp;Drucken</string>
+            <string>&amp;Print</string>
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/printer1.png</normaloff>:/gfx/printer1.png</iconset>
+             <normaloff>:/gfx/document-print.svg</normaloff>:/gfx/document-print.svg</iconset>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_exportCurrentRecitalArchiveToPDF">
            <property name="text">
-            <string>Nach &amp;PDF exportieren</string>
+            <string>Export to &amp;PDF</string>
            </property>
            <property name="icon">
             <iconset resource="../resources/qupil.qrc">
-             <normaloff>:/gfx/pdf.png</normaloff>:/gfx/pdf.png</iconset>
+             <normaloff>:/gfx/application-pdf.svg</normaloff>:/gfx/application-pdf.svg</iconset>
            </property>
           </widget>
          </item>

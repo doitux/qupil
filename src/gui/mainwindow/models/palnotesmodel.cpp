@@ -62,20 +62,19 @@ bool PalNotesModel::setData(const QModelIndex &index, const QVariant &value, int
 
 QVariant PalNotesModel::data(const QModelIndex &index, int role) const
 {
-    QVariant value = QSqlQueryModel::data(index, role);
-
-    if (role == Qt::TextColorRole && index.column() == 2)
-        return qVariantFromValue(QColor(Qt::blue));
-
-    return value;
+    return QSqlQueryModel::data(index, role);
 }
 
 void PalNotesModel::refresh()
 {
-    setQuery("SELECT n.noteid, n.cnoteid, strftime(\"%d.%m.%Y\", n.date), n.content FROM note n, pupilatlesson pal WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=n.palid AND pal.startdate <= n.date AND pal.stopdate >= n.date ORDER BY n.date DESC", *myW->getMyDb()->getMyPupilDb());
-// 	removeColumn(0);
-    setHeaderData(2, Qt::Horizontal, QObject::tr("Datum"));
-    setHeaderData(3, Qt::Horizontal, QObject::tr("Notiz"));
+    if(myConfig->readConfigInt("LimitLoadLessonNotes")) {
+        setQuery("SELECT n.noteid, n.cnoteid, strftime(\"%d.%m.%Y\", n.date), n.content FROM note n, pupilatlesson pal WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=n.palid AND pal.startdate <= n.date AND pal.stopdate >= n.date ORDER BY n.date DESC LIMIT " + QString::number(myConfig->readConfigInt("LoadLessonNotesNumber")), *myW->getMyDb()->getMyPupilDb());
+    }
+    else {
+        setQuery("SELECT n.noteid, n.cnoteid, strftime(\"%d.%m.%Y\", n.date), n.content FROM note n, pupilatlesson pal WHERE pal.palid="+QString::number(currentPalId,10)+" AND pal.palid=n.palid AND pal.startdate <= n.date AND pal.stopdate >= n.date ORDER BY n.date DESC", *myW->getMyDb()->getMyPupilDb());
+    }
+    setHeaderData(2, Qt::Horizontal, tr("Date"));
+    setHeaderData(3, Qt::Horizontal, tr("Note"));
 }
 
 bool PalNotesModel::setDate(int noteId, int cnoteId, const QString &date)

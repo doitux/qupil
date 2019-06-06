@@ -78,10 +78,10 @@ QVariant PupilContActivityModel::data(const QModelIndex &idx, int role) const
     QVariant value = QSqlQueryModel::data(idx, role);
 
     QStringList dayList;
-    dayList << tr("Montag") << tr("Dienstag") << tr("Mittwoch") << tr("Donnerstag") << tr("Freitag") << tr("Samstag") << tr("Sonntag") << QString::fromUtf8(tr("unregelmäßig").toStdString().c_str());
+    dayList << tr("Monday") << tr("Tuesday") << tr("Wednesday") << tr("Thursday") << tr("Friday") << tr("Saturday") << tr("Sunday") << QString::fromUtf8(tr("irregular").toStdString().c_str());
 
     QStringList typeList;
-    typeList << tr("Ensemble") << tr("Theorieunterricht") << tr("Korrepetition") << tr("Sonstiges");
+    typeList << tr("Ensemble") << tr("Theory lesson") << tr("Coaching with pianists") << tr("Other");
 
     if (value.isValid() && role == Qt::DisplayRole) {
 
@@ -99,12 +99,12 @@ QVariant PupilContActivityModel::data(const QModelIndex &idx, int role) const
 void PupilContActivityModel::refresh()
 {
     setQuery("SELECT activityid, desc, continoustype, continousday, continoustime, strftime(\"%d.%m.%Y\", date), strftime(\"%d.%m.%Y\", continousstopdate) FROM activity WHERE pupilid="+QString::number(currentPupilId,10)+" AND ifcontinous=1 ORDER BY date DESC", *myW->getMyDb()->getMyPupilDb());
-    setHeaderData(1, Qt::Horizontal, QObject::tr("Bezeichnung"));
-    setHeaderData(2, Qt::Horizontal, QObject::tr("Typ"));
-    setHeaderData(3, Qt::Horizontal, QObject::tr("Wochentag"));
-    setHeaderData(4, Qt::Horizontal, QObject::tr("Uhrzeit   "));
-    setHeaderData(5, Qt::Horizontal, QObject::tr("Datum (Beginn)"));
-    setHeaderData(6, Qt::Horizontal, QObject::tr("Datum (Ende)"));
+    setHeaderData(1, Qt::Horizontal, tr("Description"));
+    setHeaderData(2, Qt::Horizontal, tr("Type"));
+    setHeaderData(3, Qt::Horizontal, tr("Weekday"));
+    setHeaderData(4, Qt::Horizontal, tr("Time   "));
+    setHeaderData(5, Qt::Horizontal, tr("Start"));
+    setHeaderData(6, Qt::Horizontal, tr("End"));
 }
 
 bool PupilContActivityModel::setStartDate(int activityId, const QString &date)

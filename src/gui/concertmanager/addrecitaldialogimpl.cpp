@@ -34,6 +34,6 @@ AddRecitalDialogImpl::~AddRecitalDialogImpl() {}
 
 int AddRecitalDialogImpl::exec()
 {
-
-    QDialog::exec();
+    retranslateUi(this);
+    return QDialog::exec();
 }

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qupil</string>
+   <string>Document Viewer - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="4">
@@ -20,22 +20,22 @@
    <item row="1" column="0">
     <widget class="QPushButton" name="pushButton_print">
      <property name="text">
-      <string>Drucken</string>
+      <string>&amp;Print</string>
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/printer1.png</normaloff>:/gfx/printer1.png</iconset>
+       <normaloff>:/gfx/document-print.svg</normaloff>:/gfx/document-print.svg</iconset>
      </property>
     </widget>
    </item>
    <item row="1" column="1">
     <widget class="QPushButton" name="pushButton_exportToPdf">
      <property name="text">
-      <string>Nach PDF exportieren</string>
+      <string>Export to &amp;PDF</string>
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/pdf.png</normaloff>:/gfx/pdf.png</iconset>
+       <normaloff>:/gfx/application-pdf.svg</normaloff>:/gfx/application-pdf.svg</iconset>
      </property>
     </widget>
    </item>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qupil - Noten-Bibliothek</string>
+   <string>Music Library - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_5">
    <item row="0" column="0" colspan="2">
@@ -21,7 +21,7 @@
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Alle</string>
+       <string>All</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
@@ -44,7 +44,7 @@
            <item row="0" column="0">
             <widget class="QLabel" name="label">
              <property name="text">
-              <string>Komponist / Autor:</string>
+              <string>Composer / Author:</string>
              </property>
             </widget>
            </item>
@@ -54,7 +54,7 @@
            <item row="0" column="2">
             <widget class="QLabel" name="label_2">
              <property name="text">
-              <string>Titel:</string>
+              <string>Title:</string>
              </property>
             </widget>
            </item>
@@ -64,7 +64,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_3">
              <property name="text">
-              <string>Verlag:</string>
+              <string>Publisher:</string>
              </property>
             </widget>
            </item>
@@ -110,7 +110,7 @@
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/list_add.png</normaloff>:/gfx/list_add.png</iconset>
+               <normaloff>:/gfx/list-add.svg</normaloff>:/gfx/list-add.svg</iconset>
              </property>
              <property name="autoExclusive">
               <bool>false</bool>
@@ -139,7 +139,7 @@
              </property>
              <property name="icon">
               <iconset resource="../resources/qupil.qrc">
-               <normaloff>:/gfx/editdelete.png</normaloff>:/gfx/editdelete.png</iconset>
+               <normaloff>:/gfx/edit-delete.svg</normaloff>:/gfx/edit-delete.svg</iconset>
              </property>
              <property name="autoExclusive">
               <bool>false</bool>
@@ -157,7 +157,7 @@
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
-       <string>Verfügbar</string>
+       <string>Available</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="0" colspan="4">
@@ -178,17 +178,17 @@
          </column>
          <column>
           <property name="text">
-           <string>Komponist / Autor</string>
+           <string>Composer / Author</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Titel</string>
+           <string>Title</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Verlag</string>
+           <string>Publisher</string>
           </property>
          </column>
         </widget>
@@ -196,11 +196,11 @@
        <item row="1" column="0">
         <widget class="QPushButton" name="pushButton_rentSheetToPupil">
          <property name="text">
-          <string>Auswahl verleihen an</string>
+          <string>Give selection to</string>
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
-           <normaloff>:/gfx/document_export.png</normaloff>:/gfx/document_export.png</iconset>
+           <normaloff>:/gfx/document-export.svg</normaloff>:/gfx/document-export.svg</iconset>
          </property>
         </widget>
        </item>
@@ -220,7 +220,7 @@
        <item row="1" column="1">
         <widget class="QLabel" name="label_6">
          <property name="text">
-          <string>Schüler:</string>
+          <string>Pupil:</string>
          </property>
         </widget>
        </item>
@@ -231,7 +231,7 @@
      </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
-       <string>Verliehen</string>
+       <string>Loaned</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0" colspan="2">
@@ -252,27 +252,27 @@
          </column>
          <column>
           <property name="text">
-           <string>Komponist / Autor</string>
+           <string>Composer / Author</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Titel</string>
+           <string>Title</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Verlag</string>
+           <string>Publisher</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Verliehen an</string>
+           <string>Lent to</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>Verliehen am</string>
+           <string>Lent on</string>
           </property>
          </column>
         </widget>
@@ -280,11 +280,11 @@
        <item row="1" column="0">
         <widget class="QPushButton" name="pushButton_sheetBackFromPupil">
          <property name="text">
-          <string>Auswahl von Schüler zurückgegeben</string>
+          <string>Selection returned by the pupil</string>
          </property>
          <property name="icon">
           <iconset resource="../resources/qupil.qrc">
-           <normaloff>:/gfx/document_import.png</normaloff>:/gfx/document_import.png</iconset>
+           <normaloff>:/gfx/document-import.svg</normaloff>:/gfx/document-import.svg</iconset>
          </property>
         </widget>
        </item>
@@ -325,7 +325,7 @@
      </property>
      <property name="icon">
       <iconset resource="../resources/qupil.qrc">
-       <normaloff>:/gfx/dialog_ok_apply.png</normaloff>:/gfx/dialog_ok_apply.png</iconset>
+       <normaloff>:/gfx/dialog-ok-apply.svg</normaloff>:/gfx/dialog-ok-apply.svg</iconset>
      </property>
      <property name="autoDefault">
       <bool>false</bool>

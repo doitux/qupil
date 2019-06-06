@@ -29,10 +29,13 @@ class PalPiecesDelegate : public QItemDelegate
     Q_OBJECT
 public:
 
-    PalPiecesDelegate( QStringList &g, QStringList &s, QDate &d, QObject *parent = 0 );
+    PalPiecesDelegate( QStringList &g, QStringList &s, QDate &d, QObject *parent = nullptr );
     QWidget *createEditor( QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index ) const;
     void setEditorData( QWidget *editor, const QModelIndex &index ) const;
     void setModelData( QWidget *editor, QAbstractItemModel *model, const QModelIndex &index ) const;
+
+signals:
+    void editorCreated() const;
 
 private slots:
     void emitCommitData();

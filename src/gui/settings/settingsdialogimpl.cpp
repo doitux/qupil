@@ -31,6 +31,36 @@ SettingsDialogImpl::SettingsDialogImpl(ConfigFile *c, mainWindowImpl *w)
 {
     setupUi(this);
 
+//    comboBox_switchLanguage->addItem(QString(tr("Afrikaans")+" "+QString::fromUtf8("(Afrikaans)")),"af");
+//    comboBox_switchLanguage->addItem(QString(tr("Bulgarian")+" "+QString::fromUtf8("(Български)")),"bg");
+//    comboBox_switchLanguage->addItem(QString(tr("Catalan")+" "+QString::fromUtf8("(Català)")),"ca");
+//    comboBox_switchLanguage->addItem(QString(tr("Chinese")+" "+QString::fromUtf8("(简体中文)")),"zhcn");
+//    comboBox_switchLanguage->addItem(QString(tr("Czech")+" "+QString::fromUtf8("(čeština)")),"cz");
+//    comboBox_switchLanguage->addItem(QString(tr("Danish")+" "+QString::fromUtf8("(Dansk)")),"dk");
+//    comboBox_switchLanguage->addItem(QString(tr("Dutch")+" "+QString::fromUtf8("(Nederlands)")),"nl");
+    comboBox_switchLanguage->addItem(QString(tr("English")+" "+QString::fromUtf8("(English)")),"en");
+//    comboBox_switchLanguage->addItem(QString(tr("Finnish")+" "+QString::fromUtf8("(suomi)")),"fi");
+//    comboBox_switchLanguage->addItem(QString(tr("French")+" "+QString::fromUtf8("(français)")),"fr");
+//    comboBox_switchLanguage->addItem(QString(tr("Galician")+" "+QString::fromUtf8("(Galego)")),"gl");
+    comboBox_switchLanguage->addItem(QString(tr("German")+" "+QString::fromUtf8("(Deutsch)")),"de");
+//    comboBox_switchLanguage->addItem(QString(tr("Greek")+" "+QString::fromUtf8("(Ελληνικά)")),"gr");
+//    comboBox_switchLanguage->addItem(QString(tr("Hungarian")+" "+QString::fromUtf8("(Magyar)")),"hu");
+//    comboBox_switchLanguage->addItem(QString(tr("Italian")+" "+QString::fromUtf8("(italiano)")),"it");
+//    comboBox_switchLanguage->addItem(QString(tr("Japanese")+" "+QString::fromUtf8("(日本語)")),"jp");
+//    comboBox_switchLanguage->addItem(QString(tr("Lithuania")+" "+QString::fromUtf8("(Lietuviškai)")),"lt");
+//    comboBox_switchLanguage->addItem(QString(tr("Norwegian")+" "+QString::fromUtf8("(Norsk)")),"no");
+//    comboBox_switchLanguage->addItem(QString(tr("Polish")+" "+QString::fromUtf8("(polski)")),"pl");
+//    comboBox_switchLanguage->addItem(QString(tr("Portuguese-Brazilian")+" "+QString::fromUtf8("(português brasileiro)")),"ptbr");
+//    comboBox_switchLanguage->addItem(QString(tr("Portuguese-Portuguese")+" "+QString::fromUtf8("(português português)")),"ptpt");
+//    comboBox_switchLanguage->addItem(QString(tr("Russian")+" "+QString::fromUtf8("(Pyccĸий)")),"ru");
+//    comboBox_switchLanguage->addItem(QString(tr("Scottish Gaelic")+" "+QString::fromUtf8("(Gàidhlig)")),"gd");
+//    comboBox_switchLanguage->addItem(QString(tr("Slovak")+" "+QString::fromUtf8("(Slovenčina)")),"sk");
+//    comboBox_switchLanguage->addItem(QString(tr("Spanish")+" "+QString::fromUtf8("(Español)")),"es");
+//    comboBox_switchLanguage->addItem(QString(tr("Swedish")+" "+QString::fromUtf8("(svenska)")),"sv");
+//    comboBox_switchLanguage->addItem(QString(tr("Tamil")+" "+QString::fromUtf8("(தமிழ்)")),"ta");
+//    comboBox_switchLanguage->addItem(QString(tr("Turkish")+" "+QString::fromUtf8("(Tϋrkçe)")),"tr");
+//    comboBox_switchLanguage->addItem(QString(tr("Vietnamese")+" "+QString::fromUtf8("(Tiếng Việt)")),"vi");
+
     loadSettings();
 
     connect( buttonBox, SIGNAL( accepted() ), this, SLOT( saveSettings() ) );
@@ -61,6 +91,7 @@ SettingsDialogImpl::~SettingsDialogImpl() {}
 
 void SettingsDialogImpl::loadSettings()
 {
+    comboBox_switchLanguage->setCurrentIndex(comboBox_switchLanguage->findData(QString::fromUtf8(myConfig->readConfigString("Language").c_str()).section('_', 0, 0)));
     checkBox_birthdayReminder->setChecked(myConfig->readConfigInt("BirthdayReminder"));
     groupBox_lessonEndMsg->setChecked(myConfig->readConfigInt("LessonEndMsg"));
     spinBox_minutesToLessonEndForMsg->setValue(myConfig->readConfigInt("MinutesToLessonEndForMsg"));
@@ -130,10 +161,15 @@ void SettingsDialogImpl::loadSettings()
     spinBox_moderationDuration->setValue(myConfig->readConfigInt("RecitalModerationDuration"));
     spinBox_durationBetweenPieces->setValue(myConfig->readConfigInt("RecitalBetweenPiecesDuration"));
 
+    groupBox_limitLessonNotes->setChecked(myConfig->readConfigInt("LimitLoadLessonNotes"));
+    spinBox_displayLessonNotesNumber->setValue(myConfig->readConfigInt("LoadLessonNotesNumber"));
+    groupBox_limitMusicPieces->setChecked(myConfig->readConfigInt("LimitLoadMusicPieces"));
+    spinBox_displayMusicPiecesNumber->setValue(myConfig->readConfigInt("LoadMusicPiecesNumber"));
 }
 
 void SettingsDialogImpl::saveSettings()
 {
+    myConfig->writeConfigString("Language", comboBox_switchLanguage->itemData(comboBox_switchLanguage->currentIndex()).toString().toUtf8().constData());
     myConfig->writeConfigInt("BirthdayReminder", checkBox_birthdayReminder->isChecked());
     myConfig->writeConfigInt("LessonEndMsg", groupBox_lessonEndMsg->isChecked());
     myConfig->writeConfigInt("MinutesToLessonEndForMsg", spinBox_minutesToLessonEndForMsg->value());
@@ -184,13 +220,18 @@ void SettingsDialogImpl::saveSettings()
     myConfig->writeConfigInt("RecitalModerationDuration", spinBox_moderationDuration->value());
     myConfig->writeConfigInt("RecitalBetweenPiecesDuration", spinBox_durationBetweenPieces->value());
 
+    myConfig->writeConfigInt("LimitLoadLessonNotes",  groupBox_limitLessonNotes->isChecked());
+    myConfig->writeConfigInt("LoadLessonNotesNumber", spinBox_displayLessonNotesNumber->value());
+    myConfig->writeConfigInt("LimitLoadMusicPieces",  groupBox_limitMusicPieces->isChecked());
+    myConfig->writeConfigInt("LoadMusicPiecesNumber", spinBox_displayMusicPiecesNumber->value());
+
     myConfig->writeBuffer();
 }
 
 void SettingsDialogImpl::getMsgSoundFile()
 {
     QString	fileName = QFileDialog::getOpenFileName(this,
-                       QString::fromUtf8(tr("Klangdatei auswählen").toStdString().c_str()), QString::fromUtf8(myConfig->readConfigString("AppDataDir").c_str()), tr("Klangdateien (*.wav *.ogg *.mp3)"));
+                       QString::fromUtf8(tr("Select Sound File").toStdString().c_str()), QString::fromUtf8(myConfig->readConfigString("AppDataDir").c_str()), tr("Sound Files (*.wav *.ogg *.mp3)"));
     lineEdit_msgSoundFilePath->setText(fileName);
 
 }
@@ -198,7 +239,7 @@ void SettingsDialogImpl::getMsgSoundFile()
 void SettingsDialogImpl::getRemSoundFile()
 {
     QString	fileName = QFileDialog::getOpenFileName(this,
-                       QString::fromUtf8(tr("Klangdatei auswählen").toStdString().c_str()), QString::fromUtf8(myConfig->readConfigString("AppDataDir").c_str()), tr("Klangdateien (*.wav *.ogg *.mp3)"));
+                       QString::fromUtf8(tr("Select Sound File").toStdString().c_str()), QString::fromUtf8(myConfig->readConfigString("AppDataDir").c_str()), tr("Sound Files (*.wav *.ogg *.mp3)"));
     lineEdit_remSoundFilePath->setText(fileName);
 
 }
@@ -335,3 +376,7 @@ void SettingsDialogImpl::lessonLocationsItemChanged(QListWidgetItem * current, Q
         lineEdit_newLessonLocation->setText(current->data(Qt::DisplayRole).toString());
 }
 
+void SettingsDialogImpl::retranslate()
+{
+    retranslateUi(this);
+}

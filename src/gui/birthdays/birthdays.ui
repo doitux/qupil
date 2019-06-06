@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>179</width>
-    <height>208</height>
+    <width>188</width>
+    <height>215</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qupil - Geburtstag</string>
+   <string>Birthdays - Qupil</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <property name="horizontalSpacing">
@@ -36,21 +36,21 @@
        <widget class="QLabel" name="label_gfx">
         <property name="minimumSize">
          <size>
-          <width>124</width>
-          <height>126</height>
+          <width>132</width>
+          <height>132</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>124</width>
-          <height>126</height>
+          <width>132</width>
+          <height>132</height>
          </size>
         </property>
-        <property name="text">
-         <string/>
-        </property>
         <property name="pixmap">
-         <pixmap resource="../resources/qupil.qrc">:/gfx/bday.png</pixmap>
+         <pixmap resource="../resources/qupil.qrc">:/gfx/view-calendar-birthday-color.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
         </property>
        </widget>
       </item>

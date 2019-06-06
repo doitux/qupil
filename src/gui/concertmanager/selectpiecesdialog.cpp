@@ -41,12 +41,12 @@ void SelectPiecesDialog::changeEvent(QEvent *e)
     }
 }
 
-void SelectPiecesDialog::exec(int recitalId)
+int SelectPiecesDialog::exec(int recitalId)
 {
+    ui->retranslateUi(this);
     currentRecitalId = recitalId;
     loadPieces();
-    QDialog::exec();
-}
+    return QDialog::exec();}
 
 void SelectPiecesDialog::loadPieces()
 {
