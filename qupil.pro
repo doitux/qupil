@@ -256,7 +256,7 @@ mac {
     # make it universal
     CONFIG += x86_64
     CONFIG -= x86
-    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.6
+    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.7
 
     # for universal-compilation on PPC-Mac uncomment the following line
     # on Intel-Mac you have to comment this line out or build will fail.
@@ -269,6 +269,8 @@ mac {
         QtCore
     LIBS += -framework \
         QtGui
+    LIBS += -framework \
+        QtSql
     
     # SDL and SDL_mixer come as frameworks
     LIBS += -framework \
@@ -284,8 +286,8 @@ mac {
     
     # set the application icon
     RC_FILE = qupil.icns
-    LIBPATH += /Developer/SDKs/MacOSX10.6.sdk/usr/lib
-    INCLUDEPATH += /Developer/SDKs/MacOSX10.6.sdk/usr/include/
+    QMAKE_LFLAGS += -F/Library/Frameworks
+    INCLUDEPATH += /usr/local/include
     INCLUDEPATH += /Library/Frameworks/SDL.framework/Headers
     INCLUDEPATH += /Library/Frameworks/SDL_mixer.framework/Headers
 }

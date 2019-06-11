@@ -11,11 +11,7 @@
 //
 #include "sdlplayer.h"
 
-#if (defined __APPLE__)
-#include <SDL.h>
-#else
 #include <SDL/SDL.h>
-#endif
 
 using namespace std;
 
