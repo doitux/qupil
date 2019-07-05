@@ -18,16 +18,16 @@ MetronomPlayer::MetronomPlayer(SDLPlayer *s) : numBeats(4), mySDLPlayer(s)
 
 bool MetronomPlayer::loadSounds(const QString& f1,const QString& f2,const QString& f3)
 {
-    if( SDL_LoadWAV(f2.toStdString().c_str(), &click.spec, &click.buffer, &click.length) == NULL ) {
-        QMessageBox::critical(0,"Qupil Fehler","Konnte "+f1+" nicht laden.");
+    if( SDL_LoadWAV(f2.toStdString().c_str(), &click.spec, &click.buffer, &click.length) == nullptr ) {
+        QMessageBox::critical(nullptr,"Qupil", QString(tr("Could not load %1")).arg(f1));
         return false;
     }
-    if( SDL_LoadWAV(f1.toStdString().c_str(), &clickOne.spec, &clickOne.buffer, &clickOne.length)== NULL ) {
-        QMessageBox::critical(0,"Qupil Fehler","Konnte "+f2+" nicht laden.");
+    if( SDL_LoadWAV(f1.toStdString().c_str(), &clickOne.spec, &clickOne.buffer, &clickOne.length)== nullptr ) {
+        QMessageBox::critical(nullptr,"Qupil", QString(tr("Could not load %1")).arg(f2));
         return false;
     }
-    if( SDL_LoadWAV(f3.toStdString().c_str(), &clickAccent.spec, &clickAccent.buffer,&clickAccent.length) == NULL ) {
-        QMessageBox::critical(0,"Qupil Fehler","Konnte "+f3+" nicht laden.");
+    if( SDL_LoadWAV(f3.toStdString().c_str(), &clickAccent.spec, &clickAccent.buffer,&clickAccent.length) == nullptr ) {
+        QMessageBox::critical(nullptr,"Qupil", QString(tr("Could not load %1")).arg(f3));
         return false;
     }
     click.pos = click.length;
@@ -38,7 +38,7 @@ bool MetronomPlayer::loadSounds(const QString& f1,const QString& f2,const QStrin
     clickAccent.bps = clickAccent.spec.channels *  clickAccent.spec.format == AUDIO_S16 ? 2 : 1;
 
     if( click.bps == clickOne.bps && click.bps==clickAccent.bps ) return true;
-    QMessageBox::critical(0,"Qupil Fehler","Fehler beim Laden der Sound Dateien: Alle Sound Dateien müssen dasselbe Sample Format haben.");
+    QMessageBox::critical(nullptr,"Qupil",tr("Error loading sound files: All sound files must have the same sample format."));
     return false;
 }
 
@@ -130,7 +130,7 @@ void  MetronomPlayer::initAudio()
     desired->callback = playerCallback;
     desired->userdata = this;
 
-    if ( SDL_OpenAudio(desired,NULL) < 0 ) {
+    if ( SDL_OpenAudio(desired,nullptr) < 0 ) {
         emit AudioInitFail();
         return;
     }

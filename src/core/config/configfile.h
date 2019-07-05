@@ -32,7 +32,7 @@ enum ConfigType { CONFIG_TYPE_INT, CONFIG_TYPE_STRING, CONFIG_TYPE_INT_LIST, CON
 
 class ConfigFile :public QObject
 {
-
+  Q_OBJECT
 public:
     ConfigFile(char *argv0, bool readonly);
 

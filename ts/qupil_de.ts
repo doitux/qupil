@@ -2256,6 +2256,21 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
     </message>
 </context>
 <context>
+    <name>MetronomPlayer</name>
+    <message>
+        <location filename="../src/core/sound/metronomplayer.cpp" line="22"/>
+        <location filename="../src/core/sound/metronomplayer.cpp" line="26"/>
+        <location filename="../src/core/sound/metronomplayer.cpp" line="30"/>
+        <source>Could not load %1</source>
+        <translation>Kann %1 nicht laden.</translation>
+    </message>
+    <message>
+        <location filename="../src/core/sound/metronomplayer.cpp" line="41"/>
+        <source>Error loading sound files: All sound files must have the same sample format.</source>
+        <translation>Fehler beim Laden der Sound Dateien: Alle Sound Dateien müssen dasselbe Sample Format haben.</translation>
+    </message>
+</context>
+<context>
     <name>PalNotesModel</name>
     <message>
         <location filename="../src/gui/mainwindow/models/palnotesmodel.cpp" line="76"/>
@@ -3254,6 +3269,21 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
         <source>Genre</source>
         <translation>Genre</translation>
     </message>
+    <message>
+        <location filename="../src/gui/concertmanager/recitaltabs.cpp" line="191"/>
+        <source>Pure playing time</source>
+        <translation>Reine Spielzeit</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/recitaltabs.cpp" line="191"/>
+        <source>Min.</source>
+        <translation>Min.</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/concertmanager/recitaltabs.cpp" line="191"/>
+        <source>Estimated total duration</source>
+        <translation>Geschätzte Gesamtdauer</translation>
+    </message>
 </context>
 <context>
     <name>ReminderDialog</name>
@@ -3292,6 +3322,39 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
+    <message>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="45"/>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="69"/>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="112"/>
+        <source>Error</source>
+        <translation>Fehler</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="45"/>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="69"/>
+        <source>The following error occurred while reading the reminder list</source>
+        <translation>Beim Laden der Daten ist folgender Fehler aufgetreten</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="56"/>
+        <source>At program start</source>
+        <translation>Beim Programmstart</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="59"/>
+        <source>At every lesson</source>
+        <translation>Am Anfang jedes Unterrichts</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="62"/>
+        <source>At the pupil</source>
+        <translation>Bei dem Schüler</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/reminderdialog.cpp" line="112"/>
+        <source>The following error occurred while deleting the reminder</source>
+        <translation>Beim Löschen der Erinnerung trat folgender Fehler auf</translation>
+    </message>
 </context>
 <context>
     <name>ReminderEditDialog</name>
@@ -3329,6 +3392,26 @@ Bitte ändern Sie die Schüleranzahl um zu speichern!</translation>
         <location filename="../src/gui/reminder/remindereditdialog.ui" line="81"/>
         <source>Play sound file while displaying the reminder</source>
         <translation>Spiele Klangdatei beim Anzeigen der Erinnerung</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/remindereditdialog.cpp" line="33"/>
+        <source>Error</source>
+        <translation>Fehler</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/remindereditdialog.cpp" line="33"/>
+        <source>The following error occurred while loading the data</source>
+        <translation>Beim Laden der Daten trat folgender Fehler auf</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/remindereditdialog.cpp" line="85"/>
+        <source>Please enter a reminder text to use the function!</source>
+        <translation>Bitte geben Sie einen Erinnerungstext ein um die Funktion zu nutzen!</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/reminder/remindereditdialog.cpp" line="121"/>
+        <source>The following error occurred while entering the reminder</source>
+        <translation>Beim Eintragen der Erinnerung ist folgender Fehler aufgetreten</translation>
     </message>
 </context>
 <context>
@@ -4014,12 +4097,12 @@ Das Backup wird nicht zurückgespielt!</translation>
         <translation>Unterrichtseinheiten: %1 - Schüler: %2 </translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="825"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="824"/>
         <source>Reminder for the pupil </source>
         <translation>Erinnerung für den Schüler </translation>
     </message>
     <message>
-        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="827"/>
+        <location filename="../src/gui/mainwindow/mainwindowimpl.cpp" line="826"/>
         <source>Done? - Reminder will be removed!</source>
         <translation>Erledigt? - Erinnerung wird gelöscht!</translation>
     </message>

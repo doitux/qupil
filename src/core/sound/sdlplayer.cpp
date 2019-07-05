@@ -46,7 +46,7 @@ bool SDLPlayer::initAudio()
             audioEnabled = 1;
             return true;
         } else {
-            qDebug() << "Fehler beim Laden des Audiogerätes";
+            qDebug() << "Error loading audio device";
             return false;
         }
     }
