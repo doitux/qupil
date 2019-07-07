@@ -30,7 +30,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox_bpm">
+         <widget class="MyMetronomeSpinBox" name="spinBox_bpm">
           <property name="suffix">
            <string> bpm</string>
           </property>
@@ -116,7 +116,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="spinBox_beat">
+         <widget class="MyMetronomeSpinBox" name="spinBox_beat">
           <property name="minimumSize">
            <size>
             <width>50</width>
@@ -271,7 +271,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QSpinBox" name="spinBox_tunePitch">
+       <widget class="MyMetronomeSpinBox" name="spinBox_tunePitch">
         <property name="minimum">
          <number>438</number>
         </property>
@@ -298,6 +298,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyMetronomeSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>mymetronomespinbox.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>spinBox_bpm</tabstop>
   <tabstop>horizontalSlider</tabstop>

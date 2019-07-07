@@ -98,6 +98,7 @@ SOURCES += src/qupil.cpp \
     src/gui/mainwindow/models/palpiecesmodel.cpp \
     src/gui/mainwindow/delegates/palpiecesdelegate.cpp \
     src/gui/mainwindow/pupiltabwidget.cpp \
+    src/gui/metronom/mymetronomespinbox.cpp \
     src/gui/settings/settingsdialogimpl.cpp \
     src/gui/birthdays/birthdaysdialogimpl.cpp \
     src/gui/mainwindow/pupillisttreewidget.cpp \
@@ -147,6 +148,7 @@ HEADERS += src/core/third_party/tinyxml/tinyxml.h \
     src/gui/mainwindow/models/palpiecesmodel.h \
     src/gui/mainwindow/delegates/palpiecesdelegate.h \
     src/gui/mainwindow/pupiltabwidget.h \
+    src/gui/metronom/mymetronomespinbox.h \
     src/gui/settings/settingsdialogimpl.h \
     src/gui/birthdays/birthdaysdialogimpl.h \
     src/gui/mainwindow/pupillisttreewidget.h \
