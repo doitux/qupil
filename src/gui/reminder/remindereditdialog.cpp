@@ -30,7 +30,7 @@ ReminderEditDialog::ReminderEditDialog(QWidget *parent, int mode, int reminderid
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 242 - " << query.lastError();
-            QMessageBox::critical(this, "Qupil - Fehler", QString("Beim Laden der Daten ist folgender Fehler aufgetreten:\n%1").arg("DB Error: 242 - "+query.lastError().text()), QMessageBox::Ok);
+            QMessageBox::critical(this, "Qupil - "+tr("Error"), QString(tr("The following error occurred while loading the data")+":\n%1").arg("DB Error: 242 - "+query.lastError().text()), QMessageBox::Ok);
         } else {
             query.next();
             ui->lineEdit->setText(query.value(1).toString());
@@ -82,7 +82,7 @@ void ReminderEditDialog::changeEvent(QEvent *e)
 void ReminderEditDialog::accept()
 {
     if(ui->lineEdit->text().isEmpty()) {
-        QMessageBox::information(this, "Qupil - Erinnerungen", "Bitte geben Sie einen Erinnerungstext ein um die Funktion zu nutzen!", QMessageBox::Ok);
+        QMessageBox::information(this, "Qupil", tr("Please enter a reminder text to use the function!"), QMessageBox::Ok);
         return;
     } else {
         int rmode = 0;
@@ -118,7 +118,7 @@ void ReminderEditDialog::accept()
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 237 - " << query.lastError();
-            QMessageBox::critical(this, "Qupil - Fehler", QString("Beim Eintragen der Erinnerung ist folgender Fehler aufgetreten:\n%1").arg("DB Error: 237 - "+query.lastError().text()), QMessageBox::Ok);
+            QMessageBox::critical(this, "Qupil", QString(tr("The following error occurred while entering the reminder")+":\n%1").arg("DB Error: 237 - "+query.lastError().text()), QMessageBox::Ok);
         } else {
             QDialog::accept();
         }

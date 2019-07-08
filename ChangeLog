@@ -1,3 +1,9 @@
+08.07.2019 - Version 1.4.1:
+    - Enhancement: Start / stop metronome via space bar #16
+    - Bugfix: Sql errors when handling quotation marks in texts #5
+    - Bugfix: Concert manager translation missing #15
+    - Bugfix: Reminder translation bug #14
+
 06.06.2019 - Version 1.4:
     - Feature: Multi-language support - english interface #4
     - Feature: Language selectable via settings #9

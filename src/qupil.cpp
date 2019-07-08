@@ -20,10 +20,6 @@
 
 #include <iostream>
 
-#ifdef __APPLE__
-#include <QMacStyle>
-#endif
-
 #include <QtGui>
 #include <QtCore>
 

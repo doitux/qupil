@@ -11,11 +11,7 @@
 //
 #include "sdlplayer.h"
 
-#if (defined __APPLE__)
-#include <SDL.h>
-#else
 #include <SDL/SDL.h>
-#endif
 
 using namespace std;
 
@@ -50,7 +46,7 @@ bool SDLPlayer::initAudio()
             audioEnabled = 1;
             return true;
         } else {
-            qDebug() << "Fehler beim Laden des Audiogerätes";
+            qDebug() << "Error loading audio device";
             return false;
         }
     }

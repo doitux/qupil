@@ -35,6 +35,9 @@ MetronomDialogImpl::MetronomDialogImpl(ConfigFile *c, mainWindowImpl *w, SDLPlay
 
     initsuccess = true;
 
+    spinBox_bpm->setMyPlayButton(pushButton_play);
+    spinBox_beat->setMyPlayButton(pushButton_play);
+    spinBox_tunePitch->setMyPlayButton(pushButton_play);
 
     myMetronomPlayer->setBPM(spinBox_bpm->value());
 
@@ -63,6 +66,10 @@ void MetronomDialogImpl::show()
     retranslateUi(this);
     timer->start(1000);
     QDialog::show();
+    pushButton_play->setDefault(true);
+    pushButton_play->setShortcut(QKeySequence(Qt::Key_Space));
+
+//    this->
 }
 
 void MetronomDialogImpl::changeTempo(int t)
@@ -73,7 +80,7 @@ void MetronomDialogImpl::changeTempo(int t)
 
 void MetronomDialogImpl::audioInitFail()
 {
-    QMessageBox::critical(this,"Qupil","Konnte die Soundkarte nicht initialisieren.");
+    QMessageBox::critical(this,"Qupil", tr("Could not initialize the sound card."));
 }
 
 void MetronomDialogImpl::checkTempo()
@@ -197,5 +204,4 @@ void MetronomDialogImpl::reject()
     mySDLPlayer->closeAudio();
     QDialog::reject();
 }
-
 

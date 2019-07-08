@@ -42,7 +42,7 @@ void ReminderDialog::refreshList()
     query.exec();
     if (query.lastError().isValid()) {
         qDebug() << "DB Error: 238 - " << query.lastError();
-        QMessageBox::critical(this, "Qupil - Fehler", QString("Beim Lesen der Erinnerungsliste ist folgender Fehler aufgetreten:\n%1").arg("DB Error: 238 - "+query.lastError().text()), QMessageBox::Ok);
+        QMessageBox::critical(this, "Qupil - "+tr("Error"), QString(tr("The following error occurred while reading the reminder list")+":\n%1").arg("DB Error: 238 - "+query.lastError().text()), QMessageBox::Ok);
     } else {
         while(query.next()) {
             QTreeWidgetItem *item = new QTreeWidgetItem(ui->treeWidget);
@@ -53,20 +53,20 @@ void ReminderDialog::refreshList()
             switch(query.value(2).toInt()) {
 
             case 0:
-                rmodeString = "Beim Programmstart";
+                rmodeString = tr("At program start");
                 break;
             case 1:
-                rmodeString = "Bei jeder Unterrichtseinheit";
+                rmodeString = tr("At every lesson");
                 break;
             case 2: {
-                rmodeString = QString::fromUtf8(QString("Beim Schüler: ").toStdString().c_str());
+                rmodeString = tr("At the pupil")+": ";
                 QSqlQuery query2;
                 query2.prepare("SELECT surname, forename FROM pupil WHERE pupilid = ?");
                 query2.addBindValue(query.value(3).toInt());
                 query2.exec();
                 if (query2.lastError().isValid()) {
                     qDebug() << "DB Error: 239 - " << query2.lastError();
-                    QMessageBox::critical(this, "Qupil - Fehler", QString("Beim Lesen der Erinnerungsliste ist folgender Fehler aufgetreten:\n%1").arg("DB Error: 239 - "+query2.lastError().text()), QMessageBox::Ok);
+                    QMessageBox::critical(this, "Qupil - "+tr("Error"), QString(tr("The following error occurred while reading the reminder list")+":\n%1").arg("DB Error: 239 - "+query2.lastError().text()), QMessageBox::Ok);
                 } else {
                     query2.next();
                     rmodeString += "\""+query2.value(0).toString()+", "+query2.value(1).toString()+"\"";
@@ -109,7 +109,7 @@ void ReminderDialog::delReminder()
         query.exec();
         if (query.lastError().isValid()) {
             qDebug() << "DB Error: 240 - " << query.lastError();
-            QMessageBox::critical(this, "Qupil - Fehler", QString("Beim Loeschen der Erinnerung ist folgender Fehler aufgetreten:\n%1").arg("DB Error: 240 - "+query.lastError().text()), QMessageBox::Ok);
+            QMessageBox::critical(this, "Qupil - "+tr("Error"), QString(tr("The following error occurred while deleting the reminder")+":\n%1").arg("DB Error: 240 - "+query.lastError().text()), QMessageBox::Ok);
         } else {
             refreshList();
         }

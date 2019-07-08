@@ -188,7 +188,7 @@ void RecitalTabs::refreshPieces()
     }
 
 
-    ui->label_completeDuration->setText("Reine Spielzeit: "+QString("<span style='color: blue;'>%1 Min.</span>").arg(completePiecesDuration)+ " - Gesch&auml;tzte Gesamtdauer: "+QString("<span style='color: blue;'>%1 Min.</span>").arg(completeAllInAllDuration));
+    ui->label_completeDuration->setText(tr("Pure playing time")+": "+QString("<span style='color: blue;'>%1 "+tr("Min.")+"</span>").arg(completePiecesDuration)+ " - "+tr("Estimated total duration")+": "+QString("<span style='color: blue;'>%1 "+tr("Min.")+"</span>").arg(completeAllInAllDuration));
 
     myCM->refreshPieceActions(ui->treeWidget->topLevelItemCount());
 
