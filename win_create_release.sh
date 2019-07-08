@@ -9,6 +9,7 @@ if [[ -n "$1" && -n "$2" ]] ; then
 	rm ./Qupil-$1/data/sounds/.directory
 	zip -r Qupil-$1-windows.zip ./Qupil-$1
 
+	sed -i -e '/<project>/,/<\/project>/ s|<version>[0-9a-z.]\{1,\}</version>|<version>'$1'</version>|g' qupil_bitrock_windows.xml
 	$2/bin/builder build ./qupil_bitrock_windows.xml windows
 
 	mv $2/output/Qupil-$1-windows-installer.exe .
