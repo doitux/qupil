@@ -124,7 +124,11 @@ void ConcertManagerDialogImpl::loadReadyPiecesView()
     }
     while(query.next()) {
         //Prüfen ob der Eintrag ein gemeinsamer Gruppeneintrag ist.
-        QSqlQuery query1("SELECT count(*) FROM piece p, lesson l, pupilatlesson pal WHERE p.state = 3 AND pal.palid = p.palid AND pal.lessonid = l.lessonid AND pal.stopdate > date('now') AND l.lessonid="+query.value(0).toString()+" AND p.title='"+query.value(3).toString()+"'");
+        QSqlQuery query1;
+        query1.prepare("SELECT count(*) FROM piece p, lesson l, pupilatlesson pal WHERE p.state = 3 AND pal.palid = p.palid AND pal.lessonid = l.lessonid AND pal.stopdate > date('now') AND l.lessonid=? AND p.title=?");
+        query1.addBindValue(query.value(0));
+        query1.addBindValue(query.value(3));
+        query1.exec();
         if (query1.lastError().isValid()) {
             qDebug() << "DB Error: 42 - " << query1.lastError();
         }
